@@ -1,3 +1,3 @@
 function ret=read(obj)
-
-ret
+ret=readDev(obj);
+return
