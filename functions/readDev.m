@@ -1,4 +1,4 @@
-function readDev(object)
+function ret=readDev(obj)
 % Reads data from Device.
 % 
 % Read function for interfaces, independent of which interface type is 
@@ -23,4 +23,20 @@ function readDev(object)
 % 
 % References: 
 
-return ret
+
+switch(obj.prop.mode)
+    case 'eth'
+        ret=eth.read(obj);
+    case 'gpib'
+        gpib.open(obj)
+    case 'eth2gpib'
+        error('openDev:Not implemented yet');
+    case 'serial'
+        error('openDev:Not implemented yet');
+    case 'eth2serial' 
+        error('openDev:Not implemented yet');
+    otherwise
+        error('openDev:Unknown mode');            
+end
+
+return 

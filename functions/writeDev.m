@@ -1,4 +1,4 @@
-function writeDev(object,txt)
+function ret=writeDev(obj,txt)
 % Writes string to Device.
 % 
 % Write function for interfaces, independent of which interface type is 
@@ -23,4 +23,19 @@ function writeDev(object,txt)
 % 
 % References: 
 
-return 
+switch(obj.prop.mode)
+    case 'eth'
+        ret=eth.write(obj,txt);
+    case 'gpib'
+        gpib.open(obj)
+    case 'eth2gpib'
+        error('openDev:Not implemented yet');
+    case 'serial'
+        error('openDev:Not implemented yet');
+    case 'eth2serial' 
+        error('openDev:Not implemented yet');
+    otherwise
+        error('openDev:Unknown mode');            
+end
+
+return
