@@ -1,0 +1,4 @@
+function flushDev(obj)
+
+
+end

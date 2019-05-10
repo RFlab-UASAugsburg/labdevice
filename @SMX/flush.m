@@ -1,0 +1,4 @@
+function flush(obj)
+
+
+end
