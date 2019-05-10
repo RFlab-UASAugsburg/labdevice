@@ -24,7 +24,6 @@ classdef  SMX
        end
        
        function delete(obj)
-           disp('DebugDeccstuktor')
            closeDev(obj);
        end
    end
