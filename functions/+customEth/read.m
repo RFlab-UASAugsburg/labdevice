@@ -10,6 +10,6 @@ t=tic;
          end
        end
    end
-disp('eth.read: timeout')
+disp('customEth.read: timeout')
 
 end

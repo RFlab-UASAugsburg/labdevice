@@ -10,6 +10,6 @@ t=tic;
          end
        end
    end
-disp('gpib.read: timeout')
+disp('customGpib.read: timeout')
 
 end
