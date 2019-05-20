@@ -25,9 +25,9 @@ function ret=writeDev(obj,txt)
 
 switch(obj.prop.mode)
     case 'eth'
-        ret=eth.write(obj,txt);
+        ret = eth.write(obj,txt);
     case 'gpib'
-        gpib.open(obj)
+        ret = gpib.write(obj,txt);
     case 'eth2gpib'
         error('openDev:Not implemented yet');
     case 'serial'

@@ -28,7 +28,7 @@ switch(obj.prop.mode)
     case 'eth'
         obj=eth.open(obj);
     case 'gpib'
-        gpib.open(obj)
+        obj=gpib.opn(obj);
     case 'eth2gpib'
         error('openDev:Not implemented yet');
     case 'serial'

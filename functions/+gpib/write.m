@@ -1,9 +1,9 @@
 function ret=write(obj,txt)
-% Closes a GPIB connection.
+% Writes txt via GPIB connection to object.
 % 
-% Closes a VISA (gpib) interfaces. 
+% Writes over a VISA (gpib) interfaces. 
 %  
-%
+% Parameters:
 %  obj:         labDevice Handle with properties
 %               obj.prop.
 %                - mode
@@ -13,7 +13,7 @@ function ret=write(obj,txt)
 %                - gpib.primaryAdress
 %                - gpib.vendor
 %                - gpib.boardIndex
-%
+%  txt:         text that is send to device
 %
 % Return values:
 %  ret:         1 if it was successfull.

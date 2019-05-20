@@ -1,4 +1,4 @@
-function obj=open(obj)
+function obj=opn(obj)
 % Opens a GPIB connection.
 % 
 % Opens a VISA (gpib) interfaces. Writes the handle in obj.commHandle.
@@ -30,7 +30,7 @@ function obj=open(obj)
 %
 % References:
 
-obj.commHandle = visa('agilent', ['GPIB',num2str(obj.prop.gpib.boardIndex),'::',num2str(obj.prop.gpib.primaryAdress),'::INSTR']);
+obj.prop.commHandle = visa('agilent', ['GPIB',num2str(obj.prop.gpib.boardIndex),'::',num2str(obj.prop.gpib.primaryAdress),'::INSTR']);
 fopen(obj.prop.commHandle);
 
 return

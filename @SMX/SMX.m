@@ -1,4 +1,6 @@
 classdef  SMX
+    %%
+   
     properties
       prop
     end
@@ -13,10 +15,16 @@ classdef  SMX
                    obj.prop.adress=varargin{1};
                    obj.prop.port=varargin{2};
                case 'gpib'
-                   if length(varargin)~=1
-                       error('SMX: gpib wrong input arguments')
+                   if length(varargin)== 2
+                       obj.prop.gpib.primaryAdress=varargin{1};
+                       obj.prop.gpib.boardIndex=varargin{2};
+                       obj.prop.gpib.vendor = 'ni'; % All lab devices up to now work with the National Instrument interface
+                   elseif length(varargin)== 3
+                       obj.prop.gpib.vendor=varargin{3};
+                   else
+                       error('SMX gpib: Wrong input arguments')
                    end
-                   obj.prop.adress=varargin{1};
+
                otherwise
                    error('SMX: mode not supported')
            end
