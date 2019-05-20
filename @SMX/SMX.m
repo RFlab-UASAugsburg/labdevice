@@ -13,6 +13,9 @@ classdef  SMX < labDevice
            % add device specific destructor from here on
        end
        
+       % All functions that are inheritanced methods of the superclass
+       % labDevice need to be initalised here once more.
+       
        function ret=read(obj)
            ret=read@labDevice(obj);
            % add device specific read from here on

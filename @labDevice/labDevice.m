@@ -45,12 +45,9 @@ classdef  labDevice
            closeDev(obj);
        end
        
-       % Declare the function signature
-       
+       % Declare the function signatures of all other functions in folder
        flush(obj);
-       
        write(obj,txt);
-       
        ret=read(obj);
    end
  
