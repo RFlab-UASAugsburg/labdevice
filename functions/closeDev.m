@@ -25,9 +25,9 @@ function obj=closeDev(obj)
 
 switch(obj.prop.mode)
     case 'eth'
-        obj=eth.close(obj);
+        obj=customEth.close(obj);
     case 'gpib'
-        obj=gpib.close(obj);
+        obj=customGpib.close(obj);
     case 'eth2gpib'
         error('openDev:Not implemented yet');
     case 'serial'
