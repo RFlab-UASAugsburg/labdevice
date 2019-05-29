@@ -12,21 +12,21 @@ classdef  labDevice
             obj.prop.mode=mode;
             switch (obj.prop.mode)
                 case 'eth'
-                    if nargin~=2
+                    if length(varargin)~=2
                         error('ethernet interface got wrong number of input arguments')
                     end
                     obj.prop.adress=varargin{1};
                     obj.prop.port = varargin{2};
                 case 'gpib'
-                    if nargin==1
+                    if length(varargin)==1
                         obj.prop.gpib.primaryAdress=[varargin{1}];
                         obj.prop.gpib.boardIndex=1;
                         obj.prop.gpib.vendor='agilent'; % ni is standard for R&S devices.
-                    elseif nargin==2
+                    elseif length(varargin)==2
                         obj.prop.gpib.primaryAdress=varargin{1};
                         obj.prop.gpib.boardIndex=varargin{2};
                         obj.prop.gpib.vendor='agilent'; % ni is standard for R&S devices.
-                    elseif nargin==3
+                    elseif length(varargin)==3
                        obj.prop.gpib.primaryAdress=varargin{1};
                        obj.prop.gpib.boardIndex=varargin{2};
                        obj.prop.gpib.vendor=varargin{3};
