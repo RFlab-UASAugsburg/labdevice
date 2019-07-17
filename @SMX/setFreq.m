@@ -1,5 +1,7 @@
 function setFreq(obj,freq)
 
+% git-test-3
+
 writeDev(obj,['RF ',num2str(freq)]);
 
 % result='000000';
