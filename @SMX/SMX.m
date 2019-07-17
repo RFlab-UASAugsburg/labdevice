@@ -26,8 +26,8 @@ classdef  SMX < labDevice
            % add device flush destructor from here on
        end
        
-       function write(obj,txt)
-           write@labDevice(obj,txt);
+       function write(obj, txt)
+           write@labDevice(obj, txt);
            % add device write destructor from here on
        end
        

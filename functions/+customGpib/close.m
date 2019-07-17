@@ -1,4 +1,4 @@
-function obj=close(obj)
+function obj = close(obj)
 % Closes a GPIB connection.
 % 
 % Closes a VISA (gpib) interfaces. 

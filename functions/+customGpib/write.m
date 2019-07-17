@@ -1,4 +1,4 @@
-function ret=write(obj,txt)
+function ret = write(obj,txt)
 % Writes txt via GPIB connection to object.
 % 
 % Writes over a VISA (gpib) interfaces. 
@@ -22,7 +22,7 @@ function ret=write(obj,txt)
 %
 % References:
 
-fprintf(obj.prop.commHandle,txt);
+fprintf(obj.prop.commHandle, txt);
 
-ret=1;
+ret = 1;
 return

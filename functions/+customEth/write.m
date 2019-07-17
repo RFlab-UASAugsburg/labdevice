@@ -1,5 +1,5 @@
-function ret=write(obj,txt)
+function ret = write(obj,txt)
 
-fprintf(obj.prop.commHandle,'%s\n',txt);
-ret=0;
+fprintf(obj.prop.commHandle, '%s\n', txt);
+ret = 0;
 return

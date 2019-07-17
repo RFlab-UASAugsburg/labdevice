@@ -1,4 +1,4 @@
-function ret=writeDev(obj,txt)
+function ret = writeDev(obj, txt)
 % Writes string to Device.
 % 
 % Write function for interfaces, independent of which interface type is 

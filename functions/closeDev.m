@@ -1,4 +1,4 @@
-function obj=closeDev(obj)
+function obj = closeDev(obj)
 % Close connection to Device.
 % 
 % Close function for interfaces, independent of which interface type is 
@@ -25,9 +25,9 @@ function obj=closeDev(obj)
 
 switch(obj.prop.mode)
     case 'eth'
-        obj=customEth.close(obj);
+        obj = customEth.close(obj);
     case 'gpib'
-        obj=customGpib.close(obj);
+        obj = customGpib.close(obj);
     case 'eth2gpib'
         error('openDev:Not implemented yet');
     case 'serial'

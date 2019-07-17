@@ -1,3 +1,3 @@
-function write(obj,txt)
-    writeDev(obj,txt);
+function write(obj, txt)
+    writeDev(obj, txt);
 end
