@@ -1,4 +1,4 @@
-function obj=openDev(obj)
+function obj = openDev(obj)
 % Opens connection to Device.
 % 
 % Open function for interfaces, independent of which interface type is 
