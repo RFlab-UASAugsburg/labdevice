@@ -1,8 +1,8 @@
-function setFreq(obj,freq)
+function setFreq(obj, freq)
 
-writeDev(obj,['RF ',num2str(freq)]);
+writeDev(obj, ['RF ', num2str(freq)]);
 
-% result='000000';
+% result = '000000';
 % % Abfrage des Operation Complete Bit
 % while str2num(result(6)) ~= 1
 %     writeDev(obj, '*OPC?');
