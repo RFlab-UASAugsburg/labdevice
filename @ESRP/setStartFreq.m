@@ -1,5 +1,5 @@
 function setStartFreq(obj, freq)
-%git-test
+
 writeDev(obj, ['FREQ:STAR ', num2str(freq), 'Hz; *WAI']);
 
 % result='000000';
