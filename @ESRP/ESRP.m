@@ -1,9 +1,9 @@
-classdef  SMX < labDevice
+classdef  ESRP < labDevice
     properties
       % Add device specific properties here
     end
    methods 
-       function obj = SMX(mode, varargin)
+       function obj = ESRP(mode, varargin)
            obj@labDevice(mode, varargin);
            % add device specific constructor from here on
        end
