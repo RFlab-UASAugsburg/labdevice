@@ -1,4 +1,4 @@
-function setStartFreq(obj, freq)
+function setStopFreq(obj, freq)
 %
 %
 % (long description goes here)
@@ -13,7 +13,7 @@ function setStartFreq(obj, freq)
 % See also:
 %
 
-writeDev(obj, ['FREQ:STAR ', num2str(freq), 'Hz; *WAI']);
+writeDev(obj, ['FREQ:STOP ', num2str(freq), 'Hz; *WAI']);
 
 % result = '000000';
 % % Abfrage des Operation Complete Bit
