@@ -1,14 +1,21 @@
 function setAutBandw (obj, setBandw)
 %
-% Sets the automatic bandwidth setting to enable or disable
+% Enables of disables the automatic bandwidth setting.
 %
 %
 %
 % Parameters:
+%	obj.prop:	labDevice Handle with properties
+%            	- mode
+%            	- address
+%            	- port
+%            	- prop.comm(unication)Handle (interface specific)
 %
+%   setBandw:   'on'  [String]
+%               'off' [String]
 %
 % Return values:
-%
+%   /
 %
 % See also:
 %
