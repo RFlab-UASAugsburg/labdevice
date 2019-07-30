@@ -22,6 +22,6 @@ if pow > 0 % SMX Specific
     return
 end
 
-writeDev(obj, ['L ', num2str(pow)]);
+write(obj, ['L ', num2str(pow)]);
 
 end

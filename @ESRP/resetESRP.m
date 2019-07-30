@@ -19,8 +19,8 @@ function resetESRP (obj)
 % See also:
 %
 
-writeDev(obj, ['*RST;*CLS; *WAI']);
-writeDev(obj, ['SYST:DISP:UPD ON']);
+write(obj, ['*RST;*CLS; *WAI']);
+write(obj, ['SYST:DISP:UPD ON']);
 
 
 end

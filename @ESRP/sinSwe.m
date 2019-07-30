@@ -18,6 +18,6 @@ function sinSwe (obj)
 % See also:
 %
 
-writeDev(obj, ['INIT2:CONT OFF; *WAI']);
+write(obj, ['INIT2:CONT OFF; *WAI']);
 
 end

@@ -24,11 +24,11 @@ function setFreqDistAxis (obj, freqDistAxis)
 
 switch freqDistAxis
     case 'auto'
-        writeDev(obj,['DISP:TRAC1:X:SPAC AUTO; *WAI']);
+        write(obj,['DISP:TRAC1:X:SPAC AUTO; *WAI']);
     case 'lin'
-        writeDev(obj,['DISP:TRAC1:X:SPAC LIN;  *WAI']);
+        write(obj,['DISP:TRAC1:X:SPAC LIN;  *WAI']);
     case 'log'
-        writeDev(obj,['DISP:TRAC1:X:SPAC LOG;  *WAI']);
+        write(obj,['DISP:TRAC1:X:SPAC LOG;  *WAI']);
     otherwise
         disp('Unclear status. (freqDistAxis)');
 end

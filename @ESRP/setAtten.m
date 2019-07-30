@@ -30,10 +30,10 @@ function setAtten (obj, attSta, attVal)
 
 switch attSta
     case 'on'
-        writeDev(obj, ['INP:ATT:PROT ON; *WAI']);
-        writeDev(obj, ['INP:ATT ', num2string(attVal), 'dB']);
+        write(obj, ['INP:ATT:PROT ON; *WAI']);
+        write(obj, ['INP:ATT ', num2string(attVal), 'dB']);
     
     case 'off'
-        writeDev(obj, ['INP:ATT:PROT OFF; *WAI']);
+        write(obj, ['INP:ATT:PROT OFF; *WAI']);
 end
 end

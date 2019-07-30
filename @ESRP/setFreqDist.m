@@ -29,11 +29,11 @@ function setFreqDist (obj, freqDist)
 
 switch freqDist
     case 'auto'
-        writeDev(obj,['SWE:SPAC AUTO; *WAI']);
+        write(obj,['SWE:SPAC AUTO; *WAI']);
     case 'lin'
-        writeDev(obj,['SWE:SPAC LIN;  *WAI']);
+        write(obj,['SWE:SPAC LIN;  *WAI']);
     case 'log'
-        writeDev(obj,['SWE:SPAC LOG;  *WAI']);
+        write(obj,['SWE:SPAC LOG;  *WAI']);
     otherwise
         disp('Unclear status. (freqDist)');
 end

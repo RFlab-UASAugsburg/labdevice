@@ -22,9 +22,9 @@ function setAutBandw (obj, setBandw)
 
 switch setBandw
     case 'off'
-        writeDev(obj,['BAND:RES:AUTO OFF; *WAI']);
+        write(obj,['BAND:RES:AUTO OFF; *WAI']);
     case 'on'
-        writeDev(obj,['BAND:RES:AUTO ON;  *WAI']);
+        write(obj,['BAND:RES:AUTO ON;  *WAI']);
     otherwise
         disp('Unclear status. (setBandw)');
 end

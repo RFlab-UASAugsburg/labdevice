@@ -19,4 +19,4 @@ function setIncr (obj, incr)
 % See also:
 %
 
-writeDev(obj, ['SCAN1:STEP ', num2string(incr), 'Hz; *WAI']);
+write(obj, ['SCAN1:STEP ', num2string(incr), 'Hz; *WAI']);

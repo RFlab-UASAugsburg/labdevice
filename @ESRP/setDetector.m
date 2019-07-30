@@ -24,11 +24,11 @@ function setDetector (obj, detec)
 
 switch detec
     case 'qpeak'
-        writeDev(obj, ['DET1:FUNC QFE; *WAI']);
+        write(obj, ['DET1:FUNC QFE; *WAI']);
     case 'mpeak'
-        writeDev(obj, ['DET1:FUNC POS; *WAI']);
+        write(obj, ['DET1:FUNC POS; *WAI']);
     case 'aver'
-        writeDev(obj, ['DET1:FUNC AVER; *WAI'];
+        write(obj, ['DET1:FUNC AVER; *WAI'];
     otherwise
         disp('Detector unbekannt.');
     

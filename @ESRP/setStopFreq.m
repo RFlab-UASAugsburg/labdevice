@@ -20,7 +20,7 @@ function setStopFreq(obj, freq)
 % See also:
 %
 
-writeDev(obj, ['FREQ:STOP ', num2str(freq), 'Hz; *WAI']);
+write(obj, ['FREQ:STOP ', num2str(freq), 'Hz; *WAI']);
 
 % result = '000000';
 % % Abfrage des Operation Complete Bit

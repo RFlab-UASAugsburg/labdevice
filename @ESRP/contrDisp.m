@@ -25,9 +25,9 @@ function contrDisp (obj, setDisp)
 
 switch setDisp
     case 'off'
-        writeDev(obj, ['SYST:DISP:UPD OFF']);
+        write(obj, ['SYST:DISP:UPD OFF']);
     case 'on'
-        writeDev(obj, ['SYST:DISP:UPD ON']);
+        write(obj, ['SYST:DISP:UPD ON']);
     otherwise
         disp('Unclear status. (setDisp)');
 end

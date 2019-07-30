@@ -18,7 +18,7 @@ function actRecMod (obj)
 % See also:
 %
 
-writeDev(obj, ['INST REC; *WAI']);
+write(obj, ['INST REC; *WAI']);
 
 
 end

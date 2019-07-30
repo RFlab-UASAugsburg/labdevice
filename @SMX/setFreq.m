@@ -1,6 +1,6 @@
 function setFreq(obj, freq)
 
-writeDev(obj, ['RF ', num2str(freq)]);
+write(obj, ['RF ', num2str(freq)]);
 
 
 % result = '000000';
