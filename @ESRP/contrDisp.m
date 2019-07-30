@@ -23,7 +23,7 @@ function contrDisp (obj, setDisp)
 % See also:
 %
 
-switch (setDisp)
+switch setDisp
     case 'off'
         writeDev(obj, ['SYST:DISP:UPD OFF']);
     case 'on'

@@ -1,6 +1,6 @@
-function setDetector (obj, detector)
+function setDetector (obj, detec)
 %
-% Activate the Receiver Mode (ESRP)
+% Sets the meassuring protocol. (qpeak, mpeak, aver)
 %
 %
 %
@@ -11,7 +11,7 @@ function setDetector (obj, detector)
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
 %
-%   detector:   'qpeak'  [String]
+%   detec:      'qpeak'  [String]
 %               'mpeak'  [String]
 %               'aver'   [String]
 %
@@ -22,13 +22,13 @@ function setDetector (obj, detector)
 %
 
 
-switch
+switch detec
     case 'qpeak'
-        writeDev(obj, ['DET1:FUNC QFE;*WAI']);
+        writeDev(obj, ['DET1:FUNC QFE; *WAI']);
     case 'mpeak'
-        writeDev(obj, ['DET1:FUNC POS;*WAI']);
+        writeDev(obj, ['DET1:FUNC POS; *WAI']);
     case 'aver'
-        writeDev(obj, ['DET1:FUNC AVER;*WAI'];
+        writeDev(obj, ['DET1:FUNC AVER; *WAI'];
     otherwise
         disp('Detector unbekannt.');
     

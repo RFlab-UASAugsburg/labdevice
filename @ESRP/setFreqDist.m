@@ -5,7 +5,7 @@ function setFreqDist (obj, freqDist)
 %   - linear
 %   - logarithmic
 %
-% This will not influence the scale of the x-axis!
+% !! This will not influence the scale of the x-axis !!
 %
 %
 % Parameters:
@@ -29,13 +29,13 @@ function setFreqDist (obj, freqDist)
 
 switch freqDist
     case 'auto'
-        writeDev(obj,['SWE:SPAC AUTO;*WAI']);
+        writeDev(obj,['SWE:SPAC AUTO; *WAI']);
     case 'lin'
-        writeDev(obj,['BAND:RES:AUTO ON; *WAI']);
+        writeDev(obj,['SWE:SPAC LIN;  *WAI']);
     case 'log'
-        writeDev(obj,['']);
+        writeDev(obj,['SWE:SPAC LOG;  *WAI']);
     otherwise
-        disp('Unclear status. (setBandw)');
+        disp('Unclear status. (freqDist)');
 end
 
 
