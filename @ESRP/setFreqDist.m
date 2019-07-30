@@ -28,11 +28,11 @@ function setFreqDist (obj, freqDist)
 
 
 switch freqDist
-    case auto
+    case 'auto'
         writeDev(obj,['SWE:SPAC AUTO;*WAI']);
-    case lin
+    case 'lin'
         writeDev(obj,['BAND:RES:AUTO ON; *WAI']);
-    case log
+    case 'log'
         writeDev(obj,['']);
     otherwise
         disp('Unclear status. (setBandw)');
