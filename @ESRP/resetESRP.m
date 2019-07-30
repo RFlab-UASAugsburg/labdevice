@@ -19,8 +19,8 @@ function resetESRP (obj)
 % See also:
 %
 
-write(obj, ['*RST;*CLS; *WAI']);
-write(obj, ['SYST:DISP:UPD ON']);
+write(obj, ['*RST;*CLS; *WAI']);        % reset
+write(obj, ['SYST:DISP:UPD ON']);       % turn display on again (bec. of remote-mode)
 
 
 end

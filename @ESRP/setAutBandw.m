@@ -26,7 +26,7 @@ switch setBandw
     case 'on'
         write(obj,['BAND:RES:AUTO ON;  *WAI']);
     otherwise
-        disp('Unclear status. (setBandw)');
+        fprintf('Unclear status. (setBandw)\n');
 end
 
 

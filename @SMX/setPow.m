@@ -1,5 +1,6 @@
 function setPow(obj,pow)
-% Set powerlevel of labDevice.
+%
+% Set powerlevel of the SMX.
 % 
 % (long description goes here)
 %
@@ -9,16 +10,17 @@ function setPow(obj,pow)
 %                - address
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
+%
 %  pow:          power level [dBm]
 %
 %
 % See also: setFreq
 % 
-% References: 
+% References:
 
 
 if pow > 0 % SMX Specific
-    disp ('Power Level too high!');           
+    fprintf('Power Level too high!\n');
     return
 end
 

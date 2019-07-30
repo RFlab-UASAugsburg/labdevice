@@ -35,7 +35,7 @@ switch freqDist
     case 'log'
         write(obj,['SWE:SPAC LOG;  *WAI']);
     otherwise
-        disp('Unclear status. (freqDist)');
+        fprintf('Unclear status. (freqDist)\n');
 end
 
 

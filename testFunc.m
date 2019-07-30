@@ -1,20 +1,20 @@
 %% Skipt um neue Funktionen zu testen
 %
 %
-connection = 0; % 0 = GPIB
+connection = 1; % 0 = GPIB
                 % 1 = ETH
 
 switch connection
     case 0
-objGPIB = ESRP('gpib',20,1);
-objGPIB.resetESRP();
+oGPIB = ESRP('gpib',20,1);
+oGPIB.resetESRP();
 % Testobjekt ist das neue Objekt
 % Über GPIB wird der Messempfänger angesteuert
 % Die Adresse ist: 20
 
     case 1
 % Kommunikation z.B. über Ethernet:
-objEth = ESRP('eth','141.82.73.167', 5025);
-objEth.resetESRP();
+oETH = ESRP('eth','141.82.73.167', 5025);
+oETH.resetESRP();
 
 end

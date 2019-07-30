@@ -19,4 +19,5 @@ function setIncr (obj, incr)
 % See also:
 %
 
-write(obj, ['SCAN1:STEP ', num2string(incr), 'Hz; *WAI']);
+write(obj, ['SCAN1:STEP ', num2str(incr), 'Hz; *WAI']);
+fprintf('Set the incremente to %.2f Hz\n', incr);
