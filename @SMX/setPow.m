@@ -4,7 +4,7 @@ function setPow(obj,pow)
 % (long description goes here)
 %
 % Parameters:
-%  obj.prop:     labDevice Handle with properties
+%	obj.prop:     labDevice Handle with properties
 %                - mode
 %                - address
 %                - port
