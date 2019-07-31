@@ -1,6 +1,6 @@
 function setDetector (obj, detec)
 %
-% Sets the meassuring protocol. (qpeak, mpeak, aver)
+% Sets the measuring protocol. (qpeak, mpeak, aver)
 %
 %
 %
@@ -34,4 +34,5 @@ switch detec
     
   
 end
+
 end

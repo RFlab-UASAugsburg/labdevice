@@ -32,8 +32,4 @@ switch setDisp
         fprintf('Unclear status. (setDisp)\n');
 end
 
-
-
-
-
 end

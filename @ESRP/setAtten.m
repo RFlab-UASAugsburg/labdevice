@@ -32,12 +32,13 @@ switch attSta
     case 'on'
         write(obj, ['INP:ATT:PROT ON; *WAI']);
         write(obj, ['INP:ATT ', num2str(attVal), 'dB']);
-        fprintf('Input attenuation protector set: on\nValue: %d dB\n', attVal);
+        %fprintf('Input attenuation protector set: on\nValue: %d dB\n', attVal);
     
     case 'off'
         write(obj, ['INP:ATT:PROT OFF; *WAI']);
-        fprintf('Input attenuation protector set: off\nValue: 0 dB - 10 dB\n');
+        %fprintf('Input attenuation protector set: off\nValue: 0 dB - 10 dB\n');
     otherwise
         fprintf('Attenuation state unclear. (attSta)\n');
 end
+
 end
