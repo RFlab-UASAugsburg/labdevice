@@ -1,7 +1,7 @@
 %% Skript zum auslesen von empfangenen Daten
 %
 % dieses Skript ist testweise nur mit einer ethernet Verbindung zum
-% Messempfänger möglich.
+% MessempfÃ¤nger mÃ¶glich.
 %
 %
 
@@ -42,7 +42,7 @@ oETH.setAtten('off');
 
 
 
-% --------- Rücklesen der eingestellten Werte -----------------------------
+% --------- RÃ¼cklesen der eingestellten Werte -----------------------------
 
     write(oETH, 'FREQ:START?;*WAI')
 fstart = sscanf(fscanf(oETH, '%s'), '%d');
@@ -63,7 +63,7 @@ fstep2 = sscanf(fscanf(oETH, '%s'), '%f');
 
 
 
-% --------- Überprüfung des Frequenzbereiches -----------------------------
+% --------- ÃœberprÃ¼fung des Frequenzbereiches -----------------------------
 
 if (fstart < fstart1) || ( fstop > fstop2)
     error('Frequenzbereich fehlerhaft.');

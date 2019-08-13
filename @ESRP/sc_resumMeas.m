@@ -17,6 +17,6 @@ function sc_resumMeas (obj)
 % See also:
 %
 
-write(obj, ['INIT:IMM; *WAI']); % restart
+write(obj, ['INIT2:IMM; *WAI']); % restart
 
 end

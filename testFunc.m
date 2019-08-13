@@ -9,7 +9,7 @@ instrreset; % Disconnect and delete all instrument objects
 connection = 1; % 0 = GPIB
                 % 1 = ETH
                 
-addpath /functions/.
+% addpath /functions/.
 
 switch connection
     case 0
