@@ -28,7 +28,7 @@ function r_setPreAmp (obj, gain, range)
 %
 
 if (range < 0 || range > 3)
-	fprintf("range is not correct (0 to 3)\n");
+	error('range is not correct (0 to 3)');
 else
     switch gain
         case 'on'

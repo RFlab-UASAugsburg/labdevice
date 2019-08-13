@@ -29,7 +29,7 @@ switch setDisp
     case 'on'
         write(obj, ['SYST:DISP:UPD ON']);
     otherwise
-        fprintf('Unclear status. (setDisp)\n');
+        error('Unclear status. (setDisp)');
 end
 
 end

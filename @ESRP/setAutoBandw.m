@@ -1,4 +1,4 @@
-function setAutBandw (obj, setBandw)
+function setAutoBandw (obj, setBandw)
 %
 % Enables of disables the automatic bandwidth setting.
 %
@@ -26,7 +26,7 @@ switch setBandw
     case 'on'
         write(obj,['BAND:RES:AUTO ON;  *WAI']);
     otherwise
-        fprintf('Unclear status. (setBandw)\n');
+        error('Unclear status. (setBandw)');
 end
 
 

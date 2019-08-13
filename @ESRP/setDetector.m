@@ -28,9 +28,9 @@ switch detec
     case 'mpeak'
         write(obj, ['DET1:FUNC POS; *WAI']);
     case 'aver'
-        write(obj, ['DET1:FUNC AVER; *WAI'];
+        write(obj, ['DET1:FUNC AVER; *WAI']);
     otherwise
-        fprintf('Detector unbekannt.\n');
+        error('Detector unbekannt.');
     
   
 end

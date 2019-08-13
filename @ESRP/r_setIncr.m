@@ -24,7 +24,7 @@ function r_setIncr (obj, incr, range)
 %
 
 if (range < 0 || range > 3)
-	fprintf("range is not correct (0 to 3)\n");
+	error('range is not correct (0 to 3)');
 else
     write(obj, ['SCAN', num2str(range), ':STEP ', num2str(incr), 'Hz; *WAI']);
     %fprintf('Set the incremente to %.2f Hz\n', incr);

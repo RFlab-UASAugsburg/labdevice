@@ -30,7 +30,7 @@ switch freqDistAxis
     case 'log'
         write(obj,['DISP:TRAC1:X:SPAC LOG;  *WAI']);
     otherwise
-        fprintf('Unclear status. (freqDistAxis)\n');
+        error('Unclear status. (freqDistAxis)');
 end
 
 

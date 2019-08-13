@@ -1,7 +1,7 @@
-function sinSwe (obj)
+function sc_abortMeas (obj)
 %
-% Single sweep
-%
+% This method stops a measurement.
+%	"sc_" stands for "scan contol" and is debugging relevant.
 %
 %
 % Parameters:
@@ -11,13 +11,12 @@ function sinSwe (obj)
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
 %
-%
 % Return values:
 %   /
 %
 % See also:
 %
 
-write(obj, ['INIT2:CONT OFF; *WAI']);
+write(obj, ['ABOR; *WAI']);     % abort
 
 end

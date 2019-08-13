@@ -1,6 +1,6 @@
-function actRecMod (obj)
+function singlSweep (obj)
 %
-% Activate the Receiver Mode (ESRP)
+% Sets the measurement to single sweep.
 %
 %
 %
@@ -11,14 +11,12 @@ function actRecMod (obj)
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
 %
-%
 % Return values:
 %   /
 %
 % See also:
 %
 
-write(obj, ['INST REC; *WAI']);
-
+write(obj, ['INIT2:CONT OFF; *WAI']);
 
 end

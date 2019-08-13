@@ -1,8 +1,15 @@
 %% Skipt um neue Funktionen zu testen
 %
 %
+
+close all;
+clc;
+instrreset; % Disconnect and delete all instrument objects
+
 connection = 1; % 0 = GPIB
                 % 1 = ETH
+                
+addpath /functions/.
 
 switch connection
     case 0
