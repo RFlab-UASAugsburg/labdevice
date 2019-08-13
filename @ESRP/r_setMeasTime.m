@@ -1,4 +1,4 @@
-function r_setMesTim(obj, mesTim, range)
+function r_setMeasTime(obj, mesTim, range)
 %
 % Sets the measuring time.
 %   "r_" stands for "depending on range"
@@ -26,7 +26,7 @@ function r_setMesTim(obj, mesTim, range)
 %
 
 if (range < 0 || range > 3)
-	fprintf("range is not correct (0 to 3)\n");
+	error('range is not correct (0 to 3)');
 else
     write(obj, ['SCAN', num2str(range), ':TIME ', num2str(mesTim), '; *WAI']);
 end

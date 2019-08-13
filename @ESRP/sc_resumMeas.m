@@ -1,7 +1,7 @@
-function sinSwe (obj)
+function sc_resumMeas (obj)
 %
-% Single sweep
-%
+% This method resumes the measurement.
+%	"sc_" stands for "scan contol" and is debugging relevant.
 %
 %
 % Parameters:
@@ -11,13 +11,12 @@ function sinSwe (obj)
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
 %
-%
 % Return values:
 %   /
 %
 % See also:
 %
 
-write(obj, ['INIT2:CONT OFF; *WAI']);
+write(obj, ['INIT2:IMM; *WAI']); % restart
 
 end

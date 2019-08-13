@@ -38,7 +38,7 @@ switch attSta
         write(obj, ['INP:ATT:PROT OFF; *WAI']);
         %fprintf('Input attenuation protector set: off\nValue: 0 dB - 10 dB\n');
     otherwise
-        fprintf('Attenuation state unclear. (attSta)\n');
+        error('Attenuation state unclear. (attSta)');
 end
 
 end

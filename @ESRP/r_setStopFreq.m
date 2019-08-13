@@ -1,6 +1,7 @@
-function setStartFreq(obj, freq, range)
+function r_setStopFreq(obj, freq, range)
 %
-% Sets the start frequency.
+% Sets the Stop Frequency.
+%   "r_" stands for "depending on range"
 %
 % (long description goes here)
 %
@@ -14,28 +15,25 @@ function setStartFreq(obj, freq, range)
 %
 %   freq:       frequency [Hz]
 %
-%   range:      defines which start frequency will be set
-%               0:      Sets the start frequency of the whole measurement
-%               1-3:    Sets the start frequency of the range (1 to 3)
+%   range:      defines which stop frequency will be set
+%               0:      Sets the stop frequency of the whole measurement
+%               1-3:    Sets the stop frequency of the range (1 to 3)
 %
 % Return values:
 %   /
 %
 % See also:
 %
-
 if (range < 0 || range > 3)
-    fprintf("range is not correct (0 to 3)\n");
+    error('range is not correct (0 to 3)');
 else
     switch range
         case 0
-            write(obj, ['FREQ:STAR ', num2str(freq), 'Hz; *WAI']);
+            write(obj, ['FREQ:STOP ', num2str(freq), 'Hz; *WAI']);
         otherwise
-            write(obj, ['SCAN', num2str(range), ':STAR ', num2str(freq), 'Hz; *WAI']);
+            write(obj, ['SCAN', num2str(range), ':STOP ', num2str(freq), 'Hz; *WAI']);
     end
 end
-
-
 
 % result = '000000';
 % % Abfrage des Operation Complete Bit
