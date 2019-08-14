@@ -1,7 +1,7 @@
-function sc_holdMeas (obj)
+function actReceiverMode (obj)
 %
-% This method pauses the measurement.
-%	"sc_" stands for "scan contol" and is debugging relevant.
+% Activate the Receiver Mode (ESRP)
+%
 %
 %
 % Parameters:
@@ -11,12 +11,14 @@ function sc_holdMeas (obj)
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
 %
+%
 % Return values:
 %   /
 %
 % See also:
 %
 
-write(obj, ['HOLD; *WAI']);
+write(obj, ['INST REC; *WAI']);
+
 
 end

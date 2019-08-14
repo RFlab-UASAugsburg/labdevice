@@ -1,7 +1,7 @@
-function sc_abortMeas (obj)
+function singleSweep (obj)
 %
-% This method stops a measurement.
-%	"sc_" stands for "scan contol" and is debugging relevant.
+% Sets the measurement to single sweep.
+%
 %
 %
 % Parameters:
@@ -17,6 +17,6 @@ function sc_abortMeas (obj)
 % See also:
 %
 
-write(obj, ['ABOR; *WAI']);     % abort
+write(obj, ['INIT2:CONT OFF; *WAI']);
 
 end

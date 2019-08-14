@@ -1,7 +1,7 @@
-function r_setMeasTime(obj, mesTim, range)
+function setMeasuringTime(obj, mesTim, range)
 %
 % Sets the measuring time.
-%   "r_" stands for "depending on range"
+%   DEPENDING ON RANGE
 %
 % Defines the measurement time per point (frequency).
 % Default is: 50e-3 [s]

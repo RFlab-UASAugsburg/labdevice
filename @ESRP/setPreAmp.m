@@ -1,7 +1,7 @@
-function r_setPreAmp (obj, gain, range)
+function setPreAmp (obj, gain, range)
 %
 % No idea what this command does.
-%   "r_" stands for "depending on range"
+%   DEPENDING ON RANGE
 %
 % (Here goes the long description)
 %

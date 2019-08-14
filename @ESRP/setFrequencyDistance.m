@@ -1,4 +1,4 @@
-function setFreqDist (obj, freqDist)
+function setFrequencyDistance (obj, freqDist)
 %
 % Sets the space of the frequency to:
 %   - auto

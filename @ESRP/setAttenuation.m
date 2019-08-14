@@ -1,7 +1,7 @@
-function r_setAtten(obj, attVal, range)
+function setAttenuation(obj, attVal, range)
 %
 % Sets the attenuation for the different ranges.
-%   "r_" stands for "depending on range"
+%   DEPENDING ON RANGE
 %
 %
 %

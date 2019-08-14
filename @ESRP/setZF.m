@@ -1,7 +1,9 @@
-function r_setIncr (obj, incr, range)
+function setZF (obj, rbw, range)
 %
-% Sets the increment between the measuring points.
+% Measurement bandwidth used within the scan range. (filter)
 %   "r_" stands for "depending on range"
+%
+% (Here goes the long description)
 %
 %
 %
@@ -12,7 +14,7 @@ function r_setIncr (obj, incr, range)
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
 %
-%   incr:       increment (Schrittweite) [Hz]
+%   rbw:        resolution bandwidth [Hz]
 %
 %   range:      choose the range
 %               1 - 3 [int]
@@ -26,8 +28,7 @@ function r_setIncr (obj, incr, range)
 if (range < 0 || range > 3)
 	error('range is not correct (0 to 3)');
 else
-    write(obj, ['SCAN', num2str(range), ':STEP ', num2str(incr), 'Hz; *WAI']);
-    %fprintf('Set the incremente to %.2f Hz\n', incr);
+    write(obj, ['SCAN', num2str(range), ':BAND:RES ', num2str(rbw), 'Hz; *WAI']);
 end
 
 

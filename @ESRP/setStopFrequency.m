@@ -1,7 +1,7 @@
-function r_setStopFreq(obj, freq, range)
+function setStopFrequency(obj, freq, range)
 %
 % Sets the Stop Frequency.
-%   "r_" stands for "depending on range"
+%   DEPENDING ON RANGE
 %
 % (long description goes here)
 %

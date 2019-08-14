@@ -1,7 +1,7 @@
-function singlSweep (obj)
+function holdMeasurement (obj)
 %
-% Sets the measurement to single sweep.
-%
+% This method pauses the measurement.
+%   SCAN CONTOL
 %
 %
 % Parameters:
@@ -17,6 +17,6 @@ function singlSweep (obj)
 % See also:
 %
 
-write(obj, ['INIT2:CONT OFF; *WAI']);
+write(obj, ['HOLD; *WAI']);
 
 end

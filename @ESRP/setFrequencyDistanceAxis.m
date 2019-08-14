@@ -1,4 +1,4 @@
-function setFreqDistAxis (obj, freqDistAxis)
+function setFrequencyDistanceAxis (obj, freqDistAxis)
 %
 % Sets the frequency distance of the x-axis to: auto, lin, log
 % (not the messuring porints!)

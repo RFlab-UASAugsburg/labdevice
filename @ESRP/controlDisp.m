@@ -1,4 +1,4 @@
-function contrDisp (obj, setDisp)
+function controlDisp (obj, setDisp)
 %
 % Turns the Display of the ESRP on or off
 %

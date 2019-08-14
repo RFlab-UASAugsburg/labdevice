@@ -1,7 +1,7 @@
-function sc_resumMeas (obj)
+function resumeMeasurement(obj)
 %
 % This method resumes the measurement.
-%	"sc_" stands for "scan contol" and is debugging relevant.
+%   SCAN CONTOL
 %
 %
 % Parameters:

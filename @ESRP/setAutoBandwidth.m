@@ -1,4 +1,4 @@
-function setAutoBandw (obj, setBandw)
+function setAutoBandwidth (obj, setBandw)
 %
 % Enables of disables the automatic bandwidth setting.
 %

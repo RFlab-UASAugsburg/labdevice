@@ -1,7 +1,7 @@
-function actRecMode (obj)
+function abortMeasurement (obj)
 %
-% Activate the Receiver Mode (ESRP)
-%
+% This method stops a measurement.
+%   SCAN CONTOL
 %
 %
 % Parameters:
@@ -11,14 +11,12 @@ function actRecMode (obj)
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
 %
-%
 % Return values:
 %   /
 %
 % See also:
 %
 
-write(obj, ['INST REC; *WAI']);
-
+write(obj, ['ABOR; *WAI']);     % abort
 
 end

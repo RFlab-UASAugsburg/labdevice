@@ -1,7 +1,7 @@
-function r_setStartFreq(obj, freq, range)
+function setStartFrequency(obj, freq, range)
 %
 % Sets the start frequency.
-%   "r_" stands for "depending on range"
+%   DEPENDING ON RANGE
 %
 % (long description goes here)
 %
