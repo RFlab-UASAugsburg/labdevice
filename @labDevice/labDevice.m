@@ -19,17 +19,17 @@ classdef  labDevice
                     obj.prop.port   = varargin{2};
                 case 'gpib'
                     if length(varargin) == 1
-                        obj.prop.gpib.primaryAdress	= [varargin{1}];
-                        obj.prop.gpib.boardIndex	= 1;
-                        obj.prop.gpib.vendor		= 'agilent'; % ni is standard for R&S devices.
+                        obj.prop.gpib.primaryAdress  = [varargin{1}];
+                        obj.prop.gpib.boardIndex     = 1;
+                        obj.prop.gpib.vendor         = 'agilent'; % ni is standard for R&S devices.
                     elseif length(varargin) == 2
-                        obj.prop.gpib.primaryAdress 	= varargin{1};
-                        obj.prop.gpib.boardIndex	= varargin{2};
-                        obj.prop.gpib.vendor		= 'agilent'; % ni is standard for R&S devices.
+                        obj.prop.gpib.primaryAdress  = varargin{1};
+                        obj.prop.gpib.boardIndex	 = varargin{2};
+                        obj.prop.gpib.vendor		 = 'agilent'; % ni is standard for R&S devices.
                     elseif length(varargin) == 3
-                       obj.prop.gpib.primaryAdress	= varargin{1};
-                       obj.prop.gpib.boardIndex		= varargin{2};
-                       obj.prop.gpib.vendor 		= varargin{3};
+                       obj.prop.gpib.primaryAdress	 = varargin{1};
+                       obj.prop.gpib.boardIndex		 = varargin{2};
+                       obj.prop.gpib.vendor 		 = varargin{3};
                    else
                        error('gpib interface got wrong number of input arguments')
                    end
@@ -48,7 +48,7 @@ classdef  labDevice
        % Declare the function signatures of all other functions in folder
        flush(obj);
        write(obj, txt);
-       ret=read(obj);
+       ret = read(obj);
    end
  
 end

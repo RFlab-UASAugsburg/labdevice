@@ -14,9 +14,9 @@ fopen(oETH)
 
 oETH.setDetector('qpeak');
 
-oETH.r_setStartFreq(30e6,0);
-oETH.r_setStartFreq(150e3,1);
-oETH.r_setStartFreq(30e6,2);
+oETH.setStartFrequency(30e6,0);
+oETH.setStartFrequency(150e3,1);
+oETH.setStartFrequency(30e6,2);
 
 oETH.r_setStopFreq(1e9,0);
 oETH.r_setStopFreq(30e6,1);
