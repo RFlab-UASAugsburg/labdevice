@@ -1,13 +1,16 @@
-%% Skript zum auslesen von empfangenen Daten
+%% Reading for the ESRP
 %
-% dieses Skript ist testweise nur mit einer ethernet Verbindung zum
-% Messempfänger möglich.
+%
 %
 %
 
-testFunc; % establishing a connection
+test_Initialize; % establishing a connection
 
-% ----------- SETUP -------------------------------------------------------
+%% ----------- OPEN THE CONNECTION ----------------------------------------
+
+fopen(oETH)
+
+%% ----------- SETUP ------------------------------------------------------
 
 oETH.setDetector('qpeak');
 
@@ -42,7 +45,7 @@ oETH.setAtten('off');
 
 
 
-% --------- Rücklesen der eingestellten Werte -----------------------------
+% --------- R�cklesen der eingestellten Werte -----------------------------
 
     write(oETH, 'FREQ:START?;*WAI')
 fstart = sscanf(fscanf(oETH, '%s'), '%d');
@@ -60,26 +63,6 @@ fstop2 = sscanf(fscanf(oETH, '%s'), '%f');
 fstep1 = sscanf(fscanf(oETH, '%s'), '%f');
     write(oETH, 'SCAN2:STEP?;*WAI')
 fstep2 = sscanf(fscanf(oETH, '%s'), '%f');
-
-
-
-% --------- Überprüfung des Frequenzbereiches -----------------------------
-
-if (fstart < fstart1) || ( fstop > fstop2)
-    error('Frequenzbereich fehlerhaft.');
-else
-    if (fstart < fstop1) && (fstop <= fstop1)
-        f1 = (fstart:fstep1:fstop)';
-        f2 = [];
-    elseif fstart >= fstart2
-        f1 = [];
-        f2 = (fstart:fstep2:fstop)';
-    else
-        f1 = (fstart:fstep1:fstop1)';
-        f2 = (fstart2:fstep2:fstop)';
-    end
-    f_data = unique([f1; f2; fstop]);
-end
 
 
 
