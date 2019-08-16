@@ -11,9 +11,9 @@ function setDetector (obj, detec)
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
 %
-%   detec:      'qpeak'  [String]
+%   detec:      'qpeak'  [String] (CISPR 16-1-1)
 %               'mpeak'  [String]
-%               'aver'   [String]
+%               'aver'   [String] (CISPR 16-1-1)
 %
 % Return values:
 %   /

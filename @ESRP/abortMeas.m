@@ -1,7 +1,7 @@
-function abortMeasurement (obj)
+function abortMeas (obj)
 %
 % This method stops a measurement.
-%   SCAN CONTOL
+%   SCAN CONTOL (= commands during the measurement)
 %
 %
 % Parameters:

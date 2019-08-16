@@ -1,7 +1,7 @@
-function resumeMeasurement(obj)
+function startMeasurement(obj)
 %
-% This method resumes the measurement.
-%   SCAN CONTOL
+% This method starts the measurement.
+%   SCAN CONTOL (= commands during the measurement)
 %
 %
 % Parameters:
@@ -17,6 +17,6 @@ function resumeMeasurement(obj)
 % See also:
 %
 
-write(obj, ['INIT2:IMM; *WAI']); % restart
+write(obj, ['INIT2:IMM; *WAI']); % start
 
 end

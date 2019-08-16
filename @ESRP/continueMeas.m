@@ -1,7 +1,7 @@
-function holdMeasurement (obj)
+function continueMeas(obj)
 %
-% This method pauses the measurement.
-%   SCAN CONTOL
+% This method continues the measurement at the frequency it was interrupted.
+%   SCAN CONTOL (= commands during the measurement)
 %
 %
 % Parameters:
@@ -17,6 +17,6 @@ function holdMeasurement (obj)
 % See also:
 %
 
-write(obj, ['HOLD; *WAI']);
+write(obj, ['INIT2:CONM; *WAI']); % resume
 
 end

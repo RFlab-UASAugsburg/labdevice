@@ -1,4 +1,4 @@
-function setMeasuringTime(obj, mesTim, range)
+function setMeasTime(obj, mesTim, range)
 %
 % Sets the measuring time.
 %   DEPENDING ON RANGE

@@ -1,4 +1,4 @@
-function SetInputAttenuation(obj, attSta, attVal)
+function setInputAttenuation(obj, attSta, attVal)
 %
 % Sets the input attenuation. Input Attenuation Protector
 %

@@ -1,11 +1,13 @@
-function setFreqDistance (obj, freqDist)
+function setFreqStepMode (obj, freqDist)
 %
-% Sets the space of the frequency to:
+% Sets the step mode of the frequency to:
 %   - auto
 %   - linear
 %   - logarithmic
 %
 % !! This will not influence the scale of the x-axis !!
+%
+% 
 %
 %
 % Parameters:
