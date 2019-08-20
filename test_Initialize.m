@@ -27,7 +27,3 @@ oETH = ESRP('eth', '141.82.73.167', 5025);
 oETH.resetESRP();
 
 end
-
-
-
-
