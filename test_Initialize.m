@@ -6,16 +6,16 @@
 instrreset; % Disconnect and delete all instrument objects
 
 %% Choose the requiered connection type
-connection = 1; % 0 = GPIB
+connection = 0; % 0 = GPIB
                 % 1 = ETH
                 
 switch connection
     case 0
 oGPIB = ESRP('gpib', 20, 1);
-oETH.set('InputBufferSize',  2^24)
-oETH.set('OutputBufferSize', 2^24)
-oETH.set('Timeout',          30);
-oETH.set('EOSCharCode',      0);
+%oGPIB.set('InputBufferSize',  2^24);
+%oGPIB.set('OutputBufferSize', 2^24);
+%oGPIB.set('Timeout',          30);
+%oGPIB.set('EOSCharCode',      0);
 
 
 oGPIB.resetESRP();
