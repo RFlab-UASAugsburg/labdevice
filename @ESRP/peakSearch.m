@@ -24,7 +24,7 @@ function peakSearch (obj, margin, method, no, noPeak)
 %                 1 - 500 (peaks)
 %
 %   noPeak:     number of peaks per subrange [int]
-%               in case of searching without subranges, this parameter
+%               in case of searching without subranges, this parameter is irrelevant
 %
 % Return values:
 %   /

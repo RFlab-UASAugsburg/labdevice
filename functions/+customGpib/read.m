@@ -17,6 +17,6 @@ t = tic;
             end
 %       end
 %   end
-disp('customGpib.read: timeout')
+%disp('customGpib.read: timeout') % useless there ?
 
 end

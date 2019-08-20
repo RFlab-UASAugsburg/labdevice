@@ -22,8 +22,8 @@ function setFreqStepSize(obj, stepSize, range)
 %                  - prop.comm(unication)Handle (interface specific)
 %
 %   stepSize:	increment (Schrittweite)
-%                 [Hz] -> stepMode = 'lin'
-%                 [%]  -> stepMode = 'log'
+%                 [Hz] -> if (stepMode = 'lin')
+%                 [%]  -> if (stepMode = 'log')
 %
 %   range:      choose the range
 %               1 - 10 [int]

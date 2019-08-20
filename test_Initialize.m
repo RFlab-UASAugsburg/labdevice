@@ -6,7 +6,7 @@
 instrreset; % Disconnect and delete all instrument objects
 
 %% Choose the requiered connection type
-connection = 0; % 0 = GPIB
+connection = 1; % 0 = GPIB
                 % 1 = ETH
                 
 switch connection
