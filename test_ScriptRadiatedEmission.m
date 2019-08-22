@@ -4,7 +4,9 @@
 %
 %
 
-test_Initialize; % establishing a connection
+if exist('connection', 'var')
+    test_Initialize;	% establishing a connection
+end
 
 %% ----------- SETUP ------------------------------------------------------
 
