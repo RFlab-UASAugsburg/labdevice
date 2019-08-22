@@ -7,4 +7,5 @@
 
 instrreset
 clear all
+close all
 clc
