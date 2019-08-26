@@ -117,7 +117,7 @@ rawdata_string = oETH.read;         % Warings appears. "Input buffer was filled 
                                     % Therefor the red data is cut of to 512 entries instead of 32335
 
 rawdata = sscanf(rawdata_string, '%e,');
-NData = length(rawdata);
+NData	= length(rawdata);
 
 
 % --------- compare frequency- and datavector -----------------------------
@@ -130,24 +130,27 @@ end
 
 % --------- plot ----------------------------------------------------------
 
-figure;
-subplot(3,1,1);
-plot(f_data /1e6, rawdata);
-xlabel('f/MHz'), ylabel('raw data/dBuV');
-xlim(f_data([1, end]) / 1e6);
+handleFigure                = figure;
+handleAxes1                 = subplot(3,1,1);
+handlePlot1                 = plot(handleAxes1, f_data /1e6, rawdata);
+handleAxes1.XLabel.String	= 'f/MHz';               % Lables x-axis
+handleAxes1.YLabel.String	= 'raw data/dBuV';       % Lables y-axis
+handleAxes1.XLim            = (f_data([1, end]) / 1e6);       % XLim sets the value range of the x-axis
 
 
 [f_AF, AF3m, AF10m, f_att, aff] = loadCorrectedData();
 
-att_fdata  = interp1(f_att, att, f_data);
-AF3m_fdata  = interp1(f_AF(f_AF <= 1e9), AF3m (f_AF <= 1e9), f_data);
-AF10m_fdata = interp1(f_AF(f_AF <= 1e9), AF10m(f_AF <= 1e9), f_data);
+att_fdata     = interp1(f_att, att, f_data);
+AF3m_fdata    = interp1(f_AF(f_AF <= 1e9), AF3m (f_AF <= 1e9), f_data);
+AF10m_fdata   = interp1(f_AF(f_AF <= 1e9), AF10m(f_AF <= 1e9), f_data);
 
-FB1limit = -7.9131 * log10(f_att) + 101.1672;
+FB1limit	  = -7.9131 * log10(f_att) + 101.1672;
 
-data_dBuV = rawdata + att_fdata + AF3m_fdata;
+data_dBuV     = rawdata + att_fdata + AF3m_fdata;
 
-subplot(3, 1, 2:3)
-semilogx( (f_data / 1e6), data_dBuV);
-xlabel('f/MHz'), ylabel('U/(dBuV/m)');
+handleAxes2                 = subplot(3, 1, 2:3);
+handlePlot2                 = plot(hanleAxes2, (f_data / 1e6), data_dBuV);  %before: semilogx
+handleAxes2.XScale          = 'log';
+handleAxes2.XLabel.String	= 'f/MHz';
+handleAxes2.YLabel.String	= 'U/(dBuV/m)';
 
