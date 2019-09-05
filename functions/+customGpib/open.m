@@ -31,6 +31,7 @@ function obj = open(obj)
 % References:
 
 obj.prop.commHandle = visa(obj.prop.gpib.vendor, ['GPIB', num2str(obj.prop.gpib.boardIndex), '::', num2str(obj.prop.gpib.primaryAdress), '::INSTR']);
+
 fopen(obj.prop.commHandle);
 
 return
