@@ -131,6 +131,7 @@ end
 % --------- plot ----------------------------------------------------------
 
 handleFigure                = figure;
+handleFigure.Position       = [13,82,1348,709];
 handleAxes1                 = subplot(3,1,1);
 handlePlot1                 = plot(handleAxes1, f_data /1e6, rawdata);
 handleAxes1.XLabel.String	= 'f/MHz';               % Lables x-axis
@@ -138,7 +139,7 @@ handleAxes1.YLabel.String	= 'raw data/dBuV';       % Lables y-axis
 handleAxes1.XLim            = (f_data([1, end]) / 1e6);       % XLim sets the value range of the x-axis
 
 
-[f_AF, AF3m, AF10m, f_att, aff] = loadCorrectedData();
+[f_AF, AF3m, AF10m, f_att, att] = loadCorrectedData_implementedJustForTesting();
 
 att_fdata     = interp1(f_att, att, f_data);
 AF3m_fdata    = interp1(f_AF(f_AF <= 1e9), AF3m (f_AF <= 1e9), f_data);
@@ -149,7 +150,7 @@ FB1limit	  = -7.9131 * log10(f_att) + 101.1672;
 data_dBuV     = rawdata + att_fdata + AF3m_fdata;
 
 handleAxes2                 = subplot(3, 1, 2:3);
-handlePlot2                 = plot(hanleAxes2, (f_data / 1e6), data_dBuV);  %before: semilogx
+handlePlot2                 = plot(handleAxes2, (f_data / 1e6), data_dBuV);  %before: semilogx
 handleAxes2.XScale          = 'log';
 handleAxes2.XLabel.String	= 'f/MHz';
 handleAxes2.YLabel.String	= 'U/(dBuV/m)';

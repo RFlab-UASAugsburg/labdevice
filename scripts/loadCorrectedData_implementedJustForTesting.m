@@ -1,4 +1,4 @@
-function [f_AF, AF3m, AF10m, f_att, att] = loadCorrectedData()
+function [f_AF, AF3m, AF10m, f_att, att] = loadCorrectedData_implementedJustForTesting()
 
 fid = fopen('./correctedData/Antennenfaktor.csv');
 if fid == -1
