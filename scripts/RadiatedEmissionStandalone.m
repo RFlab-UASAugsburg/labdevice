@@ -13,43 +13,43 @@ end
 
 %% ----------- SETUP ------------------------------------------------------
 
-oETH.setDetector('qpeak');
+objESRP.setDetector('qpeak');
 
-oETH.setStartFrequency(30e6,0);
-oETH.setStartFrequency(150e3,1);
-oETH.setStartFrequency(30e6,2);
+objESRP.setStartFrequency(30e6,0);
+objESRP.setStartFrequency(150e3,1);
+objESRP.setStartFrequency(30e6,2);
 
-oETH.setStopFrequency(1e9,0);
-oETH.setStopFrequency(30e6,1);
-oETH.setStopFrequency(3e9,2);
+objESRP.setStopFrequency(1e9,0);
+objESRP.setStopFrequency(30e6,1);
+objESRP.setStopFrequency(3e9,2);
 
-oETH.setFreqStepSize(4e3,1);
-oETH.setFreqStepSize(120e3,2);
+objESRP.setFreqStepSize(4e3,1);
+objESRP.setFreqStepSize(120e3,2);
 
-oETH.setMeasBandwidth(9e3,1);
-oETH.setMeasBandwidth(120e3,2);
+objESRP.setMeasBandwidth(9e3,1);
+objESRP.setMeasBandwidth(120e3,2);
 
-oETH.setMeasTime(200e-3,1);
-oETH.setMeasTime(50e-3,2);
+objESRP.setMeasTime(200e-3,1);
+objESRP.setMeasTime(50e-3,2);
 
-oETH.setAttenuation(10,1);
-oETH.setAttenuation(0,2);
+objESRP.setAttenuation(10,1);
+objESRP.setAttenuation(0,2);
 
-oETH.setPreAmp('off',1);
-oETH.setPreAmp('off',2);
+objESRP.setPreAmp('off',1);
+objESRP.setPreAmp('off',2);
 
 
-oETH.actReceiverMode;
-oETH.setAutoBandwidth('off');
-oETH.singleSweep;
-oETH.setInputAttenuation('off');
+objESRP.actReceiverMode;
+objESRP.setAutoBandwidth('off');
+objESRP.singleSweep;
+objESRP.setInputAttenuation('off');
 
 
 %% --------- Measurement --------------------------------------------------
 
-oETH.singleSweep;
+objESRP.singleSweep;
 
-oETH.startMeasurement;
+objESRP.startMeasurement;
 
 pause(10); % workarround. Probably time violation. Otherwise errors appear.
 
@@ -57,8 +57,8 @@ pause(10); % workarround. Probably time violation. Otherwise errors appear.
 
 % --------- Queries unit of y-Axis ----------------------------------------
 
-oETH.write('CALC:UNIT:POW?; *WAI');
-unit = oETH.read;
+objESRP.write('CALC:UNIT:POW?; *WAI');
+unit = objESRP.read;
 
 switch unit
     case 'DBUV'
@@ -71,24 +71,24 @@ end
 
 % --------- Queries the set parameters ------------------------------------
 
-write(oETH, 'FREQ:START?; *WAI')
-fstart = read(oETH);
-write(oETH, 'SCAN1:STAR?; *WAI')
-fstart1 = read(oETH);
-write(oETH, 'SCAN2:STAR?; *WAI')
-fstart2 = read(oETH);
+write(objESRP, 'FREQ:START?; *WAI')
+fstart = read(objESRP);
+write(objESRP, 'SCAN1:STAR?; *WAI')
+fstart1 = read(objESRP);
+write(objESRP, 'SCAN2:STAR?; *WAI')
+fstart2 = read(objESRP);
 
-write(oETH,  'FREQ:STOP?; *WAI')
-fstop = read(oETH);
-write(oETH, 'SCAN1:STOP?; *WAI')
-fstop1 = read(oETH);
-write(oETH, 'SCAN2:STOP?; *WAI')
-fstop2 = read(oETH);
+write(objESRP,  'FREQ:STOP?; *WAI')
+fstop = read(objESRP);
+write(objESRP, 'SCAN1:STOP?; *WAI')
+fstop1 = read(objESRP);
+write(objESRP, 'SCAN2:STOP?; *WAI')
+fstop2 = read(objESRP);
 
-write(oETH, 'SCAN1:STEP?; *WAI')
-fstep1 = read(oETH);
-write(oETH, 'SCAN2:STEP?; *WAI')
-fstep2 = read(oETH);
+write(objESRP, 'SCAN1:STEP?; *WAI')
+fstep1 = read(objESRP);
+write(objESRP, 'SCAN2:STEP?; *WAI')
+fstep2 = read(objESRP);
 
 % --------- Check the frequency range -------------------------------------
 
@@ -112,8 +112,8 @@ end
 
 % --------- EVALUATION ----------------------------------------------------
 
-oETH.write('TRAC? TRACE1; *WAI');
-rawdata_string = oETH.read;         % Warings appears. "Input buffer was filled befor the Terminator was reached."
+objESRP.write('TRAC? TRACE1; *WAI');
+rawdata_string = objESRP.read;         % Warings appears. "Input buffer was filled befor the Terminator was reached."
                                     % Therefor the red data is cut of to 512 entries instead of 32335
 
 rawdata = sscanf(rawdata_string, '%e,');
