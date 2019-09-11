@@ -1,4 +1,4 @@
-function InitializeESRPConnectionGUI(connection)
+function objESRP = InitializeESRPConnectionGUI(connection)
 %
 % Establish the connection w/ the ESRP
 %
@@ -28,4 +28,5 @@ switch connection
 
 end
 
+return objESRP
 end
