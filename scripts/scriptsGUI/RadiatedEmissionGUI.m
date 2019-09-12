@@ -7,10 +7,6 @@
 addpath ../../functions/.      % access 'functions'     folder
 addpath ../../correctedData/.  % access 'correctedData' folder
 
-if ~exist('connection', 'var')
-    initializeConnection;	% establishing a connection
-end
-
 %% ----------- SETUP ------------------------------------------------------
 
 objESRP.setDetector('qpeak');
@@ -130,7 +126,7 @@ end
 
 % --------- plot ----------------------------------------------------------
 
-handleFigure                = figure;
+handleFigure                = uifigure; %(ui)
 handleFigure.Position       = [13,82,1348,709];
 handleAxes1                 = subplot(3,1,1);
 handlePlot1                 = plot(handleAxes1, f_data /1e6, rawdata);
