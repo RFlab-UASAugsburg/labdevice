@@ -1,38 +1,48 @@
-%% Reading for the ESRP
+function radiatedEmissionGUI(objESRP, detector, startFreq, stopFreq, measTime)
+%
+% Radiates Emission Measurement
+%
+% (long description goes here)
 %
 %
+% Parameters:
+%   connection
 %
+% Return values:
+%   /
+%
+% See also:
 %
 
-addpath ../../functions/.      % access 'functions'     folder
-addpath ../../correctedData/.  % access 'correctedData' folder
+addpath ../functions/.      % access 'functions'     folder
+addpath ../correctedData/.  % access 'correctedData' folder
 
 %% ----------- SETUP ------------------------------------------------------
 
-objESRP.setDetector('qpeak');
+objESRP.setDetector(detector);
 
-objESRP.setStartFrequency(30e6,0);
-objESRP.setStartFrequency(150e3,1);
-objESRP.setStartFrequency(30e6,2);
+objESRP.setStartFrequency(startFreq, 0);
+objESRP.setStartFrequency(150e3, 1);
+objESRP.setStartFrequency(30e6, 2);
 
-objESRP.setStopFrequency(1e9,0);
-objESRP.setStopFrequency(30e6,1);
-objESRP.setStopFrequency(3e9,2);
+objESRP.setStopFrequency(stopFreq, 0);
+objESRP.setStopFrequency(30e6, 1);
+objESRP.setStopFrequency(3e9, 2);
 
-objESRP.setFreqStepSize(4e3,1);
-objESRP.setFreqStepSize(120e3,2);
+objESRP.setFreqStepSize(4e3, 1);
+objESRP.setFreqStepSize(120e3, 2);
 
-objESRP.setMeasBandwidth(9e3,1);
-objESRP.setMeasBandwidth(120e3,2);
+objESRP.setMeasBandwidth(9e3, 1);
+objESRP.setMeasBandwidth(120e, 2);
 
-objESRP.setMeasTime(200e-3,1);
-objESRP.setMeasTime(50e-3,2);
+objESRP.setMeasTime(200e-3, 1);
+objESRP.setMeasTime(measTime, 2);
 
-objESRP.setAttenuation(10,1);
-objESRP.setAttenuation(0,2);
+objESRP.setAttenuation(10, 1);
+objESRP.setAttenuation(0, 2);
 
-objESRP.setPreAmp('off',1);
-objESRP.setPreAmp('off',2);
+objESRP.setPreAmp('off', 1);
+objESRP.setPreAmp('off', 2);
 
 
 objESRP.actReceiverMode;
@@ -126,14 +136,6 @@ end
 
 % --------- plot ----------------------------------------------------------
 
-handleFigure                = uifigure; %(ui)
-handleFigure.Position       = [13,82,1348,709];
-handleAxes1                 = subplot(3,1,1);
-handlePlot1                 = plot(handleAxes1, f_data /1e6, rawdata);
-handleAxes1.XLabel.String	= 'f/MHz';               % Lables x-axis
-handleAxes1.YLabel.String	= 'raw data/dBuV';       % Lables y-axis
-handleAxes1.XLim            = (f_data([1, end]) / 1e6);       % XLim sets the value range of the x-axis
-
 
 [f_AF, AF3m, AF10m, f_att, att] = loadCorrectedData_implementedJustForTesting();
 
@@ -145,9 +147,6 @@ FB1limit	  = -7.9131 * log10(f_att) + 101.1672;
 
 data_dBuV     = rawdata + att_fdata + AF3m_fdata;
 
-handleAxes2                 = subplot(3, 1, 2:3);
-handlePlot2                 = plot(handleAxes2, (f_data / 1e6), data_dBuV);  %before: semilogx
-handleAxes2.XScale          = 'log';
-handleAxes2.XLabel.String	= 'f/MHz';
-handleAxes2.YLabel.String	= 'U/(dBuV/m)';
+plot(app.Axes, (f_data / 1e6), data_dBuV);  %before: semilogx
 
+end
