@@ -18,13 +18,11 @@ instrreset; % Disconnect and delete all instrument objects
 clearvars;  % Delete all variables
 
 switch connection
-    case 0
-        objESRP = ESRP('gpib', 20, 1);
     case 1
+        objESRP = ESRP('gpib', 20, 1);
+    case 0
         objESRP = ESRP('eth', '141.82.73.167', 5025);
 end
 
 objESRP.resetESRP();
-
-return objESRP;
 end
