@@ -1,4 +1,4 @@
-function objESRP = radiatedEmissionGUI(objESRP, detector, startFreq, stopFreq, measTime)
+function objESRP = radiated(objESRP, detector, startFreq, stopFreq, measTime)
 %
 % Radiates Emission Measurement
 %
