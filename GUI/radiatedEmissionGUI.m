@@ -33,7 +33,7 @@ objESRP.setFreqStepSize(4e3, 1);
 objESRP.setFreqStepSize(120e3, 2);
 
 objESRP.setMeasBandwidth(9e3, 1);
-objESRP.setMeasBandwidth(120e, 2);
+objESRP.setMeasBandwidth(120e3, 2);
 
 objESRP.setMeasTime(200e-3, 1);
 objESRP.setMeasTime(measTime, 2);
