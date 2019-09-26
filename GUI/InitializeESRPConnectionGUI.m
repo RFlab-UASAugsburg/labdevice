@@ -15,7 +15,7 @@ function objESRP = InitializeESRPConnectionGUI(connection)
 %
 
 instrreset; % Disconnect and delete all instrument objects
-clearvars;  % Delete all variables
+
 
 switch connection
     case 1
