@@ -1,3 +1,4 @@
 # ignore all asv files (MATLAB temp files)
 *.asv
 soerenTest.m
+test.txt
