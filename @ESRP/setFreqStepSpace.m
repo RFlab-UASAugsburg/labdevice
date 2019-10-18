@@ -1,9 +1,13 @@
 function setFreqStepSpace(obj, mode)
 %
 % Sets the mode of the Step Space.
-%   DEPENDING ON RANGE
 % 
-% Note that the frequency step space for TIME DOMAIN SCANS (R&S ESRP-K53) is always selected automatically.
+% Note that the frequency step space for TIME DOMAIN SCANS (R&S ESRP-K53)
+% is always selected automatically!
+%
+% In order to set the frequency step space manually, the time domain scan
+% must be switched off. Use the setTimeDomainScan.m function to do this.
+%
 %
 %
 % Parameters:
@@ -20,6 +24,7 @@ function setFreqStepSpace(obj, mode)
 %   /
 %
 % See also:
+%   setTimeDomainScan.m
 %
 
 switch  mode
