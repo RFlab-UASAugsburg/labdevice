@@ -35,9 +35,9 @@ classdef  labDevice
                    end
 
                otherwise
-                   error('connection: mode not supported')
+
+                   error('LabDevice Interface: Mode not supported')
            end
-           addpath('.\functions');
            obj = openDev(obj);
        end
        
