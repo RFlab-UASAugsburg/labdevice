@@ -29,11 +29,11 @@ function setFreqStepSpace(obj, mode)
 
 switch  mode
     case 'lin'
-        write(obj, ['SWE:SPAC LIN; *WAI']);
+        write(obj, ['SWE:SPAC LIN; *WAI']);     % set to linear
     case 'log'
-        write(obj, ['SWE:SPAC LOG; *WAI']);
+        write(obj, ['SWE:SPAC LOG; *WAI']);     % set to logarithmic
     otherwise
-        error('Selected mode does not exist');
+        error('Selected mode does not exist. (mode)');
 end
     
 

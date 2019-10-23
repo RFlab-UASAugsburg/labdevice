@@ -1,4 +1,4 @@
-function setTimeDomainScan(obj, mode)
+function timeDomainScan(obj, mode)
 %
 % Sets the mode of the Step Space.
 %   DEPENDING ON RANGE
