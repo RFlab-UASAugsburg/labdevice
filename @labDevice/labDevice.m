@@ -11,7 +11,7 @@ classdef  labDevice
             end
             obj.prop.mode = mode;
             switch (obj.prop.mode)
-                case 'eth'
+                case 'eth' 
                     if length(varargin) ~= 2
                         error('ethernet interface got wrong number of input arguments')
                     end

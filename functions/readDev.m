@@ -26,7 +26,7 @@ function ret = readDev(obj)
 
 switch(obj.prop.mode)
     case 'eth'
-        ret = customEth.read(obj);
+        ret = customEthOverJava.read(obj);
     case 'gpib'
         ret = customGpib.read(obj);
     case 'eth2gpib'

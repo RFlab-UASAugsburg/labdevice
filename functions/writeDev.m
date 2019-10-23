@@ -25,7 +25,7 @@ function ret = writeDev(obj, txt)
 
 switch(obj.prop.mode)
     case 'eth'
-        ret = customEth.write(obj,txt);
+        ret = customEthOverJava.write(obj,txt);
     case 'gpib'
         ret = customGpib.write(obj,txt);
     case 'eth2gpib'
