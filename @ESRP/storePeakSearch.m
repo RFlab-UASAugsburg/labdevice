@@ -12,8 +12,6 @@ function storePeakSearch (obj)
 %                - port
 %                - prop.comm(unication)Handle (interface specific)
 %
-%   margin:     span [dC]
-%                 Range: -200 dB to 200 dB
 %
 %
 % Return values:

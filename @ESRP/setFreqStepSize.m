@@ -3,7 +3,8 @@ function setFreqStepSize(obj, stepSize, range)
 % Sets the increment between the measuring points.
 %   DEPENDING ON RANGE
 % 
-% Note that the frequency stepsize for TIME DOMAIN SCANS (R&S ESRP-K53) is always selected automatically.
+% NOTE: The frequency stepsize for TIME DOMAIN SCANS (R&S ESRP-K53) is always selected automatically.
+%       Only needed when timeDomainScan.m is turned off.
 %
 % Frequency stepsize within the scan range.
 % If you define a stepsize that is larger than the range itself,
@@ -31,11 +32,11 @@ function setFreqStepSize(obj, stepSize, range)
 % Return values:
 %   /
 %
-% See also:
+% See also: setTimeDomainScan.m
 %
 
-if (range < 0 || range > 10)
-	error('range is not correct (0 to 10)');
+if (range < 1 || range > 10)
+	error('Range is not correct. (1 to 10)');
 else
     write(obj, ['SCAN', num2str(range), ':STEP ', num2str(stepSize), 'Hz; *WAI']);
     %fprintf('Set the incremente to %.2f Hz\n', stepSize);

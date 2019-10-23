@@ -1,4 +1,4 @@
-function actReceiverMode (obj)
+function activateReceiverMode (obj)
 %
 % Activate the Receiver Mode (ESRP)
 %

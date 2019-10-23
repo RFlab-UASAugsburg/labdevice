@@ -19,7 +19,7 @@ function setPreAmp (obj, gain, range)
 %               'off' [String]
 %
 %   range:      choose the range
-%               1 - 3 [int]
+%               1 - 10 [int]
 %
 % Return values:
 %   /
@@ -27,8 +27,8 @@ function setPreAmp (obj, gain, range)
 % See also:
 %
 
-if (range < 0 || range > 3)
-	error('range is not correct (0 to 3)');
+if (range < 1 || range > 10)
+	error('range is not correct (1 to 10)');
 else
     switch gain
         case 'on'
@@ -36,7 +36,7 @@ else
         case 'off'
             write(obj, ['SCAN', num2str(range), ':INP:GAIN:STAT ', gain, '; *WAI']);
         otherwise
-            fprintf("parameter 'gain' unclear.\n");
+            error('Parameter not readable. Check the datatyp. (gain)');
     end
 end
 

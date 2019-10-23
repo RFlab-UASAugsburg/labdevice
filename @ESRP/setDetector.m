@@ -30,7 +30,7 @@ switch detec
     case 'aver'
         write(obj, ['DET1:FUNC AVER; *WAI']);
     otherwise
-        error('Detector unbekannt.');
+        error('Detector unbekannt. (detec)');
     
   
 end

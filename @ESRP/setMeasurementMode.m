@@ -6,7 +6,7 @@ function setMeasurementMode(obj, mode)
 %   - I/Q Analyser Mode
 %
 %
-%   NOTE: I/Q Analyser and New Spectrum not supported.
+%   NOTE: "I/Q Analyser" and "New Spectrum" not supported.
 %
 %
 %
