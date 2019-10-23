@@ -6,9 +6,8 @@ function setMeasurementMode(obj, mode)
 %   - I/Q Analyser Mode
 %
 %
-%   NOTE: I/Q Analyser Mode doesn't work atm
+%   NOTE: I/Q Analyser and New Spectrum not supported.
 %
-% (long description goes here)
 %
 %
 % Parameters:
@@ -42,8 +41,9 @@ switch mode
         write(obj, ['INST REC']);
     case 'spec'                     % spectrum mode
         write(obj, ['INST SAN']);
-    %case 'newspec'
-%     case 'iq'                       % IQ-Analyser mode
+     case 'iq'                       % IQ-Analyser mode
+         error('IQ Analyser Mode remotivly not supported.');
+         
 %         write(obj, ['TRAC:IQ']);
 %         write(obj, ['TRAC:IQ:SET']);
 %         switch iqdata              
@@ -58,6 +58,7 @@ switch mode
 %             otherwise
 %                 error('Wrong display type of the IQ data. (iqdata)');
 %        end
+
     otherwise
         error('Selected mode does not exist. (mode)');
 end
