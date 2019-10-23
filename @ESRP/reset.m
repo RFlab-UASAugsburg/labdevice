@@ -1,4 +1,4 @@
-function resetESRP (obj)
+function reset (obj)
 % 
 % Resets the ESRP
 %
