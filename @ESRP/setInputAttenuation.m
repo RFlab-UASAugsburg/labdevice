@@ -1,10 +1,13 @@
-function setInputAttenuation(obj, attSta, attVal)
+function setInputAttenuation(obj, prot, auto, value)
 %
-% Sets the input attenuation. Input Attenuation Protector
+% Sets the input attenuation.
+%	'prot' and 'auto' needs to be set.
+%	'value' only when automatic attenuation configuration is turned off.
+%
+% WARNING: To protect the input mixer, the attenuation levels of 10dB or
+% less are possible only if the input protection ('prot') is turned off.
 %
 % This function defines the attenuation level at the RF input.
-% Either the attenuation will be turned off or it will be set between 0 dB
-% and 75 dB (increment: 5 dB).
 %
 %
 % Parameters:
@@ -14,12 +17,14 @@ function setInputAttenuation(obj, attSta, attVal)
 %               - port
 %               - prop.comm(unication)Handle (interface specific)
 %
-%   attSta:     attenuation state
-%                 'on'   [String]
-%                 'off'  [String]  ? 10 dB (0 - 10 dB)
+%   auto:   automatic attenuation configuration
+%               'on'   [String]
+%               'off'  [String]
 %
-%   attVal:     attenuation value
-%                 0 dB - 75 dB (increment: 5)
+%   value:  attenuation value
+%           	0 dB - 70 dB (increment: 10)
+%
+%   prot:   attenuation protection
 %
 %
 % Return values:
@@ -28,18 +33,23 @@ function setInputAttenuation(obj, attSta, attVal)
 % See also:
 %
 
-
-switch attSta
+switch prot             % turns the input attenuation mode on or off
     case 'on'
-        write(obj, ['INP:ATT:PROT ON; *WAI']);
-        write(obj, ['INP:ATT ', num2str(attVal), 'dB']);
-        %fprintf('Input attenuation protector set: on\nValue: %d dB\n', attVal);
-    
+        write(obj, ['INP:ATT:PROT ON']);
     case 'off'
-        write(obj, ['INP:ATT:PROT OFF; *WAI']);
-        %fprintf('Input attenuation protector set: off\nValue: 0 dB - 10 dB\n');
+        write(obj, ['INP:ATT:PROT OFF']);
     otherwise
-        error('Attenuation state unclear. (attSta)');
+        error('Selected mode does not exist. (prot)');
+end
+
+switch auto             % turns the automatic attenuation configuration on or off
+    case 'on'
+        write(obj, ['INP:ATT:AUTO ON; *WAI']);
+    case 'off'
+        write(obj, ['INP:ATT:AUTO OFF; *WAI']);
+        write(obj, ['INP:ATT ', num2str(value), 'dB']); % sets the attenuation value
+    otherwise
+        error('Selected mode does not exist. (auto)');
 end
 
 end

@@ -22,9 +22,9 @@ function setAutoBandwidth (obj, setBandw)
 
 switch setBandw
     case 'off'
-        write(obj,['BAND:RES:AUTO OFF; *WAI']);
+        write(obj, ['BAND:RES:AUTO OFF; *WAI']);
     case 'on'
-        write(obj,['BAND:RES:AUTO ON;  *WAI']);
+        write(obj, ['BAND:RES:AUTO ON;  *WAI']);
     otherwise
         error('Unclear status. (setBandw)');
 end

@@ -1,4 +1,4 @@
-function controlDisp (obj, setDisp)
+function controlDisplay (obj, setDisp)
 %
 % Turns the Display of the ESRP on or off
 %
@@ -24,10 +24,10 @@ function controlDisp (obj, setDisp)
 %
 
 switch setDisp
-    case 'off'
-        write(obj, ['SYST:DISP:UPD OFF']);
     case 'on'
         write(obj, ['SYST:DISP:UPD ON']);
+    case 'off'
+        write(obj, ['SYST:DISP:UPD OFF']);
     otherwise
         error('Unclear status. (setDisp)');
 end

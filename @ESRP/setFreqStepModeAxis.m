@@ -24,11 +24,11 @@ function setFreqStepModeAxis (obj, freqDistAxis)
 
 switch freqDistAxis
     case 'auto'
-        write(obj,['DISP:TRAC1:X:SPAC AUTO; *WAI']);
+        write(obj, ['DISP:TRAC1:X:SPAC AUTO; *WAI']);
     case 'lin'
-        write(obj,['DISP:TRAC1:X:SPAC LIN;  *WAI']);
+        write(obj, ['DISP:TRAC1:X:SPAC LIN;  *WAI']);
     case 'log'
-        write(obj,['DISP:TRAC1:X:SPAC LOG;  *WAI']);
+        write(obj, ['DISP:TRAC1:X:SPAC LOG;  *WAI']);
     otherwise
         error('Unclear status. (freqDistAxis)');
 end

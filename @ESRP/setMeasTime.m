@@ -17,7 +17,7 @@ function setMeasTime(obj, mesTim, range)
 %   mesTim:     measuring time [s]
 %
 %   range:      choose the range
-%               1 - 3 [int]
+%               1 - 10 [int]
 %
 % Return values:
 %   /
@@ -25,8 +25,8 @@ function setMeasTime(obj, mesTim, range)
 % See also:
 %
 
-if (range < 0 || range > 3)
-	error('range is not correct (0 to 3)');
+if (range < 1 || range > 10)
+	error('Range is not correct (0 to 10)');
 else
     write(obj, ['SCAN', num2str(range), ':TIME ', num2str(mesTim), '; *WAI']);
 end
