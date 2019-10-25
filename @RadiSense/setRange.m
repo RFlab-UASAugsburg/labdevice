@@ -16,7 +16,7 @@ function ret = setRange(obj, range)
         throw(MException(msgID,msg));
     end
     response = read(obj);
-    if response(2) ~= "R"
+    if length(response) ~= 3
         msgID = "RADISENSE:WeirdError";
         msg = "could not set range" + response;
         throw(MException(msgID,msg));
