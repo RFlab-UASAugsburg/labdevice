@@ -1,5 +1,5 @@
 classdef RadiSense < labDevice
-    %RADISENSE Summary of this class goes here
+    %RADISENSE RadiSense Electric field probe
     %   Detailed explanation goes here
     
     properties
@@ -17,7 +17,35 @@ classdef RadiSense < labDevice
         end
         function ret = read(obj)
            ret = read@labDevice(obj);
-           % add device specific read from here on
+           % Handle error messages here
+           switch ret
+               case ":E1"
+                   msgID = "RADISENSE:BadCommand";
+                   msg = "Internal buffer overflow (too long command)";
+               case ":E2"
+                   msgID = "RADISENSE:BadCommand";
+                   msg = "Command too long";
+               case ":E3"
+                   msgID = "RADISENSE:badCommand";
+                   msg = "Invalid Command";
+               case ":E4"
+                   msgID = "RADISENSE:BadCommand";
+                   msg = "Command too short, illegal character or invalid parameter";
+               case ":E5"
+                   msgID = "RADISENSE:HWError";
+                   msg = "Hardware Error";
+               case ":E6"
+                   msgID = "RADISENSE:ParityError";
+                   msg = "Parity Error";
+               case ":E9"
+                   msgID = "RADISENSE:NoConnection";
+                   msg = "Probe is not connected, maybe LASER is off?";
+               otherwise
+                   return
+           end
+           throw(MException(msgID,msg));
+                
+           
         end
        
         function flush(obj)
@@ -29,7 +57,6 @@ classdef RadiSense < labDevice
            write@labDevice(obj, txt);
            % add device write destructor from here on
         end
-        init(obj);
     end
 end
 
