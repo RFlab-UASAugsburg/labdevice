@@ -5,4 +5,3 @@ function ret = getRange(obj)
 ret = obj.setRange("N");
 ret = obj.setRange(mod(ret-2,4)+1);
 end
-

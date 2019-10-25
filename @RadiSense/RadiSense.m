@@ -3,7 +3,6 @@ classdef RadiSense < labDevice
     %   Detailed explanation goes here
     
     properties
-        range
     end
     
     methods

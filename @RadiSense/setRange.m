@@ -1,22 +1,26 @@
-function setRange(obj, range)
+function ret = setRange(obj, range)
 %SETRANGE set measurement range
+%
 %   1: 0 to 10 V/m
 %   2: 10 to 30 V/m
 %   3: 30 to 100 V/m
 %   4: 100 to end of spec (overload from 600 V/m)
-    if (0 < range)&&(range < 5)
+%   N: Cycle to the next bigger range step, goes from 4 back to 1 at the
+%   end
+    legalInput = ["1","2","3","4","N"];
+    if ismember(num2str(range),legalInput)
         write(obj, "R" + num2str(range));
-    elseif range == "N"
-            write(obj, "RN");
     else
-        fprintf("range can only be 1, 2, 3, 4");
-        return
+        msgID = "RADISENSE:BadInput";
+        msg = "range can only be 1, 2, 3, 4, or N to cycle to the next range step";
+        throw(MException(msgID,msg));
     end
     response = read(obj);
     if response(2) ~= "R"
-        fprintf("could not set range!");
-    else
-        obj.range = response(3);
+        msgID = "RADISENSE:WeirdError";
+        msg = "could not set range" + response;
+        throw(MException(msgID,msg));
     end
+    ret = response(3);
 end
 
