@@ -12,7 +12,7 @@ classdef  ESRP < labDevice
            % toolbox or when exporting the code to octave.
            set(obj.prop.commHandle,'InputBufferSize', 2^24)
            set(obj.prop.commHandle,'OutputBufferSize', 2^24)
-           set(obj.prop.commHandle,'Timeout', 30);
+           set(obj.prop.commHandle,'Timeout', 20);
            fopen(obj.prop.commHandle);
        end
        

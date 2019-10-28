@@ -1,0 +1,22 @@
+{
+    "devices": {
+        "esrp": {
+            "eth": {
+                "ip": "141.82.73.167",
+                "port": 5025
+            },
+            "gpib": {
+                "address": 20,
+                "boardIdx": 1,
+                "vendor": "agilent"
+            }
+        },
+        "smx": {
+            "gpib": {
+                "address": 6,
+                "boardIdx": 1,
+                "vendor": "agilent"
+            }
+        }
+    }
+}
