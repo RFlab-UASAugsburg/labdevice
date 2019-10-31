@@ -29,10 +29,10 @@ function timeDomainScan(obj, mode)
 
 switch mode
     case 'on'
-        write(obj, "FREQ:MODE TDOM");
+        write(obj, 'FREQ:MODE TDOM');
     case 'off'
-        write(obj, "FREQ:MODE SCAN");
-        write(obj, "SWE:SPAC LOG");     % sets the frequency step size as default to logarithmic.
+        write(obj, 'FREQ:MODE SCAN');
+        write(obj, 'SWE:SPAC LOG');     % sets the frequency step size as default to logarithmic.
     otherwise
         error('Selected mode does not exist');
 end
