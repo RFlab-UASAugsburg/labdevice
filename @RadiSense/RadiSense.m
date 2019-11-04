@@ -7,7 +7,7 @@ classdef RadiSense < labDevice
     
     methods
         function obj = RadiSense(mode,varargin)
-            obj@labDevice(mode,varargin);
+            obj@labDevice(mfilename,mode,varargin);
         end
         
         function delete(obj)

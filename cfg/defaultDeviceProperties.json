@@ -9,6 +9,11 @@
                 "address": 20,
                 "boardIdx": 1,
                 "vendor": "agilent"
+            },
+            "additionalCommunicationParameters": {
+                "Timeout": 20,
+                "InputBufferSize": 16777216,
+                "OutputBufferSize": 16777216
             }
         },
         "smx": {
@@ -17,6 +22,21 @@
                 "boardIdx": 1,
                 "vendor": "agilent"
             }
+        },
+        "radisense": {
+            "gpib": {
+                "address": 8,
+                "boardIdx": 1,
+                "vendor": "agilent"
+            }
+        },
+        "hp34401a": {
+            "gpib": {
+                "address": 3,
+                "boardIdx": 1,
+                "vendor": "agilent"
+            }
         }
+
     }
 }

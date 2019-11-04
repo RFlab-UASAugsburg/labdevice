@@ -4,7 +4,7 @@ classdef  SMX < labDevice
     end
    methods 
        function obj = SMX(mode, varargin)
-           obj@labDevice(mode, varargin);
+           obj@labDevice(mfilename,mode, varargin);
            % add device specific constructor from here on
        end
        

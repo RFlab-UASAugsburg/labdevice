@@ -4,16 +4,8 @@ classdef  ESRP < labDevice
     end
    methods 
        function obj = ESRP(mode, varargin)
-           obj@labDevice(mode, varargin);
+           obj@labDevice(mfilename, mode, varargin); % mfilename is the constructor name
            % add device specific constructor from here on
-           fclose(obj.prop.commHandle); % close connection in order to change connection parameters
-           % using fclose and fopen here is a workaround.
-           % Must be considered when using matlab without its communication
-           % toolbox or when exporting the code to octave.
-           set(obj.prop.commHandle,'InputBufferSize', 2^24)
-           set(obj.prop.commHandle,'OutputBufferSize', 2^24)
-           set(obj.prop.commHandle,'Timeout', 20);
-           fopen(obj.prop.commHandle);
        end
        
        function delete(obj)
