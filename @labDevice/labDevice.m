@@ -5,6 +5,25 @@ classdef  labDevice
 % At the moment just ethernet and gpib connections can be established.
 % The connection mode needs to be handed over. There is no corresponding
 % default property for it.
+%
+%   dev = labDevice(deviceName, conMode) returns labDevice object, dev,
+%   with default values for the parameters of the connection mode conMode.
+%
+%
+% Parameters of Constructor:
+%  mode:         connection mode (eth or gpib at the moment)
+%  
+%
+% Return values of Constructor:
+%  obj:         lab Device Handle with properties
+%                - mode
+%                - address
+%                - port
+%                - comm(unication)Handle (interface specific)
+%
+% See also: write, read, flush
+% 
+% References: 
 
     properties
       prop

@@ -1,9 +1,9 @@
 function defaultProperties = getDefaultDeviceProperties(deviceName)
-%
+%getDefaultDeviceProperties Get the Default Lab Device specific properties
+%                           for construction of object.
 % Search for a default addresses of device. All default device settings
 % should be stored in a json file in this folder. Always write device 
 % names in the json file as lowercase.
-%
 %
 %
 % Parameters:
