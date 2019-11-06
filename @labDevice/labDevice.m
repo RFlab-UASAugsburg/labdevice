@@ -35,8 +35,14 @@ classdef  labDevice
                    end
 
                otherwise
+<<<<<<< HEAD
                    error('SMX: mode not supported')
             end
+=======
+
+                   error('LabDevice Interface: Mode not supported')
+           end
+>>>>>>> origin/master
            obj = openDev(obj);
        end
        

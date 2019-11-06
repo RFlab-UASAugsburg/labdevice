@@ -1,7 +1,6 @@
 function startMeasurement(obj)
 %
 % This method starts the measurement.
-%   SCAN CONTOL (= commands during the measurement)
 %
 %
 % Parameters:

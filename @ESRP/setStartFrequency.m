@@ -17,7 +17,7 @@ function setStartFrequency(obj, freq, range)
 %
 %   range:      defines which start frequency will be set
 %               0:      Sets the start frequency of the whole measurement
-%               1-3:    Sets the start frequency of the range (1 to 3)
+%               1-10:    Sets the start frequency of the range 1 to 10
 %
 % Return values:
 %   /
@@ -25,7 +25,7 @@ function setStartFrequency(obj, freq, range)
 % See also:
 %
 
-if (range < 0 || range > 3)
+if (range < 0 || range > 10)
     error('range is not correct (0 to 3)');
 else
     switch range

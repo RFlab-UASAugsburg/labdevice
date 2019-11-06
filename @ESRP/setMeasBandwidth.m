@@ -31,7 +31,7 @@ function setMeasBandwidth (obj, rbw, range)
 %
 
 if (range < 0 || range > 10)
-	error('range is not correct (0 to 10)');
+	error('Range is not correct (0 to 10)');
 else
     write(obj, ['SCAN', num2str(range), ':BAND:RES ', num2str(rbw), 'Hz; *WAI']);
 end

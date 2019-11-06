@@ -1,4 +1,4 @@
-function setAttenuation(obj, attVal, range)
+function setAttenuation(obj, value, range)
 %
 % Sets the attenuation for the different ranges.
 %   DEPENDING ON RANGE
@@ -12,10 +12,10 @@ function setAttenuation(obj, attVal, range)
 %               - port
 %               - prop.comm(unication)Handle (interface specific)
 %
-%   attVal:     attenuation value [dB]
+%   value:      attenuation value [dB]
 %
 %   range:      choose the range
-%               1 - 3 [int]
+%               1 - 10 [int]
 %
 % Return values:
 %   /
@@ -24,10 +24,10 @@ function setAttenuation(obj, attVal, range)
 %
 
 
-if (range < 0 || range > 3)
-	error('range is not correct (0 to 3)');
+if (range < 1 || range > 10)
+	error('Range is not correct. (1 to 10)');
 else
-    write(obj, ['SCAN', num2str(range), ':INP:ATT ', num2str(attVal), 'dB; *WAI']);
+    write(obj, ['SCAN', num2str(range), ':INP:ATT ', num2str(value), 'dB; *WAI']);
 end
 
 
