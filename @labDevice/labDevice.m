@@ -36,8 +36,7 @@ classdef  labDevice
 
                otherwise
                    error('SMX: mode not supported')
-           end
-           addpath('.\functions');
+            end
            obj = openDev(obj);
        end
        
