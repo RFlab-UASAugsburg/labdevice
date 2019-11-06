@@ -21,7 +21,7 @@ function power = getPowerZeroSpan(obj, freq)
 %
 
 
-obj.write('FREQ:CENT ', string(freq), ' HZ;SPAN 0HZ');
+obj.write(['FREQ:CENT ', num2str(freq), ' HZ;SPAN 0HZ']);
 obj.write('BAND:RES 300 kHz');
 obj.write('SWE:TIME 200US');
 obj.write('CALC:MARK:FUNC:SUMM:RMS ON');
