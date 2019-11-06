@@ -30,19 +30,13 @@ classdef  labDevice
                        obj.prop.gpib.primaryAdress	 = varargin{1};
                        obj.prop.gpib.boardIndex		 = varargin{2};
                        obj.prop.gpib.vendor 		 = varargin{3};
-                   else
+                    else
                        error('gpib interface got wrong number of input arguments')
-                   end
+                    end
 
-               otherwise
-<<<<<<< HEAD
-                   error('SMX: mode not supported')
-            end
-=======
-
+                otherwise
                    error('LabDevice Interface: Mode not supported')
-           end
->>>>>>> origin/master
+            end
            obj = openDev(obj);
        end
        
