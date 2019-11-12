@@ -3,18 +3,24 @@
         "esrp": {
             "eth": {
                 "ip": "141.82.73.167",
-                "port": 5025
+                "port": 5025,
+                "additionalCommunicationParameters": {
+                    "setSoTimeout": 20,
+                    "setReceiveBufferSize": 16777216,
+                    "setSendBufferSize": 16777216
+                }
             },
             "gpib": {
                 "address": 20,
                 "boardIdx": 1,
                 "vendor": "agilent"
+                "additionalCommunicationParameters": {
+                    "Timeout": 20,
+                    "InputBufferSize": 16777216,
+                    "OutputBufferSize": 16777216
+                }
             },
-            "additionalCommunicationParameters": {
-                "Timeout": 20,
-                "InputBufferSize": 16777216,
-                "OutputBufferSize": 16777216
-            }
+            
         },
         "smx": {
             "gpib": {

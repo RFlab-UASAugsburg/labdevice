@@ -56,6 +56,16 @@ classdef  labDevice
                     elseif length(varargin) > 2 || length(varargin) == 1
                         error('ethernet interface got wrong number of input arguments')
                     end
+                    obj = openDev(obj);
+                    % Apply the additional device specific Communication Parameters
+                    % to connection
+                    if isfield(defaultProps.eth, 'additionalCommunicationParameters')
+                        fields=fieldnames(defaultProps.eth.additionalCommunicationParameters);
+                        for i=1:numel(fields)
+                            fh = str2func(fields{i});
+                            fh(obj.prop.commHandle, defaultProps.eth.additionalCommunicationParameters.(fields{i}));
+                        end
+                    end
                     
                 case 'gpib'
                     if isempty(varargin)
@@ -83,6 +93,15 @@ classdef  labDevice
                     else
                         error('gpib interface got wrong number of input arguments')
                     end
+                    obj = openDev(obj);
+                    if isfield(defaultProps.gpib, 'additionalCommunicationParameters')
+                        obj = closeDev(obj);
+                        fields=fieldnames(defaultProps.gpib.additionalCommunicationParameters);
+                        for i=1:numel(fields)
+                            set(obj.prop.commHandle, fields{i}, defaultProps.gpib.additionalCommunicationParameters.(fields{i}));
+                        end
+                        obj = openDev(obj);
+                    end
                     
                 otherwise
                     warning('LabDevice Interface: Using default connection settings: GPIB')
@@ -91,24 +110,30 @@ classdef  labDevice
                         obj.prop.gpib.primaryAdress  = defaultProps.gpib.address;
                         obj.prop.gpib.boardIndex     = defaultProps.gpib.boardIdx;
                         obj.prop.gpib.vendor         = defaultProps.gpib.vendor;
+                        obj = openDev(obj);
+                        if isfield(defaultProps.gpib, 'additionalCommunicationParameters')
+                            obj = closeDev(obj);
+                            fields=fieldnames(defaultProps.gpib.additionalCommunicationParameters);
+                            for i=1:numel(fields)
+                                set(obj.prop.commHandle, fields{i}, defaultProps.gpib.additionalCommunicationParameters.(fields{i}));
+                            end
+                            obj = openDev(obj);
+                        end
                     else
                         % Coudnt find default properties.
                         error('Couldnt find default properties for GPIB interface')
                     end
-            end
-            
-            obj = openDev(obj);
-            
+            end            
             % Apply the additional device specific Communication Parameters
             % to connection
-            if isfield(defaultProps, 'additionalCommunicationParameters')
-                obj = closeDev(obj);
-                fields=fieldnames(defaultProps.additionalCommunicationParameters);
-                for addCommParaIdx=1:numel(fields)
-                    set(obj.prop.commHandle, fields{addCommParaIdx},defaultProps.additionalCommunicationParameters.(fields{addCommParaIdx}));
-                end
-                obj = openDev(obj);
-            end
+%             if isfield(defaultProps, 'additionalCommunicationParameters')
+%                 obj = closeDev(obj);
+%                 fields=fieldnames(defaultProps.additionalCommunicationParameters);
+%                 for i=1:numel(fields)
+%                     set(obj.prop.commHandle, fields{i},defaultProps.additionalCommunicationParameters.(fields{i}));
+%                 end
+%                 obj = openDev(obj);
+%             end
             
         end
         
