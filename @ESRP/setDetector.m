@@ -38,7 +38,7 @@ switch detec
     case 'mpeak'
         write(obj, ['DET1:REC POS; *WAI']);
     case 'qpeak'
-        write(obj, ['DET1:REC QFE; *WAI']);
+        write(obj, ['DET1:REC QPE; *WAI']);
     case 'rms'
         write(obj, ['DET1:REC RMS; *WAI']);
     otherwise
