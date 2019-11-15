@@ -21,7 +21,7 @@ function ret = read(obj)
     end
     if ~isempty(ret)
         while (ret(end) ~= newline) && (toc(t) < timeout)
-            bytes_available = input_stream.available;
+            bytes_available = b_input_stream.available;
             for k=1:bytes_available
                 ret=[ret,char(b_input_stream.read)];
             end
@@ -30,11 +30,16 @@ function ret = read(obj)
     if ~isempty(ret)
         ret = strip(ret);
         ret = textscan(ret,'%s', 'delimiter', ',;');
-        for i = 1:length(ret)
-            if ~isnan(str2double(ret{i}))
-                ret{i} = str2double(ret{i});
+        if ~isnan(str2double(ret{1}))
+            ret{1} = str2double(ret{1});
+            ret = cell2mat(ret);
+        else
+            ret = ret{1};
+            for i=1:length(ret)
+                if ~isnan(str2double(ret(i)))
+                    ret{i} = str2double(ret(i));
+                end
             end
-        end
-        ret = ret{1};
+        end 
     end
 end
