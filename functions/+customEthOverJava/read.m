@@ -49,6 +49,9 @@ function message = read(obj)
                     message{i} = str2double(message(i));
                 end
             end
-        end 
+        end
+        if length(message) == 1 && isa(message,'cell')
+                message = message{1};
+        end
     end
 end
