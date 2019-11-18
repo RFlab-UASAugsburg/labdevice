@@ -32,7 +32,8 @@ classdef  labDevice
         function obj = labDevice(deviceName, mode, varargin)
             % Quickfix: No idea why, but sometimes varargin is a {1}{2}
             % array, sometimes not.
-            if nargin ~= length(varargin)
+%             if nargin ~= length(varargin)
+            if length(varargin(1)) == length(varargin)
                 varargin = varargin{1};
             end
             obj.prop.mode = mode;
@@ -40,6 +41,24 @@ classdef  labDevice
             % Search for default configs
             defaultProps=getDefaultDeviceProperties(deviceName);
             switch (obj.prop.mode)
+                case 'eth2gpib'
+                    if isempty(varargin)
+                        if isfield(defaultProps, "eth2gpib")
+                            adapter = ProLogix(defaultProps.eth2gpib.address, defaultProps.eth2gpib.port);
+                            obj.prop.adapter = adapter;
+                            obj.prop.gpibAddr = defaultProps.eth2gpib.gpibAddr;
+                        else
+                            error('Couldnt find default properties for ethernet2GPIB interface')
+                        end
+                    elseif numel(varargin) == 2
+                        obj.prop.adapter = varargin{1};
+                        obj.prop.gpibAddr = varargin{2};
+                    else
+                        disp(numel(varargin));
+                        disp(varargin);
+                        disp(numel(varargin{1}));
+                        error("Something went wrong!");
+                    end
                 case 'eth'
                     if isempty(varargin)
                         % Take eth default for connection
@@ -54,6 +73,7 @@ classdef  labDevice
                         obj.prop.adress = varargin{1};
                         obj.prop.port   = varargin{2};
                     elseif length(varargin) > 2 || length(varargin) == 1
+                        disp(length(varargin));
                         error('ethernet interface got wrong number of input arguments')
                     end
                     obj = openDev(obj);

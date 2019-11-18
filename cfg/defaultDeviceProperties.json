@@ -1,5 +1,9 @@
 {
     "devices": {
+        "prologix": {
+            "eth": {
+            }
+        },
         "esrp": {
             "eth": {
                 "ip": "141.82.73.167",
@@ -13,14 +17,13 @@
             "gpib": {
                 "address": 20,
                 "boardIdx": 1,
-                "vendor": "agilent"
+                "vendor": "agilent",
                 "additionalCommunicationParameters": {
                     "Timeout": 20,
                     "InputBufferSize": 16777216,
                     "OutputBufferSize": 16777216
                 }
-            },
-            
+            }
         },
         "smx": {
             "gpib": {

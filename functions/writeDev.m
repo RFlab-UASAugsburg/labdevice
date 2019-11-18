@@ -29,7 +29,7 @@ switch(obj.prop.mode)
     case 'gpib'
         ret = customGpib.write(obj,txt);
     case 'eth2gpib'
-        error('openDev: Not implemented yet');
+        ret = customEth2Gpib.write(obj,txt);
     case 'serial'
         error('openDev: Not implemented yet');
     case 'eth2serial' 
