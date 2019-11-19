@@ -18,7 +18,7 @@ function message = read(obj)
             fprintf(1, 'Connected to server\n');
 
             % read data from the socket - wait a short time first
-            pause(0.5);
+            pause(0.1);
             bytes_available = input_stream.available;
             fprintf(1, 'Reading %d bytes\n', bytes_available);
                         
