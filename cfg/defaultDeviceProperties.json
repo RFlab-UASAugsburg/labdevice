@@ -2,6 +2,8 @@
     "devices": {
         "prologix": {
             "eth": {
+                "ip": "141.82.73.150",
+                "port": 1234
             }
         },
         "esrp": {
