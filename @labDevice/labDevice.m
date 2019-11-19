@@ -33,8 +33,10 @@ classdef  labDevice
             % Quickfix: No idea why, but sometimes varargin is a {1}{2}
             % array, sometimes not.
 %             if nargin ~= length(varargin)
-            if length(varargin(1)) == length(varargin)
-                varargin = varargin{1};
+            if ~isempty(varargin)
+                if length(varargin(1)) == length(varargin)
+                    varargin = varargin{1};
+                end
             end
             obj.prop.mode = mode;
             
@@ -44,6 +46,9 @@ classdef  labDevice
                 case 'eth2gpib'
                     if isempty(varargin)
                         if isfield(defaultProps, "eth2gpib")
+%                             fprintf(1,"creating a new ProLogix object.");
+%                             fprintf(1,"Please use this adapter when creating new labdevices that are on the same GPIB bus");
+%                             fprintf(1,"for example labdevice('eth2gpib',thisobj.prop.adapter,gpibAddr");
                             adapter = ProLogix(defaultProps.eth2gpib.address, defaultProps.eth2gpib.port);
                             obj.prop.adapter = adapter;
                             obj.prop.gpibAddr = defaultProps.eth2gpib.gpibAddr;

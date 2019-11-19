@@ -6,7 +6,7 @@ adapter = obj.prop.adapter;
 if adapter.prop.currentGPIBAddress == obj.prop.gpibAddr
     adapter.write(txt);
 else
-    adapter.setGPIBAddr(obj.prop.gpibAddr);
+    adapter.setGPIBAddress(obj.prop.gpibAddr);
     adapter.write(txt);
 
 end
