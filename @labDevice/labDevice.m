@@ -102,12 +102,13 @@ classdef  labDevice
            % Apply the additional device specific Communication Parameters 
            % to connection
            if isfield(defaultProps, 'additionalCommunicationParameters')
-               obj = closeDev(obj);
+                obj = closeDev(obj);
                 fields=fieldnames(defaultProps.additionalCommunicationParameters);
                 for addCommParaIdx=1:numel(fields)
                     set(obj.prop.commHandle, fields{addCommParaIdx},defaultProps.additionalCommunicationParameters.(fields{addCommParaIdx}));
                 end
-                obj = openDev(obj);
+                %% Quickfix
+                fopen(obj.prop.commHandle);
            end
          
            
