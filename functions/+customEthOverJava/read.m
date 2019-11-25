@@ -18,7 +18,7 @@ function message = read(obj)
             fprintf(1, 'Connected to server\n');
 
             % read data from the socket - wait a short time first
-            pause(0.3);
+            pause(0.5);
             bytes_available = input_stream.available;
             fprintf(1, 'Reading %d bytes\n', bytes_available);
                         
@@ -33,25 +33,4 @@ function message = read(obj)
             pause(1);
         end
     end
-%     if ~isempty(message)
-%         message = strip(message);
-%         message = textscan(message,'%s', 'delimiter', ',;');
-%         if ~isnan(str2double(message{1}))
-%             message{1} = str2double(message{1});
-%             message = cell2mat(message);
-%             if length(message) == 1
-%                 message = message(1);
-%             end
-%         else
-%             message = message{1};
-%             for i=1:length(message)
-%                 if ~isnan(str2double(message(i)))
-%                     message{i} = str2double(message(i));
-%                 end
-%             end
-%         end
-%         if length(message) == 1 && isa(message,'cell')
-%                 message = message{1};
-%         end
-%     end
 end

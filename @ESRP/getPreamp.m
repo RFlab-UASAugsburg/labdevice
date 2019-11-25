@@ -7,6 +7,6 @@ function status = getPreamp(obj,varargin)
     else
         obj.write("SCAN"+varargin{1}+ ":INP:GAIN:STAT?");
     end
-    status = strip(esrp.read);
+    status = str2double(obj.read);
 end
 

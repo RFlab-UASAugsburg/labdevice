@@ -6,13 +6,16 @@ function trace = getTrace(obj, varargin)
     else
         trac_num = 1;
     end
+    prev = obj.read;
     obj.write("TRAC? TRACE" + trac_num + "; *WAI");
     message = obj.read;
-    trace = str2num(message);
+    trace = sscanf(message,"%e,");
     if isempty(trace)
         if isempty(message)
             error("no answer from device");
         else
+            disp(prev);
+            disp(message);
             error("bad message from device");
         end
     end
