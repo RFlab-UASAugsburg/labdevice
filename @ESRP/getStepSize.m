@@ -14,7 +14,7 @@ function stepsize = getStepSize(obj,varargin)
     if isempty(varargin)
         obj.write("FREQ:CENTER:STEP?");
     else
-        obj.write("SCAN"+varargin{1}+"STEP?");
+        obj.write("SCAN"+varargin{1}+":STEP?");
     end
     stepsize = str2double(obj.read);
 end

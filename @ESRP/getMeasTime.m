@@ -14,7 +14,7 @@ function time = getMeasTime(obj,varargin)
     if isempty(varargin)
         obj.write("SWE:TIME?");
     else
-        obj.write("SCAN"+varargin{1}+"TIME?");
+        obj.write("SCAN"+varargin{1}+":TIME?");
     end
     time = str2double(obj.read);
 end
