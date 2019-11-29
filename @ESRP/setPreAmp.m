@@ -1,9 +1,10 @@
 function setPreAmp (obj, gain, range)
 %
-% No idea what this command does.
+% Enable/Disable the preamp.
 %   DEPENDING ON RANGE
 %
-% (Here goes the long description)
+% Configure the preamplifier for either the main screen or receiver scan
+% ranges.
 %
 %
 %
@@ -19,7 +20,9 @@ function setPreAmp (obj, gain, range)
 %               'off' [String]
 %
 %   range:      choose the range
-%               1 - 10 [int]
+%               0 - 10 [int]
+%               0: Main screen
+%               1-10: Scan ranges 
 %
 % Return values:
 %   /
@@ -27,18 +30,25 @@ function setPreAmp (obj, gain, range)
 % See also:
 %
 
-if (range < 1 || range > 10)
+if (range < 0 || range > 10)
 	error('range is not correct (1 to 10)');
-else
-    switch gain
+elseif range == 0
+    switch lower(gain)
         case 'on'
-            write(obj, ['SCAN', num2str(range), ':INP:GAIN:STAT ', gain, '; *WAI']);
+            write(obj, "INP:GAIN:STAT ON; *WAI");
         case 'off'
-            write(obj, ['SCAN', num2str(range), ':INP:GAIN:STAT ', gain, '; *WAI']);
+            write(obj, "INP:GAIN:STAT OFF; *WAI");
         otherwise
-            error('Parameter not readable. Check the datatyp. (gain)');
+            error('Parameter not readable. Check the datatype. (gain)');
+    end
+else
+    switch lower(gain)
+        case 'on'
+            write(obj, "SCAN" + num2str(range) + ":INP:GAIN:STAT ON;*WAI");
+        case 'off'
+            write(obj, "SCAN" + num2str(range) + ":INP:GAIN:STAT OFF;*WAI");
+        otherwise
+            error('Parameter not readable. Check the datatype. (gain)');
     end
 end
-
-
 end
