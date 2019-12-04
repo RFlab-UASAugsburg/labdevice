@@ -17,7 +17,7 @@ classdef RadiSense < labDevice
         function ret = read(obj)
            ret = read@labDevice(obj);
            % Handle error messages here
-           switch ret
+           switch strip(ret)
                case ":E1"
                    msgID = "RADISENSE:BadCommand";
                    msg = "Internal buffer overflow (too long command)";
