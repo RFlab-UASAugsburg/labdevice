@@ -15,7 +15,7 @@ function ret = setRange(obj, range)
         msg = "range can only be 1, 2, 3, 4, or N to cycle to the next range step";
         throw(MException(msgID,msg));
     end
-    response = read(obj);
+    response = strip(read(obj));
     if length(response) ~= 3
         msgID = "RADISENSE:WeirdError";
         msg = "could not set range" + response;
