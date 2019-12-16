@@ -5,5 +5,6 @@ function zero(obj) %zero(obj, generator)
     write(obj, "TC"); %random measurement to test if sensor is on
     read(obj);
     write(obj, "ZERO");
-    pause(15); %Wait for zeroing process to finish, no exact time is known so far
+    fprintf('%s\n',"Waiting 15 seconds for the zeroing process to finish");
+    pause(15);
 end
