@@ -44,7 +44,7 @@ classdef  labDevice
             defaultProps=getDefaultDeviceProperties(deviceName);
             switch (obj.prop.mode)
                 case 'eth2gpib'
-                    if isempty(varargin) && isnan(defaultProps)
+                    if isempty(varargin) && ~isstruct(defaultProps)
                         error("no properties found");
                     elseif isempty(varargin)
                         if isfield(defaultProps, "eth2gpib")
@@ -67,7 +67,7 @@ classdef  labDevice
                         error("Something went wrong!");
                     end
                 case 'eth'
-                    if isempty(varargin) && isnan(defaultProps)
+                    if isempty(varargin) && ~isstruct(defaultProps)
                         error("no properties found");
                     elseif isempty(varargin)
                         % Take eth default for connection
@@ -88,7 +88,7 @@ classdef  labDevice
                     obj = openDev(obj);
                     % Apply the additional device specific Communication Parameters
                     % to connection
-                    if ~isnan(defaultProps)
+                    if isstruct(defaultProps)
                         if isfield(defaultProps.eth, 'additionalCommunicationParameters')
                             fields=fieldnames(defaultProps.eth.additionalCommunicationParameters);
                             for i=1:numel(fields)
@@ -99,7 +99,7 @@ classdef  labDevice
                     end
                     
                 case 'gpib'
-                    if isempty(varargin) && isnan(defaultProps)
+                    if isempty(varargin) && ~isstruct(defaultProps)
                         error("no properties found");
                     elseif isempty(varargin)
                         % Take GPIB default for connection
@@ -127,7 +127,7 @@ classdef  labDevice
                         error('gpib interface got wrong number of input arguments')
                     end
                     obj = openDev(obj);
-                    if ~isnan(defaultProps)
+                    if isstruct(defaultProps)
                         if isfield(defaultProps.gpib, 'additionalCommunicationParameters')
                             obj = closeDev(obj);
                             fields=fieldnames(defaultProps.gpib.additionalCommunicationParameters);
@@ -141,7 +141,7 @@ classdef  labDevice
                 otherwise
                     warning('LabDevice Interface: Using default connection settings: GPIB')
                     % Take GPIB default for connection
-                    if isempty(varargin) && isnan(defaultProps)
+                    if isempty(varargin) && ~isstruct(defaultProps)
                         error("no properties found");
                     elseif isfield(defaultProps.gpib)
                         obj.prop.gpib.primaryAdress  = defaultProps.gpib.address;

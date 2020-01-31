@@ -7,6 +7,7 @@ function i = getILimit(obj, varargin)
         source = varargin{1};
         obj.write("APPL? " + source + ";*WAI;");
         message = obj.read();
+        message = erase(message,char(34));
         if isempty(message)
             error("no answer from device");
         end
@@ -16,7 +17,7 @@ function i = getILimit(obj, varargin)
         obj.write("CURR?" + ";*WAI;")
         i = str2double(obj.read);
     end
-    if isempty(i)
+    if isempty(i) || isnan(u)
         disp(message);
         error("bad message from device");
     end
