@@ -24,7 +24,7 @@ function message = read(obj)
                         
             data_reader = DataReader(d_input_stream);
             message = data_reader.readBuffer(bytes_available);
-            message = char(message');
+            message = strip(char(message'));
             bytes_available = input_stream.available;
             if bytes_available ~= 0
                 message = [message read(obj)];
