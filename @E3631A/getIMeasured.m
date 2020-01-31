@@ -9,6 +9,7 @@ function i = getIMeasured(obj, varargin)
     else
         obj.write("MEAS:CURR?" + ";*WAI;");
     end
+    pause(0.1);
     message = obj.read;
     i = str2double(message);
     if isnan(i)

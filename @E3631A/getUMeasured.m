@@ -9,6 +9,7 @@ function u = getUMeasured(obj, varargin)
     else
         obj.write("MEAS:VOLT?" + ";*WAI;");
     end
+    pause(0.1);
     message = obj.read;
     u = str2double(message);
     if isnan(u)
