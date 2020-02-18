@@ -16,15 +16,17 @@ function message = read(obj)
             d_input_stream = DataInputStream(input_stream);
             % read data from the socket - wait a short time first
             i = tic;
+            pause(0.05);
             bytes_available = input_stream.available;
             while bytes_available == 0 && toc(i) < 1
-                pause(0.1);
+                 pause(0.05);
                 bytes_available = input_stream.available;
-            end
-                        
+            end    
+            
             data_reader = DataReader(d_input_stream);
             message = data_reader.readBuffer(bytes_available);
             message = strip(char(message'));
+            pause(0.05);
             bytes_available = input_stream.available;
             if bytes_available ~= 0
                 message = [message read(obj)];
