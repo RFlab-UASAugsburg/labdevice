@@ -1,10 +1,10 @@
-classdef  SMX < labDevice
+classdef  SMX < labDevice & SignalGenerator
     properties
       % Add device specific properties here
     end
    methods 
        function obj = SMX(mode, varargin)
-           obj@labDevice(mfilename,mode, varargin);
+           obj@labDevice(mfilename, mode, varargin);
            % add device specific constructor from here on
        end
        

@@ -4,5 +4,6 @@ function startupLabDeviceDrivers()
 
     addpath(fullfile(projectRootDir, 'cfg'))
     addpath(fullfile(projectRootDir, 'functions'))
-
+    addpath(fullfile(projectRootDir, 'deviceTypes'))
+    disp('done!')
 end
