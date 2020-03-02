@@ -1,1 +1,59 @@
-LabDevice Driver
+=== LabDevice Driver Framework ===
+A open source framewok handling interactions with typical laboratory devices.
+The framework consists of a communication layer and a device layer.
+A bottom layer for communication that can handle GPIB, Ethernet, and GPIB-over-Ethernet communication 
+is the base of the framework. On top typical SCPI (Standard Commands for Programmable Instruments) commands 
+are implemented to free the user from searching through endless user manuals.
+This framework can be used as stand-alone or can yield the basis for all Matlab measurement applications.
+
+=== WICHTIG: Als Submodule wird nur der Master-branch eingebunden! ===
+
+Soll als Submodule in bestehende git Repos eingebunden werden:
+<code>
+git submodule add git@git.etech.fh-augsburg.de:emc/labdevicedrivers.git 
+</code>
+
+The submodule is not updated when using if git pull is angewendet on the repository it contains.
+
+Das Submodul wird nicht bei einem git pull, des Repositorys in das es eingebunden ist, geupdated.
+Daher muss nach git pull noch folgendes Komando ausgeführt werden.
+<code>
+git submodule update --init --remote labdevicedrivers
+</code>
+
+Erlaubt generische Ansteuerung von Geräten:
+<code Matlab>
+Espr1=ESPR(mode, adress);
+Espr1.setStartFreq(1e3);
+Espr1.prop(erties).mode="eth";
+                  .adress="192.168.1.20";
+                  .commHandle;
+</code>
+
+  * mode= "eth";
+  * mode= "gpib";
+  * mode= "eth2gpib";
+  * mode= "eth2serial";
+
+
+=== Ordnerstruktur === 
+Namespaces (mit + vor Ordnernamen) separieren open und close Funktionen der einzelnen Schnittstellen (z.B. eth oder gpib).  <code>
+labdevicedrivers
+
+  @ESPR
+      espr.m
+      setStartFreq.m
+@labDevice
+      Superclass for all lab Devices
+
+  functions 
+Contains all low level functionality like opening and closing connection to device.
+      readDev.m 
+      writeDev.m 
+      openDev.m 
+      closeDev.m 
+      rwDev.m 
+      +eth 
+      +gpib 
+
+</code>
