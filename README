@@ -1,4 +1,5 @@
 # LabDevice Driver Framework 
+
 A open source framewok handling interactions with typical laboratory devices.
 The framework consists of a communication layer and a device layer.
 A bottom layer for communication that can handle GPIB, Ethernet, and GPIB-over-Ethernet communication 
@@ -7,11 +8,13 @@ are implemented to free the user from searching through endless user manuals.
 This framework can be used as stand-alone or can yield the basis for all Matlab measurement applications.
 
 ### Supported Communication Interfaces
+
   * mode= "eth";
   * mode= "gpib";
   * mode= "eth2gpib"; (See: Using Interface Converter) 
 
 ### Example
+
 ** Use with Ethernet **
 <code Matlab>
 mode="eth"; % Using ethernet interface for communication
@@ -22,7 +25,8 @@ emiTestReceiver.setStartFreq(1e3);
 
 ** Use with GPIB **
 <code Matlab>
-
+sigGen = SMX("gpib",... % mode
+             6); % GPIB address
 sigGen.setFreq(1e7);
 </code>
 
@@ -44,7 +48,8 @@ sigGen = SMX("eth2gpib",... % communication mode
 sigGen.setFreq(1e7);
 </code>
 
-### Structure
+### Repository Structure
+
 <code Matlab> @labDevice </code>
 Superclass for all lab Devices
 <code Matlab> cfg </code>
@@ -61,15 +66,13 @@ Contains all low level functionality like opening and closing connection to devi
 Namespaces (contianing + in front of foldername) seperate *open* and *close* functions of the interfaces (e.g. eth or gpib). 
 
 ### Adding labdevicedreivers as a submodule
-To integrate the labdevice framework in an existing repo as a submodule:
 
+To integrate the labdevice framework in an existing repo as a submodule:
 <code Matlab>
 git submodule add git@git.etech.fh-augsburg.de:emc/labdevicedrivers.git 
 </code>
-
 **Keep in mind:** git pull on the main repository does not update the submodule.
 After git pull you need to execute 
-
 <code Matlab>
 git submodule update --init --remote labdevicedrivers
 </code>
