@@ -6,15 +6,13 @@ is the base of the framework. On top typical SCPI (Standard Commands for Program
 are implemented to free the user from searching through endless user manuals.
 This framework can be used as stand-alone or can yield the basis for all Matlab measurement applications.
 
-### Communication Interfaces
+### Supported Communication Interfaces
   * mode= "eth";
   * mode= "gpib";
   * mode= "eth2gpib";
-  * mode= "eth2serial";
 
 ### Example
-
-Erlaubt generische Ansteuerung von Geräten:
+Use with Ethernet
 <code Matlab>
 mode="eth"; % Using ethernet interface for communication
 adress="192.168.1.20"; % IP Adress of device
@@ -22,35 +20,31 @@ emiTestReceiver=ESPR(mode, adress);
 emiTestReceiver.setStartFreq(1e3);
 </code>
 
-
-
-
+// TODO ADD USE WITH GPIB HERE
 
 ### Structure
-Namespaces (mit + vor Ordnernamen) separieren open und close Funktionen der einzelnen Schnittstellen (z.B. eth oder gpib).  <code>
-labdevicedrivers
+Namespaces (contianing + in front of foldername) seperate *open* and *close* functions of the interfaces (e.g. eth or gpib)
+Namespaces (mit + vor Ordnernamen) separieren open und close Funktionen der einzelnen Schnittstellen (z.B. eth oder gpib).  
 
 <code Matlab>
 @ESPR
-
 @labDevice
       Superclass for all lab Devices
-
   functions 
 Contains all low level functionality like opening and closing connection to device.
 </code>
 
 ### Adding labdevicedreivers as a submodule
-submodule 
-=== WICHTIG: Als Submodule wird nur der Master-branch eingebunden! ===
 To integrate the labdevice framework in an existing repo as a submodule:
+
 <code Matlab>
 git submodule add git@git.etech.fh-augsburg.de:emc/labdevicedrivers.git 
 </code>
 
-*Keep in mind:* git pull on the main repository does not update the submodule.
+**Keep in mind:** git pull on the main repository does not update the submodule.
 After git pull you need to execute 
-```
+
+<code Matlab>
 git submodule update --init --remote labdevicedrivers
-```
+</code>
 to update the submodule after running git pull.
