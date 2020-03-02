@@ -1,4 +1,4 @@
-### LabDevice Driver Framework 
+# LabDevice Driver Framework 
 A open source framewok handling interactions with typical laboratory devices.
 The framework consists of a communication layer and a device layer.
 A bottom layer for communication that can handle GPIB, Ethernet, and GPIB-over-Ethernet communication 
@@ -9,22 +9,53 @@ This framework can be used as stand-alone or can yield the basis for all Matlab 
 ### Supported Communication Interfaces
   * mode= "eth";
   * mode= "gpib";
-  * mode= "eth2gpib";
+  * mode= "eth2gpib"; (See: Using Interface Converter) 
 
 ### Example
-Use with Ethernet
+** Use with Ethernet **
 <code Matlab>
 mode="eth"; % Using ethernet interface for communication
-adress="192.168.1.20"; % IP Adress of device
+adress="192.168.1.20"; % IP address of device
 emiTestReceiver=ESPR(mode, adress);
 emiTestReceiver.setStartFreq(1e3);
 </code>
 
-// TODO ADD USE WITH GPIB HERE
+** Use with GPIB **
+<code Matlab>
+
+sigGen.setFreq(1e7);
+</code>
+
+### Using Interface Converter
+
+  * mode= "eth2gpib"; 
+
+Interface converters require an initialisation of the interface converter 
+object first, before initialising the device class.
+<code Matlab>
+% Initialising interface converter object
+interfaceConverter = ProLogix('eth',... % communication mode of converter
+                              '192.168.75.42',... % IP address of converter
+                              1234); % Port of converter
+% Pass interface converter to device constructor.
+sigGen = SMX("eth2gpib",... % communication mode 
+             interfaceConverter,... % Interface converter object
+             6); % GPIB address of device
+sigGen.setFreq(1e7);
+</code>
 
 ### Structure
 <code Matlab> @labDevice </code>
 Superclass for all lab Devices
+<code Matlab> cfg </code>
+Configs: Eg. default device properties
+<code Matlab> deviceTypes </code>
+Abstract Interface Classes for the different device types. The classes should be used to define common
+interfaces for all devices of one specific type. The abstract class
+assures the same method or property names over all devices of one 
+device type eg. vector network analyser.
+<code Matlab> interfaceConverters </code>
+Contains all interface converter objects eg. eth2gpib.
 <code Matlab> functions </code>
 Contains all low level functionality like opening and closing connection to device.
 Namespaces (contianing + in front of foldername) seperate *open* and *close* functions of the interfaces (e.g. eth or gpib). 
