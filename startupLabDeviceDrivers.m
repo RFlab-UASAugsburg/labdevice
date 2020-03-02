@@ -5,5 +5,9 @@ function startupLabDeviceDrivers()
     addpath(fullfile(projectRootDir, 'cfg'))
     addpath(fullfile(projectRootDir, 'functions'))
     addpath(fullfile(projectRootDir, 'deviceTypes'))
+    
+    javaaddpath(fullfile(projectRootDir,'functions/+customEthOverJava/java'));
+    
     disp('done!')
+
 end

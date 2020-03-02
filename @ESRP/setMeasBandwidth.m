@@ -35,6 +35,4 @@ if (range < 0 || range > 10)
 else
     write(obj, ['SCAN', num2str(range), ':BAND:RES ', num2str(rbw), 'Hz; *WAI']);
 end
-
-
 end

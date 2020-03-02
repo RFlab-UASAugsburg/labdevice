@@ -26,11 +26,11 @@ function obj = openDev(obj)
 
 switch(obj.prop.mode)
     case 'eth'
-        obj = customEth.open(obj);
+        obj = customEthOverJava.open(obj);
     case 'gpib'
         obj = customGpib.open(obj);
     case 'eth2gpib'
-        error('openDev: Not implemented yet');
+        %nothing to do;
     case 'serial'
         error('openDev: Not implemented yet');
     case 'eth2serial' 

@@ -38,6 +38,7 @@ elseif range == 0
             write(obj, "INP:GAIN:STAT ON; *WAI");
         case 'off'
             write(obj, "INP:GAIN:STAT OFF; *WAI");
+
         otherwise
             error('Parameter not readable. Check the datatype. (gain)');
     end

@@ -1,19 +1,30 @@
 {
     "devices": {
+        "prologix": {
+            "eth": {
+                "ip": "192.168.73.40",
+                "port": 1234
+            }
+        },
         "esrp": {
             "eth": {
-                "ip": "192.168.75.10",
-                "port": 5025
+                "ip": "141.82.73.167",
+                "port": 5025,
+                "additionalCommunicationParameters": {
+                    "setSoTimeout": 20,
+                    "setReceiveBufferSize": 16777216,
+                    "setSendBufferSize": 16777216
+                }
             },
             "gpib": {
                 "address": 20,
                 "boardIdx": 1,
-                "vendor": "agilent"
-            },
-            "additionalCommunicationParameters": {
-                "Timeout": 20,
-                "InputBufferSize": 16777216,
-                "OutputBufferSize": 16777216
+                "vendor": "agilent",
+                "additionalCommunicationParameters": {
+                    "Timeout": 20,
+                    "InputBufferSize": 16777216,
+                    "OutputBufferSize": 16777216
+                }
             }
         },
         "smx": {

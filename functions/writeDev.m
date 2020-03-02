@@ -25,11 +25,11 @@ function ret = writeDev(obj, txt)
 
 switch(obj.prop.mode)
     case 'eth'
-        ret = customEth.write(obj,txt);
+        ret = customEthOverJava.write(obj,txt);
     case 'gpib'
         ret = customGpib.write(obj,txt);
     case 'eth2gpib'
-        error('openDev: Not implemented yet');
+        ret = customEth2Gpib.write(obj,txt);
     case 'serial'
         error('openDev: Not implemented yet');
     case 'eth2serial' 

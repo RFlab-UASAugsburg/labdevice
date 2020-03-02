@@ -1,18 +1,18 @@
-classdef  ESRP < labDevice
+classdef  Stepper < labDevice
     properties
       % Add device specific properties here
     end
    methods 
-       function obj = ESRP(mode, varargin)
-           obj@labDevice(mfilename, mode, varargin); % mfilename is the constructor name
+       function obj = Stepper(mode, varargin)
+           obj@labDevice(mfilename,mode, varargin);
            % add device specific constructor from here on
-
        end
        
        function delete(obj)
            delete@labDevice(obj);
            % add device specific destructor from here on
        end
+       
        % All functions that are inheritanced methods of the superclass
        % labDevice need to be initalised here once more.
        

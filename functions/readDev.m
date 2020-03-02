@@ -26,11 +26,11 @@ function ret = readDev(obj)
 
 switch(obj.prop.mode)
     case 'eth'
-        ret = customEth.read(obj);
+        ret = customEthOverJava.read(obj);
     case 'gpib'
         ret = customGpib.read(obj);
     case 'eth2gpib'
-        error('openDev: Not implemented yet');
+        ret = customEth2Gpib.read(obj);
     case 'serial'
         error('openDev: Not implemented yet');
     case 'eth2serial' 
