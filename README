@@ -23,16 +23,12 @@ emiTestReceiver.setStartFreq(1e3);
 // TODO ADD USE WITH GPIB HERE
 
 ### Structure
-Namespaces (contianing + in front of foldername) seperate *open* and *close* functions of the interfaces (e.g. eth or gpib)
-Namespaces (mit + vor Ordnernamen) separieren open und close Funktionen der einzelnen Schnittstellen (z.B. eth oder gpib).  
+Namespaces (contianing + in front of foldername) seperate *open* and *close* functions of the interfaces (e.g. eth or gpib). 
 
-<code Matlab>
-@ESPR
-@labDevice
-      Superclass for all lab Devices
-  functions 
+<code Matlab> @labDevice </code>
+Superclass for all lab Devices
+<code Matlab> functions </code>
 Contains all low level functionality like opening and closing connection to device.
-</code>
 
 ### Adding labdevicedreivers as a submodule
 To integrate the labdevice framework in an existing repo as a submodule:
