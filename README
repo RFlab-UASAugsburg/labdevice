@@ -30,7 +30,7 @@ emiTestReceiver.setStartFreq(1e3);
 Namespaces (mit + vor Ordnernamen) separieren open und close Funktionen der einzelnen Schnittstellen (z.B. eth oder gpib).  <code>
 labdevicedrivers
 
-<code>
+<code Matlab>
 @ESPR
 
 @labDevice
@@ -44,13 +44,13 @@ Contains all low level functionality like opening and closing connection to devi
 submodule 
 === WICHTIG: Als Submodule wird nur der Master-branch eingebunden! ===
 To integrate the labdevice framework in an existing repo as a submodule:
-<code>
+<code Matlab>
 git submodule add git@git.etech.fh-augsburg.de:emc/labdevicedrivers.git 
 </code>
 
 *Keep in mind:* git pull on the main repository does not update the submodule.
 After git pull you need to execute 
-<code>
+```
 git submodule update --init --remote labdevicedrivers
-</code>
+```
 to update the submodule after running git pull.
