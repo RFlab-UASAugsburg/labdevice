@@ -1,4 +1,4 @@
-classdef  ZVM < labDevice
+classdef  ZVM < labDevice & VNA
     properties
       % Add device specific properties here
     end
