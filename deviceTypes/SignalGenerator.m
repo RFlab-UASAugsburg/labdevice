@@ -1,4 +1,3 @@
-classdef  SignalGenerator
     %> @file SignalGenerator.m
     %> @brief Abstract Interface Class for Signal Generators
     % ======================================================
@@ -14,6 +13,7 @@ classdef  SignalGenerator
     %> classdef  SMX < labDevice & SignalGenerator
     %> @endcode
     % ======================================================
+classdef  SignalGenerator
     properties
       % Add device type specific properties here
     end
