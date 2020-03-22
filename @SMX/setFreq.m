@@ -1,25 +1,14 @@
+% ====================================================
+%> @brief Set output frequency of signal generator
+%>
+%> @param obj Instance of class
+%> @param freq Frequency [Hz]
+%>
+%> @return obj Instance of class
+% =====================================================
 function setFreq(obj, freq)
-%
-% Set frequency of the SMX.
-% 
-% (long description goes here)
-%
-% Parameters:
-%	obj.prop:     labDevice Handle with properties
-%                - mode
-%                - address
-%                - port
-%                - prop.comm(unication)Handle (interface specific)
-%
-%  freq:          frequency [Hz]
-%
-%
-% See also: setFreq
-% 
-% References:
 
 write(obj, ['RF ', num2str(freq)]);
-
 
 % result = '000000';
 % % Abfrage des Operation Complete Bit

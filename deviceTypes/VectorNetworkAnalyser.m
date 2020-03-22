@@ -1,19 +1,19 @@
-classdef  VNA
-    %> @file VNA.m
-    %> @brief Abstract Interface Class for Vector Signal Analyzers
-    % ======================================================
-    %> @brief This is an abstract class. It should be used as a common
-    %> interface for all devices of the subclass. The abstract class
-    %> assures the same method or property names over all devices of one 
-    %> device type.
-    %>
-    %> Usage:
-    %
-    %> Initalise subclass
-    %> @code
-    %> classdef  ZVM < labDevice & VNA
-    %> @endcode
-    % ======================================================
+%> @file VectorNetworkAnalyser.m
+%> @brief Abstract Interface Class for Vector Network Analyzers
+% ======================================================
+%> @brief This is an abstract class. It should be used as a common
+%> interface for all devices of the subclass. The abstract class
+%> assures the same method or property names over all devices of one
+%> device type.
+%>
+%> Usage:
+%
+%> Initalise subclass
+%> @code
+%> classdef  ZVM < labDevice & VectorNetworkAnalyser
+%> @endcode
+% ======================================================
+classdef  VectorNetworkAnalyser
     properties
       % Add device type specific properties here
     end

@@ -1,17 +1,24 @@
+% ====================================================
+%> @brief Set Amplitude Modulation Parameters
+%>
+%> @param obj Instance of class
+%> @param mode 'INT': use internal modulation;
+%>             'EXT': use external modulation;
+%>             'OFF': disable AM modulation
+%>
+%> If internal modulation is used:
+%> @param amplitudeFreq Amplitude Frequency [Hz]
+%> @param modulationStrength Modulation Strength [%]
+% =====================================================
 function setAM(obj,mode,varargin)
-%SETAM control SMX amplitude modulation
-%   mode: 'INT': use internal modulation, specify AF in Hz and modulation
-%               index in %
-%         'EXT': use external modulation
-%         'OFF': disable AM modulation
 switch upper(mode)
     case 'INT'
-        af = varargin{1};
-        index = varargin{2};
-        obj.write("AF "+af+"HZ");
+        amplitudeFreq = varargin{1};
+        modulationStrength = varargin{2};
+        obj.write("AF " + amplitudeFreq + "HZ");
         obj.write("AF:ON");
         obj.write("AM:I");
-        obj.write("AM "+index+"%");
+        obj.write("AM " + modulationStrength + "%");
     case 'EXT'
         obj.write("AM:E");
         obj.write("AF:OFF");
