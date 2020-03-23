@@ -3,8 +3,6 @@
 %>
 %> @param obj Instance of class
 %> @param pow Power level [dBm]
-%>
-%> @return Instance of class
 % =====================================================
 function setPow(obj,pow)
 

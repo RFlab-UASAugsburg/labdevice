@@ -23,8 +23,6 @@ classdef  VectorNetworkAnalyser
        %>
        %> @param obj Instance of class
        %> @param pow Power level [dBm]
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setSourcePower(obj,pow)
 
@@ -33,8 +31,6 @@ classdef  VectorNetworkAnalyser
        %>
        %> @param obj Instance of class
        %> @param freq Frequency [Hz]
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setStartFreq(obj, freq)
           
@@ -43,8 +39,6 @@ classdef  VectorNetworkAnalyser
        %>
        %> @param obj Instance of class
        %> @param freq Frequency [Hz]
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setStopFreq(obj, freq)
       
@@ -71,8 +65,6 @@ classdef  VectorNetworkAnalyser
        %>
        %> @param obj Instance of class
        %> @param sweepPoints int
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setSweepPoints(obj,sweepPoints)
       
@@ -81,8 +73,6 @@ classdef  VectorNetworkAnalyser
        %>
        %> @param obj Instance of class
        %> @param param Measurement Parameter string, e.g. "S11" or "Z21"
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setMeasParameter(obj,param)
       
@@ -90,8 +80,6 @@ classdef  VectorNetworkAnalyser
        %> @brief set device to single sweep mode
        %>
        %> @param obj Instance of class
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       singleSweep(obj)
       
@@ -99,8 +87,6 @@ classdef  VectorNetworkAnalyser
        %> @brief set device to continuous sweep mode
        %>
        %> @param obj Instance of class
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       continuousSweep(obj)
       
@@ -108,8 +94,6 @@ classdef  VectorNetworkAnalyser
        %> @brief initiate/trigger a measurement/sweep
        %>
        %> @param obj Instance of class
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       doSweep(obj)
    end

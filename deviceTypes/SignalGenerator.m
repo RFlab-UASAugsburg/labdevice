@@ -23,8 +23,6 @@ classdef  SignalGenerator
        %>
        %> @param obj Instance of class
        %> @param pow Power level [dBm]
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setPow(obj,pow)
 
@@ -32,8 +30,6 @@ classdef  SignalGenerator
        %> @brief Disable the output of signal generator
        %>
        %> @param obj Instance of class
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       outputDisable(obj)
       
@@ -42,8 +38,6 @@ classdef  SignalGenerator
        %>
        %> @param obj Instance of class
        %> @param freq Frequency [Hz]
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setFreq(obj, freq)
        

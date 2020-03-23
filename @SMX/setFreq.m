@@ -3,8 +3,6 @@
 %>
 %> @param obj Instance of class
 %> @param freq Frequency [Hz]
-%>
-%> @return obj Instance of class
 % =====================================================
 function setFreq(obj, freq)
 
