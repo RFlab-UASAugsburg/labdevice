@@ -77,3 +77,14 @@ After git pull you need to execute
 git submodule update --init --remote labdevicedrivers
 </code>
 to update the submodule after running git pull.
+
+### Documentation
+You can find matlabDoxygen Documentation in doc/html.
+Until now doxygen must be run offline. 
+Run 
+<code>
+doxygen Doxyfile
+</code> 
+in the folder doc/doxymatlab/.
+We use doxymatlab: Copyright (c) 2009, Fabrice All rights reserved.
+http://www.mathworks.com/matlabcentral/fileexchange/25925-using-doxygen-with-matlab/

@@ -1,23 +1,10 @@
+% ====================================================
+%> @brief Set output power level of signal generator
+%>
+%> @param obj Instance of class
+%> @param pow Power level [dBm]
+% =====================================================
 function setPow(obj,pow)
-%
-% Set powerlevel of the SMX.
-% 
-% (long description goes here)
-%
-% Parameters:
-%	obj.prop:     labDevice Handle with properties
-%                - mode
-%                - address
-%                - port
-%                - prop.comm(unication)Handle (interface specific)
-%
-%  pow:          power level [dBm]
-%
-%
-% See also: setFreq
-% 
-% References:
-
 
 if pow > 0 % SMX Specific
     fprintf('Power Level too high!\n');

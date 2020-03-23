@@ -1,0 +1,111 @@
+\hypertarget{class_signal_generator}{}\section{Signal\+Generator Class Reference}
+\label{class_signal_generator}\index{Signal\+Generator@{Signal\+Generator}}
+
+
+This is an abstract class. It should be used as a common interface for all devices of the subclass. The abstract class assures the same method or property names over all devices of one device type.  
+
+
+
+
+Inherited by \hyperlink{class_s_m_x}{S\+MX}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_signal_generator_a23eeb0ad1a1a5d4ed06255e4161a9d1e}{set\+Pow} (in obj, in pow)
+\begin{DoxyCompactList}\small\item\em Set output power level of signal generator. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_signal_generator_a537e05b408855d7fbba8f38409be37df}{output\+Disable} (in obj)
+\begin{DoxyCompactList}\small\item\em Disable the output of signal generator. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_signal_generator_a0ac40e204a22be1bf7bdd65f584c2bb4}{set\+Freq} (in obj, in freq)
+\begin{DoxyCompactList}\small\item\em Set output frequency of signal generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is an abstract class. It should be used as a common interface for all devices of the subclass. The abstract class assures the same method or property names over all devices of one device type. 
+
+Usage\+: Initalise subclass 
+\begin{DoxyCode}
+classdef  \hyperlink{class_s_m_x}{SMX} < \hyperlink{classlab_device}{labDevice} & \hyperlink{class_signal_generator}{SignalGenerator}
+\end{DoxyCode}
+ 
+
+Definition at line 16 of file Signal\+Generator.\+m.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_signal_generator_a537e05b408855d7fbba8f38409be37df}\label{class_signal_generator_a537e05b408855d7fbba8f38409be37df}} 
+\index{Signal\+Generator@{Signal\+Generator}!output\+Disable@{output\+Disable}}
+\index{output\+Disable@{output\+Disable}!Signal\+Generator@{Signal\+Generator}}
+\subsubsection{\texorpdfstring{output\+Disable()}{outputDisable()}}
+{\footnotesize\ttfamily virtual Signal\+Generator\+::output\+Disable (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Disable the output of signal generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+obj Instance of class 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_s_m_x_a8488e3aee6732ac028ff5cceaa6b92b7}{S\+MX}.
+
+\mbox{\Hypertarget{class_signal_generator_a0ac40e204a22be1bf7bdd65f584c2bb4}\label{class_signal_generator_a0ac40e204a22be1bf7bdd65f584c2bb4}} 
+\index{Signal\+Generator@{Signal\+Generator}!set\+Freq@{set\+Freq}}
+\index{set\+Freq@{set\+Freq}!Signal\+Generator@{Signal\+Generator}}
+\subsubsection{\texorpdfstring{set\+Freq()}{setFreq()}}
+{\footnotesize\ttfamily virtual Signal\+Generator\+::set\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set output frequency of signal generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class \\
+\hline
+{\em freq} & Frequency \mbox{[}Hz\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+obj Instance of class 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_s_m_x_a7363c5f4d6937d4e6c8f81a7e64bfa4d}{S\+MX}.
+
+\mbox{\Hypertarget{class_signal_generator_a23eeb0ad1a1a5d4ed06255e4161a9d1e}\label{class_signal_generator_a23eeb0ad1a1a5d4ed06255e4161a9d1e}} 
+\index{Signal\+Generator@{Signal\+Generator}!set\+Pow@{set\+Pow}}
+\index{set\+Pow@{set\+Pow}!Signal\+Generator@{Signal\+Generator}}
+\subsubsection{\texorpdfstring{set\+Pow()}{setPow()}}
+{\footnotesize\ttfamily virtual Signal\+Generator\+::set\+Pow (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{pow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set output power level of signal generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class \\
+\hline
+{\em pow} & Power level \mbox{[}d\+Bm\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+obj Instance of class 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_s_m_x_a93851e9f9277b0959115b8d1486c0d3c}{S\+MX}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/soeren/emc/labdevicedrivers/device\+Types/\hyperlink{_signal_generator_8m}{Signal\+Generator.\+m}\end{DoxyCompactItemize}

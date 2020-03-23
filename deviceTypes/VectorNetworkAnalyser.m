@@ -1,19 +1,19 @@
-classdef  VNA
-    %> @file VNA.m
-    %> @brief Abstract Interface Class for Vector Signal Analyzers
-    % ======================================================
-    %> @brief This is an abstract class. It should be used as a common
-    %> interface for all devices of the subclass. The abstract class
-    %> assures the same method or property names over all devices of one 
-    %> device type.
-    %>
-    %> Usage:
-    %
-    %> Initalise subclass
-    %> @code
-    %> classdef  ZVM < labDevice & VNA
-    %> @endcode
-    % ======================================================
+%> @file VectorNetworkAnalyser.m
+%> @brief Abstract Interface Class for Vector Network Analyzers
+% ======================================================
+%> @brief This is an abstract class. It should be used as a common
+%> interface for all devices of the subclass. The abstract class
+%> assures the same method or property names over all devices of one
+%> device type.
+%>
+%> Usage:
+%
+%> Initalise subclass
+%> @code
+%> classdef  ZVM < labDevice & VectorNetworkAnalyser
+%> @endcode
+% ======================================================
+classdef  VectorNetworkAnalyser
     properties
       % Add device type specific properties here
     end
@@ -23,8 +23,6 @@ classdef  VNA
        %>
        %> @param obj Instance of class
        %> @param pow Power level [dBm]
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setSourcePower(obj,pow)
 
@@ -33,8 +31,6 @@ classdef  VNA
        %>
        %> @param obj Instance of class
        %> @param freq Frequency [Hz]
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setStartFreq(obj, freq)
           
@@ -43,8 +39,6 @@ classdef  VNA
        %>
        %> @param obj Instance of class
        %> @param freq Frequency [Hz]
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setStopFreq(obj, freq)
       
@@ -71,8 +65,6 @@ classdef  VNA
        %>
        %> @param obj Instance of class
        %> @param sweepPoints int
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setSweepPoints(obj,sweepPoints)
       
@@ -81,8 +73,6 @@ classdef  VNA
        %>
        %> @param obj Instance of class
        %> @param param Measurement Parameter string, e.g. "S11" or "Z21"
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       setMeasParameter(obj,param)
       
@@ -90,8 +80,6 @@ classdef  VNA
        %> @brief set device to single sweep mode
        %>
        %> @param obj Instance of class
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       singleSweep(obj)
       
@@ -99,8 +87,6 @@ classdef  VNA
        %> @brief set device to continuous sweep mode
        %>
        %> @param obj Instance of class
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       continuousSweep(obj)
       
@@ -108,8 +94,6 @@ classdef  VNA
        %> @brief initiate/trigger a measurement/sweep
        %>
        %> @param obj Instance of class
-       %> 
-       %> @return obj Instance of class
        % =====================================================
       doSweep(obj)
    end

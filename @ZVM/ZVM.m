@@ -1,4 +1,4 @@
-classdef  ZVM < labDevice & VNA
+classdef  ZVM < labDevice & VektorNetworkAnalyser
     properties
       % Add device specific properties here
     end
