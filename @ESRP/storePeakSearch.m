@@ -1,3 +1,4 @@
+%MARKED FOR DELETION
 function storePeakSearch (obj)
 %
 % At the moment, all peakSearch commands are in this function.

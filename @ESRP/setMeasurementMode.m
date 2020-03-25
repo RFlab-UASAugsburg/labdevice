@@ -1,68 +1,21 @@
+% ====================================================
+%> @brief Switch between the measurement modes
+%>
+%> - 'rec' for Receiver Mode
+%> - 'spec' for Spectrum Mode
+%>
+%> @param obj Instance of class
+%> @param mode [string] 'rec' or 'spec'
+% =====================================================
 function setMeasurementMode(obj, mode)
-% 
-% Switch between the measurement modes.
-%   - Receiver Mode
-%   - Spectrum Mode
-%   - I/Q Analyser Mode
-%
-%
-%   NOTE: "I/Q Analyser" and "New Spectrum" not supported.
-%
-%
-%
-% Parameters:
-%	obj.prop:	labDevice Handle with properties
-%            	- mode
-%               - address
-%               - port
-%               - prop.comm(unication)Handle (interface specific)
-%
-%   mode:       [String]
-%               rec      
-%               spec     
-%               newspec  
-%               iq       
-%
-%   iqdata:     Only needs to set, if the IQ-Analyser is needed [String]
-%               rim
-%               magn
-%               freq
-%               vect
-%
-%
-% Return values:
-%   /
-%
-% See also:
-%
-
-switch mode
-    case 'rec'                      % receiver mode
-        write(obj, ['INST REC']);
-    case 'spec'                     % spectrum mode
-        write(obj, ['INST SAN']);
-     case 'iq'                       % IQ-Analyser mode
-         error('IQ Analyser Mode remotivly not supported.');
-         
-%         write(obj, ['TRAC:IQ']);
-%         write(obj, ['TRAC:IQ:SET']);
-%         switch iqdata              
-%             case 'rim'
-%                 write(obj, ['CALC:FORM:RIM']);
-%             case 'magn'
-%                 write(obj, ['CALC:FORM:MAGN']);
-%             case 'freq'
-%                 write(obj, ['CALC:FORM:FREQ']);
-%             case 'vect'
-%                 write(obj, ['CALC:FORM:VECT']);
-%             otherwise
-%                 error('Wrong display type of the IQ data. (iqdata)');
-%        end
-
-    otherwise
-        error('Selected mode does not exist. (mode)');
-end
-
-
-
+	switch mode
+	    case 'rec'                      % receiver mode
+	        write(obj, ['INST REC']);
+	    case 'spec'                     % spectrum mode
+	        write(obj, ['INST SAN']);
+	    case 'iq'                       % IQ-Analyser mode
+	         error('IQ Analyser Mode not supported remotely.');
+		otherwise
+	         error('Selected mode does not exist. (mode)');
+	end
 end

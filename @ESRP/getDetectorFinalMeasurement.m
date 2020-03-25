@@ -1,5 +1,5 @@
 % ====================================================
-%> @brief get the currently set detector
+%> @brief get the currently set detector for final measurement
 %>
 %> detector strings:
 %>               'qpeak'
@@ -11,18 +11,18 @@
 %>               'rms
 %>
 %> @param obj Instance of class
-%> @param varargin detector number. Defaults to 1 if left empty
+%> @param varargin detector number. Defaults to 1 if left empty.
 %>
 %> @return detector (char array) the set detector in above format
 % =====================================================
 
-function detector = getDetector(obj,varargin)
+function detector = getDetectorFinalMeasurement(obj,varargin)
     if ~isempty(varargin)
         det_num = varargin{1};
     else
         det_num = 1;
     end
-    obj.write("DET"+det_num+":REC?");
+    obj.write("DET"+det_num+":FME?");
     detector = lower(strip(obj.read)); 
     switch detector
     case 'pos'

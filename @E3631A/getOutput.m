@@ -1,12 +1,13 @@
+% ====================================================
+%> @brief Get the currently active output
+%>
+%> @param obj Instance of class
+%>
+%> @return output currently active output. 'P6V' || 'P25V' || 'N25V'
+% =====================================================
+
 function output = getOutput(obj)
-%SE Select the output to be programmed
-%   subsequent calls to functions without specifying an output will now use
-%   the one given here.
-%   output: string or char array, one of these:
-%   P6V:    6V rail
-%   P25V:   25V rail
-%   N25V:   -25V rail
-obj.write("INST?");
-output = obj.read;
+	obj.write("INST?");
+	output = obj.read;
 end
 

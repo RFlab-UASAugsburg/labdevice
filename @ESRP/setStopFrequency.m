@@ -1,45 +1,21 @@
-function setStopFrequency(obj, freq, range)
-%
-% Sets the Stop Frequency.
-%   DEPENDING ON RANGE
-%
-% (long description goes here)
-%
-%
-% Parameters:
-%	obj.prop:	labDevice Handle with properties
-%            	- mode
-%               - address
-%               - port
-%               - prop.comm(unication)Handle (interface specific)
-%
-%   freq:       frequency [Hz]
-%
-%   range:      defines which stop frequency will be set
-%               0:      Sets the stop frequency of the whole measurement
-%               1-10:   Sets the stop frequency of the range 1 to 10
-%
-% Return values:
-%   /
-%
-% See also:
-%
-if (range < 0 || range > 10)
-    error('range is not correct (1 to 10)');
-else
-    switch range
-        case 0          
-            write(obj, ['FREQ:STOP ', num2str(freq), 'Hz; *WAI']);
-        otherwise
-            write(obj, ['SCAN', num2str(range), ':STOP ', num2str(freq), 'Hz; *WAI']);
-    end
-end
+% ====================================================
+%> @brief set the stop frequency
+%> 
+%> set the stop frequency of the whole measurement, or of a specified scan range
+%> (in spectrum mode, no scan ranges are available)
+%>
+%> @param obj Instance of class
+%> @param freq in Hz
+%> @param varargin leave empty to set the stop frequency of the whole measurement, [1..10] for a scan range
+% =====================================================
 
-% result = '000000';
-% % Abfrage des Operation Complete Bit
-% while str2num(result(6)) ~= 1
-%     writeDev(obj, '*OPC?');
-%     result = readDev(obj);
-% end
-
+function setStopFrequency(obj, freq, varargin)
+	if ~isempty(varargin)
+		if (varargin{1} < 1 || varargin{1} > 10)
+	    	error('range is not correct (1 to 10)');
+	    else
+	    	write(obj, ['SCAN', num2str(varargin{1}), ':STOP ', num2str(freq), 'Hz; *WAI']);
+	else
+		write(obj, ['FREQ:STOP ', num2str(freq), 'Hz; *WAI']);
+	end
 end

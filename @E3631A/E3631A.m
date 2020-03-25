@@ -1,7 +1,23 @@
+%> @file E3631A.m
+%> @brief Keysight E3631A 80W Triple Output Power Supply
+% ======================================================
+%> @brief Keysight E3631A Power Supply 
+%>
+%> Usage:
+%
+%> Initalise subclass
+%> @code
+%> psu = E3631A("gpib",... % mode
+%>              6); % GPIB address
+%> psu.setVolts(3,'P6V');
+%> psu.setAmps(1,'P6V');
+%> psu.setOutput('N25V');
+%> psu.setAmps(0.05);
+%> i = psu.getAmpsMeasured('P6V')
+%> @endcode
+% ======================================================
+
 classdef E3631A < labDevice
-    %E3631A Triple Output Power Supply
-    %   Implement lab device controls for the PSU
-    
     properties
         
     end

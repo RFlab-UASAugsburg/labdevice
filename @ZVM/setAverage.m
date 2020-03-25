@@ -1,6 +1,12 @@
+% ======================================================================
+%> @brief configure averaging
+%>
+%> currently only set up for point averaging, functionality could be extended
+%>
+%> @param obj Instance of ZVM class
+%> @param average -1 for no averaging, otherwise the amount of measurements to average into a single result.
+% ======================================================================
 function setAverage(obj,average)
-%SETAVERAGE Summary of this function goes here
-%   Detailed explanation goes here
 if average == -1
     obj.write('AVER OFF');
 else
@@ -8,4 +14,3 @@ else
     obj.write(['AVER:COUN ',num2str(average)]);
     obj.write('AVER ON');
 end
-

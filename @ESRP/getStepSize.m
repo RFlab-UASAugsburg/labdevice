@@ -1,16 +1,15 @@
+% ====================================================
+%> @brief get the start frequency
+%> 
+%> get stepsize of either a specific scan range, or the main rbw
+%> currently set
+%>
+%> @param obj Instance of class
+%> @param varargin leave empty to get the main rbw, or specify a scan range [1..10] for stepsizes (always leave empty in spectrum mode)
+%>
+%> @return stepsize in Hz
+% =====================================================
 function stepsize = getStepSize(obj,varargin)
-%GETSTEPSIZE get stepsize of either a specific scan range, or the main rbw
-%currently set.
-%   provide a index between 1 and 10 to get the stepsize of the corresponding
-%   range
-% Parameters:
-%	obj.prop:	labDevice Handle with properties
-%            	- mode
-%               - address
-%               - port
-%               - prop.comm(unication)Handle (interface specific)
-%
-%   varargin:   number between 1 and 10 to choose scan range [optional]
     if isempty(varargin)
         obj.write("FREQ:CENTER:STEP?");
     else

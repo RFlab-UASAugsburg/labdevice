@@ -1,3 +1,11 @@
+% ====================================================
+%> @brief get the currently set power unit (Y axis unit)
+%>
+%> @return unit one of these unit strings: 'DBM','V','A','W','DBPW','WATT','DBUV','DBMV','VOLT','DBUA','AMP'
+% =====================================================
+
+
+
 function unit = getPowUnit(obj)
 %GET returns currently set power unit
 %   Detailed explanation goes here

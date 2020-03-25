@@ -1,3 +1,12 @@
+% ====================================================
+%> @brief return X value of a specified marker
+%>
+%> @param obj Instance of class
+%> @param varargin optionally specify which marker to use for measurement (defaults to 1)
+%>
+%> @return X in Hz
+% =====================================================
+
 function X = getMarkerX(obj,varargin)
 %GETMARKERX return X-Value of specified marker
 %   if no number is specified, the first marker is chosen

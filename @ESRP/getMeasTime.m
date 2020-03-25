@@ -1,16 +1,14 @@
+% ====================================================
+%> @brief get the measurement time for a time or frequency domain measurement
+%> 
+%> @param obj Instance of class
+%> @param varargin leave empty to get frequency domain sweep time, or specify a scan range [1..10] for time domain scan time
+%>
+%> @return time in seconds
+% =====================================================
+
+
 function time = getMeasTime(obj,varargin)
-%GETSTEPSIZE get stepsize of either a specific scan range, or the main rbw
-%currently set.
-%   provide a index between 1 and 10 to get the stepsize of the corresponding
-%   range
-% Parameters:
-%	obj.prop:	labDevice Handle with properties
-%            	- mode
-%               - address
-%               - port
-%               - prop.comm(unication)Handle (interface specific)
-%
-%   varargin:   number between 1 and 10 to choose scan range [optional]
     if isempty(varargin)
         obj.write("SWE:TIME?");
     else

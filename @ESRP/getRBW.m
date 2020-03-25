@@ -1,16 +1,16 @@
-function rbw = getRBW(obj,varargin)
-%GETRBW get rbw of either a specific scan range, or the main rbw
-%currently set.
-%   provide a index between 1 and 10 to get the rbw of the corresponding
-%   range
-% Parameters:
-%	obj.prop:	labDevice Handle with properties
-%            	- mode
-%               - address
-%               - port
-%               - prop.comm(unication)Handle (interface specific)
-%
-%   varargin:   number between 1 and 10 to choose scan range
+% ====================================================
+%> @brief get the resolution bandwidth
+%> 
+%> get the resolution bandwidth of the whole measurement, or of a specified scan range
+%> (in spectrum mode, no scan ranges are available)
+%>
+%> @param obj Instance of class
+%> @param varargin leave empty to get the start frequency of the whole measurement, [1..10] for a scan range
+%>
+%> @return rbw in Hz
+% =====================================================
+
+function rbw = getMeasBandwidth(obj,varargin)
     if isempty(varargin)
         obj.write("BAND:RES?");
     else

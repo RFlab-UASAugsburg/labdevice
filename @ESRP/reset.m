@@ -1,26 +1,12 @@
+% ======================================================================
+%> @brief reset the device
+%>
+%> also re-enables the display for convenience.
+%>
+%> @param obj Instance of class
+% ======================================================================
+
 function reset (obj)
-% 
-% Resets the ESRP
-%
-% The ESRP will be reseted and because of switching into the remote mode,
-% the display will be turned on again.
-%
-%
-% Parameters:
-%	obj.prop:	labDevice Handle with properties
-%            	- mode
-%               - address
-%               - port
-%               - prop.comm(unication)Handle (interface specific)
-%
-% Return values:
-%   /
-%
-% See also:
-%
-
-write(obj, ['*RST;*CLS; *WAI']);        % reset
-write(obj, ['SYST:DISP:UPD ON']);       % turn display on again (bec. of remote-mode)
-
-
+	write(obj, ['*RST;*CLS; *WAI']);        % reset
+	write(obj, ['SYST:DISP:UPD ON']);       % turn display on again (bec. of remote-mode)
 end

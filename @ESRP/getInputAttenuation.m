@@ -1,18 +1,13 @@
+% ====================================================
+%> @brief get current input attenuation value, the auto ATT status, or the input protection status
+%>
+%> @param obj Instance of class
+%> @param varargin 'prot' for protection status, 'auto' for auto ATT status, leave empty to get attenuation value
+%>
+%> @return att input attenuation in dB, or 'on'/'off' for status queries
+% =====================================================
+
 function att = getInputAttenuation(obj,varargin)
-%GETINPUTATTENUATION get current input attenuation value, the auto ATT
-%status, or the input protection status
-%   
-% provide no extra variables to get the input attenuation value. Add 'prot'
-% or 'auto' to get the corresponding status.
-% Parameters:
-%	obj.prop:	labDevice Handle with properties
-%            	- mode
-%               - address
-%               - port
-%               - prop.comm(unication)Handle (interface specific)
-%
-%   varargin:   'prot' for protection status
-%               'auto' for auto ATT status
     if isempty(varargin)
         obj.write("INP:ATT?");
         att = str2double(obj.read);

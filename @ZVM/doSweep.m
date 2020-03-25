@@ -1,5 +1,8 @@
+% ======================================================================
+%> @brief do a single Sweep / immediately start a new measurement
+%>
+%> @param obj Instance of ZVM class
+% ======================================================================
 function doSweep(obj)
-%DOSWEEP Summary of this function goes here
-%   Detailed explanation goes here
-obj.write('INIT:IMM;*WAI');
+	obj.write('INIT:IMM;*WAI');
 end

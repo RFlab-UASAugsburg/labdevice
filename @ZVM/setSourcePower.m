@@ -1,6 +1,10 @@
+% ======================================================================
+%> @brief set the source power
+%>
+%> @param obj Instance of ZVM class
+%> @param power in dBm
+% ======================================================================
 function setSourcePower(obj,power)
-%SETSOURCEPOWER set the source power (in dBm)
-%   Detailed explanation goes here
-obj.write("SOUR:POW " + power + "dBm");
+	obj.write("SOUR:POW " + power + "dBm");
 end
 

@@ -1,7 +1,15 @@
+% ====================================================
+%> @brief get the Preamp status
+%>
+%> get either the global preamp status or the status for a single scan range
+%>
+%> @param obj Instance of class
+%> @param varargin leave empty to get global preamp status, or specify a scan range [1..10]
+%>
+%> @return status 1:on 0:off
+% =====================================================
+
 function status = getPreamp(obj,varargin)
-%GETPREAMP get the Preamp status
-%   either provide a range to get the preamp status of a single scan
-%   range, or nothing to get the main input preamp status.
     if isempty(varargin)
         obj.write("INP:GAIN:STAT?");
     else

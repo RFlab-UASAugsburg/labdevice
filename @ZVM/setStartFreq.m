@@ -1,6 +1,10 @@
+% ======================================================================
+%> @brief set the start frequency
+%>
+%> @param obj Instance of ZVM class
+%> @param freq in Hz
+% ======================================================================
 function setStartFreq(obj,freq)
-%SETSTARTFREQ Set the start frequency (in Hz)
-%   Detailed explanation goes here
-obj.write("FREQ:START " + freq);
+	obj.write("FREQ:START " + freq);
 end
 

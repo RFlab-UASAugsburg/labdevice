@@ -1,34 +1,39 @@
+%> @file labDevice.m
+%> @brief Superclass for all labdevices
+% ======================================================
+%> @brief Handling of the default values is done here.
+%>
+%> At the moment ethernet, gpib and gpib over ethernet connections are supported.
+%> The connection mode needs to be handed over. There is no corresponding
+%> default property for it.
+%>
+%> Usage:
+%
+%> Initalise class
+%> @code
+%> dev = labDevice(deviceName, conMode) 
+%> %returns labDevice object, dev,
+%> %with default values for the parameters of the connection mode conMode.
+%> @endcode
+% ======================================================
+
 classdef  labDevice
-    %labDevice Superclass for all labdevices
-    %
-    % Handling of the default values is done here.
-    % At the moment just ethernet and gpib connections can be established.
-    % The connection mode needs to be handed over. There is no corresponding
-    % default property for it.
-    %
-    %   dev = labDevice(deviceName, conMode) returns labDevice object, dev,
-    %   with default values for the parameters of the connection mode conMode.
-    %
-    %
-    % Parameters of Constructor:
-    %  mode:         connection mode (eth or gpib at the moment)
-    %
-    %
-    % Return values of Constructor:
-    %  obj:         lab Device Handle with properties
-    %                - mode
-    %                - address
-    %                - port
-    %                - comm(unication)Handle (interface specific)
-    %
-    % See also: write, read, flush
-    %
-    % References:
     
     properties
         prop
     end
     methods
+        % ======================================================================
+        %> @brief labdevice constructor
+        %>
+        %> The constructor.
+        %>
+        %> @param deviceName type of device as used in the default configs file
+        %> @param mode Communication mode e.g. "eth" for ethernet
+        %> @param varargin Variable input arguments depending on connection mode
+        %>
+        %> @return Instance of the labDevice class.
+        % ======================================================================
         function obj = labDevice(deviceName, mode, varargin)
             % Quickfix: No idea why, but sometimes varargin is a {1}{2}
             % array, sometimes not.
@@ -174,7 +179,13 @@ classdef  labDevice
             
 
         end
-        
+        % ======================================================================
+        %> @brief Delete labDevice Object
+        %>
+        %> The destructor 
+        %>
+        %> @param obj Instance of class
+        % ======================================================================
         function delete(obj)
             closeDev(obj);
         end

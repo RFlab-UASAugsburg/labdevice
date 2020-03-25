@@ -1,6 +1,10 @@
+% ======================================================================
+%> @brief set the IF/IF/resolution bandwidth
+%>
+%> @param obj Instance of ZVM class
+%> @param bandwidth in Hz [double]
+% ======================================================================
 function setZFBandwidth(obj,bandwidth)
-%SETZFBANDWIDTH Set the ZF Bandwith (in Hz)
-%   Detailed explanation goes here
-obj.write("BWID:RES " + bandwidth + "Hz");
+	obj.write("BWID:RES " + bandwidth + "Hz");
 end
 

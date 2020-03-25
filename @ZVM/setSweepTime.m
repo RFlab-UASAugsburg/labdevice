@@ -1,3 +1,9 @@
+% ======================================================================
+%> @brief configure the sweep time (in ms)
+%>
+%> @param obj Instance of ZVM class
+%> @param time -1 for automatic sweep time, otherwise time in ms
+% ======================================================================
 function setSweepTime(obj,time)
 %SETSWEEPTIME Summary of this function goes here
 %   Detailed explanation goes here

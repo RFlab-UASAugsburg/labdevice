@@ -1,11 +1,16 @@
+% ======================================================================
+%> @brief Set the measurement format
+%>
+%> UPHase,PHASe,COMPlex,MAGNitude,PHASe,REAL,IMAGinary,SWR,GDELay
+%>
+%> @param obj Instance of ZVM class
+%> @param format one of: 'UPH','PHAS','COMP','MAGN','PHAS','REAL','IMAG','SWR','GDEL'
+% ======================================================================
 function setMeasFormat(obj,format)
-%SETMEASFORMAT Set the measurement format
-%   UPHase,PHASe,COMPlex,MAGNitude,PHASe,REAL,IMAGinary,SWR,GDELay
-%   Detailed explanation goes here
-if strcmpi("UPH",format)
-    obj.write("CALC:FORM PHAS;*WAI");
-    obj.write("CALC:FORM UPH");
-else
-    obj.write("CALC:FORM " + upper(format));
+	if strcmpi("UPH",format)
+	    obj.write("CALC:FORM PHAS;*WAI");
+	    obj.write("CALC:FORM UPH");
+	else
+	    obj.write("CALC:FORM " + upper(format));
+	end
 end
-

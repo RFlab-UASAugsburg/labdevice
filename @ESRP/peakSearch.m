@@ -1,3 +1,4 @@
+%MARKED FOR DELETION
 function peakSearch (obj, margin, method, no, noPeak)
 %
 % At the moment, all peakSearch commands are in this function.

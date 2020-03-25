@@ -1,48 +1,21 @@
-function setStartFrequency(obj, freq, range)
-%
-% Sets the start frequency.
-%   DEPENDING ON RANGE
-%
-% (long description goes here)
-%
-%
-% Parameters:
-%	obj.prop:	labDevice Handle with properties
-%            	- mode
-%               - address
-%               - port
-%               - prop.comm(unication)Handle (interface specific)
-%
-%   freq:       frequency [Hz]
-%
-%   range:      defines which start frequency will be set
-%               0:      Sets the start frequency of the whole measurement
-%               1-10:    Sets the start frequency of the range 1 to 10
-%
-% Return values:
-%   /
-%
-% See also:
-%
+% ====================================================
+%> @brief set the start frequency
+%> 
+%> set the start frequency of the whole measurement, or of a specified scan range
+%> (in spectrum mode, no scan ranges are available)
+%>
+%> @param obj Instance of class
+%> @param freq in Hz
+%> @param varargin leave empty to set the start frequency of the whole measurement, [1..10] for a scan range
+% =====================================================
 
-if (range < 0 || range > 10)
-    error('range is not correct (0 to 3)');
-else
-    switch range
-        case 0
-            write(obj, ['FREQ:STAR ', num2str(freq), 'Hz; *WAI']);
-        otherwise
-            write(obj, ['SCAN', num2str(range), ':STAR ', num2str(freq), 'Hz; *WAI']);
-    end
-end
-
-
-
-% result = '000000';
-% % Abfrage des Operation Complete Bit
-% while str2num(result(6)) ~= 1
-%     writeDev(obj, '*OPC?');
-%     result = readDev(obj);
-% end
-
+function setStartFrequency(obj, freq, varargin)
+	if ~isempty(varargin)
+		if (varargin{1} < 1 || varargin{1} > 10)
+	    	error('range is not correct (1 to 10)');
+	    else
+	    	write(obj, ['SCAN', num2str(varargin{1}), ':STAR ', num2str(freq), 'Hz; *WAI']);
+	else
+		write(obj, ['FREQ:STAR ', num2str(freq), 'Hz; *WAI']);
+	end
 end

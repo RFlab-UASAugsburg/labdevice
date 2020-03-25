@@ -1,6 +1,9 @@
+% ======================================================================
+%> @brief set the measurement mode
+%>
+%> @param obj Instance of ZVM class
+%> @param mode
+% ======================================================================
 function setMeasMode(obj,mode)
-%SETFREQMODE Summary of this function goes here
-%   Detailed explanation goes here
-obj.write("SENS:FREQ:MODE " + mode);
+	obj.write("SENS:FREQ:MODE " + mode);
 end
-

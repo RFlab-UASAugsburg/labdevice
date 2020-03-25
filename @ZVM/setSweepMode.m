@@ -1,6 +1,12 @@
+% ======================================================================
+%> @brief choose single or continuous sweep mode
+%>
+%> use ZVM.continuousSweep and ZVM.singleSweep for readability
+%>
+%> @param obj Instance of ZVM class
+%> @param mode 'cont' or 'single'
+% ======================================================================
 function setSweepMode(obj,mode)
-%SETSWEEPMODE Summary of this function goes here
-%   Detailed explanation goes here
     switch mode
         case 'cont'
             obj.write('INIT:CONT ON');
@@ -10,4 +16,3 @@ function setSweepMode(obj,mode)
             error("incorrect mode");
     end
 end
-

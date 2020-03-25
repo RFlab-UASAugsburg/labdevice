@@ -1,6 +1,8 @@
+% ======================================================================
+%> @brief set device to continuous sweep mode
+%>
+%> @param obj Instance of ZVM class
+% ======================================================================
 function continuousSweep(obj)
-%CONTINUOUSSWEEP set device to continuous sweep mode
-%   obj Instance of ZVM class
-obj.write('INIT:CONT ON');
+	obj.write('INIT:CONT ON');
 end
-

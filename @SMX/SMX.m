@@ -1,7 +1,7 @@
 %> @file SMX.m
 %> @brief Rhode und Schwarz SMX Signal Generator
 % ======================================================
-%> @brief Rhode und Schwarz Signal generator with AM, FM and pulse
+%> @brief Rohde und Schwarz Signal generator with AM, FM and pulse
 %> modulation.
 %>
 %> Usage:

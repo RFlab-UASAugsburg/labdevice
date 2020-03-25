@@ -1,6 +1,10 @@
+% ======================================================================
+%> @brief set the amount of measurement points in a sweep
+%>
+%> @param obj Instance of ZVM class
+%> @param points amount of points
+% ======================================================================
 function setSweepPoints(obj,points)
-%SETSWEEPPOINTS Summary of this function goes here
-%   Detailed explanation goes here
-obj.write("SWE:POINTS " + points);
+	obj.write("SWE:POINTS " + points);
 end
 

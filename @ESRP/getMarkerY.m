@@ -1,6 +1,14 @@
+% ====================================================
+%> @brief return Y value of a specified marker
+%>
+%> @param obj Instance of class
+%> @param varargin optionally specify which marker to use for measurement (defaults to 1)
+%>
+%> @return Y unit depends on the current device settings
+% =====================================================
+
+
 function Y = getMarkerY(obj,varargin)
-%GETMARKERX return Y-Value of specified marker
-%   if no number is specified, the first marker is chosen
     if ~isempty(varargin)
         mark_num = varargin{1};
     else

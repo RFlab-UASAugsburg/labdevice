@@ -1,15 +1,11 @@
-function freq = getCenterFrequency(obj)
-%GETCENTERFREQUENCY get center frequency of ESRP
-% Parameters:
-%	obj.prop:	labDevice Handle with properties
-%            	- mode
-%               - address
-%               - port
-%               - prop.comm(unication)Handle (interface specific)
-%
-% Return values:
-%   freq:       center frequency in Hz
+% ====================================================
+%> @brief get the current center frequency of ESRP
+%>
+%> @param obj Instance of class
+%> @return freq center Frequency in Hz
+% =====================================================
 
+function freq = getCenterFrequency(obj)
     obj.write("FREQ:CENT?");
     freq = obj.read;
     if isnan(str2double(freq))

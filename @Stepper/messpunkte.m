@@ -1,3 +1,4 @@
+%should probably be moved to Praktikumsversuch repo...
 function [ist_wert,deltaAngle,AngleVector]= messpunkte(~,stopp_pos,MeasPoints,Kreismessung)
 % In dieser Funktion wird der Winkelvektor und den Reale Start-& Stoppwinkel
 % berechnet

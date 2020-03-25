@@ -1,7 +1,12 @@
+% ======================================================================
+%> @brief get the amount of measurement points in a sweep
+%>
+%> @param obj Instance of ZVM class
+%>
+%> @return points number of sweep points [double]
+% ======================================================================
 function points = getSweepPoints(obj)
-%GETSWEEPPOINTS Summary of this function goes here
-%   Detailed explanation goes here
-obj.write('SWE:POINTS?');
-points = str2double(obj.read());
+	obj.write('SWE:POINTS?');
+	points = str2double(obj.read());
 end
 
