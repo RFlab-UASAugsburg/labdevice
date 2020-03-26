@@ -1,3 +1,9 @@
+% ======================================================================
+%> @brief reads data from labDevice using the java helper class
+%>
+%> @param obj Instance of labDevice class
+%> @return message read data as a single character array
+% ======================================================================
 function message = read(obj)
     import java.net.Socket
     import java.io.*
