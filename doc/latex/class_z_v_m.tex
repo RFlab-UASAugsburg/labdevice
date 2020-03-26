@@ -1,212 +1,493 @@
-\hypertarget{class_z_v_m}{}\section{Z\+VM Class Reference}
-\label{class_z_v_m}\index{Z\+VM@{Z\+VM}}
+\hypertarget{class_z_v_m}{}\doxysection{Z\+VM Class Reference}
+\label{class_z_v_m}\index{ZVM@{ZVM}}
 
 
-Inherits \hyperlink{classlab_device}{lab\+Device}, and V\+NA.
+Rohde und Schwarz \mbox{\hyperlink{class_z_v_m}{Z\+VM}} Vector Signal Analyzer.  
 
-\subsection*{Public Member Functions}
+
+
+
+Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}, and Vektor\+Network\+Analyser.
+
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \hyperlink{class_z_v_m_a305759181353dc954271961d92a6718d}{Z\+VM} (in mode, in varargin)
-\item 
-function \hyperlink{class_z_v_m_a60bf89e4b0ab9c41105d54b72657cca1}{delete} (in obj)
-\item 
-function \hyperlink{class_z_v_m_af3911140bd2e9c2d372f6085189658f8}{read} (in obj)
-\item 
-function \hyperlink{class_z_v_m_adcb77d2a4cb6a10a4d045ab91540c3e1}{flush} (in obj)
-\item 
-function \hyperlink{class_z_v_m_aa94a75b704b56a4ecbc73dc8ce3870bc}{write} (in obj, in txt)
-\item 
-function \hyperlink{class_z_v_m_a257b1ef2269ceb632a7255f8d7eb691c}{continuous\+Sweep} (in obj)
-\item 
-function \hyperlink{class_z_v_m_ad05200443734a91ae55858023cb9e489}{do\+Sweep} (in obj)
-\item 
-function \hyperlink{class_z_v_m_ae184b648cd1a40e14745830b6e64caa6}{get\+Sweep\+Points} (in obj)
-\item 
-function \hyperlink{class_z_v_m_a62b5846f3b2aa046c714eeed38355e9d}{get\+Trace\+Cmplx} (in obj, in channel, in f\+\_\+points)
-\item 
-function \hyperlink{class_z_v_m_af88d3bca150c59d3fa8a853080a8d8d1}{set\+Average} (in obj, in average)
-\item 
-function \hyperlink{class_z_v_m_ad0a2ec0f5c015c66a082641c66a31130}{set\+Display} (in obj, in onoff)
-\item 
-function \hyperlink{class_z_v_m_ab6a1a5420d82e64aa0db2798a7f0c271}{set\+Meas\+Format} (in obj, in format)
-\item 
-function \hyperlink{class_z_v_m_ac087c6a910e00386fc16d32673f6c3d6}{set\+Meas\+Mode} (in obj, in mode)
-\item 
-function \hyperlink{class_z_v_m_a29cf6af35b5d80b9894adc3c6e13c9fc}{set\+Meas\+Parameter} (in obj, in param)
-\item 
-function \hyperlink{class_z_v_m_a776015b165753aa32bc78e3167d52e75}{set\+Source\+Power} (in obj, in power)
-\item 
-function \hyperlink{class_z_v_m_acaaedad4c145369a61da834b2f5e49be}{set\+Start\+Freq} (in obj, in freq)
-\item 
-function \hyperlink{class_z_v_m_a8333bb3fd41207edca3bc6c4c4bcc0ae}{set\+Stop\+Freq} (in obj, in freq)
-\item 
-function \hyperlink{class_z_v_m_a69105b51fb178fdd69ee9f512d16a546}{set\+Sweep\+Count} (in obj, in count)
-\item 
-function \hyperlink{class_z_v_m_ab052e6c187fa789ee7f2501214969168}{set\+Sweep\+Mode} (in obj, in mode)
-\item 
-function \hyperlink{class_z_v_m_a7a9cbe25b5ac601010bcf24ef7926467}{set\+Sweep\+Points} (in obj, in points)
-\item 
-function \hyperlink{class_z_v_m_ac41f8881b799470b4ddd28803d431a8a}{set\+Sweep\+Time} (in obj, in time)
-\item 
-function \hyperlink{class_z_v_m_ab89b2dadec4f0bf813c053d66e5ac2b5}{set\+Z\+F\+Bandwidth} (in obj, in bandwidth)
-\item 
-function \hyperlink{class_z_v_m_a9fab21909e1eb4de3964a63105490883}{single\+Sweep} (in obj)
-\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+function \mbox{\hyperlink{class_z_v_m_a305759181353dc954271961d92a6718d}{Z\+VM}} (in mode, in varargin)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_z_v_m}{Z\+VM}} constructor. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_a60bf89e4b0ab9c41105d54b72657cca1}{delete}} (in obj)
+\begin{DoxyCompactList}\small\item\em Delete \mbox{\hyperlink{class_z_v_m}{Z\+VM}} Object. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_af3911140bd2e9c2d372f6085189658f8}{read}} (in obj)
+\begin{DoxyCompactList}\small\item\em Read data from labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_adcb77d2a4cb6a10a4d045ab91540c3e1}{flush}} (in obj)
+\begin{DoxyCompactList}\small\item\em Flush labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_aa94a75b704b56a4ecbc73dc8ce3870bc}{write}} (in obj, in txt)
+\begin{DoxyCompactList}\small\item\em Write S\+C\+P\+I/skippy commands to labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_a257b1ef2269ceb632a7255f8d7eb691c}{continuous\+Sweep}} (in obj)
+\begin{DoxyCompactList}\small\item\em set device to continuous sweep mode \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_ad05200443734a91ae55858023cb9e489}{do\+Sweep}} (in obj)
+\begin{DoxyCompactList}\small\item\em do a single Sweep / immediately start a new measurement \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_ae184b648cd1a40e14745830b6e64caa6}{get\+Sweep\+Points}} (in obj)
+\begin{DoxyCompactList}\small\item\em get the amount of measurement points in a sweep \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_a62b5846f3b2aa046c714eeed38355e9d}{get\+Trace\+Cmplx}} (in obj, in channel, in f\+\_\+points)
+\begin{DoxyCompactList}\small\item\em get the complex trace from the device \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_af88d3bca150c59d3fa8a853080a8d8d1}{set\+Average}} (in obj, in average)
+\begin{DoxyCompactList}\small\item\em configure averaging \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_ad0a2ec0f5c015c66a082641c66a31130}{set\+Display}} (in obj, in onoff)
+\begin{DoxyCompactList}\small\item\em enable/disable display update during remote control \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_ab6a1a5420d82e64aa0db2798a7f0c271}{set\+Meas\+Format}} (in obj, in format)
+\begin{DoxyCompactList}\small\item\em Set the measurement format. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_ac087c6a910e00386fc16d32673f6c3d6}{set\+Meas\+Mode}} (in obj, in mode)
+\begin{DoxyCompactList}\small\item\em set the measurement mode \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_a29cf6af35b5d80b9894adc3c6e13c9fc}{set\+Meas\+Parameter}} (in obj, in param)
+\begin{DoxyCompactList}\small\item\em set the parameter to measure \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_a776015b165753aa32bc78e3167d52e75}{set\+Source\+Power}} (in obj, in power)
+\begin{DoxyCompactList}\small\item\em set the source power \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_acaaedad4c145369a61da834b2f5e49be}{set\+Start\+Freq}} (in obj, in freq)
+\begin{DoxyCompactList}\small\item\em set the start frequency \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_a8333bb3fd41207edca3bc6c4c4bcc0ae}{set\+Stop\+Freq}} (in obj, in freq)
+\begin{DoxyCompactList}\small\item\em set the stop frequency \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_a69105b51fb178fdd69ee9f512d16a546}{set\+Sweep\+Count}} (in obj, in count)
+\begin{DoxyCompactList}\small\item\em set the sweep count \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_ab052e6c187fa789ee7f2501214969168}{set\+Sweep\+Mode}} (in obj, in mode)
+\begin{DoxyCompactList}\small\item\em choose single or continuous sweep mode \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_a7a9cbe25b5ac601010bcf24ef7926467}{set\+Sweep\+Points}} (in obj, in points)
+\begin{DoxyCompactList}\small\item\em set the amount of measurement points in a sweep \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_ac41f8881b799470b4ddd28803d431a8a}{set\+Sweep\+Time}} (in obj, in time)
+\begin{DoxyCompactList}\small\item\em configure the sweep time (in ms) \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_ab89b2dadec4f0bf813c053d66e5ac2b5}{set\+Z\+F\+Bandwidth}} (in obj, in bandwidth)
+\begin{DoxyCompactList}\small\item\em set the I\+F/\+I\+F/resolution bandwidth \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_z_v_m_a9fab21909e1eb4de3964a63105490883}{single\+Sweep}} (in obj)
+\begin{DoxyCompactList}\small\item\em set device to single sweep mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
+Rohde und Schwarz \mbox{\hyperlink{class_z_v_m}{Z\+VM}} Vector Signal Analyzer. 
+
+Usage\+: Initalise subclass 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{zvm = \mbox{\hyperlink{class_z_v_m_a305759181353dc954271961d92a6718d}{ZVM}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{             6); \% GPIB address}
+\DoxyCodeLine{zvm.singleSweep();}
+\DoxyCodeLine{trace = zvm.getTraceCmplx(1,zvm.getSweepPoints);}
+\end{DoxyCode}
+ 
+
+Definition at line 16 of file Z\+V\+M.\+m.
 
 
-Definition at line 1 of file Z\+V\+M.\+m.
 
-
-
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_z_v_m_a305759181353dc954271961d92a6718d}\label{class_z_v_m_a305759181353dc954271961d92a6718d}} 
-\index{Z\+VM@{Z\+VM}!Z\+VM@{Z\+VM}}
-\index{Z\+VM@{Z\+VM}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{Z\+V\+M()}{ZVM()}}
+\index{ZVM@{ZVM}!ZVM@{ZVM}}
+\index{ZVM@{ZVM}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{ZVM()}{ZVM()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::\+Z\+VM (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
-\subsection{Member Function Documentation}
+\mbox{\hyperlink{class_z_v_m}{Z\+VM}} constructor. 
+
+The constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Communication mode e.\+g. \char`\"{}gpib\char`\"{} for gpib \\
+\hline
+{\em varargin} & Variable input arguments depending on connection mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_z_v_m_a257b1ef2269ceb632a7255f8d7eb691c}\label{class_z_v_m_a257b1ef2269ceb632a7255f8d7eb691c}} 
-\index{Z\+VM@{Z\+VM}!continuous\+Sweep@{continuous\+Sweep}}
-\index{continuous\+Sweep@{continuous\+Sweep}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{continuous\+Sweep()}{continuousSweep()}}
+\index{ZVM@{ZVM}!continuousSweep@{continuousSweep}}
+\index{continuousSweep@{continuousSweep}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{continuousSweep()}{continuousSweep()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::continuous\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+set device to continuous sweep mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_a60bf89e4b0ab9c41105d54b72657cca1}\label{class_z_v_m_a60bf89e4b0ab9c41105d54b72657cca1}} 
-\index{Z\+VM@{Z\+VM}!delete@{delete}}
-\index{delete@{delete}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{delete()}{delete()}}
+\index{ZVM@{ZVM}!delete@{delete}}
+\index{delete@{delete}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Delete \mbox{\hyperlink{class_z_v_m}{Z\+VM}} Object. 
+
+The destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_ad05200443734a91ae55858023cb9e489}\label{class_z_v_m_ad05200443734a91ae55858023cb9e489}} 
-\index{Z\+VM@{Z\+VM}!do\+Sweep@{do\+Sweep}}
-\index{do\+Sweep@{do\+Sweep}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{do\+Sweep()}{doSweep()}}
+\index{ZVM@{ZVM}!doSweep@{doSweep}}
+\index{doSweep@{doSweep}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{doSweep()}{doSweep()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::do\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+do a single Sweep / immediately start a new measurement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_adcb77d2a4cb6a10a4d045ab91540c3e1}\label{class_z_v_m_adcb77d2a4cb6a10a4d045ab91540c3e1}} 
-\index{Z\+VM@{Z\+VM}!flush@{flush}}
-\index{flush@{flush}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{flush()}{flush()}}
+\index{ZVM@{ZVM}!flush@{flush}}
+\index{flush@{flush}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Flush labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_ae184b648cd1a40e14745830b6e64caa6}\label{class_z_v_m_ae184b648cd1a40e14745830b6e64caa6}} 
-\index{Z\+VM@{Z\+VM}!get\+Sweep\+Points@{get\+Sweep\+Points}}
-\index{get\+Sweep\+Points@{get\+Sweep\+Points}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{get\+Sweep\+Points()}{getSweepPoints()}}
+\index{ZVM@{ZVM}!getSweepPoints@{getSweepPoints}}
+\index{getSweepPoints@{getSweepPoints}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{getSweepPoints()}{getSweepPoints()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::get\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+get the amount of measurement points in a sweep 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+points number of sweep points \mbox{[}double\mbox{]} 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_z_v_m_a62b5846f3b2aa046c714eeed38355e9d}\label{class_z_v_m_a62b5846f3b2aa046c714eeed38355e9d}} 
-\index{Z\+VM@{Z\+VM}!get\+Trace\+Cmplx@{get\+Trace\+Cmplx}}
-\index{get\+Trace\+Cmplx@{get\+Trace\+Cmplx}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{get\+Trace\+Cmplx()}{getTraceCmplx()}}
+\index{ZVM@{ZVM}!getTraceCmplx@{getTraceCmplx}}
+\index{getTraceCmplx@{getTraceCmplx}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{getTraceCmplx()}{getTraceCmplx()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::get\+Trace\+Cmplx (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{channel,  }\item[{in}]{f\+\_\+points }\end{DoxyParamCaption})}
 
+
+
+get the complex trace from the device 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em channel} & which measurement channel to use (just use 1) \\
+\hline
+{\em f\+\_\+points} & amount of measurement points in the sweep\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Daten\+V\+NA complex array of length f\+\_\+points with the trace data 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_z_v_m_af3911140bd2e9c2d372f6085189658f8}\label{class_z_v_m_af3911140bd2e9c2d372f6085189658f8}} 
-\index{Z\+VM@{Z\+VM}!read@{read}}
-\index{read@{read}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{read()}{read()}}
+\index{ZVM@{ZVM}!read@{read}}
+\index{read@{read}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Read data from labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret Data read from device 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_z_v_m_af88d3bca150c59d3fa8a853080a8d8d1}\label{class_z_v_m_af88d3bca150c59d3fa8a853080a8d8d1}} 
-\index{Z\+VM@{Z\+VM}!set\+Average@{set\+Average}}
-\index{set\+Average@{set\+Average}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Average()}{setAverage()}}
+\index{ZVM@{ZVM}!setAverage@{setAverage}}
+\index{setAverage@{setAverage}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setAverage()}{setAverage()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Average (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{average }\end{DoxyParamCaption})}
 
+
+
+configure averaging 
+
+currently only set up for point averaging, functionality could be extended
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em average} & -\/1 for no averaging, otherwise the amount of measurements to average into a single result. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_ad0a2ec0f5c015c66a082641c66a31130}\label{class_z_v_m_ad0a2ec0f5c015c66a082641c66a31130}} 
-\index{Z\+VM@{Z\+VM}!set\+Display@{set\+Display}}
-\index{set\+Display@{set\+Display}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Display()}{setDisplay()}}
+\index{ZVM@{ZVM}!setDisplay@{setDisplay}}
+\index{setDisplay@{setDisplay}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setDisplay()}{setDisplay()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Display (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{onoff }\end{DoxyParamCaption})}
 
+
+
+enable/disable display update during remote control 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em onoff} & \textquotesingle{}on\textquotesingle{} or \textquotesingle{}off\textquotesingle{} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_ab6a1a5420d82e64aa0db2798a7f0c271}\label{class_z_v_m_ab6a1a5420d82e64aa0db2798a7f0c271}} 
-\index{Z\+VM@{Z\+VM}!set\+Meas\+Format@{set\+Meas\+Format}}
-\index{set\+Meas\+Format@{set\+Meas\+Format}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Meas\+Format()}{setMeasFormat()}}
+\index{ZVM@{ZVM}!setMeasFormat@{setMeasFormat}}
+\index{setMeasFormat@{setMeasFormat}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setMeasFormat()}{setMeasFormat()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Meas\+Format (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{format }\end{DoxyParamCaption})}
 
+
+
+Set the measurement format. 
+
+U\+P\+Hase,P\+H\+A\+Se,C\+O\+M\+Plex,M\+A\+G\+Nitude,P\+H\+A\+Se,R\+E\+AL,I\+M\+A\+Ginary,S\+WR,G\+D\+E\+Lay
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em format} & one of\+: \textquotesingle{}U\+PH\textquotesingle{},\textquotesingle{}P\+H\+AS\textquotesingle{},\textquotesingle{}C\+O\+MP\textquotesingle{},\textquotesingle{}M\+A\+GN\textquotesingle{},\textquotesingle{}P\+H\+AS\textquotesingle{},\textquotesingle{}R\+E\+AL\textquotesingle{},\textquotesingle{}I\+M\+AG\textquotesingle{},\textquotesingle{}S\+WR\textquotesingle{},\textquotesingle{}G\+D\+EL\textquotesingle{} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_ac087c6a910e00386fc16d32673f6c3d6}\label{class_z_v_m_ac087c6a910e00386fc16d32673f6c3d6}} 
-\index{Z\+VM@{Z\+VM}!set\+Meas\+Mode@{set\+Meas\+Mode}}
-\index{set\+Meas\+Mode@{set\+Meas\+Mode}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Meas\+Mode()}{setMeasMode()}}
+\index{ZVM@{ZVM}!setMeasMode@{setMeasMode}}
+\index{setMeasMode@{setMeasMode}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setMeasMode()}{setMeasMode()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Meas\+Mode (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{mode }\end{DoxyParamCaption})}
 
+
+
+set the measurement mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em mode} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_a29cf6af35b5d80b9894adc3c6e13c9fc}\label{class_z_v_m_a29cf6af35b5d80b9894adc3c6e13c9fc}} 
-\index{Z\+VM@{Z\+VM}!set\+Meas\+Parameter@{set\+Meas\+Parameter}}
-\index{set\+Meas\+Parameter@{set\+Meas\+Parameter}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Meas\+Parameter()}{setMeasParameter()}}
+\index{ZVM@{ZVM}!setMeasParameter@{setMeasParameter}}
+\index{setMeasParameter@{setMeasParameter}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setMeasParameter()}{setMeasParameter()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Meas\+Parameter (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{param }\end{DoxyParamCaption})}
 
+
+
+set the parameter to measure 
+
+in frequency sweep mode, while measuring power
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em param} & Measurement parameter, for example \textquotesingle{}Z21\textquotesingle{} or \textquotesingle{}S11\textquotesingle{} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_a776015b165753aa32bc78e3167d52e75}\label{class_z_v_m_a776015b165753aa32bc78e3167d52e75}} 
-\index{Z\+VM@{Z\+VM}!set\+Source\+Power@{set\+Source\+Power}}
-\index{set\+Source\+Power@{set\+Source\+Power}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Source\+Power()}{setSourcePower()}}
+\index{ZVM@{ZVM}!setSourcePower@{setSourcePower}}
+\index{setSourcePower@{setSourcePower}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setSourcePower()}{setSourcePower()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Source\+Power (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{power }\end{DoxyParamCaption})}
 
+
+
+set the source power 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em power} & in d\+Bm \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_acaaedad4c145369a61da834b2f5e49be}\label{class_z_v_m_acaaedad4c145369a61da834b2f5e49be}} 
-\index{Z\+VM@{Z\+VM}!set\+Start\+Freq@{set\+Start\+Freq}}
-\index{set\+Start\+Freq@{set\+Start\+Freq}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Start\+Freq()}{setStartFreq()}}
+\index{ZVM@{ZVM}!setStartFreq@{setStartFreq}}
+\index{setStartFreq@{setStartFreq}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setStartFreq()}{setStartFreq()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Start\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})}
 
+
+
+set the start frequency 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em freq} & in Hz \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_a8333bb3fd41207edca3bc6c4c4bcc0ae}\label{class_z_v_m_a8333bb3fd41207edca3bc6c4c4bcc0ae}} 
-\index{Z\+VM@{Z\+VM}!set\+Stop\+Freq@{set\+Stop\+Freq}}
-\index{set\+Stop\+Freq@{set\+Stop\+Freq}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Stop\+Freq()}{setStopFreq()}}
+\index{ZVM@{ZVM}!setStopFreq@{setStopFreq}}
+\index{setStopFreq@{setStopFreq}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setStopFreq()}{setStopFreq()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Stop\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})}
 
+
+
+set the stop frequency 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em freq} & in Hz \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_a69105b51fb178fdd69ee9f512d16a546}\label{class_z_v_m_a69105b51fb178fdd69ee9f512d16a546}} 
-\index{Z\+VM@{Z\+VM}!set\+Sweep\+Count@{set\+Sweep\+Count}}
-\index{set\+Sweep\+Count@{set\+Sweep\+Count}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Sweep\+Count()}{setSweepCount()}}
+\index{ZVM@{ZVM}!setSweepCount@{setSweepCount}}
+\index{setSweepCount@{setSweepCount}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setSweepCount()}{setSweepCount()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Sweep\+Count (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{count }\end{DoxyParamCaption})}
 
+
+
+set the sweep count 
+
+idk what this does, need to do some research in the manual later
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em count} & sweep count \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_ab052e6c187fa789ee7f2501214969168}\label{class_z_v_m_ab052e6c187fa789ee7f2501214969168}} 
-\index{Z\+VM@{Z\+VM}!set\+Sweep\+Mode@{set\+Sweep\+Mode}}
-\index{set\+Sweep\+Mode@{set\+Sweep\+Mode}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Sweep\+Mode()}{setSweepMode()}}
+\index{ZVM@{ZVM}!setSweepMode@{setSweepMode}}
+\index{setSweepMode@{setSweepMode}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setSweepMode()}{setSweepMode()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Sweep\+Mode (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{mode }\end{DoxyParamCaption})}
 
+
+
+choose single or continuous sweep mode 
+
+use \mbox{\hyperlink{class_z_v_m_a257b1ef2269ceb632a7255f8d7eb691c}{Z\+V\+M.\+continuous\+Sweep}} and \mbox{\hyperlink{class_z_v_m_a9fab21909e1eb4de3964a63105490883}{Z\+V\+M.\+single\+Sweep}} for readability
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em mode} & \textquotesingle{}cont\textquotesingle{} or \textquotesingle{}single\textquotesingle{} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_a7a9cbe25b5ac601010bcf24ef7926467}\label{class_z_v_m_a7a9cbe25b5ac601010bcf24ef7926467}} 
-\index{Z\+VM@{Z\+VM}!set\+Sweep\+Points@{set\+Sweep\+Points}}
-\index{set\+Sweep\+Points@{set\+Sweep\+Points}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Sweep\+Points()}{setSweepPoints()}}
+\index{ZVM@{ZVM}!setSweepPoints@{setSweepPoints}}
+\index{setSweepPoints@{setSweepPoints}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setSweepPoints()}{setSweepPoints()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{points }\end{DoxyParamCaption})}
 
+
+
+set the amount of measurement points in a sweep 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em points} & amount of points \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_ac41f8881b799470b4ddd28803d431a8a}\label{class_z_v_m_ac41f8881b799470b4ddd28803d431a8a}} 
-\index{Z\+VM@{Z\+VM}!set\+Sweep\+Time@{set\+Sweep\+Time}}
-\index{set\+Sweep\+Time@{set\+Sweep\+Time}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Sweep\+Time()}{setSweepTime()}}
+\index{ZVM@{ZVM}!setSweepTime@{setSweepTime}}
+\index{setSweepTime@{setSweepTime}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setSweepTime()}{setSweepTime()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Sweep\+Time (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{time }\end{DoxyParamCaption})}
 
+
+
+configure the sweep time (in ms) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em time} & -\/1 for automatic sweep time, otherwise time in ms \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_ab89b2dadec4f0bf813c053d66e5ac2b5}\label{class_z_v_m_ab89b2dadec4f0bf813c053d66e5ac2b5}} 
-\index{Z\+VM@{Z\+VM}!set\+Z\+F\+Bandwidth@{set\+Z\+F\+Bandwidth}}
-\index{set\+Z\+F\+Bandwidth@{set\+Z\+F\+Bandwidth}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{set\+Z\+F\+Bandwidth()}{setZFBandwidth()}}
+\index{ZVM@{ZVM}!setZFBandwidth@{setZFBandwidth}}
+\index{setZFBandwidth@{setZFBandwidth}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{setZFBandwidth()}{setZFBandwidth()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::set\+Z\+F\+Bandwidth (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{bandwidth }\end{DoxyParamCaption})}
 
+
+
+set the I\+F/\+I\+F/resolution bandwidth 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em bandwidth} & in Hz \mbox{[}double\mbox{]} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_a9fab21909e1eb4de3964a63105490883}\label{class_z_v_m_a9fab21909e1eb4de3964a63105490883}} 
-\index{Z\+VM@{Z\+VM}!single\+Sweep@{single\+Sweep}}
-\index{single\+Sweep@{single\+Sweep}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{single\+Sweep()}{singleSweep()}}
+\index{ZVM@{ZVM}!singleSweep@{singleSweep}}
+\index{singleSweep@{singleSweep}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{singleSweep()}{singleSweep()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::single\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+set device to single sweep mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_z_v_m_aa94a75b704b56a4ecbc73dc8ce3870bc}\label{class_z_v_m_aa94a75b704b56a4ecbc73dc8ce3870bc}} 
-\index{Z\+VM@{Z\+VM}!write@{write}}
-\index{write@{write}!Z\+VM@{Z\+VM}}
-\subsubsection{\texorpdfstring{write()}{write()}}
+\index{ZVM@{ZVM}!write@{write}}
+\index{write@{write}!ZVM@{ZVM}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
 {\footnotesize\ttfamily function Z\+V\+M\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
 
 
 
+Write S\+C\+P\+I/skippy commands to labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
+\hline
+{\em txt} & String with S\+C\+P\+I/skippy commands for labdevice \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/soeren/emc/labdevicedrivers/@\+Z\+V\+M/\hyperlink{_z_v_m_8m}{Z\+V\+M.\+m}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/@\+Z\+V\+M/\mbox{\hyperlink{_z_v_m_8m}{Z\+V\+M.\+m}}\end{DoxyCompactItemize}

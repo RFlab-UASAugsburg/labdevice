@@ -1,84 +1,179 @@
-\hypertarget{class_stepper}{}\section{Stepper Class Reference}
+\hypertarget{class_stepper}{}\doxysection{Stepper Class Reference}
 \label{class_stepper}\index{Stepper@{Stepper}}
 
 
-Inherits \hyperlink{classlab_device}{lab\+Device}.
+Data acquisition unit with some custom hardware added to create a precice rotatable table.  
 
-\subsection*{Public Member Functions}
+
+
+
+Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}.
+
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \hyperlink{class_stepper_aa4f62f9f2f81f3e06d8b975d52ee680c}{Stepper} (in mode, in varargin)
-\item 
-function \hyperlink{class_stepper_a9a5b14b0e09de7315a3695b0c38c00d8}{delete} (in obj)
-\item 
-function \hyperlink{class_stepper_a4bce363f98e8f973e67bbdcd9517b430}{read} (in obj)
-\item 
-function \hyperlink{class_stepper_a09e1d2bca7c3ec73d92659cc4a57a3c7}{flush} (in obj)
-\item 
-function \hyperlink{class_stepper_ada9181b2569a0d9235abeac683133384}{write} (in obj, in txt)
-\item 
-function \hyperlink{class_stepper_ab5a1152af6d956e4e05baa0d35efcca7}{nullpos} (in obj)
-\item 
-function \hyperlink{class_stepper_a59922bf2f911a664e791ae9ef74bb983}{turn} (in obj, in deg)
-\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+function \mbox{\hyperlink{class_stepper_aa4f62f9f2f81f3e06d8b975d52ee680c}{Stepper}} (in mode, in varargin)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_stepper}{Stepper}} constructor. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_stepper_a9a5b14b0e09de7315a3695b0c38c00d8}{delete}} (in obj)
+\begin{DoxyCompactList}\small\item\em Delete \mbox{\hyperlink{class_stepper}{Stepper}} Object. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_stepper_a4bce363f98e8f973e67bbdcd9517b430}{read}} (in obj)
+\begin{DoxyCompactList}\small\item\em Read data from labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_stepper_a09e1d2bca7c3ec73d92659cc4a57a3c7}{flush}} (in obj)
+\begin{DoxyCompactList}\small\item\em Flush labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_stepper_ada9181b2569a0d9235abeac683133384}{write}} (in obj, in txt)
+\begin{DoxyCompactList}\small\item\em Write S\+C\+P\+I/skippy commands to labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_stepper_ab5a1152af6d956e4e05baa0d35efcca7}{nullpos}} (in obj)
+\begin{DoxyCompactList}\small\item\em manually turn the antenna to the null position \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_stepper_a59922bf2f911a664e791ae9ef74bb983}{turn}} (in obj, in deg)
+\begin{DoxyCompactList}\small\item\em turn the motor by deg degrees \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
+Data acquisition unit with some custom hardware added to create a precice rotatable table. 
+
+Usage\+: Initalise subclass 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{stepper = SStepper(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{             6); \% GPIB address}
+\DoxyCodeLine{stepper.nullpos(); \%point the antenna in a certain direction}
+\DoxyCodeLine{stepper.turn(360); \%\mbox{\hyperlink{class_stepper_a59922bf2f911a664e791ae9ef74bb983}{turn}} the table by 360 degrees}
+\end{DoxyCode}
+ 
+
+Definition at line 16 of file Stepper.\+m.
 
 
-Definition at line 1 of file Stepper.\+m.
 
-
-
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_stepper_aa4f62f9f2f81f3e06d8b975d52ee680c}\label{class_stepper_aa4f62f9f2f81f3e06d8b975d52ee680c}} 
 \index{Stepper@{Stepper}!Stepper@{Stepper}}
 \index{Stepper@{Stepper}!Stepper@{Stepper}}
-\subsubsection{\texorpdfstring{Stepper()}{Stepper()}}
+\doxysubsubsection{\texorpdfstring{Stepper()}{Stepper()}}
 {\footnotesize\ttfamily function Stepper\+::\+Stepper (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
-\subsection{Member Function Documentation}
+\mbox{\hyperlink{class_stepper}{Stepper}} constructor. 
+
+The constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Communication mode e.\+g. \char`\"{}gpib\char`\"{} for gpib \\
+\hline
+{\em varargin} & Variable input arguments depending on connection mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the \mbox{\hyperlink{class_stepper}{Stepper}} class. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_stepper_a9a5b14b0e09de7315a3695b0c38c00d8}\label{class_stepper_a9a5b14b0e09de7315a3695b0c38c00d8}} 
 \index{Stepper@{Stepper}!delete@{delete}}
 \index{delete@{delete}!Stepper@{Stepper}}
-\subsubsection{\texorpdfstring{delete()}{delete()}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
 {\footnotesize\ttfamily function Stepper\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Delete \mbox{\hyperlink{class_stepper}{Stepper}} Object. 
+
+The destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_stepper_a09e1d2bca7c3ec73d92659cc4a57a3c7}\label{class_stepper_a09e1d2bca7c3ec73d92659cc4a57a3c7}} 
 \index{Stepper@{Stepper}!flush@{flush}}
 \index{flush@{flush}!Stepper@{Stepper}}
-\subsubsection{\texorpdfstring{flush()}{flush()}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
 {\footnotesize\ttfamily function Stepper\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Flush labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_stepper}{Stepper}} class \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_stepper_ab5a1152af6d956e4e05baa0d35efcca7}\label{class_stepper_ab5a1152af6d956e4e05baa0d35efcca7}} 
 \index{Stepper@{Stepper}!nullpos@{nullpos}}
 \index{nullpos@{nullpos}!Stepper@{Stepper}}
-\subsubsection{\texorpdfstring{nullpos()}{nullpos()}}
+\doxysubsubsection{\texorpdfstring{nullpos()}{nullpos()}}
 {\footnotesize\ttfamily function Stepper\+::nullpos (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+manually turn the antenna to the null position 
+
+Disables all fields in the motor so the platform can be easily turned by hand
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_stepper}{Stepper}} class \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_stepper_a4bce363f98e8f973e67bbdcd9517b430}\label{class_stepper_a4bce363f98e8f973e67bbdcd9517b430}} 
 \index{Stepper@{Stepper}!read@{read}}
 \index{read@{read}!Stepper@{Stepper}}
-\subsubsection{\texorpdfstring{read()}{read()}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
 {\footnotesize\ttfamily function Stepper\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Read data from labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_stepper}{Stepper}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret Data read from device 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_stepper_a59922bf2f911a664e791ae9ef74bb983}\label{class_stepper_a59922bf2f911a664e791ae9ef74bb983}} 
 \index{Stepper@{Stepper}!turn@{turn}}
 \index{turn@{turn}!Stepper@{Stepper}}
-\subsubsection{\texorpdfstring{turn()}{turn()}}
+\doxysubsubsection{\texorpdfstring{turn()}{turn()}}
 {\footnotesize\ttfamily function Stepper\+::turn (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{deg }\end{DoxyParamCaption})}
 
+
+
+turn the motor by deg degrees 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_stepper}{Stepper}} class \\
+\hline
+{\em deg} & Angle in degrees \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_stepper_ada9181b2569a0d9235abeac683133384}\label{class_stepper_ada9181b2569a0d9235abeac683133384}} 
 \index{Stepper@{Stepper}!write@{write}}
 \index{write@{write}!Stepper@{Stepper}}
-\subsubsection{\texorpdfstring{write()}{write()}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
 {\footnotesize\ttfamily function Stepper\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
 
 
 
+Write S\+C\+P\+I/skippy commands to labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_stepper}{Stepper}} class \\
+\hline
+{\em txt} & String with S\+C\+P\+I/skippy commands for labdevice \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/soeren/emc/labdevicedrivers/@\+Stepper/\hyperlink{_stepper_8m}{Stepper.\+m}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/@\+Stepper/\mbox{\hyperlink{_stepper_8m}{Stepper.\+m}}\end{DoxyCompactItemize}

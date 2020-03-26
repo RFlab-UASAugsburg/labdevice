@@ -1,6 +1,6 @@
 A open source framewok handling interactions with typical laboratory devices. The framework consists of a communication layer and a device layer. A bottom layer for communication that can handle G\+P\+IB, Ethernet, and G\+P\+I\+B-\/over-\/\+Ethernet communication is the base of the framework. On top typical S\+C\+PI (Standard Commands for Programmable Instruments) commands are implemented to free the user from searching through endless user manuals. This framework can be used as stand-\/alone or can yield the basis for all Matlab measurement applications.
 
-\subsubsection*{Supported Communication Interfaces}
+\doxysubsubsection*{Supported Communication Interfaces}
 
 
 \begin{DoxyItemize}
@@ -9,26 +9,26 @@ A open source framewok handling interactions with typical laboratory devices. Th
 \item mode= \char`\"{}eth2gpib\char`\"{}; (See\+: Using Interface Converter)
 \end{DoxyItemize}
 
-\subsubsection*{Example}
+\doxysubsubsection*{Example}
 
 $\ast$$\ast$ Use with Ethernet $\ast$$\ast$ 
-\begin{DoxyCode}
-mode=\textcolor{stringliteral}{"eth"}; % Using ethernet \textcolor{keyword}{interface }for communication
-adress=\textcolor{stringliteral}{"192.168.1.20"}; % IP address of device
-emiTestReceiver=ESPR(mode, adress);
-emiTestReceiver.setStartFreq(1e3);
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mode=\textcolor{stringliteral}{"eth"}; \% Using ethernet \textcolor{keyword}{interface }for communication}
+\DoxyCodeLine{adress=\textcolor{stringliteral}{"192.168.1.20"}; \% IP address of device}
+\DoxyCodeLine{emiTestReceiver=ESPR(mode, adress);}
+\DoxyCodeLine{emiTestReceiver.setStartFreq(1e3);}
 \end{DoxyCode}
 
 
 $\ast$$\ast$ Use with G\+P\+IB $\ast$$\ast$ 
-\begin{DoxyCode}
-sigGen = \hyperlink{class_s_m_x}{SMX}(\textcolor{stringliteral}{"gpib"},% mode
-             6); % GPIB address
-sigGen.setFreq(1e7);
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_s_m_x}{SMX}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{             6); \% GPIB address}
+\DoxyCodeLine{sigGen.setFreq(1e7);}
 \end{DoxyCode}
 
 
-\subsubsection*{Using Interface Converter}
+\doxysubsubsection*{Using Interface Converter}
 
 
 \begin{DoxyItemize}
@@ -36,55 +36,56 @@ sigGen.setFreq(1e7);
 \end{DoxyItemize}
 
 Interface converters require an initialisation of the interface converter object first, before initialising the device class. 
-\begin{DoxyCode}
-% Initialising \textcolor{keyword}{interface }converter object
-interfaceConverter = \hyperlink{class_pro_logix}{ProLogix}(\textcolor{stringliteral}{'eth'},% communication mode of converter
-                              \textcolor{stringliteral}{'192.168.75.42'},% IP address of converter
-                              1234); % Port of converter
-% Pass \textcolor{keyword}{interface }converter to device constructor.
-sigGen = \hyperlink{class_s_m_x}{SMX}(\textcolor{stringliteral}{"eth2gpib"},% communication mode 
-             interfaceConverter,% Interface converter \textcolor{keywordtype}{object}
-             6); % GPIB address of device
-sigGen.setFreq(1e7);
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\% Initialising \textcolor{keyword}{interface }converter object}
+\DoxyCodeLine{interfaceConverter = \mbox{\hyperlink{class_pro_logix}{ProLogix}}(\textcolor{stringliteral}{'eth'},\% communication mode of converter}
+\DoxyCodeLine{                              \textcolor{stringliteral}{'192.168.75.42'},\% IP address of converter}
+\DoxyCodeLine{                              1234); \% Port of converter}
+\DoxyCodeLine{}
+\DoxyCodeLine{\% Pass \textcolor{keyword}{interface }converter to device constructor.}
+\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_s_m_x}{SMX}}(\textcolor{stringliteral}{"eth2gpib"},\% communication mode }
+\DoxyCodeLine{             interfaceConverter,\% Interface converter \textcolor{keywordtype}{object}}
+\DoxyCodeLine{             6); \% GPIB address of device}
+\DoxyCodeLine{sigGen.setFreq(1e7);}
 \end{DoxyCode}
 
 
-\subsubsection*{Repository Structure}
+\doxysubsubsection*{Repository Structure}
 
 
-\begin{DoxyCode}
-@\hyperlink{classlab_device}{labDevice} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{@\mbox{\hyperlink{classlab_device}{labDevice}} }
 \end{DoxyCode}
  Superclass for all lab Devices 
-\begin{DoxyCode}
-cfg 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cfg }
 \end{DoxyCode}
  Configs\+: Eg. default device properties 
-\begin{DoxyCode}
-deviceTypes 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{deviceTypes }
 \end{DoxyCode}
  Abstract Interface Classes for the different device types. The classes should be used to define common interfaces for all devices of one specific type. The abstract class assures the same method or property names over all devices of one device type eg. vector network analyser. 
-\begin{DoxyCode}
-interfaceConverters 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{interfaceConverters }
 \end{DoxyCode}
  Contains all interface converter objects eg. eth2gpib. 
-\begin{DoxyCode}
-functions 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{functions }
 \end{DoxyCode}
  Contains all low level functionality like opening and closing connection to device. Namespaces (contianing + in front of foldername) seperate {\itshape open} and {\itshape close} functions of the interfaces (e.\+g. eth or gpib).
 
-\subsubsection*{Adding labdevicedreivers as a submodule}
+\doxysubsubsection*{Adding labdevicedreivers as a submodule}
 
 To integrate the labdevice framework in an existing repo as a submodule\+: 
-\begin{DoxyCode}
-git submodule add git@git.etech.fh-augsburg.de:emc/labdevicedrivers.git 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git submodule add git@git.etech.fh-\/augsburg.de:emc/labdevicedrivers.git }
 \end{DoxyCode}
- {\bfseries Keep in mind\+:} git pull on the main repository does not update the submodule. After git pull you need to execute 
-\begin{DoxyCode}
-git submodule update --init --remote labdevicedrivers
+ {\bfseries{Keep in mind\+:}} git pull on the main repository does not update the submodule. After git pull you need to execute 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git submodule update -\/-\/init -\/-\/remote labdevicedrivers}
 \end{DoxyCode}
  to update the submodule after running git pull.
 
-\subsubsection*{Documentation}
+\doxysubsubsection*{Documentation}
 
-You can find matlab\+Doxygen Documentation in doc/html. Until now doxygen must be run offline. Run {\ttfamily  doxygen Doxyfile  in the folder doc/doxymatlab/. We use doxymatlab\+: Copyright (c) 2009, Fabrice All rights reserved. \href{http://www.mathworks.com/matlabcentral/fileexchange/25925-using-doxygen-with-matlab/}{\tt http\+://www.\+mathworks.\+com/matlabcentral/fileexchange/25925-\/using-\/doxygen-\/with-\/matlab/}  }
+You can find matlab\+Doxygen Documentation in doc/html. Until now doxygen must be run offline. Run {\ttfamily  doxygen Doxyfile  in the folder doc/doxymatlab/. We use doxymatlab\+: Copyright (c) 2009, Fabrice All rights reserved. \href{http://www.mathworks.com/matlabcentral/fileexchange/25925-using-doxygen-with-matlab/}{\texttt{ http\+://www.\+mathworks.\+com/matlabcentral/fileexchange/25925-\/using-\/doxygen-\/with-\/matlab/}} @endmainpage }

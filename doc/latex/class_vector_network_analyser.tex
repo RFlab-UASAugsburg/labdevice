@@ -1,41 +1,41 @@
-\hypertarget{class_vector_network_analyser}{}\section{Vector\+Network\+Analyser Class Reference}
-\label{class_vector_network_analyser}\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
+\hypertarget{class_vector_network_analyser}{}\doxysection{Vector\+Network\+Analyser Class Reference}
+\label{class_vector_network_analyser}\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}}
 
 
 This is an abstract class. It should be used as a common interface for all devices of the subclass. The abstract class assures the same method or property names over all devices of one device type.  
 
 
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \hyperlink{class_vector_network_analyser_a046f125f382e6d61c47f5310de0beae6}{set\+Source\+Power} (in obj, in pow)
+virtual \mbox{\hyperlink{class_vector_network_analyser_a046f125f382e6d61c47f5310de0beae6}{set\+Source\+Power}} (in obj, in pow)
 \begin{DoxyCompactList}\small\item\em Set output power level of V\+NA. \end{DoxyCompactList}\item 
-virtual \hyperlink{class_vector_network_analyser_a80f2fbd6ef0425348fa651c286065350}{set\+Start\+Freq} (in obj, in freq)
+virtual \mbox{\hyperlink{class_vector_network_analyser_a80f2fbd6ef0425348fa651c286065350}{set\+Start\+Freq}} (in obj, in freq)
 \begin{DoxyCompactList}\small\item\em Set start frequency of vna sweep. \end{DoxyCompactList}\item 
-virtual \hyperlink{class_vector_network_analyser_a909388ee53bd7ed70e06451a792cf51b}{set\+Stop\+Freq} (in obj, in freq)
+virtual \mbox{\hyperlink{class_vector_network_analyser_a909388ee53bd7ed70e06451a792cf51b}{set\+Stop\+Freq}} (in obj, in freq)
 \begin{DoxyCompactList}\small\item\em Set stop frequency of vna sweep. \end{DoxyCompactList}\item 
-virtual \hyperlink{class_vector_network_analyser_a4d18127562f541c12e217e1edffd0df9}{get\+Trace\+Cmplx} (in obj)
+virtual \mbox{\hyperlink{class_vector_network_analyser_a4d18127562f541c12e217e1edffd0df9}{get\+Trace\+Cmplx}} (in obj)
 \begin{DoxyCompactList}\small\item\em get the measured complex values \end{DoxyCompactList}\item 
-virtual \hyperlink{class_vector_network_analyser_a6fea4338a2e20d0863c84bf411228c96}{get\+Sweep\+Points} (in obj)
+virtual \mbox{\hyperlink{class_vector_network_analyser_a6fea4338a2e20d0863c84bf411228c96}{get\+Sweep\+Points}} (in obj)
 \begin{DoxyCompactList}\small\item\em get the number of measurement points \end{DoxyCompactList}\item 
-virtual \hyperlink{class_vector_network_analyser_aabccea00e92ce77920553db971f07c49}{set\+Sweep\+Points} (in obj, in sweep\+Points)
+virtual \mbox{\hyperlink{class_vector_network_analyser_aabccea00e92ce77920553db971f07c49}{set\+Sweep\+Points}} (in obj, in sweep\+Points)
 \begin{DoxyCompactList}\small\item\em set the number of measurement points \end{DoxyCompactList}\item 
-virtual \hyperlink{class_vector_network_analyser_a8e207eafb459a9306868a178da4dc32c}{set\+Meas\+Parameter} (in obj, in param)
+virtual \mbox{\hyperlink{class_vector_network_analyser_a8e207eafb459a9306868a178da4dc32c}{set\+Meas\+Parameter}} (in obj, in param)
 \begin{DoxyCompactList}\small\item\em set the measurement Parameter \end{DoxyCompactList}\item 
-virtual \hyperlink{class_vector_network_analyser_a60937f9c3680fa17968fd966009194e9}{single\+Sweep} (in obj)
+virtual \mbox{\hyperlink{class_vector_network_analyser_a60937f9c3680fa17968fd966009194e9}{single\+Sweep}} (in obj)
 \begin{DoxyCompactList}\small\item\em set device to single sweep mode \end{DoxyCompactList}\item 
-virtual \hyperlink{class_vector_network_analyser_a3897caf03faa79af3ba39787117a5ed1}{continuous\+Sweep} (in obj)
+virtual \mbox{\hyperlink{class_vector_network_analyser_a3897caf03faa79af3ba39787117a5ed1}{continuous\+Sweep}} (in obj)
 \begin{DoxyCompactList}\small\item\em set device to continuous sweep mode \end{DoxyCompactList}\item 
-virtual \hyperlink{class_vector_network_analyser_a6ba2aa6383fe5add61b042c41d0e14db}{do\+Sweep} (in obj)
+virtual \mbox{\hyperlink{class_vector_network_analyser_a6ba2aa6383fe5add61b042c41d0e14db}{do\+Sweep}} (in obj)
 \begin{DoxyCompactList}\small\item\em initiate/trigger a measurement/sweep \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 This is an abstract class. It should be used as a common interface for all devices of the subclass. The abstract class assures the same method or property names over all devices of one device type. 
 
 Usage\+: Initalise subclass 
-\begin{DoxyCode}
-classdef  \hyperlink{class_z_v_m}{ZVM} < \hyperlink{classlab_device}{labDevice} & \hyperlink{class_vector_network_analyser}{VectorNetworkAnalyser}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{classdef  \mbox{\hyperlink{class_z_v_m}{ZVM}} < \mbox{\hyperlink{classlab_device}{labDevice}} \& \mbox{\hyperlink{class_vector_network_analyser}{VectorNetworkAnalyser}}}
 \end{DoxyCode}
  
 
@@ -43,11 +43,11 @@ Definition at line 16 of file Vector\+Network\+Analyser.\+m.
 
 
 
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_vector_network_analyser_a3897caf03faa79af3ba39787117a5ed1}\label{class_vector_network_analyser_a3897caf03faa79af3ba39787117a5ed1}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!continuous\+Sweep@{continuous\+Sweep}}
-\index{continuous\+Sweep@{continuous\+Sweep}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{continuous\+Sweep()}{continuousSweep()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!continuousSweep@{continuousSweep}}
+\index{continuousSweep@{continuousSweep}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{continuousSweep()}{continuousSweep()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::continuous\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -56,16 +56,13 @@ set device to continuous sweep mode
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of class\\
+{\em obj} & Instance of class \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_vector_network_analyser_a6ba2aa6383fe5add61b042c41d0e14db}\label{class_vector_network_analyser_a6ba2aa6383fe5add61b042c41d0e14db}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!do\+Sweep@{do\+Sweep}}
-\index{do\+Sweep@{do\+Sweep}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{do\+Sweep()}{doSweep()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!doSweep@{doSweep}}
+\index{doSweep@{doSweep}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{doSweep()}{doSweep()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::do\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -74,16 +71,13 @@ initiate/trigger a measurement/sweep
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of class\\
+{\em obj} & Instance of class \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_vector_network_analyser_a6fea4338a2e20d0863c84bf411228c96}\label{class_vector_network_analyser_a6fea4338a2e20d0863c84bf411228c96}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!get\+Sweep\+Points@{get\+Sweep\+Points}}
-\index{get\+Sweep\+Points@{get\+Sweep\+Points}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{get\+Sweep\+Points()}{getSweepPoints()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!getSweepPoints@{getSweepPoints}}
+\index{getSweepPoints@{getSweepPoints}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{getSweepPoints()}{getSweepPoints()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::get\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -99,9 +93,9 @@ get the number of measurement points
 int number of points 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_vector_network_analyser_a4d18127562f541c12e217e1edffd0df9}\label{class_vector_network_analyser_a4d18127562f541c12e217e1edffd0df9}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!get\+Trace\+Cmplx@{get\+Trace\+Cmplx}}
-\index{get\+Trace\+Cmplx@{get\+Trace\+Cmplx}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{get\+Trace\+Cmplx()}{getTraceCmplx()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!getTraceCmplx@{getTraceCmplx}}
+\index{getTraceCmplx@{getTraceCmplx}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{getTraceCmplx()}{getTraceCmplx()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::get\+Trace\+Cmplx (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -117,9 +111,9 @@ get the measured complex values
 n x 1 complex column vector 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_vector_network_analyser_a8e207eafb459a9306868a178da4dc32c}\label{class_vector_network_analyser_a8e207eafb459a9306868a178da4dc32c}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!set\+Meas\+Parameter@{set\+Meas\+Parameter}}
-\index{set\+Meas\+Parameter@{set\+Meas\+Parameter}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{set\+Meas\+Parameter()}{setMeasParameter()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!setMeasParameter@{setMeasParameter}}
+\index{setMeasParameter@{setMeasParameter}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{setMeasParameter()}{setMeasParameter()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::set\+Meas\+Parameter (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -130,16 +124,13 @@ set the measurement Parameter
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of class \\
 \hline
-{\em param} & Measurement Parameter string, e.\+g. \char`\"{}\+S11\char`\"{} or \char`\"{}\+Z21\char`\"{}\\
+{\em param} & Measurement Parameter string, e.\+g. \char`\"{}\+S11\char`\"{} or \char`\"{}\+Z21\char`\"{} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_vector_network_analyser_a046f125f382e6d61c47f5310de0beae6}\label{class_vector_network_analyser_a046f125f382e6d61c47f5310de0beae6}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!set\+Source\+Power@{set\+Source\+Power}}
-\index{set\+Source\+Power@{set\+Source\+Power}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{set\+Source\+Power()}{setSourcePower()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!setSourcePower@{setSourcePower}}
+\index{setSourcePower@{setSourcePower}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{setSourcePower()}{setSourcePower()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::set\+Source\+Power (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{pow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -150,16 +141,13 @@ Set output power level of V\+NA.
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of class \\
 \hline
-{\em pow} & Power level \mbox{[}d\+Bm\mbox{]}\\
+{\em pow} & Power level \mbox{[}d\+Bm\mbox{]} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_vector_network_analyser_a80f2fbd6ef0425348fa651c286065350}\label{class_vector_network_analyser_a80f2fbd6ef0425348fa651c286065350}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!set\+Start\+Freq@{set\+Start\+Freq}}
-\index{set\+Start\+Freq@{set\+Start\+Freq}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{set\+Start\+Freq()}{setStartFreq()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!setStartFreq@{setStartFreq}}
+\index{setStartFreq@{setStartFreq}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{setStartFreq()}{setStartFreq()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::set\+Start\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -170,16 +158,13 @@ Set start frequency of vna sweep.
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of class \\
 \hline
-{\em freq} & Frequency \mbox{[}Hz\mbox{]}\\
+{\em freq} & Frequency \mbox{[}Hz\mbox{]} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_vector_network_analyser_a909388ee53bd7ed70e06451a792cf51b}\label{class_vector_network_analyser_a909388ee53bd7ed70e06451a792cf51b}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!set\+Stop\+Freq@{set\+Stop\+Freq}}
-\index{set\+Stop\+Freq@{set\+Stop\+Freq}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{set\+Stop\+Freq()}{setStopFreq()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!setStopFreq@{setStopFreq}}
+\index{setStopFreq@{setStopFreq}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{setStopFreq()}{setStopFreq()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::set\+Stop\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -190,16 +175,13 @@ Set stop frequency of vna sweep.
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of class \\
 \hline
-{\em freq} & Frequency \mbox{[}Hz\mbox{]}\\
+{\em freq} & Frequency \mbox{[}Hz\mbox{]} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_vector_network_analyser_aabccea00e92ce77920553db971f07c49}\label{class_vector_network_analyser_aabccea00e92ce77920553db971f07c49}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!set\+Sweep\+Points@{set\+Sweep\+Points}}
-\index{set\+Sweep\+Points@{set\+Sweep\+Points}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{set\+Sweep\+Points()}{setSweepPoints()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!setSweepPoints@{setSweepPoints}}
+\index{setSweepPoints@{setSweepPoints}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{setSweepPoints()}{setSweepPoints()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::set\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{sweep\+Points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -210,16 +192,13 @@ set the number of measurement points
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of class \\
 \hline
-{\em sweep\+Points} & int\\
+{\em sweep\+Points} & int \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 \mbox{\Hypertarget{class_vector_network_analyser_a60937f9c3680fa17968fd966009194e9}\label{class_vector_network_analyser_a60937f9c3680fa17968fd966009194e9}} 
-\index{Vector\+Network\+Analyser@{Vector\+Network\+Analyser}!single\+Sweep@{single\+Sweep}}
-\index{single\+Sweep@{single\+Sweep}!Vector\+Network\+Analyser@{Vector\+Network\+Analyser}}
-\subsubsection{\texorpdfstring{single\+Sweep()}{singleSweep()}}
+\index{VectorNetworkAnalyser@{VectorNetworkAnalyser}!singleSweep@{singleSweep}}
+\index{singleSweep@{singleSweep}!VectorNetworkAnalyser@{VectorNetworkAnalyser}}
+\doxysubsubsection{\texorpdfstring{singleSweep()}{singleSweep()}}
 {\footnotesize\ttfamily virtual Vector\+Network\+Analyser\+::single\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -228,14 +207,11 @@ set device to single sweep mode
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of class\\
+{\em obj} & Instance of class \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/soeren/emc/labdevicedrivers/device\+Types/\hyperlink{_vector_network_analyser_8m}{Vector\+Network\+Analyser.\+m}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/device\+Types/\mbox{\hyperlink{_vector_network_analyser_8m}{Vector\+Network\+Analyser.\+m}}\end{DoxyCompactItemize}

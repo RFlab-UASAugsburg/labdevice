@@ -1,46 +1,46 @@
-\hypertarget{class_s_m_x}{}\section{S\+MX Class Reference}
-\label{class_s_m_x}\index{S\+MX@{S\+MX}}
+\hypertarget{class_s_m_x}{}\doxysection{S\+MX Class Reference}
+\label{class_s_m_x}\index{SMX@{SMX}}
 
 
-Rhode und Schwarz Signal generator with AM, FM and pulse modulation.  
+Rohde und Schwarz Signal generator with AM, FM and pulse modulation.  
 
 
 
 
-Inherits \hyperlink{classlab_device}{lab\+Device}, and \hyperlink{class_signal_generator}{Signal\+Generator}.
+Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}, and \mbox{\hyperlink{class_signal_generator}{Signal\+Generator}}.
 
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \hyperlink{class_s_m_x_ade343b92e0901e72f0718f18bfbbb867}{S\+MX} (in mode, in varargin)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_s_m_x}{S\+MX} constructor. \end{DoxyCompactList}\item 
-function \hyperlink{class_s_m_x_ab223e7b43c5813ce3b9ac735a3f37386}{delete} (in obj)
-\begin{DoxyCompactList}\small\item\em Delete \hyperlink{class_s_m_x}{S\+MX} Object. \end{DoxyCompactList}\item 
-function \hyperlink{class_s_m_x_aaa694a47ebbbbeb3200224181ee1d65b}{read} (in obj)
+function \mbox{\hyperlink{class_s_m_x_ade343b92e0901e72f0718f18bfbbb867}{S\+MX}} (in mode, in varargin)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_s_m_x}{S\+MX}} constructor. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_s_m_x_ab223e7b43c5813ce3b9ac735a3f37386}{delete}} (in obj)
+\begin{DoxyCompactList}\small\item\em Delete \mbox{\hyperlink{class_s_m_x}{S\+MX}} Object. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_s_m_x_aaa694a47ebbbbeb3200224181ee1d65b}{read}} (in obj)
 \begin{DoxyCompactList}\small\item\em Read data from labdevice. \end{DoxyCompactList}\item 
-function \hyperlink{class_s_m_x_ab6a7febf2f8a2baecec1f66946b67845}{flush} (in obj)
+function \mbox{\hyperlink{class_s_m_x_ab6a7febf2f8a2baecec1f66946b67845}{flush}} (in obj)
 \begin{DoxyCompactList}\small\item\em Flush labdevice. \end{DoxyCompactList}\item 
-function \hyperlink{class_s_m_x_a28e9a0da57a9a3ba7fe66dc9b0f00596}{write} (in obj, in txt)
+function \mbox{\hyperlink{class_s_m_x_a28e9a0da57a9a3ba7fe66dc9b0f00596}{write}} (in obj, in txt)
 \begin{DoxyCompactList}\small\item\em Write S\+C\+P\+I/skippy commands to labdevice. \end{DoxyCompactList}\item 
-function \hyperlink{class_s_m_x_a8488e3aee6732ac028ff5cceaa6b92b7}{output\+Disable} (in obj)
+function \mbox{\hyperlink{class_s_m_x_a8488e3aee6732ac028ff5cceaa6b92b7}{output\+Disable}} (in obj)
 \begin{DoxyCompactList}\small\item\em Disable the output of signal generator. \end{DoxyCompactList}\item 
-function \hyperlink{class_s_m_x_a948280cfa337b1fd49aed6fad1e23f01}{set\+AM} (in obj, in mode, in varargin)
+function \mbox{\hyperlink{class_s_m_x_a948280cfa337b1fd49aed6fad1e23f01}{set\+AM}} (in obj, in mode, in varargin)
 \begin{DoxyCompactList}\small\item\em Set Amplitude Modulation Parameters. \end{DoxyCompactList}\item 
-function \hyperlink{class_s_m_x_a7363c5f4d6937d4e6c8f81a7e64bfa4d}{set\+Freq} (in obj, in freq)
+function \mbox{\hyperlink{class_s_m_x_a7363c5f4d6937d4e6c8f81a7e64bfa4d}{set\+Freq}} (in obj, in freq)
 \begin{DoxyCompactList}\small\item\em Set output frequency of signal generator. \end{DoxyCompactList}\item 
-function \hyperlink{class_s_m_x_a93851e9f9277b0959115b8d1486c0d3c}{set\+Pow} (in obj, in pow)
+function \mbox{\hyperlink{class_s_m_x_a93851e9f9277b0959115b8d1486c0d3c}{set\+Pow}} (in obj, in pow)
 \begin{DoxyCompactList}\small\item\em Set output power level of signal generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
+\doxysubsection*{Additional Inherited Members}
 
 
-\subsection{Detailed Description}
-Rhode und Schwarz Signal generator with AM, FM and pulse modulation. 
+\doxysubsection{Detailed Description}
+Rohde und Schwarz Signal generator with AM, FM and pulse modulation. 
 
 Usage\+: Initalise subclass 
-\begin{DoxyCode}
-sigGen = \hyperlink{class_s_m_x_ade343b92e0901e72f0718f18bfbbb867}{SMX}(\textcolor{stringliteral}{"gpib"},% mode
-             6); % GPIB address
-sigGen.setFreq(1e7);
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_s_m_x_ade343b92e0901e72f0718f18bfbbb867}{SMX}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{             6); \% GPIB address}
+\DoxyCodeLine{sigGen.setFreq(1e7);}
 \end{DoxyCode}
  
 
@@ -48,16 +48,16 @@ Definition at line 16 of file S\+M\+X.\+m.
 
 
 
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_s_m_x_ade343b92e0901e72f0718f18bfbbb867}\label{class_s_m_x_ade343b92e0901e72f0718f18bfbbb867}} 
-\index{S\+MX@{S\+MX}!S\+MX@{S\+MX}}
-\index{S\+MX@{S\+MX}!S\+MX@{S\+MX}}
-\subsubsection{\texorpdfstring{S\+M\+X()}{SMX()}}
+\index{SMX@{SMX}!SMX@{SMX}}
+\index{SMX@{SMX}!SMX@{SMX}}
+\doxysubsubsection{\texorpdfstring{SMX()}{SMX()}}
 {\footnotesize\ttfamily function S\+M\+X\+::\+S\+MX (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
-\hyperlink{class_s_m_x}{S\+MX} constructor. 
+\mbox{\hyperlink{class_s_m_x}{S\+MX}} constructor. 
 
 The constructor
 
@@ -69,20 +69,20 @@ The constructor
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Instance of the \hyperlink{class_s_m_x}{S\+MX} class. 
+Instance of the \mbox{\hyperlink{class_s_m_x}{S\+MX}} class. 
 \end{DoxyReturn}
 
 
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_s_m_x_ab223e7b43c5813ce3b9ac735a3f37386}\label{class_s_m_x_ab223e7b43c5813ce3b9ac735a3f37386}} 
-\index{S\+MX@{S\+MX}!delete@{delete}}
-\index{delete@{delete}!S\+MX@{S\+MX}}
-\subsubsection{\texorpdfstring{delete()}{delete()}}
+\index{SMX@{SMX}!delete@{delete}}
+\index{delete@{delete}!SMX@{SMX}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
 {\footnotesize\ttfamily function S\+M\+X\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 
 
-Delete \hyperlink{class_s_m_x}{S\+MX} Object. 
+Delete \mbox{\hyperlink{class_s_m_x}{S\+MX}} Object. 
 
 The destructor
 
@@ -92,9 +92,9 @@ The destructor
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_s_m_x_ab6a7febf2f8a2baecec1f66946b67845}\label{class_s_m_x_ab6a7febf2f8a2baecec1f66946b67845}} 
-\index{S\+MX@{S\+MX}!flush@{flush}}
-\index{flush@{flush}!S\+MX@{S\+MX}}
-\subsubsection{\texorpdfstring{flush()}{flush()}}
+\index{SMX@{SMX}!flush@{flush}}
+\index{flush@{flush}!SMX@{SMX}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
 {\footnotesize\ttfamily function S\+M\+X\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 
@@ -103,13 +103,13 @@ Flush labdevice.
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of \hyperlink{class_s_m_x}{S\+MX} class \\
+{\em obj} & Instance of \mbox{\hyperlink{class_s_m_x}{S\+MX}} class \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_s_m_x_a8488e3aee6732ac028ff5cceaa6b92b7}\label{class_s_m_x_a8488e3aee6732ac028ff5cceaa6b92b7}} 
-\index{S\+MX@{S\+MX}!output\+Disable@{output\+Disable}}
-\index{output\+Disable@{output\+Disable}!S\+MX@{S\+MX}}
-\subsubsection{\texorpdfstring{output\+Disable()}{outputDisable()}}
+\index{SMX@{SMX}!outputDisable@{outputDisable}}
+\index{outputDisable@{outputDisable}!SMX@{SMX}}
+\doxysubsubsection{\texorpdfstring{outputDisable()}{outputDisable()}}
 {\footnotesize\ttfamily function S\+M\+X\+::output\+Disable (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -118,20 +118,17 @@ Disable the output of signal generator.
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of class\\
+{\em obj} & Instance of class \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 
 
-Reimplemented from \hyperlink{class_signal_generator_a537e05b408855d7fbba8f38409be37df}{Signal\+Generator}.
+Reimplemented from \mbox{\hyperlink{class_signal_generator_a537e05b408855d7fbba8f38409be37df}{Signal\+Generator}}.
 
 \mbox{\Hypertarget{class_s_m_x_aaa694a47ebbbbeb3200224181ee1d65b}\label{class_s_m_x_aaa694a47ebbbbeb3200224181ee1d65b}} 
-\index{S\+MX@{S\+MX}!read@{read}}
-\index{read@{read}!S\+MX@{S\+MX}}
-\subsubsection{\texorpdfstring{read()}{read()}}
+\index{SMX@{SMX}!read@{read}}
+\index{read@{read}!SMX@{SMX}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
 {\footnotesize\ttfamily function S\+M\+X\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 
@@ -140,16 +137,16 @@ Read data from labdevice.
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of \hyperlink{class_s_m_x}{S\+MX} class\\
+{\em obj} & Instance of \mbox{\hyperlink{class_s_m_x}{S\+MX}} class\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 ret Data read from device 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_s_m_x_a948280cfa337b1fd49aed6fad1e23f01}\label{class_s_m_x_a948280cfa337b1fd49aed6fad1e23f01}} 
-\index{S\+MX@{S\+MX}!set\+AM@{set\+AM}}
-\index{set\+AM@{set\+AM}!S\+MX@{S\+MX}}
-\subsubsection{\texorpdfstring{set\+A\+M()}{setAM()}}
+\index{SMX@{SMX}!setAM@{setAM}}
+\index{setAM@{setAM}!SMX@{SMX}}
+\doxysubsubsection{\texorpdfstring{setAM()}{setAM()}}
 {\footnotesize\ttfamily function S\+M\+X\+::set\+AM (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
@@ -171,9 +168,9 @@ If internal modulation is used\+:
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_s_m_x_a7363c5f4d6937d4e6c8f81a7e64bfa4d}\label{class_s_m_x_a7363c5f4d6937d4e6c8f81a7e64bfa4d}} 
-\index{S\+MX@{S\+MX}!set\+Freq@{set\+Freq}}
-\index{set\+Freq@{set\+Freq}!S\+MX@{S\+MX}}
-\subsubsection{\texorpdfstring{set\+Freq()}{setFreq()}}
+\index{SMX@{SMX}!setFreq@{setFreq}}
+\index{setFreq@{setFreq}!SMX@{SMX}}
+\doxysubsubsection{\texorpdfstring{setFreq()}{setFreq()}}
 {\footnotesize\ttfamily function S\+M\+X\+::set\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -184,20 +181,17 @@ Set output frequency of signal generator.
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of class \\
 \hline
-{\em freq} & Frequency \mbox{[}Hz\mbox{]}\\
+{\em freq} & Frequency \mbox{[}Hz\mbox{]} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 
 
-Reimplemented from \hyperlink{class_signal_generator_a0ac40e204a22be1bf7bdd65f584c2bb4}{Signal\+Generator}.
+Reimplemented from \mbox{\hyperlink{class_signal_generator_a0ac40e204a22be1bf7bdd65f584c2bb4}{Signal\+Generator}}.
 
 \mbox{\Hypertarget{class_s_m_x_a93851e9f9277b0959115b8d1486c0d3c}\label{class_s_m_x_a93851e9f9277b0959115b8d1486c0d3c}} 
-\index{S\+MX@{S\+MX}!set\+Pow@{set\+Pow}}
-\index{set\+Pow@{set\+Pow}!S\+MX@{S\+MX}}
-\subsubsection{\texorpdfstring{set\+Pow()}{setPow()}}
+\index{SMX@{SMX}!setPow@{setPow}}
+\index{setPow@{setPow}!SMX@{SMX}}
+\doxysubsubsection{\texorpdfstring{setPow()}{setPow()}}
 {\footnotesize\ttfamily function S\+M\+X\+::set\+Pow (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{pow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
@@ -208,20 +202,17 @@ Set output power level of signal generator.
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of class \\
 \hline
-{\em pow} & Power level \mbox{[}d\+Bm\mbox{]}\\
+{\em pow} & Power level \mbox{[}d\+Bm\mbox{]} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-obj Instance of class 
-\end{DoxyReturn}
 
 
-Reimplemented from \hyperlink{class_signal_generator_a23eeb0ad1a1a5d4ed06255e4161a9d1e}{Signal\+Generator}.
+Reimplemented from \mbox{\hyperlink{class_signal_generator_a23eeb0ad1a1a5d4ed06255e4161a9d1e}{Signal\+Generator}}.
 
 \mbox{\Hypertarget{class_s_m_x_a28e9a0da57a9a3ba7fe66dc9b0f00596}\label{class_s_m_x_a28e9a0da57a9a3ba7fe66dc9b0f00596}} 
-\index{S\+MX@{S\+MX}!write@{write}}
-\index{write@{write}!S\+MX@{S\+MX}}
-\subsubsection{\texorpdfstring{write()}{write()}}
+\index{SMX@{SMX}!write@{write}}
+\index{write@{write}!SMX@{SMX}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
 {\footnotesize\ttfamily function S\+M\+X\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
 
 
@@ -230,7 +221,7 @@ Write S\+C\+P\+I/skippy commands to labdevice.
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of \hyperlink{class_s_m_x}{S\+MX} class \\
+{\em obj} & Instance of \mbox{\hyperlink{class_s_m_x}{S\+MX}} class \\
 \hline
 {\em txt} & String with S\+C\+P\+I/skippy commands for labdevice \\
 \hline
@@ -239,4 +230,4 @@ Write S\+C\+P\+I/skippy commands to labdevice.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/soeren/emc/labdevicedrivers/@\+S\+M\+X/\hyperlink{_s_m_x_8m}{S\+M\+X.\+m}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/@\+S\+M\+X/\mbox{\hyperlink{_s_m_x_8m}{S\+M\+X.\+m}}\end{DoxyCompactItemize}

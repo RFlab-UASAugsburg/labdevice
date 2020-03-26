@@ -1,16 +1,30 @@
-\hypertarget{open_dev_8m}{}\section{/home/soeren/emc/labdevicedrivers/functions/open\+Dev.m File Reference}
-\label{open_dev_8m}\index{/home/soeren/emc/labdevicedrivers/functions/open\+Dev.\+m@{/home/soeren/emc/labdevicedrivers/functions/open\+Dev.\+m}}
-\subsection*{Functions}
+\hypertarget{open_dev_8m}{}\doxysection{/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/functions/open\+Dev.m File Reference}
+\label{open_dev_8m}\index{/home/thomas/HF-\/LAB/labdevicedrivers/functions/openDev.m@{/home/thomas/HF-\/LAB/labdevicedrivers/functions/openDev.m}}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \hyperlink{open_dev_8m_ae0944a4612c0d2bbee2f4ac45a808d74}{open\+Dev} (in obj)
-\end{DoxyCompactItemize}
+function \mbox{\hyperlink{open_dev_8m_ae0944a4612c0d2bbee2f4ac45a808d74}{open\+Dev}} (in obj)
+\begin{DoxyCompactList}\small\item\em Opens connection to Device. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{open_dev_8m_ae0944a4612c0d2bbee2f4ac45a808d74}\label{open_dev_8m_ae0944a4612c0d2bbee2f4ac45a808d74}} 
-\index{open\+Dev.\+m@{open\+Dev.\+m}!open\+Dev@{open\+Dev}}
-\index{open\+Dev@{open\+Dev}!open\+Dev.\+m@{open\+Dev.\+m}}
-\subsubsection{\texorpdfstring{open\+Dev()}{openDev()}}
+\index{openDev.m@{openDev.m}!openDev@{openDev}}
+\index{openDev@{openDev}!openDev.m@{openDev.m}}
+\doxysubsubsection{\texorpdfstring{openDev()}{openDev()}}
 {\footnotesize\ttfamily function open\+Dev (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Opens connection to Device. 
+
+Open function for interfaces, independent of which interface type is used. Reads the obj.\+mode property to decide which low level open function is used to fill the obj.\+comm\+Handle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{classlab_device}{lab\+Device}} class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+obj Instance of \mbox{\hyperlink{classlab_device}{lab\+Device}} class 
+\end{DoxyReturn}

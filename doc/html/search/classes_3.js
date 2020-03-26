@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['prologix',['ProLogix',['../class_pro_logix.html',1,'']]]
+  ['prologix_232',['ProLogix',['../class_pro_logix.html',1,'']]]
 ];

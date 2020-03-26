@@ -1,16 +1,30 @@
-\hypertarget{write_dev_8m}{}\section{/home/soeren/emc/labdevicedrivers/functions/write\+Dev.m File Reference}
-\label{write_dev_8m}\index{/home/soeren/emc/labdevicedrivers/functions/write\+Dev.\+m@{/home/soeren/emc/labdevicedrivers/functions/write\+Dev.\+m}}
-\subsection*{Functions}
+\hypertarget{write_dev_8m}{}\doxysection{/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/functions/write\+Dev.m File Reference}
+\label{write_dev_8m}\index{/home/thomas/HF-\/LAB/labdevicedrivers/functions/writeDev.m@{/home/thomas/HF-\/LAB/labdevicedrivers/functions/writeDev.m}}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \hyperlink{write_dev_8m_a46fef045f11fbeb3e175059e65297d5f}{write\+Dev} (in obj, in txt)
-\end{DoxyCompactItemize}
+function \mbox{\hyperlink{write_dev_8m_a46fef045f11fbeb3e175059e65297d5f}{write\+Dev}} (in obj, in txt)
+\begin{DoxyCompactList}\small\item\em Writes string to Device. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{write_dev_8m_a46fef045f11fbeb3e175059e65297d5f}\label{write_dev_8m_a46fef045f11fbeb3e175059e65297d5f}} 
-\index{write\+Dev.\+m@{write\+Dev.\+m}!write\+Dev@{write\+Dev}}
-\index{write\+Dev@{write\+Dev}!write\+Dev.\+m@{write\+Dev.\+m}}
-\subsubsection{\texorpdfstring{write\+Dev()}{writeDev()}}
+\index{writeDev.m@{writeDev.m}!writeDev@{writeDev}}
+\index{writeDev@{writeDev}!writeDev.m@{writeDev.m}}
+\doxysubsubsection{\texorpdfstring{writeDev()}{writeDev()}}
 {\footnotesize\ttfamily function write\+Dev (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
 
+
+
+Writes string to Device. 
+
+Write function for interfaces, independent of which interface type is used. Reads the obj.\+mode property to decide which low level write function is used on the obj.\+comm\+Handle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{classlab_device}{lab\+Device}} class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret exit code of write function, ususally 0 on success 
+\end{DoxyReturn}

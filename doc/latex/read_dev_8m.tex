@@ -1,16 +1,30 @@
-\hypertarget{read_dev_8m}{}\section{/home/soeren/emc/labdevicedrivers/functions/read\+Dev.m File Reference}
-\label{read_dev_8m}\index{/home/soeren/emc/labdevicedrivers/functions/read\+Dev.\+m@{/home/soeren/emc/labdevicedrivers/functions/read\+Dev.\+m}}
-\subsection*{Functions}
+\hypertarget{read_dev_8m}{}\doxysection{/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/functions/read\+Dev.m File Reference}
+\label{read_dev_8m}\index{/home/thomas/HF-\/LAB/labdevicedrivers/functions/readDev.m@{/home/thomas/HF-\/LAB/labdevicedrivers/functions/readDev.m}}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \hyperlink{read_dev_8m_a44a9326166e9103556a02f1d918f0c61}{read\+Dev} (in obj)
-\end{DoxyCompactItemize}
+function \mbox{\hyperlink{read_dev_8m_a44a9326166e9103556a02f1d918f0c61}{read\+Dev}} (in obj)
+\begin{DoxyCompactList}\small\item\em Reads data from Device. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{read_dev_8m_a44a9326166e9103556a02f1d918f0c61}\label{read_dev_8m_a44a9326166e9103556a02f1d918f0c61}} 
-\index{read\+Dev.\+m@{read\+Dev.\+m}!read\+Dev@{read\+Dev}}
-\index{read\+Dev@{read\+Dev}!read\+Dev.\+m@{read\+Dev.\+m}}
-\subsubsection{\texorpdfstring{read\+Dev()}{readDev()}}
+\index{readDev.m@{readDev.m}!readDev@{readDev}}
+\index{readDev@{readDev}!readDev.m@{readDev.m}}
+\doxysubsubsection{\texorpdfstring{readDev()}{readDev()}}
 {\footnotesize\ttfamily function read\+Dev (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Reads data from Device. 
+
+Read function for interfaces, independent of which interface type is used. Reads the obj.\+mode property to decide which low level read function is used on the obj.\+comm\+Handle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{classlab_device}{lab\+Device}} class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret read data as a single character Array 
+\end{DoxyReturn}

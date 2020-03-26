@@ -1,24 +1,50 @@
-\hypertarget{namespacecustom_eth2_gpib}{}\section{custom\+Eth2\+Gpib Namespace Reference}
-\label{namespacecustom_eth2_gpib}\index{custom\+Eth2\+Gpib@{custom\+Eth2\+Gpib}}
-\subsection*{Functions}
+\hypertarget{namespacecustom_eth2_gpib}{}\doxysection{custom\+Eth2\+Gpib Namespace Reference}
+\label{namespacecustom_eth2_gpib}\index{customEth2Gpib@{customEth2Gpib}}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \hyperlink{namespacecustom_eth2_gpib_ab83286ff408e937e869a99622242f36b}{read} (in obj)
-\item 
-function \hyperlink{namespacecustom_eth2_gpib_a47c3a123e46093d92399c0cbc782d669}{write} (in obj, in txt)
-\end{DoxyCompactItemize}
+function \mbox{\hyperlink{namespacecustom_eth2_gpib_ab83286ff408e937e869a99622242f36b}{read}} (in obj)
+\begin{DoxyCompactList}\small\item\em read data from the adapter \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{namespacecustom_eth2_gpib_a47c3a123e46093d92399c0cbc782d669}{write}} (in obj, in txt)
+\begin{DoxyCompactList}\small\item\em write string to adapter \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespacecustom_eth2_gpib_ab83286ff408e937e869a99622242f36b}\label{namespacecustom_eth2_gpib_ab83286ff408e937e869a99622242f36b}} 
-\index{custom\+Eth2\+Gpib@{custom\+Eth2\+Gpib}!read@{read}}
-\index{read@{read}!custom\+Eth2\+Gpib@{custom\+Eth2\+Gpib}}
-\subsubsection{\texorpdfstring{read()}{read()}}
+\index{customEth2Gpib@{customEth2Gpib}!read@{read}}
+\index{read@{read}!customEth2Gpib@{customEth2Gpib}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
 {\footnotesize\ttfamily function custom\+Eth2\+Gpib\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+read data from the adapter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{classlab_device}{lab\+Device}} class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret read data as a single character array 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespacecustom_eth2_gpib_a47c3a123e46093d92399c0cbc782d669}\label{namespacecustom_eth2_gpib_a47c3a123e46093d92399c0cbc782d669}} 
-\index{custom\+Eth2\+Gpib@{custom\+Eth2\+Gpib}!write@{write}}
-\index{write@{write}!custom\+Eth2\+Gpib@{custom\+Eth2\+Gpib}}
-\subsubsection{\texorpdfstring{write()}{write()}}
+\index{customEth2Gpib@{customEth2Gpib}!write@{write}}
+\index{write@{write}!customEth2Gpib@{customEth2Gpib}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
 {\footnotesize\ttfamily function custom\+Eth2\+Gpib\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
 
+
+
+write string to adapter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{classlab_device}{lab\+Device}} class \\
+\hline
+{\em txt} & string to be sent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret 
+\end{DoxyReturn}

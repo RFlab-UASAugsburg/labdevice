@@ -1,16 +1,30 @@
-\hypertarget{get_default_device_properties_8m}{}\section{/home/soeren/emc/labdevicedrivers/cfg/get\+Default\+Device\+Properties.m File Reference}
-\label{get_default_device_properties_8m}\index{/home/soeren/emc/labdevicedrivers/cfg/get\+Default\+Device\+Properties.\+m@{/home/soeren/emc/labdevicedrivers/cfg/get\+Default\+Device\+Properties.\+m}}
-\subsection*{Functions}
+\hypertarget{get_default_device_properties_8m}{}\doxysection{/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/cfg/get\+Default\+Device\+Properties.m File Reference}
+\label{get_default_device_properties_8m}\index{/home/thomas/HF-\/LAB/labdevicedrivers/cfg/getDefaultDeviceProperties.m@{/home/thomas/HF-\/LAB/labdevicedrivers/cfg/getDefaultDeviceProperties.m}}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \hyperlink{get_default_device_properties_8m_abdb449943c58a8a2c9f3e383bb043ab7}{get\+Default\+Device\+Properties} (in device\+Name)
-\end{DoxyCompactItemize}
+function \mbox{\hyperlink{get_default_device_properties_8m_abdb449943c58a8a2c9f3e383bb043ab7}{get\+Default\+Device\+Properties}} (in device\+Name)
+\begin{DoxyCompactList}\small\item\em Get the Default Lab Device specific properties for construction of object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Function Documentation}
+\doxysubsection{Function Documentation}
 \mbox{\Hypertarget{get_default_device_properties_8m_abdb449943c58a8a2c9f3e383bb043ab7}\label{get_default_device_properties_8m_abdb449943c58a8a2c9f3e383bb043ab7}} 
-\index{get\+Default\+Device\+Properties.\+m@{get\+Default\+Device\+Properties.\+m}!get\+Default\+Device\+Properties@{get\+Default\+Device\+Properties}}
-\index{get\+Default\+Device\+Properties@{get\+Default\+Device\+Properties}!get\+Default\+Device\+Properties.\+m@{get\+Default\+Device\+Properties.\+m}}
-\subsubsection{\texorpdfstring{get\+Default\+Device\+Properties()}{getDefaultDeviceProperties()}}
+\index{getDefaultDeviceProperties.m@{getDefaultDeviceProperties.m}!getDefaultDeviceProperties@{getDefaultDeviceProperties}}
+\index{getDefaultDeviceProperties@{getDefaultDeviceProperties}!getDefaultDeviceProperties.m@{getDefaultDeviceProperties.m}}
+\doxysubsubsection{\texorpdfstring{getDefaultDeviceProperties()}{getDefaultDeviceProperties()}}
 {\footnotesize\ttfamily function get\+Default\+Device\+Properties (\begin{DoxyParamCaption}\item[{in}]{device\+Name }\end{DoxyParamCaption})}
 
+
+
+Get the Default Lab Device specific properties for construction of object. 
+
+Search for a default addresses of device. All default device settings should be stored in a json file in this folder. Always write device names in the json file as lowercase. See also\+: default\+Device\+Properties.\+json
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & \mbox{[}string\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+default\+Properties \mbox{[}struct\mbox{]} 
+\end{DoxyReturn}

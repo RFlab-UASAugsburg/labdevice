@@ -1,85 +1,152 @@
-\hypertarget{classlab_device}{}\section{lab\+Device Class Reference}
-\label{classlab_device}\index{lab\+Device@{lab\+Device}}
+\hypertarget{classlab_device}{}\doxysection{lab\+Device Class Reference}
+\label{classlab_device}\index{labDevice@{labDevice}}
 
 
-Inherited by \hyperlink{class_e3631_a}{E3631A}, \hyperlink{class_e_s_r_p}{E\+S\+RP}, \hyperlink{class_pro_logix}{Pro\+Logix}, \hyperlink{class_radi_sense}{Radi\+Sense}, \hyperlink{class_s_m_x}{S\+MX}, \hyperlink{class_stepper}{Stepper}, and \hyperlink{class_z_v_m}{Z\+VM}.
+Handling of the default values is done here.  
 
-\subsection*{Public Member Functions}
+
+
+
+Inherited by \mbox{\hyperlink{class_e3631_a}{E3631A}}, \mbox{\hyperlink{class_e_s_r_p}{E\+S\+RP}}, \mbox{\hyperlink{class_pro_logix}{Pro\+Logix}}, \mbox{\hyperlink{class_radi_sense}{Radi\+Sense}}, \mbox{\hyperlink{class_s_m_x}{S\+MX}}, \mbox{\hyperlink{class_stepper}{Stepper}}, and \mbox{\hyperlink{class_z_v_m}{Z\+VM}}.
+
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \hyperlink{classlab_device_a09e8cbad3c7eee79583b8832bb4b7db5}{lab\+Device} (in device\+Name, in mode, in varargin)
+function \mbox{\hyperlink{classlab_device_a09e8cbad3c7eee79583b8832bb4b7db5}{lab\+Device}} (in device\+Name, in mode, in varargin)
+\begin{DoxyCompactList}\small\item\em labdevice constructor \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{classlab_device_a7057c50fc2d4e45ec73d245b0c9492c1}{delete}} (in obj)
+\begin{DoxyCompactList}\small\item\em Delete \mbox{\hyperlink{classlab_device}{lab\+Device}} Object. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{classlab_device_ad819d668a8f3e4c20d6982c015930d93}{flush}} (in obj)
 \item 
-function \hyperlink{classlab_device_a7057c50fc2d4e45ec73d245b0c9492c1}{delete} (in obj)
-\item 
-function \hyperlink{classlab_device_ad819d668a8f3e4c20d6982c015930d93}{flush} (in obj)
-\item 
-function \hyperlink{classlab_device_a063e6017e5c6eee88b9dfdaf73e92c00}{read} (in obj)
-\item 
-function \hyperlink{classlab_device_ac25c0a57509a9ea7b776254bf505f64b}{write} (in obj, in txt)
-\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
+function \mbox{\hyperlink{classlab_device_a063e6017e5c6eee88b9dfdaf73e92c00}{read}} (in obj)
+\begin{DoxyCompactList}\small\item\em Read data from labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{classlab_device_ac25c0a57509a9ea7b776254bf505f64b}{write}} (in obj, in txt)
+\begin{DoxyCompactList}\small\item\em Write S\+C\+P\+I/skippy commands to labdevice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Property \hyperlink{classlab_device_aaabc2a46d897dc183df1647ff890ef18}{prop}
+Property \mbox{\hyperlink{classlab_device_aaabc2a46d897dc183df1647ff890ef18}{prop}}
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
+Handling of the default values is done here. 
+
+At the moment ethernet, gpib and gpib over ethernet connections are supported. The connection mode needs to be handed over. There is no corresponding default property for it.
+
+Usage\+: Initalise class 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{dev = \mbox{\hyperlink{classlab_device_a09e8cbad3c7eee79583b8832bb4b7db5}{labDevice}}(deviceName, conMode) }
+\DoxyCodeLine{\%returns \mbox{\hyperlink{classlab_device}{labDevice}} object, dev,}
+\DoxyCodeLine{\%with \textcolor{keywordflow}{default} values \textcolor{keywordflow}{for} the parameters of the connection mode conMode.}
+\end{DoxyCode}
+ 
+
+Definition at line 20 of file lab\+Device.\+m.
 
 
-Definition at line 1 of file lab\+Device.\+m.
 
-
-
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classlab_device_a09e8cbad3c7eee79583b8832bb4b7db5}\label{classlab_device_a09e8cbad3c7eee79583b8832bb4b7db5}} 
-\index{lab\+Device@{lab\+Device}!lab\+Device@{lab\+Device}}
-\index{lab\+Device@{lab\+Device}!lab\+Device@{lab\+Device}}
-\subsubsection{\texorpdfstring{lab\+Device()}{labDevice()}}
+\index{labDevice@{labDevice}!labDevice@{labDevice}}
+\index{labDevice@{labDevice}!labDevice@{labDevice}}
+\doxysubsubsection{\texorpdfstring{labDevice()}{labDevice()}}
 {\footnotesize\ttfamily function lab\+Device\+::lab\+Device (\begin{DoxyParamCaption}\item[{in}]{device\+Name,  }\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
-\subsection{Member Function Documentation}
+labdevice constructor 
+
+The constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Name} & type of device as used in the default configs file \\
+\hline
+{\em mode} & Communication mode e.\+g. \char`\"{}eth\char`\"{} for ethernet \\
+\hline
+{\em varargin} & Variable input arguments depending on connection mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the \mbox{\hyperlink{classlab_device}{lab\+Device}} class. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classlab_device_a7057c50fc2d4e45ec73d245b0c9492c1}\label{classlab_device_a7057c50fc2d4e45ec73d245b0c9492c1}} 
-\index{lab\+Device@{lab\+Device}!delete@{delete}}
-\index{delete@{delete}!lab\+Device@{lab\+Device}}
-\subsubsection{\texorpdfstring{delete()}{delete()}}
+\index{labDevice@{labDevice}!delete@{delete}}
+\index{delete@{delete}!labDevice@{labDevice}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
 {\footnotesize\ttfamily function lab\+Device\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Delete \mbox{\hyperlink{classlab_device}{lab\+Device}} Object. 
+
+The destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classlab_device_ad819d668a8f3e4c20d6982c015930d93}\label{classlab_device_ad819d668a8f3e4c20d6982c015930d93}} 
-\index{lab\+Device@{lab\+Device}!flush@{flush}}
-\index{flush@{flush}!lab\+Device@{lab\+Device}}
-\subsubsection{\texorpdfstring{flush()}{flush()}}
+\index{labDevice@{labDevice}!flush@{flush}}
+\index{flush@{flush}!labDevice@{labDevice}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
 {\footnotesize\ttfamily function lab\+Device\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classlab_device_a063e6017e5c6eee88b9dfdaf73e92c00}\label{classlab_device_a063e6017e5c6eee88b9dfdaf73e92c00}} 
-\index{lab\+Device@{lab\+Device}!read@{read}}
-\index{read@{read}!lab\+Device@{lab\+Device}}
-\subsubsection{\texorpdfstring{read()}{read()}}
+\index{labDevice@{labDevice}!read@{read}}
+\index{read@{read}!labDevice@{labDevice}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
 {\footnotesize\ttfamily function lab\+Device\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+Read data from labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{classlab_device}{lab\+Device}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret Data read from device 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlab_device_ac25c0a57509a9ea7b776254bf505f64b}\label{classlab_device_ac25c0a57509a9ea7b776254bf505f64b}} 
-\index{lab\+Device@{lab\+Device}!write@{write}}
-\index{write@{write}!lab\+Device@{lab\+Device}}
-\subsubsection{\texorpdfstring{write()}{write()}}
+\index{labDevice@{labDevice}!write@{write}}
+\index{write@{write}!labDevice@{labDevice}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
 {\footnotesize\ttfamily function lab\+Device\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
 
 
 
-\subsection{Member Data Documentation}
+Write S\+C\+P\+I/skippy commands to labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{classlab_device}{lab\+Device}} class \\
+\hline
+{\em txt} & String with S\+C\+P\+I/skippy commands for labdevice \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classlab_device_aaabc2a46d897dc183df1647ff890ef18}\label{classlab_device_aaabc2a46d897dc183df1647ff890ef18}} 
-\index{lab\+Device@{lab\+Device}!prop@{prop}}
-\index{prop@{prop}!lab\+Device@{lab\+Device}}
-\subsubsection{\texorpdfstring{prop}{prop}}
+\index{labDevice@{labDevice}!prop@{prop}}
+\index{prop@{prop}!labDevice@{labDevice}}
+\doxysubsubsection{\texorpdfstring{prop}{prop}}
 {\footnotesize\ttfamily Property lab\+Device\+::prop}
 
 
 
-Definition at line 31 of file lab\+Device.\+m.
+Definition at line 25 of file lab\+Device.\+m.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/soeren/emc/labdevicedrivers/@lab\+Device/\hyperlink{lab_device_8m}{lab\+Device.\+m}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/@lab\+Device/\mbox{\hyperlink{lab_device_8m}{lab\+Device.\+m}}\end{DoxyCompactItemize}
