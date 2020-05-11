@@ -13,7 +13,8 @@
 %> trace = zvm.getTraceCmplx(1,zvm.getSweepPoints);
 %> @endcode
 % ======================================================
-classdef  ZVM < labDevice & VektorNetworkAnalyser
+classdef  ZVM < labDevice & VectorNetworkAnalyser
+                                                
     properties
       % Add device specific properties here
     end
