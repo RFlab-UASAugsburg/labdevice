@@ -3,9 +3,11 @@
 %>
 %> @param obj Instance of class
 %> @param channel Selected channel 1..4
+%>
+%> @return VertPos Vertical position of the waveform in [div]
 % =====================================================
 
-function VertPos = getVertPos(obj, channel)
+function VertPos = getVerticalPosition(obj, channel)
 	  if (channel >= 1 & channel <= 4)
             write(obj, ["CHAN"+channel+":POS?; *WAI"]);
             message = obj.read;

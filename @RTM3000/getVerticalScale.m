@@ -3,9 +3,11 @@
 %>
 %> @param obj Instance of class
 %> @param channel Selected channel 1..4
+%>
+%> @return VertScale Vertical position of the the indicated channel in [V/div]
 % =====================================================
 
-function Scale = getVertScale(obj, channel)
+function VertScale = getVerticalScale(obj, channel)
 	  if (channel >= 1 & channel <= 4)
             write(obj, ["CHAN"+channel+":SCAL?; *WAI"]);
             message = obj.read;
@@ -17,5 +19,5 @@ function Scale = getVertScale(obj, channel)
           else
               error('Only channels 1-4 are selectable');
       end
-    Scale = message;
+    VertScale = message;
 end

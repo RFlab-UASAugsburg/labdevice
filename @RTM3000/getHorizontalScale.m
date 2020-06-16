@@ -1,16 +1,18 @@
 % ====================================================
-%> @brief Get the horizontal scale for all channels and math waveforms
+%> @brief Get the horizontal scale of all channels and math waveforms
 %>
 %> @param obj Instance of class
+%>
+%> @return HorzScale Horizontal scale in [s/div]
 % =====================================================
 
-function Scale = getHorzScale(obj)
-    write(obj, ['TIM:SCAL?; *WAI']);
+function HorzScale = getHorizontalScale(obj)
+    write(obj, "TIM:SCAL?; *WAI");
     message = obj.read;
     message = strip(message);
     if isempty(message)
         error("no response from device");
     end
 
-    Scale = message;
+    HorzScale = message;
 end

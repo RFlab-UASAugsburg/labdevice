@@ -6,7 +6,7 @@
 %> @param pos Desired vertical postition (-5 to 5)div
 % =====================================================
 
-function setVertPos(obj, channel, pos)
+function setVerticalPosition(obj, channel, pos)
 	  if (channel >= 1 & channel <= 4)
           if (pos < -5 | pos > 5)
               error('Position is out of bounds. Keep it between -5 and 5');
