@@ -6,6 +6,18 @@
                 "port": 1234
             }
         },
+        "rohdeundschwarz_rtm3000": {
+                    "eth": {
+                        "ip": "141.82.75.71",
+                        "port": 5025
+                    }
+            },
+        "rigol_dg4102": {
+                    "eth": {
+                        "ip": "141.82.75.74",
+                        "port": 5555
+                    }
+            },
         "rohdeundschwarz_esrp": {
             "eth": {
                 "ip": "192.168.73.25",
