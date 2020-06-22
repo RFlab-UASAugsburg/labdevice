@@ -10,9 +10,9 @@ function EnableDisableMathChannel (obj, channel, status)
 	  if (channel >= 1 && channel <= 5)
          switch status
             case 'on'
-                write(obj,"CALC:MATH<" + channel + ">:STAT ON");
+                write(obj,"CALC:MATH" + channel + ":STAT ON");
             case 'off'
-                write(obj,"CALC:MATH<" + channel + ">:STAT OFF");
+                write(obj,"CALC:MATH" + channel + ":STAT OFF");
             otherwise
                 error('Unclear status. ' +status);
          end
