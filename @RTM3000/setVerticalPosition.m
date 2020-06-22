@@ -2,7 +2,9 @@
 %> @brief Change the vertical position for a specific channel
 %>
 %> @param obj Instance of class
+%>
 %> @param channel Selected channel 1..4
+%>
 %> @param pos Desired vertical postition (-5 to 5)div
 % =====================================================
 

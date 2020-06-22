@@ -2,7 +2,9 @@
 %> @brief Get analog channel data from selected channel
 %>
 %> @param obj Instance of class
+%>
 %> @param channel Selected channel
+%>
 % =====================================================
 
 function AnalogChannelData = getAnalogChannelData(obj, channel)

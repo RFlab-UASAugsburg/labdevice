@@ -2,6 +2,7 @@
 %> @brief set the FFT windowing type
 %>
 %> @param obj Instance of class
+%>
 %> @param type one of these type strings: 'RECT','HAMM','HANN','BLAC','FLAT'
 % =====================================================
 

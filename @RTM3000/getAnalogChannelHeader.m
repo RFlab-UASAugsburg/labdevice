@@ -2,7 +2,9 @@
 %> @brief Get analog channel header from selected channel
 %>
 %> @param obj Instance of class
+%>
 %> @param channel Selected channel
+%>
 %> @return Comma-separated value list  with: XStart in s 
 %>                                           XStop in s
 %>                                           Record length of waveform in Samples 

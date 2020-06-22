@@ -2,7 +2,9 @@
 %> @brief Turn FFT on or off
 %>
 %> @param obj Instance of class
+%>
 %> @param state On-Off switch for the FFT
+%>
 % =====================================================
 
 function EnableDisableFFT(obj, state)

@@ -2,7 +2,9 @@
 %> @brief Change the vertical scale for a specific channel
 %>
 %> @param obj Instance of class
+%>
 %> @param channel Selected channel 1..4
+%>
 %> @param scale Desired scale of the vertical axis (1e-3 to 10)V/div
 % =====================================================
 

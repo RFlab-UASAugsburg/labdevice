@@ -2,6 +2,7 @@
 %> @brief Check if Channel is enabled or disabled
 %>
 %> @param obj Instance of class
+%>
 %> @param channel Selected channel 1..4
 %>
 %> @return Current state of the selected channel: 1 = ON

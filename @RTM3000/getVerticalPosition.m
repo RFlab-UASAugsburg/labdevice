@@ -2,6 +2,7 @@
 %> @brief Gets the vertical position for a specific channel
 %>
 %> @param obj Instance of class
+%>
 %> @param channel Selected channel 1..4
 %>
 %> @return VertPos Vertical position of the waveform in [div]

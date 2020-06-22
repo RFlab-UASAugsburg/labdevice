@@ -3,6 +3,7 @@
 %>        note: lower limits are possible if zoom or FFT is enabled
 %>
 %> @param obj Instance of class
+%>
 %> @param scale Desired scale of the horizontal axis (1e-9 to 50)[s/div]
 % =====================================================
 

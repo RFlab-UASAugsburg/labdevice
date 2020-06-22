@@ -2,7 +2,9 @@
 %> @brief Define format for data export
 %>
 %> @param obj Instance of class
+%>
 %> @param dataformat Desired dataformat for the data export (ASC,REAL,UINT)
+%>
 %> @param varargin accuracy which can only be set with UNIT (to 8,16,32)
 % =====================================================
 

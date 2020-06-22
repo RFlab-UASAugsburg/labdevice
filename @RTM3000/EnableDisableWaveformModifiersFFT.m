@@ -2,12 +2,15 @@
 %> @brief Turn ON or OFF FFT waveform modifiers
 %>
 %> @param obj Instance of class
+%>
 %> @param state ON or OFF to enable or disable certain waveform
+%>
 %> @param waveform selected waveform to enable or disable 
 %>        possible parameters: Spectrum['SPEC']
 %>                             Average['AVER']
 %>                             Maximum['MAX']
 %>                             Minimum['MIN']
+%>
 % =====================================================
 
 function EnableDisableWaveformModifiersFFT(obj, waveform, state)

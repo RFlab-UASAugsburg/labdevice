@@ -2,6 +2,7 @@
 %> @brief Gets the vertical scale for a specific channel
 %>
 %> @param obj Instance of class
+%>
 %> @param channel Selected channel 1..4
 %>
 %> @return VertScale Vertical position of the the indicated channel in [V/div]

@@ -2,6 +2,7 @@
 %> @brief Set the source for the FFT
 %>
 %> @param obj Instance of class
+%>
 %> @param source selected channel as FFT source, e.g. "CH1","CH2",...
 % =====================================================
 

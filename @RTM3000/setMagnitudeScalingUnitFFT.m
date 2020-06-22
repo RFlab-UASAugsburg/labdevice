@@ -1,6 +1,8 @@
 % ====================================================
 %> @brief set the FFT magnitude scaling unit
+%>
 %> @param obj Instance of class
+%>
 %> @param unit one of the named units: 'LIN','DBM','DBV'
 % =====================================================
 

@@ -2,8 +2,11 @@
 %> @brief Turn a specific channel on or off
 %>
 %> @param obj Instance of class
+%>
 %> @param channel Selected channel 1..4
+%>
 %> @param status 'on' || 'off'
+%>
 % =====================================================
 
 function EnableDisableChannel (obj, channel, status)
