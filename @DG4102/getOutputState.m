@@ -1,20 +1,18 @@
 % ====================================================
-%> @brief Gets the amplitude unit
+%> @brief Get the output state('ON','OFF') of a specific output
 %>
 %> @param obj Instance of class
 %>
-%> @param source Selected source
+%> @param output Selected output 1 or 2
 %>
-%> @output AmpUnit Amplitude unit configured at the selected source
+%> @output CurrentOutputState Current output state of the selected output
 % =====================================================
-
-
-function AmpUnit = getAmplitudeUnit(obj, source)
-    write(obj,":SOUR" + source + ":VOLT:UNIT?");
+function CurrentOutputState = getOutputState(obj, output)
+    obj.write(":OUTP" + output +"?");
     message = obj.read;
     message = strip(message);
-    units = {'DBM','VPP','VRMS'};
-    if ~any(strcmp(units,message))
+    states = {'ON', 'OFF'};
+    if ~any(strcmp(states,message))
         if isempty(message)
             error("no response from device");
         else
@@ -23,6 +21,7 @@ function AmpUnit = getAmplitudeUnit(obj, source)
             
         end
     else
-        AmpUnit = message;
+        CurrentOutputState = message;
     end
 end
+
