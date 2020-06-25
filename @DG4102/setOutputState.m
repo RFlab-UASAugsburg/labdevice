@@ -2,8 +2,11 @@
 %> @brief Set the Output state of a specific output
 %>
 %> @param obj Instance of class
+%>
 %> @param output Selected output 1 or 2
+%>
 %> @param state Output state either ON or OFF
+%>
 % =====================================================
 function setOutputState(obj, output, state)
         if (output >= 1 & output <= 2)

@@ -1,8 +1,12 @@
 % ====================================================
 %> @brief Get current configuration of the generator
-%> @brief Format: 'Waveform Name,Frequency,Amplitude,Offset,Start Phase/Delay'
+%>
 %> @param obj Instance of class
+%>
 %> @param source Selected source 1 or 2
+%>
+%> @output SourceConfig 2x5 cell array containing the current output
+%>        configurations
 % =====================================================
 function SourceConfig = getSourceConfig(obj, source)
     switch source
@@ -17,7 +21,7 @@ function SourceConfig = getSourceConfig(obj, source)
     if isempty(message)
             error("no response from device");
     end
-    SourceConfig = [{'Waveform Nam','Frequency','Amplitude','Offset','Start Phase/Delay'};strsplit(message,',')];
+    SourceConfig = [{'Waveform Name','Frequency','Amplitude','Offset','Start Phase/Delay'};strsplit(message,',')];
     
 
 end
