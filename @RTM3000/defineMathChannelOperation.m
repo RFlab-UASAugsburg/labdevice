@@ -6,7 +6,8 @@
 %> @param waveform selected math waveform
 %>
 %> @param varargin source channel(s) for the math operation
-%> Syntax: Channels: CH1 
+%> Syntax: Channels: "CH1"
+%>         Operations: "ADD"
 %>         Constant value(for low/high pass): 1E6 
 %>
 %> @param operation desired math operation to be calculated
