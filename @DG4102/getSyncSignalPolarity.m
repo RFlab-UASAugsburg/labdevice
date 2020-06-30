@@ -5,6 +5,8 @@
 %>
 %> @param output Selected output
 %>
+%> @output syncSignalPolarity Currently configured sync signal polarity
+%>
 % =====================================================
 
 
