@@ -1,0 +1,19 @@
+% ====================================================
+%> @brief Gets the configured trigger type
+%>
+%> @param obj Instance of class
+%>
+%> @output triggerType Currently configured trigger type
+%>
+% =====================================================
+
+
+function triggerType = getTriggerType(obj)
+write(obj,"TRIG:A:TYPE?");
+message = obj.read;
+message = strip(message);
+if isempty(message)
+    error("no response from device");
+end
+triggerType = message;
+end
