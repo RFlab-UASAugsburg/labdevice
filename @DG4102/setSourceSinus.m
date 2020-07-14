@@ -7,7 +7,7 @@
 %>
 %> @param freq Frequency 1µHz to 160MHz
 %>
-%> @param amp Amplitude in Vpp (boundaries depending on the frequency)
+%> @param amp Amplitude into 50 Ohm in Vpp (boundaries depending on the frequency)
 %>
 %> @param offset DC Offset in V
 %>
@@ -24,12 +24,12 @@ if source == 1 || source == 2
             error('Amplitude out of bounds. Keep it between 1E-3 and 10');
         end
 
-    elseif freq > 1E-3 & freq <= 70E6
+    elseif freq > 1E-6 & freq <= 70E6
         if amp < 1E-3 || amp > 5
             error('Amplitude out of bounds. Keep it between 1E-3 and 5');
         end
 
-    elseif freq > 1E-3 & freq <= 100E6
+    elseif freq > 1E-6 & freq <= 100E6
         if amp < 1E-3 || amp > 2.5
             error('Amplitude out of bounds. Keep it between 1E-3 and 2.5');
         end
