@@ -15,6 +15,7 @@ function AnalogChannelData = getAnalogChannelData(obj, channel)
             error("no response from device");
         end
         AnalogChannelData = strsplit(message,",");
+        AnalogChannelData = str2double(AnalogChannelData);
     else
         error("Channel can only be set to 1-4");
     end

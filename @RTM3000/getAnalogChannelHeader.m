@@ -18,7 +18,7 @@ function AnalogChannelHeader = getAnalogChannelHeader(obj, channel)
         if isempty(message)
             error("no response from device");
         end
-        AnalogChannelHeader = strsplit(message,",");
+        AnalogChannelHeader = [{'XStart in s','XStop in s','waveform in samples','Num of values per sample interval'};strsplit(message,',')];
     else
         error("Channel can only be set to 1-4");
     end
