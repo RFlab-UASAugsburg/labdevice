@@ -12,26 +12,30 @@
 % =====================================================
 
 function setQuickMeasurementSource(obj, place, SignalSourceOne, varargin)
-    possibleSources = {'CH1','CH2','CH3','CH4','MA1','RE1','RE2','RE3','RE4'};
-    if any(strcmp(possibleSources,SignalSourceOne))
-        if any(strcmp(possibleSources,varargin{1}))
-            switch nargin
-                case 4
-                    write(obj,"MEAS"+place+":SOUR "+SignalSourceOne+","+varargin{1});
-                case 3
-                    write(obj,"MEAS"+place+":SOUR "+SignalSourceOne);
-                otherwise
-                    error("Too many input arguments");
+possibleSources = {'CH1','CH2','CH3','CH4','MA1','RE1','RE2','RE3','RE4'};
+switch nargin
+    case 4
+        if any(strcmp(possibleSources,SignalSourceOne))
+            if any(strcmp(possibleSources,varargin{1}))
+                write(obj,"MEAS"+place+":SOUR "+SignalSourceOne+","+varargin{1});
+            else
+                error("Second source argument wrong -> measurement source can only be" + string(join(possibleSources)));
             end
+            
+        else
+            error("First source argument wrong -> measurement source can only be" + string(join(possibleSources)));
+        end
+    case 3
+        if any(strcmp(possibleSources,SignalSourceOne))
+            write(obj,"MEAS"+place+":SOUR "+SignalSourceOne);
         else
             error("measurement source can only be" + string(join(possibleSources)));
         end
-
-    else
-        error("measurement source can only be" + string(join(possibleSources)));
-    end
+    otherwise
+        error("Too many input arguments");
 end
-
+  
+end
 
 
 
