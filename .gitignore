@@ -1,4 +1,5 @@
 # ignore all asv files (MATLAB temp files)
 *.asv
+*.DS_Store
 soerenTest.m
 initializeConnectionStandalone.m
