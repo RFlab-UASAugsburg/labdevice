@@ -15,6 +15,7 @@ function MathChannelData = getMathChannelData(obj, channel)
             error("no response from device");
         end
         MathChannelData = strsplit(message,",");
+        MathChannelData = str2double(MathChannelData);
     else
         error("Channel can only be set to 1-4");
     end
