@@ -15,6 +15,7 @@ function setStopFrequency(obj, freq, varargin)
 	    	error('range is not correct (1 to 10)');
 	    else
 	    	write(obj, ['SCAN', num2str(varargin{1}), ':STOP ', num2str(freq), 'Hz; *WAI']);
+        end
 	else
 		write(obj, ['FREQ:STOP ', num2str(freq), 'Hz; *WAI']);
 	end

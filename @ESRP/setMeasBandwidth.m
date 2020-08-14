@@ -1,5 +1,5 @@
 % ====================================================
-%> @brief get the resolution bandwidth
+%> @brief set the resolution bandwidth
 %> 
 %> set the resolution bandwidth of the whole measurement, or of a specified scan range
 %> (in spectrum mode, no scan ranges are available)
