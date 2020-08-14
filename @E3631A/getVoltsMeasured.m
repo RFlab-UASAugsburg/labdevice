@@ -7,7 +7,7 @@
 %> @return u measured Voltage in Volts
 % =====================================================
 
-function u = getUMeasured(obj, varargin)
+function u = getVoltsMeasured(obj, varargin)
     if ~isempty(varargin)
         source = varargin{1};
         obj.write("MEAS:VOLT? " + source + ";*WAI;");

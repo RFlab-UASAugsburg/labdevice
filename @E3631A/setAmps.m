@@ -9,7 +9,7 @@
 function setAmps(obj, amps, varargin)
 	if ~isempty(varargin)
 	    source = varargin{1};
-	    u = obj.getULimit(source);
+	    u = obj.getVoltsLimit(source);
 	    obj.write("APPL " + source +", "+u+", " + amps);
 	else
 	    obj.write("CURR " + amps);
