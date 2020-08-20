@@ -64,7 +64,7 @@ function \mbox{\hyperlink{class_e_s_r_p_ab0cead2c11e6735a1bcdac5c3bc3f0f9}{get\+
 \begin{DoxyCompactList}\small\item\em get the start frequency \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_a1eab453f67409e3b5f7000e825185f9d}{get\+Stop\+Frequency}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em get the stop frequency \end{DoxyCompactList}\item 
-function \mbox{\hyperlink{class_e_s_r_p_a4b75c8085d7000162dcc229f23391630}{get\+Trace}} (in obj, in varargin)
+function \mbox{\hyperlink{class_e_s_r_p_a62b9e9eccda23c5544a859c23e6aa707}{get\+Trace}} (in obj, in freq\+Points, in varargin)
 \begin{DoxyCompactList}\small\item\em get data of a trace \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_a34187373f286c235398d6908a98102db}{hold\+Meas}} (in obj)
 \begin{DoxyCompactList}\small\item\em pause/hold the current measurement \end{DoxyCompactList}\item 
@@ -597,11 +597,11 @@ get the stop frequency of the whole measurement, or of a specified scan range (i
 \begin{DoxyReturn}{Returns}
 freq in Hz 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_e_s_r_p_a4b75c8085d7000162dcc229f23391630}\label{class_e_s_r_p_a4b75c8085d7000162dcc229f23391630}} 
+\mbox{\Hypertarget{class_e_s_r_p_a62b9e9eccda23c5544a859c23e6aa707}\label{class_e_s_r_p_a62b9e9eccda23c5544a859c23e6aa707}} 
 \index{ESRP@{ESRP}!getTrace@{getTrace}}
 \index{getTrace@{getTrace}!ESRP@{ESRP}}
 \doxysubsubsection{\texorpdfstring{getTrace()}{getTrace()}}
-{\footnotesize\ttfamily function E\+S\+R\+P\+::get\+Trace (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function E\+S\+R\+P\+::get\+Trace (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq\+Points,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -612,6 +612,8 @@ request, read and parse trace returns a double array of trace values
 
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of class \\
+\hline
+{\em freq\+Points} & number of frequency points in the trace \\
 \hline
 {\em varargin} & select the trace index, defaults to 1\\
 \hline
@@ -1195,4 +1197,4 @@ Write S\+C\+P\+I/skippy commands to labdevice.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/thomas/\+H\+F-\/\+Lab/labdevicedrivers/@\+E\+S\+R\+P/\mbox{\hyperlink{_e_s_r_p_8m}{E\+S\+R\+P.\+m}}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+Lab/emcframework/labdevicedrivers/@\+E\+S\+R\+P/\mbox{\hyperlink{_e_s_r_p_8m}{E\+S\+R\+P.\+m}}\end{DoxyCompactItemize}

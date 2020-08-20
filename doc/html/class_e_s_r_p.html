@@ -154,9 +154,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1eab453f67409e3b5f7000e825185f9d"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_s_r_p.html#a1eab453f67409e3b5f7000e825185f9d">getStopFrequency</a> (in obj, in varargin)</td></tr>
 <tr class="memdesc:a1eab453f67409e3b5f7000e825185f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the stop frequency  <a href="class_e_s_r_p.html#a1eab453f67409e3b5f7000e825185f9d">More...</a><br /></td></tr>
 <tr class="separator:a1eab453f67409e3b5f7000e825185f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b75c8085d7000162dcc229f23391630"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_s_r_p.html#a4b75c8085d7000162dcc229f23391630">getTrace</a> (in obj, in varargin)</td></tr>
-<tr class="memdesc:a4b75c8085d7000162dcc229f23391630"><td class="mdescLeft">&#160;</td><td class="mdescRight">get data of a trace  <a href="class_e_s_r_p.html#a4b75c8085d7000162dcc229f23391630">More...</a><br /></td></tr>
-<tr class="separator:a4b75c8085d7000162dcc229f23391630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b9e9eccda23c5544a859c23e6aa707"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_s_r_p.html#a62b9e9eccda23c5544a859c23e6aa707">getTrace</a> (in obj, in freqPoints, in varargin)</td></tr>
+<tr class="memdesc:a62b9e9eccda23c5544a859c23e6aa707"><td class="mdescLeft">&#160;</td><td class="mdescRight">get data of a trace  <a href="class_e_s_r_p.html#a62b9e9eccda23c5544a859c23e6aa707">More...</a><br /></td></tr>
+<tr class="separator:a62b9e9eccda23c5544a859c23e6aa707"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34187373f286c235398d6908a98102db"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_s_r_p.html#a34187373f286c235398d6908a98102db">holdMeas</a> (in obj)</td></tr>
 <tr class="memdesc:a34187373f286c235398d6908a98102db"><td class="mdescLeft">&#160;</td><td class="mdescRight">pause/hold the current measurement  <a href="class_e_s_r_p.html#a34187373f286c235398d6908a98102db">More...</a><br /></td></tr>
 <tr class="separator:a34187373f286c235398d6908a98102db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1069,8 +1069,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a4b75c8085d7000162dcc229f23391630"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b75c8085d7000162dcc229f23391630">&#9670;&nbsp;</a></span>getTrace()</h2>
+<a id="a62b9e9eccda23c5544a859c23e6aa707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b9e9eccda23c5544a859c23e6aa707">&#9670;&nbsp;</a></span>getTrace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1080,6 +1080,12 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>freqPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1100,6 +1106,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">obj</td><td>Instance of class </td></tr>
+    <tr><td class="paramname">freqPoints</td><td>number of frequency points in the trace </td></tr>
     <tr><td class="paramname">varargin</td><td>select the trace index, defaults to 1</td></tr>
   </table>
   </dd>
@@ -2269,13 +2276,13 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/thomas/HF-Lab/labdevicedrivers/@ESRP/<a class="el" href="_e_s_r_p_8m_source.html">ESRP.m</a></li>
+<li>/home/thomas/HF-Lab/emcframework/labdevicedrivers/@ESRP/<a class="el" href="_e_s_r_p_8m_source.html">ESRP.m</a></li>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclass_e_s_r_p_html_a4c1ddc1b31a8235049a5cace1d3ed1ff"><div class="ttname"><a href="class_e_s_r_p.html#a4c1ddc1b31a8235049a5cace1d3ed1ff">ESRP::ESRP</a></div><div class="ttdeci">function ESRP(in mode, in varargin)</div><div class="ttdoc">ESRP constructor.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 20 2020 13:30:56 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 20 2020 14:25:59 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

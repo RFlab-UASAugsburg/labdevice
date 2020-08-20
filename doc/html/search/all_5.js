@@ -46,7 +46,7 @@ var searchData=
   ['getstopfrequency_2em_74',['getStopFrequency.m',['../get_stop_frequency_8m.html',1,'']]],
   ['getsweeppoints_75',['getSweepPoints',['../class_z_v_m.html#ae184b648cd1a40e14745830b6e64caa6',1,'ZVM::getSweepPoints()'],['../class_vector_network_analyser.html#a6fea4338a2e20d0863c84bf411228c96',1,'VectorNetworkAnalyser::getSweepPoints()']]],
   ['getsweeppoints_2em_76',['getSweepPoints.m',['../get_sweep_points_8m.html',1,'']]],
-  ['gettrace_77',['getTrace',['../class_e_s_r_p.html#a4b75c8085d7000162dcc229f23391630',1,'ESRP']]],
+  ['gettrace_77',['getTrace',['../class_e_s_r_p.html#a62b9e9eccda23c5544a859c23e6aa707',1,'ESRP']]],
   ['gettrace_2em_78',['getTrace.m',['../get_trace_8m.html',1,'']]],
   ['gettracecmplx_79',['getTraceCmplx',['../class_z_v_m.html#a62b5846f3b2aa046c714eeed38355e9d',1,'ZVM::getTraceCmplx()'],['../class_vector_network_analyser.html#a4d18127562f541c12e217e1edffd0df9',1,'VectorNetworkAnalyser::getTraceCmplx()']]],
   ['gettracecmplx_2em_80',['getTraceCmplx.m',['../get_trace_cmplx_8m.html',1,'']]],
