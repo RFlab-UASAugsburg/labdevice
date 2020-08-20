@@ -10,12 +10,13 @@
 %> @return freq in Hz
 % =====================================================
 
-function getStopFrequency(obj, varargin)
+function freq=getStopFrequency(obj, varargin)
     if ~isempty(varargin)
         if (varargin{1} < 1 || varargin{1} > 10)
             error('range is not correct (1 to 10)');
         else
             write(obj, ['SCAN', num2str(varargin{1}), ':STOP?']);
+        end
     else
         write(obj, ['FREQ:STOP?']);
     end
