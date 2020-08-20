@@ -1,6 +1,11 @@
+% ======================================================================
+%> @brief get the averaged E-field value of all axis
+%>
+%> @param obj Instance of RadiSense_EFieldProbe class
+%>
+%> @return ret Data read from device
+% ======================================================================
 function ret = getField(obj)
-%GETFIELD get averaged value of all axis
-%
 %   enable all axis, extract the measurement from returned data. The sensor
 %   returns the euclidian norm of all enabled axis.
 obj.write("AEEE");

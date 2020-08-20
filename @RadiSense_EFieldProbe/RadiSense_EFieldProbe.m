@@ -1,7 +1,20 @@
+%> @file RadiSense_EFieldProbe
+%> @brief RadiSense Electrical Field Probe
+% ======================================================
+%> @brief RadiSense Electrical Field Probe, code is compatible with RadiSense 4, 6 and 18.
+%>
+%> Usage:
+%
+%> Initalise subclass
+%> @code
+%> radisense = RadiSense_EFieldProbe("gpib",... % mode
+%>              6); % GPIB address
+%> radisense.zero(); % zero the probe, this takes 15 seconds!
+%> field = radisense.getField();
+%> @endcode
+% ======================================================
 classdef RadiSense_EFieldProbe < labDevice
-    %RadiSense_EFieldProbe RadiSense Electric field probe
-    %   Detailed explanation goes here
-    
+  
     properties
     end
     
@@ -12,7 +25,6 @@ classdef RadiSense_EFieldProbe < labDevice
         
         function delete(obj)
            delete@labDevice(obj);
-           % add device specific destructor from here on
         end
         function ret = read(obj)
            ret = read@labDevice(obj);
@@ -44,17 +56,14 @@ classdef RadiSense_EFieldProbe < labDevice
            end
            throw(MException(msgID,msg));
                 
-           
         end
        
         function flush(obj)
            flush@labDevice(obj);
-           % add device flush destructor from here on
         end
        
         function write(obj, txt)
            write@labDevice(obj, txt);
-           % add device write destructor from here on
         end
     end
 end
