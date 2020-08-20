@@ -88,3 +88,6 @@ doxygen Doxyfile
 in the folder doc/doxymatlab/.
 We use doxymatlab: Copyright (c) 2009, Fabrice All rights reserved.
 http://www.mathworks.com/matlabcentral/fileexchange/25925-using-doxygen-with-matlab/
+
+### Contribute
+See our [Development Guidelines](./doc/developmentGuidelines.md)
