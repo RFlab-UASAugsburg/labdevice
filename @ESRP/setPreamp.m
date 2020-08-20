@@ -24,7 +24,7 @@ function setPreamp (obj, stat, varargin)
         if varargin{1} <1 || varargin {1} > 10
             error('range is not correct (1 to 10)');
         else
-            switch lower(varargin{1})
+            switch lower(stat)
                 case 'on'
                     write(obj, "SCAN" + num2str(varargin{1}) + ":INP:GAIN:STAT ON;*WAI");
                 case 'off'
