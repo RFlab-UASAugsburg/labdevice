@@ -69,6 +69,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>RadiSense Electrical Field Probe, code is compatible with RadiSense 4, 6 and 18.  
+ <a href="class_radi_sense___e_field_probe.html#details">More...</a></p>
+
 <p>Inherits <a class="el" href="classlab_device.html">labDevice</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -84,12 +87,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ac8bbf793d9d972c88464d602bdda77"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radi_sense___e_field_probe.html#a6ac8bbf793d9d972c88464d602bdda77">write</a> (in obj, in txt)</td></tr>
 <tr class="separator:a6ac8bbf793d9d972c88464d602bdda77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96cbb33795f8ef58f2f2ddcbf273c028"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radi_sense___e_field_probe.html#a96cbb33795f8ef58f2f2ddcbf273c028">getField</a> (in obj)</td></tr>
+<tr class="memdesc:a96cbb33795f8ef58f2f2ddcbf273c028"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the averaged E-field value of all axis  <a href="class_radi_sense___e_field_probe.html#a96cbb33795f8ef58f2f2ddcbf273c028">More...</a><br /></td></tr>
 <tr class="separator:a96cbb33795f8ef58f2f2ddcbf273c028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeba842dc93b242741cf43ad8cac3858d"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radi_sense___e_field_probe.html#aeba842dc93b242741cf43ad8cac3858d">getRange</a> (in obj)</td></tr>
+<tr class="memdesc:aeba842dc93b242741cf43ad8cac3858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the currently set measurement range 1: 0 to 10V/m 2: 10 to 30V/m 3: 30 to 100V/m 4: 100V/m to end of spec.  <a href="class_radi_sense___e_field_probe.html#aeba842dc93b242741cf43ad8cac3858d">More...</a><br /></td></tr>
 <tr class="separator:aeba842dc93b242741cf43ad8cac3858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12ff9ec8c7d10b062813c874db3354e2"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radi_sense___e_field_probe.html#a12ff9ec8c7d10b062813c874db3354e2">setRange</a> (in obj, in range)</td></tr>
 <tr class="separator:a12ff9ec8c7d10b062813c874db3354e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c7ef2f9fedf26b369c7d03ab6af9ce6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radi_sense___e_field_probe.html#a5c7ef2f9fedf26b369c7d03ab6af9ce6">zero</a> (in obj)</td></tr>
+<tr class="memdesc:a5c7ef2f9fedf26b369c7d03ab6af9ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">zero the probe  <a href="class_radi_sense___e_field_probe.html#a5c7ef2f9fedf26b369c7d03ab6af9ce6">More...</a><br /></td></tr>
 <tr class="separator:a5c7ef2f9fedf26b369c7d03ab6af9ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classlab_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classlab_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classlab_device.html">labDevice</a></td></tr>
 <tr class="memitem:a09e8cbad3c7eee79583b8832bb4b7db5 inherit pub_methods_classlab_device"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_device.html#a09e8cbad3c7eee79583b8832bb4b7db5">labDevice</a> (in deviceName, in mode, in varargin)</td></tr>
@@ -114,8 +120,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aaabc2a46d897dc183df1647ff890ef18 inherit pub_attribs_classlab_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_radi_sense___e_field_probe_8m_source.html#l00001">1</a> of file <a class="el" href="_radi_sense___e_field_probe_8m_source.html">RadiSense_EFieldProbe.m</a>.</p>
+<div class="textblock"><p>RadiSense Electrical Field Probe, code is compatible with RadiSense 4, 6 and 18. </p>
+<p>Usage: Initalise subclass </p><div class="fragment"><div class="line">radisense = <a class="code" href="class_radi_sense___e_field_probe.html#a78c88eab87848dee7ce29a69c2dce442">RadiSense_EFieldProbe</a>(<span class="stringliteral">&quot;gpib&quot;</span>,% mode</div>
+<div class="line">             6); % GPIB address</div>
+<div class="line">radisense.zero(); % <a class="code" href="class_radi_sense___e_field_probe.html#a5c7ef2f9fedf26b369c7d03ab6af9ce6">zero</a> the probe, <span class="keyword">this</span> takes 15 seconds!</div>
+<div class="line">field = radisense.getField();</div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="_radi_sense___e_field_probe_8m_source.html#l00016">16</a> of file <a class="el" href="_radi_sense___e_field_probe_8m_source.html">RadiSense_EFieldProbe.m</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a78c88eab87848dee7ce29a69c2dce442"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78c88eab87848dee7ce29a69c2dce442">&#9670;&nbsp;</a></span>RadiSense_EFieldProbe()</h2>
@@ -198,6 +209,15 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>get the averaged E-field value of all axis </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Instance of <a class="el" href="class_radi_sense___e_field_probe.html" title="RadiSense Electrical Field Probe, code is compatible with RadiSense 4, 6 and 18.">RadiSense_EFieldProbe</a> class</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ret Data read from device </dd></dl>
+
 </div>
 </div>
 <a id="aeba842dc93b242741cf43ad8cac3858d"></a>
@@ -215,6 +235,15 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>returns the currently set measurement range 1: 0 to 10V/m 2: 10 to 30V/m 3: 30 to 100V/m 4: 100V/m to end of spec. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Instance of <a class="el" href="class_radi_sense___e_field_probe.html" title="RadiSense Electrical Field Probe, code is compatible with RadiSense 4, 6 and 18.">RadiSense_EFieldProbe</a> class</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ret measurement range from device </dd></dl>
 
 </div>
 </div>
@@ -308,15 +337,26 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>zero the probe </p>
+<p>before useful measurements can be taken, the sensor has to be zeroed. This process takes 15 seconds.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Instance of <a class="el" href="class_radi_sense___e_field_probe.html" title="RadiSense Electrical Field Probe, code is compatible with RadiSense 4, 6 and 18.">RadiSense_EFieldProbe</a> class </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/thomas/HF-Lab/emcframework/labdevicedrivers/@RadiSense_EFieldProbe/<a class="el" href="_radi_sense___e_field_probe_8m_source.html">RadiSense_EFieldProbe.m</a></li>
+<li>/home/thomas/HF-Lab/labdevicedrivers/@RadiSense_EFieldProbe/<a class="el" href="_radi_sense___e_field_probe_8m_source.html">RadiSense_EFieldProbe.m</a></li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclass_radi_sense___e_field_probe_html_a78c88eab87848dee7ce29a69c2dce442"><div class="ttname"><a href="class_radi_sense___e_field_probe.html#a78c88eab87848dee7ce29a69c2dce442">RadiSense_EFieldProbe::RadiSense_EFieldProbe</a></div><div class="ttdeci">function RadiSense_EFieldProbe(in mode, in varargin)</div></div>
+<div class="ttc" id="aclass_radi_sense___e_field_probe_html_a5c7ef2f9fedf26b369c7d03ab6af9ce6"><div class="ttname"><a href="class_radi_sense___e_field_probe.html#a5c7ef2f9fedf26b369c7d03ab6af9ce6">RadiSense_EFieldProbe::zero</a></div><div class="ttdeci">function zero(in obj)</div><div class="ttdoc">zero the probe</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 20 2020 15:09:56 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 20 2020 17:06:14 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>
