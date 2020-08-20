@@ -46,14 +46,14 @@ function \mbox{\hyperlink{class_e_s_r_p_a6a3378410d67cb867eaa7e0a21d92608}{get\+
 \begin{DoxyCompactList}\small\item\em return X value of a specified marker \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_a7a885cf14055f4e53187b18af70cead3}{get\+MarkerY}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em return Y value of a specified marker \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_e_s_r_p_aa0df063681e2648d5af2ff8f5aa5fd1d}{get\+Meas\+Bandwidth}} (in obj, in varargin)
+\begin{DoxyCompactList}\small\item\em get the resolution bandwidth \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_a8614d3e3448952e41302d0ffbf4c45ab}{get\+Meas\+Time}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em get the measurement time for a time or frequency domain measurement \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_afba3dc22407c73186c53b117a2cbc30b}{get\+Pow\+Unit}} (in obj)
 \begin{DoxyCompactList}\small\item\em get the currently set power unit (Y axis unit) \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_af70d83667b9f7ce762e7b38bdee54520}{get\+Preamp}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em get the Preamp status \end{DoxyCompactList}\item 
-function \mbox{\hyperlink{class_e_s_r_p_aa0df063681e2648d5af2ff8f5aa5fd1d}{get\+Meas\+Bandwidth}} (in obj, in varargin)
-\begin{DoxyCompactList}\small\item\em get the resolution bandwidth \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_aa417a7c94fff0ed9fd9e8efdcee10c5e}{get\+Scan\+Mode}} (in obj)
 \begin{DoxyCompactList}\small\item\em query the current scan mode. Only useful in receiver mode! \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_aac4448bab6ddfb6259226e8619c3a4d9}{get\+Span}} (in obj)
@@ -95,7 +95,7 @@ function \mbox{\hyperlink{class_e_s_r_p_a16fd603029e000cb4c272825cd3c37fd}{set\+
 function \mbox{\hyperlink{class_e_s_r_p_a73ad144b7514efba0a1b232076bd4f7e}{set\+Marker\+Peak}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em set a marker to the biggest peak \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_aa9ba4afe1fed1b2b023abf1e863acc83}{set\+Meas\+Bandwidth}} (in obj, in rbw, in varargin)
-\begin{DoxyCompactList}\small\item\em get the resolution bandwidth \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em set the resolution bandwidth \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_a1324708a1e8fc81551a9c73a4eae70d1}{set\+Meas\+Time}} (in obj, in mes\+Tim, in range)
 \begin{DoxyCompactList}\small\item\em set the measurement time \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e_s_r_p_a02bf692037b7413f1f00151500e2ad42}{set\+Measurement\+Mode}} (in obj, in mode)
@@ -919,7 +919,7 @@ no measurement is returned. optionally specify which marker to move (or add if i
 
 
 
-get the resolution bandwidth 
+set the resolution bandwidth 
 
 set the resolution bandwidth of the whole measurement, or of a specified scan range (in spectrum mode, no scan ranges are available) Resulution bandwidth calculation\+: BW ? f\+\_\+input $\ast$ 0.\+5 If you use the Quasipeak, C\+I\+S\+PR Average or R\+MS Average detector, the R\&S \mbox{\hyperlink{class_e_s_r_p}{E\+S\+RP}} by default couples the resolution bandwidth to the receiver frequency. If you need a different bandwidth, you can decouple the bandwidth from the frequency. When decoupled, you can select any of the supported C\+I\+S\+PR bandwidths Detailed informations\+: E\+S\+R\+P\+\_\+user\+\_\+manual\+\_\+en\+\_\+08 p. 142
 
@@ -1195,4 +1195,4 @@ Write S\+C\+P\+I/skippy commands to labdevice.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/@\+E\+S\+R\+P/\mbox{\hyperlink{_e_s_r_p_8m}{E\+S\+R\+P.\+m}}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+Lab/labdevicedrivers/@\+E\+S\+R\+P/\mbox{\hyperlink{_e_s_r_p_8m}{E\+S\+R\+P.\+m}}\end{DoxyCompactItemize}

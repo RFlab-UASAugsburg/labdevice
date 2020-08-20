@@ -22,21 +22,21 @@ function \mbox{\hyperlink{class_e3631_a_a8fc8a942a60d0fbffb8baa25f0c342a6}{flush
 \item 
 function \mbox{\hyperlink{class_e3631_a_a81d5ac55959b95d9a01a96245f9ad857}{write}} (in obj, in txt)
 \item 
-function \mbox{\hyperlink{class_e3631_a_a7801a0eabae9f1990d19d192b4c14be8}{get\+Amps\+Limit}} (in obj, in varargin)
+function \mbox{\hyperlink{class_e3631_a_a705b9d8c930df69fe1cce6df2ed0acfd}{get\+Current\+Limit}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em Get the current limit for a specified or the active output. \end{DoxyCompactList}\item 
-function \mbox{\hyperlink{class_e3631_a_a871a52524055e74c984154f76cc67e8c}{get\+Amps\+Measured}} (in obj, in varargin)
+function \mbox{\hyperlink{class_e3631_a_a72480af114d2ab8f42aedf261c2b8184}{get\+Current\+Measured}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em measure the current on a specified or the active output. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e3631_a_a24dd1e1b7c742260af3d1f2c4154f282}{get\+Output}} (in obj)
 \begin{DoxyCompactList}\small\item\em Get the currently active output. \end{DoxyCompactList}\item 
-function \mbox{\hyperlink{class_e3631_a_a9cd56006f09d8de5e453bff3d9e19947}{get\+Volts\+Limit}} (in obj, in varargin)
+function \mbox{\hyperlink{class_e3631_a_a5b05cacc3e1e463cdb5fc832603e8ea6}{get\+Voltage\+Limit}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em Get the voltage limit for a specified or the active output. \end{DoxyCompactList}\item 
-function \mbox{\hyperlink{class_e3631_a_a03e0603bcb55ea7bafb9872dfb2394d5}{get\+U\+Measured}} (in obj, in varargin)
+function \mbox{\hyperlink{class_e3631_a_a2e0e66d7745bb9255310aeeac3506995}{get\+Voltage\+Measured}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em Get the measured voltage for a specified or the active output. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e3631_a_a8f98fab6cb0427d18133b91e7532c136}{output\+Disable}} (in obj)
 \begin{DoxyCompactList}\small\item\em Disable A\+LL outputs. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e3631_a_afaa98ccc1d622d7044c3cca0b0f763f4}{output\+Enable}} (in obj)
 \begin{DoxyCompactList}\small\item\em Enable A\+LL outputs. \end{DoxyCompactList}\item 
-function \mbox{\hyperlink{class_e3631_a_acd5a9a090813fb325eb777055bd976dc}{set\+Amps}} (in obj, in amps, in varargin)
+function \mbox{\hyperlink{class_e3631_a_a7fea1a08b0ffb0bd27c3dab4fe59d1cc}{set\+Current}} (in obj, in current, in varargin)
 \begin{DoxyCompactList}\small\item\em Set the current limit for a specified or the active output. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_e3631_a_a667afca413c54b9b063c39919dcea104}{set\+Output}} (in obj, in output)
 \begin{DoxyCompactList}\small\item\em set the currently active output for programming \end{DoxyCompactList}\item 
@@ -52,11 +52,11 @@ Usage\+: Initalise subclass
 \begin{DoxyCode}{0}
 \DoxyCodeLine{psu = \mbox{\hyperlink{class_e3631_a_a1a783dbbf6a3daf9565a4a50edf20826}{E3631A}}(\textcolor{stringliteral}{"gpib"},\% mode}
 \DoxyCodeLine{             6); \% GPIB address}
-\DoxyCodeLine{psu.setVolts(3,\textcolor{stringliteral}{'P6V'});}
-\DoxyCodeLine{psu.setAmps(1,\textcolor{stringliteral}{'P6V'});}
+\DoxyCodeLine{psu.setVoltage(3,\textcolor{stringliteral}{'P6V'});}
+\DoxyCodeLine{psu.setCurrent(1,\textcolor{stringliteral}{'P6V'});}
 \DoxyCodeLine{psu.setOutput(\textcolor{stringliteral}{'N25V'});}
-\DoxyCodeLine{psu.setAmps(0.05);}
-\DoxyCodeLine{i = psu.getAmpsMeasured(\textcolor{stringliteral}{'P6V'})}
+\DoxyCodeLine{psu.setCurrent(0.05);}
+\DoxyCodeLine{i = psu.getCurrentMeasured(\textcolor{stringliteral}{'P6V'})}
 \end{DoxyCode}
  
 
@@ -86,11 +86,11 @@ Definition at line 20 of file E3631\+A.\+m.
 \doxysubsubsection{\texorpdfstring{flush()}{flush()}}
 {\footnotesize\ttfamily function E3631\+A\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_e3631_a_a7801a0eabae9f1990d19d192b4c14be8}\label{class_e3631_a_a7801a0eabae9f1990d19d192b4c14be8}} 
-\index{E3631A@{E3631A}!getAmpsLimit@{getAmpsLimit}}
-\index{getAmpsLimit@{getAmpsLimit}!E3631A@{E3631A}}
-\doxysubsubsection{\texorpdfstring{getAmpsLimit()}{getAmpsLimit()}}
-{\footnotesize\ttfamily function E3631\+A\+::get\+Amps\+Limit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_e3631_a_a705b9d8c930df69fe1cce6df2ed0acfd}\label{class_e3631_a_a705b9d8c930df69fe1cce6df2ed0acfd}} 
+\index{E3631A@{E3631A}!getCurrentLimit@{getCurrentLimit}}
+\index{getCurrentLimit@{getCurrentLimit}!E3631A@{E3631A}}
+\doxysubsubsection{\texorpdfstring{getCurrentLimit()}{getCurrentLimit()}}
+{\footnotesize\ttfamily function E3631\+A\+::get\+Current\+Limit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -106,11 +106,11 @@ Get the current limit for a specified or the active output.
 \begin{DoxyReturn}{Returns}
 i current current limit in Ampere 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_e3631_a_a871a52524055e74c984154f76cc67e8c}\label{class_e3631_a_a871a52524055e74c984154f76cc67e8c}} 
-\index{E3631A@{E3631A}!getAmpsMeasured@{getAmpsMeasured}}
-\index{getAmpsMeasured@{getAmpsMeasured}!E3631A@{E3631A}}
-\doxysubsubsection{\texorpdfstring{getAmpsMeasured()}{getAmpsMeasured()}}
-{\footnotesize\ttfamily function E3631\+A\+::get\+Amps\+Measured (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_e3631_a_a72480af114d2ab8f42aedf261c2b8184}\label{class_e3631_a_a72480af114d2ab8f42aedf261c2b8184}} 
+\index{E3631A@{E3631A}!getCurrentMeasured@{getCurrentMeasured}}
+\index{getCurrentMeasured@{getCurrentMeasured}!E3631A@{E3631A}}
+\doxysubsubsection{\texorpdfstring{getCurrentMeasured()}{getCurrentMeasured()}}
+{\footnotesize\ttfamily function E3631\+A\+::get\+Current\+Measured (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -144,31 +144,11 @@ Get the currently active output.
 \begin{DoxyReturn}{Returns}
 output currently active output. \textquotesingle{}P6V\textquotesingle{} $\vert$$\vert$ \textquotesingle{}P25V\textquotesingle{} $\vert$$\vert$ \textquotesingle{}N25V\textquotesingle{} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_e3631_a_a03e0603bcb55ea7bafb9872dfb2394d5}\label{class_e3631_a_a03e0603bcb55ea7bafb9872dfb2394d5}} 
-\index{E3631A@{E3631A}!getUMeasured@{getUMeasured}}
-\index{getUMeasured@{getUMeasured}!E3631A@{E3631A}}
-\doxysubsubsection{\texorpdfstring{getUMeasured()}{getUMeasured()}}
-{\footnotesize\ttfamily function E3631\+A\+::get\+U\+Measured (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
-
-
-
-Get the measured voltage for a specified or the active output. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em obj} & Instance of class \\
-\hline
-{\em varargin} & \textquotesingle{}P6V\textquotesingle{} $\vert$$\vert$ \textquotesingle{}P25V\textquotesingle{} $\vert$$\vert$ \textquotesingle{}N25V\textquotesingle{} to select an output, or nothing to use the currently active output\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-u measured Voltage in Volts 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_e3631_a_a9cd56006f09d8de5e453bff3d9e19947}\label{class_e3631_a_a9cd56006f09d8de5e453bff3d9e19947}} 
-\index{E3631A@{E3631A}!getVoltsLimit@{getVoltsLimit}}
-\index{getVoltsLimit@{getVoltsLimit}!E3631A@{E3631A}}
-\doxysubsubsection{\texorpdfstring{getVoltsLimit()}{getVoltsLimit()}}
-{\footnotesize\ttfamily function E3631\+A\+::get\+Volts\+Limit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_e3631_a_a5b05cacc3e1e463cdb5fc832603e8ea6}\label{class_e3631_a_a5b05cacc3e1e463cdb5fc832603e8ea6}} 
+\index{E3631A@{E3631A}!getVoltageLimit@{getVoltageLimit}}
+\index{getVoltageLimit@{getVoltageLimit}!E3631A@{E3631A}}
+\doxysubsubsection{\texorpdfstring{getVoltageLimit()}{getVoltageLimit()}}
+{\footnotesize\ttfamily function E3631\+A\+::get\+Voltage\+Limit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -183,6 +163,26 @@ Get the voltage limit for a specified or the active output.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 u current voltage limit in Volts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e3631_a_a2e0e66d7745bb9255310aeeac3506995}\label{class_e3631_a_a2e0e66d7745bb9255310aeeac3506995}} 
+\index{E3631A@{E3631A}!getVoltageMeasured@{getVoltageMeasured}}
+\index{getVoltageMeasured@{getVoltageMeasured}!E3631A@{E3631A}}
+\doxysubsubsection{\texorpdfstring{getVoltageMeasured()}{getVoltageMeasured()}}
+{\footnotesize\ttfamily function E3631\+A\+::get\+Voltage\+Measured (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+
+
+
+Get the measured voltage for a specified or the active output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class \\
+\hline
+{\em varargin} & \textquotesingle{}P6V\textquotesingle{} $\vert$$\vert$ \textquotesingle{}P25V\textquotesingle{} $\vert$$\vert$ \textquotesingle{}N25V\textquotesingle{} to select an output, or nothing to use the currently active output\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+u measured Voltage in Volts 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_e3631_a_a8f98fab6cb0427d18133b91e7532c136}\label{class_e3631_a_a8f98fab6cb0427d18133b91e7532c136}} 
 \index{E3631A@{E3631A}!outputDisable@{outputDisable}}
@@ -224,11 +224,11 @@ Equivalent to pressing the Output on/off button on the front panel. To individua
 \doxysubsubsection{\texorpdfstring{read()}{read()}}
 {\footnotesize\ttfamily function E3631\+A\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_e3631_a_acd5a9a090813fb325eb777055bd976dc}\label{class_e3631_a_acd5a9a090813fb325eb777055bd976dc}} 
-\index{E3631A@{E3631A}!setAmps@{setAmps}}
-\index{setAmps@{setAmps}!E3631A@{E3631A}}
-\doxysubsubsection{\texorpdfstring{setAmps()}{setAmps()}}
-{\footnotesize\ttfamily function E3631\+A\+::set\+Amps (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{amps,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_e3631_a_a7fea1a08b0ffb0bd27c3dab4fe59d1cc}\label{class_e3631_a_a7fea1a08b0ffb0bd27c3dab4fe59d1cc}} 
+\index{E3631A@{E3631A}!setCurrent@{setCurrent}}
+\index{setCurrent@{setCurrent}!E3631A@{E3631A}}
+\doxysubsubsection{\texorpdfstring{setCurrent()}{setCurrent()}}
+{\footnotesize\ttfamily function E3631\+A\+::set\+Current (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{current,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -238,7 +238,7 @@ Set the current limit for a specified or the active output.
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of class \\
 \hline
-{\em amps} & Current in Ampere \\
+{\em current} & Current in Ampere \\
 \hline
 {\em varargin} & \textquotesingle{}P6V\textquotesingle{} $\vert$$\vert$ \textquotesingle{}P25V\textquotesingle{} $\vert$$\vert$ \textquotesingle{}N25V\textquotesingle{} to select an output, or nothing to use the currently active output \\
 \hline
@@ -289,4 +289,4 @@ Set the voltage limit for a specified or the active output.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/@\+E3631\+A/\mbox{\hyperlink{_e3631_a_8m}{E3631\+A.\+m}}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+Lab/labdevicedrivers/@\+E3631\+A/\mbox{\hyperlink{_e3631_a_8m}{E3631\+A.\+m}}\end{DoxyCompactItemize}

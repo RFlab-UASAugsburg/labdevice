@@ -7,7 +7,7 @@ Rohde und Schwarz \mbox{\hyperlink{class_z_v_m}{Z\+VM}} Vector Signal Analyzer.
 
 
 
-Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}, and Vektor\+Network\+Analyser.
+Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}, and \mbox{\hyperlink{class_vector_network_analyser}{Vector\+Network\+Analyser}}.
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -107,7 +107,7 @@ Instance of the \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class.
 \index{ZVM@{ZVM}!continuousSweep@{continuousSweep}}
 \index{continuousSweep@{continuousSweep}!ZVM@{ZVM}}
 \doxysubsubsection{\texorpdfstring{continuousSweep()}{continuousSweep()}}
-{\footnotesize\ttfamily function Z\+V\+M\+::continuous\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Z\+V\+M\+::continuous\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -118,6 +118,10 @@ set device to continuous sweep mode
 {\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a3897caf03faa79af3ba39787117a5ed1}{Vector\+Network\+Analyser}}.
+
 \mbox{\Hypertarget{class_z_v_m_a60bf89e4b0ab9c41105d54b72657cca1}\label{class_z_v_m_a60bf89e4b0ab9c41105d54b72657cca1}} 
 \index{ZVM@{ZVM}!delete@{delete}}
 \index{delete@{delete}!ZVM@{ZVM}}
@@ -139,7 +143,7 @@ The destructor
 \index{ZVM@{ZVM}!doSweep@{doSweep}}
 \index{doSweep@{doSweep}!ZVM@{ZVM}}
 \doxysubsubsection{\texorpdfstring{doSweep()}{doSweep()}}
-{\footnotesize\ttfamily function Z\+V\+M\+::do\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Z\+V\+M\+::do\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -150,6 +154,10 @@ do a single Sweep / immediately start a new measurement
 {\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a6ba2aa6383fe5add61b042c41d0e14db}{Vector\+Network\+Analyser}}.
+
 \mbox{\Hypertarget{class_z_v_m_adcb77d2a4cb6a10a4d045ab91540c3e1}\label{class_z_v_m_adcb77d2a4cb6a10a4d045ab91540c3e1}} 
 \index{ZVM@{ZVM}!flush@{flush}}
 \index{flush@{flush}!ZVM@{ZVM}}
@@ -169,7 +177,7 @@ Flush labdevice.
 \index{ZVM@{ZVM}!getSweepPoints@{getSweepPoints}}
 \index{getSweepPoints@{getSweepPoints}!ZVM@{ZVM}}
 \doxysubsubsection{\texorpdfstring{getSweepPoints()}{getSweepPoints()}}
-{\footnotesize\ttfamily function Z\+V\+M\+::get\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Z\+V\+M\+::get\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -183,6 +191,10 @@ get the amount of measurement points in a sweep
 \begin{DoxyReturn}{Returns}
 points number of sweep points \mbox{[}double\mbox{]} 
 \end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a6fea4338a2e20d0863c84bf411228c96}{Vector\+Network\+Analyser}}.
+
 \mbox{\Hypertarget{class_z_v_m_a62b5846f3b2aa046c714eeed38355e9d}\label{class_z_v_m_a62b5846f3b2aa046c714eeed38355e9d}} 
 \index{ZVM@{ZVM}!getTraceCmplx@{getTraceCmplx}}
 \index{getTraceCmplx@{getTraceCmplx}!ZVM@{ZVM}}
@@ -299,7 +311,7 @@ set the measurement mode
 \index{ZVM@{ZVM}!setMeasParameter@{setMeasParameter}}
 \index{setMeasParameter@{setMeasParameter}!ZVM@{ZVM}}
 \doxysubsubsection{\texorpdfstring{setMeasParameter()}{setMeasParameter()}}
-{\footnotesize\ttfamily function Z\+V\+M\+::set\+Meas\+Parameter (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{param }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Z\+V\+M\+::set\+Meas\+Parameter (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -314,11 +326,15 @@ in frequency sweep mode, while measuring power
 {\em param} & Measurement parameter, for example \textquotesingle{}Z21\textquotesingle{} or \textquotesingle{}S11\textquotesingle{} \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a8e207eafb459a9306868a178da4dc32c}{Vector\+Network\+Analyser}}.
+
 \mbox{\Hypertarget{class_z_v_m_a776015b165753aa32bc78e3167d52e75}\label{class_z_v_m_a776015b165753aa32bc78e3167d52e75}} 
 \index{ZVM@{ZVM}!setSourcePower@{setSourcePower}}
 \index{setSourcePower@{setSourcePower}!ZVM@{ZVM}}
 \doxysubsubsection{\texorpdfstring{setSourcePower()}{setSourcePower()}}
-{\footnotesize\ttfamily function Z\+V\+M\+::set\+Source\+Power (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{power }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Z\+V\+M\+::set\+Source\+Power (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{power }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -331,11 +347,15 @@ set the source power
 {\em power} & in d\+Bm \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a046f125f382e6d61c47f5310de0beae6}{Vector\+Network\+Analyser}}.
+
 \mbox{\Hypertarget{class_z_v_m_acaaedad4c145369a61da834b2f5e49be}\label{class_z_v_m_acaaedad4c145369a61da834b2f5e49be}} 
 \index{ZVM@{ZVM}!setStartFreq@{setStartFreq}}
 \index{setStartFreq@{setStartFreq}!ZVM@{ZVM}}
 \doxysubsubsection{\texorpdfstring{setStartFreq()}{setStartFreq()}}
-{\footnotesize\ttfamily function Z\+V\+M\+::set\+Start\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Z\+V\+M\+::set\+Start\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -348,11 +368,15 @@ set the start frequency
 {\em freq} & in Hz \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a80f2fbd6ef0425348fa651c286065350}{Vector\+Network\+Analyser}}.
+
 \mbox{\Hypertarget{class_z_v_m_a8333bb3fd41207edca3bc6c4c4bcc0ae}\label{class_z_v_m_a8333bb3fd41207edca3bc6c4c4bcc0ae}} 
 \index{ZVM@{ZVM}!setStopFreq@{setStopFreq}}
 \index{setStopFreq@{setStopFreq}!ZVM@{ZVM}}
 \doxysubsubsection{\texorpdfstring{setStopFreq()}{setStopFreq()}}
-{\footnotesize\ttfamily function Z\+V\+M\+::set\+Stop\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Z\+V\+M\+::set\+Stop\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -365,6 +389,10 @@ set the stop frequency
 {\em freq} & in Hz \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a909388ee53bd7ed70e06451a792cf51b}{Vector\+Network\+Analyser}}.
+
 \mbox{\Hypertarget{class_z_v_m_a69105b51fb178fdd69ee9f512d16a546}\label{class_z_v_m_a69105b51fb178fdd69ee9f512d16a546}} 
 \index{ZVM@{ZVM}!setSweepCount@{setSweepCount}}
 \index{setSweepCount@{setSweepCount}!ZVM@{ZVM}}
@@ -407,7 +435,7 @@ use \mbox{\hyperlink{class_z_v_m_a257b1ef2269ceb632a7255f8d7eb691c}{Z\+V\+M.\+co
 \index{ZVM@{ZVM}!setSweepPoints@{setSweepPoints}}
 \index{setSweepPoints@{setSweepPoints}!ZVM@{ZVM}}
 \doxysubsubsection{\texorpdfstring{setSweepPoints()}{setSweepPoints()}}
-{\footnotesize\ttfamily function Z\+V\+M\+::set\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{points }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Z\+V\+M\+::set\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -420,6 +448,10 @@ set the amount of measurement points in a sweep
 {\em points} & amount of points \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_aabccea00e92ce77920553db971f07c49}{Vector\+Network\+Analyser}}.
+
 \mbox{\Hypertarget{class_z_v_m_ac41f8881b799470b4ddd28803d431a8a}\label{class_z_v_m_ac41f8881b799470b4ddd28803d431a8a}} 
 \index{ZVM@{ZVM}!setSweepTime@{setSweepTime}}
 \index{setSweepTime@{setSweepTime}!ZVM@{ZVM}}
@@ -458,7 +490,7 @@ set the I\+F/\+I\+F/resolution bandwidth
 \index{ZVM@{ZVM}!singleSweep@{singleSweep}}
 \index{singleSweep@{singleSweep}!ZVM@{ZVM}}
 \doxysubsubsection{\texorpdfstring{singleSweep()}{singleSweep()}}
-{\footnotesize\ttfamily function Z\+V\+M\+::single\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Z\+V\+M\+::single\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -469,6 +501,10 @@ set device to single sweep mode
 {\em obj} & Instance of \mbox{\hyperlink{class_z_v_m}{Z\+VM}} class \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a60937f9c3680fa17968fd966009194e9}{Vector\+Network\+Analyser}}.
+
 \mbox{\Hypertarget{class_z_v_m_aa94a75b704b56a4ecbc73dc8ce3870bc}\label{class_z_v_m_aa94a75b704b56a4ecbc73dc8ce3870bc}} 
 \index{ZVM@{ZVM}!write@{write}}
 \index{write@{write}!ZVM@{ZVM}}
@@ -490,4 +526,4 @@ Write S\+C\+P\+I/skippy commands to labdevice.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/thomas/\+H\+F-\/\+L\+A\+B/labdevicedrivers/@\+Z\+V\+M/\mbox{\hyperlink{_z_v_m_8m}{Z\+V\+M.\+m}}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+Lab/labdevicedrivers/@\+Z\+V\+M/\mbox{\hyperlink{_z_v_m_8m}{Z\+V\+M.\+m}}\end{DoxyCompactItemize}
