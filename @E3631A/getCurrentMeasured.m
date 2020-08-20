@@ -7,7 +7,7 @@
 %> @return i measured current in Ampere
 % =====================================================
 
-function i = getAmpsMeasured(obj, varargin)
+function i = getCurrentMeasured(obj, varargin)
     if ~isempty(varargin)
         source = varargin{1};
         obj.write("MEAS:CURR? " + source + ";*WAI;");

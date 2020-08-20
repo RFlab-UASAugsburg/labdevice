@@ -9,11 +9,11 @@
 %> @code
 %> psu = E3631A("gpib",... % mode
 %>              6); % GPIB address
-%> psu.setVolts(3,'P6V');
-%> psu.setAmps(1,'P6V');
+%> psu.setVoltage(3,'P6V');
+%> psu.setCurrent(1,'P6V');
 %> psu.setOutput('N25V');
-%> psu.setAmps(0.05);
-%> i = psu.getAmpsMeasured('P6V')
+%> psu.setCurrent(0.05);
+%> i = psu.getCurrentMeasured('P6V')
 %> @endcode
 % ======================================================
 
