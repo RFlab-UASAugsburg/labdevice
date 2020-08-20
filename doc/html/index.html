@@ -77,7 +77,7 @@ $(function() {
 <div class="line">adress=<span class="stringliteral">&quot;192.168.1.20&quot;</span>; % IP address of device</div>
 <div class="line">emiTestReceiver=ESPR(mode, adress);</div>
 <div class="line">emiTestReceiver.setStartFreq(1e3);</div>
-</div><!-- fragment --><p>** Use with GPIB ** </p><div class="fragment"><div class="line">sigGen = <a class="code" href="class_s_m_x.html">SMX</a>(<span class="stringliteral">&quot;gpib&quot;</span>,% mode</div>
+</div><!-- fragment --><p>** Use with GPIB ** </p><div class="fragment"><div class="line">sigGen = <a class="code" href="class_rohde_und_schwarz___s_m_x.html">RohdeUndSchwarz_SMX</a>(<span class="stringliteral">&quot;gpib&quot;</span>,% mode</div>
 <div class="line">             6); % GPIB address</div>
 <div class="line">sigGen.setFreq(1e7);</div>
 </div><!-- fragment --><h3>Using Interface Converter</h3>
@@ -85,12 +85,12 @@ $(function() {
 <li>mode= "eth2gpib";</li>
 </ul>
 <p>Interface converters require an initialisation of the interface converter object first, before initialising the device class. </p><div class="fragment"><div class="line">% Initialising <span class="keyword">interface </span>converter object</div>
-<div class="line">interfaceConverter = <a class="code" href="class_pro_logix.html">ProLogix</a>(<span class="stringliteral">&#39;eth&#39;</span>,% communication mode of converter</div>
+<div class="line">interfaceConverter = <a class="code" href="class_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t.html">ProLogix_GPIB_ETHERNET</a>(<span class="stringliteral">&#39;eth&#39;</span>,% communication mode of converter</div>
 <div class="line">                              <span class="stringliteral">&#39;192.168.75.42&#39;</span>,% IP address of converter</div>
 <div class="line">                              1234); % Port of converter</div>
 <div class="line"> </div>
 <div class="line">% Pass <span class="keyword">interface </span>converter to device constructor.</div>
-<div class="line">sigGen = <a class="code" href="class_s_m_x.html">SMX</a>(<span class="stringliteral">&quot;eth2gpib&quot;</span>,% communication mode </div>
+<div class="line">sigGen = <a class="code" href="class_rohde_und_schwarz___s_m_x.html">RohdeUndSchwarz_SMX</a>(<span class="stringliteral">&quot;eth2gpib&quot;</span>,% communication mode </div>
 <div class="line">             interfaceConverter,% Interface converter <span class="keywordtype">object</span></div>
 <div class="line">             6); % GPIB address of device</div>
 <div class="line">sigGen.setFreq(1e7);</div>
@@ -110,11 +110,11 @@ $(function() {
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <div class="ttc" id="aclasslab_device_html"><div class="ttname"><a href="classlab_device.html">labDevice</a></div><div class="ttdoc">Handling of the default values is done here.</div><div class="ttdef"><b>Definition:</b> <a href="lab_device_8m_source.html#l00020">labDevice.m:20</a></div></div>
-<div class="ttc" id="aclass_s_m_x_html"><div class="ttname"><a href="class_s_m_x.html">SMX</a></div><div class="ttdoc">Rohde und Schwarz Signal generator with AM, FM and pulse modulation.</div><div class="ttdef"><b>Definition:</b> <a href="_s_m_x_8m_source.html#l00016">SMX.m:17</a></div></div>
-<div class="ttc" id="aclass_pro_logix_html"><div class="ttname"><a href="class_pro_logix.html">ProLogix</a></div><div class="ttdoc">ProLogix GPIB-ETHERNET (GPIB-LAN) Controller.</div><div class="ttdef"><b>Definition:</b> <a href="_pro_logix_8m_source.html#l00017">ProLogix.m:18</a></div></div>
+<div class="ttc" id="aclass_rohde_und_schwarz___s_m_x_html"><div class="ttname"><a href="class_rohde_und_schwarz___s_m_x.html">RohdeUndSchwarz_SMX</a></div><div class="ttdoc">Rohde und Schwarz Signal generator with AM, FM and pulse modulation.</div><div class="ttdef"><b>Definition:</b> <a href="_rohde_und_schwarz___s_m_x_8m_source.html#l00016">RohdeUndSchwarz_SMX.m:17</a></div></div>
+<div class="ttc" id="aclass_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t_html"><div class="ttname"><a href="class_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t.html">ProLogix_GPIB_ETHERNET</a></div><div class="ttdoc">ProLogix_GPIB_ETHERNET GPIB-ETHERNET (GPIB-LAN) Controller.</div><div class="ttdef"><b>Definition:</b> <a href="_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t_8m_source.html#l00017">ProLogix_GPIB_ETHERNET.m:18</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 20 2020 14:25:59 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 20 2020 15:09:56 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

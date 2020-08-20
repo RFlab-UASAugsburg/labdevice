@@ -100,10 +100,10 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        error(<span class="stringliteral">&quot;no properties found&quot;</span>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    elseif isempty(varargin)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        <span class="keywordflow">if</span> isfield(defaultProps, <span class="stringliteral">&quot;eth2gpib&quot;</span>)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;%                             fprintf(1,<span class="stringliteral">&quot;creating a new ProLogix object.&quot;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;%                             fprintf(1,<span class="stringliteral">&quot;creating a new ProLogix_GPIB_ETHERNET object.&quot;</span>);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;%                             fprintf(1,<span class="stringliteral">&quot;Please use this adapter when creating new labdevices that are on the same GPIB bus&quot;</span>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;%                             fprintf(1,<span class="stringliteral">&quot;for example labdevice(&#39;eth2gpib&#39;,thisobj.prop.adapter,gpibAddr&quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            adapter = <a class="code" href="class_pro_logix.html">ProLogix</a>(defaultProps.eth2gpib.address, defaultProps.eth2gpib.port);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            adapter = <a class="code" href="class_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t.html">ProLogix_GPIB_ETHERNET</a>(defaultProps.eth2gpib.address, defaultProps.eth2gpib.port);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                            obj.prop.adapter = adapter;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                            obj.prop.gpibAddr = defaultProps.eth2gpib.gpibAddr;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        <span class="keywordflow">else</span></div>
@@ -259,13 +259,13 @@ $(function() {
 <div class="ttc" id="aclose_dev_8m_html_af37035755b0ac780c9be1dd5e5746be5"><div class="ttname"><a href="close_dev_8m.html#af37035755b0ac780c9be1dd5e5746be5">closeDev</a></div><div class="ttdeci">function closeDev(in obj)</div><div class="ttdoc">Close connection to Device.</div></div>
 <div class="ttc" id="aread_dev_8m_html_a44a9326166e9103556a02f1d918f0c61"><div class="ttname"><a href="read_dev_8m.html#a44a9326166e9103556a02f1d918f0c61">readDev</a></div><div class="ttdeci">function readDev(in obj)</div><div class="ttdoc">Reads data from Device.</div></div>
 <div class="ttc" id="anamespacecustom_eth_html_acc2e5fdb38158d81a1347fd6dd2e75de"><div class="ttname"><a href="namespacecustom_eth.html#acc2e5fdb38158d81a1347fd6dd2e75de">customEth::write</a></div><div class="ttdeci">function write(in obj, in txt)</div></div>
+<div class="ttc" id="aclass_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t_html"><div class="ttname"><a href="class_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t.html">ProLogix_GPIB_ETHERNET</a></div><div class="ttdoc">ProLogix_GPIB_ETHERNET GPIB-ETHERNET (GPIB-LAN) Controller.</div><div class="ttdef"><b>Definition:</b> <a href="_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t_8m_source.html#l00017">ProLogix_GPIB_ETHERNET.m:18</a></div></div>
 <div class="ttc" id="anamespacecustom_eth_html_a42b4507db8236b8a8a6632decfe76543"><div class="ttname"><a href="namespacecustom_eth.html#a42b4507db8236b8a8a6632decfe76543">customEth::read</a></div><div class="ttdeci">function read(in obj)</div></div>
 <div class="ttc" id="aget_default_device_properties_8m_html_abdb449943c58a8a2c9f3e383bb043ab7"><div class="ttname"><a href="get_default_device_properties_8m.html#abdb449943c58a8a2c9f3e383bb043ab7">getDefaultDeviceProperties</a></div><div class="ttdeci">function getDefaultDeviceProperties(in deviceName)</div><div class="ttdoc">Get the Default Lab Device specific properties for construction of object.</div></div>
 <div class="ttc" id="aclasslab_device_html_aaabc2a46d897dc183df1647ff890ef18"><div class="ttname"><a href="classlab_device.html#aaabc2a46d897dc183df1647ff890ef18">labDevice::prop</a></div><div class="ttdeci">Property prop</div><div class="ttdef"><b>Definition:</b> <a href="lab_device_8m_source.html#l00025">labDevice.m:25</a></div></div>
-<div class="ttc" id="aclass_pro_logix_html"><div class="ttname"><a href="class_pro_logix.html">ProLogix</a></div><div class="ttdoc">ProLogix GPIB-ETHERNET (GPIB-LAN) Controller.</div><div class="ttdef"><b>Definition:</b> <a href="_pro_logix_8m_source.html#l00017">ProLogix.m:18</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 20 2020 14:25:58 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 20 2020 15:09:54 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

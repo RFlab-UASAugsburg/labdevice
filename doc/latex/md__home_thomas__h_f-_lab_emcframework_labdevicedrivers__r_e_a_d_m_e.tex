@@ -13,7 +13,7 @@ A open source framewok handling interactions with typical laboratory devices. Th
 
 $\ast$$\ast$ Use with Ethernet $\ast$$\ast$ {\ttfamily  mode=\char`\"{}eth\char`\"{}; \% Using ethernet interface for communication adress=\char`\"{}192.\+168.\+1.\+20\char`\"{}; \% IP address of device emi\+Test\+Receiver=E\+S\+P\+R(mode, adress); emi\+Test\+Receiver.\+set\+Start\+Freq(1e3); }
 
-$\ast$$\ast$ Use with G\+P\+IB $\ast$$\ast$ {\ttfamily  sig\+Gen = \mbox{\hyperlink{class_s_m_x}{S\+MX}}(\char`\"{}gpib\char`\"{},... \% mode 6); \% G\+P\+IB address sig\+Gen.\+set\+Freq(1e7); }
+$\ast$$\ast$ Use with G\+P\+IB $\ast$$\ast$ {\ttfamily  sig\+Gen = S\+MX(\char`\"{}gpib\char`\"{},... \% mode 6); \% G\+P\+IB address sig\+Gen.\+set\+Freq(1e7); }
 
 \doxysubsection*{Using Interface Converter}
 
@@ -22,7 +22,7 @@ $\ast$$\ast$ Use with G\+P\+IB $\ast$$\ast$ {\ttfamily  sig\+Gen = \mbox{\hyperl
 \item mode= \char`\"{}eth2gpib\char`\"{};
 \end{DoxyItemize}
 
-Interface converters require an initialisation of the interface converter object first, before initialising the device class. {\ttfamily  \% Initialising interface converter object interface\+Converter = \mbox{\hyperlink{class_pro_logix}{Pro\+Logix}}(\textquotesingle{}eth\textquotesingle{},... \% communication mode of converter \textquotesingle{}192.\+168.\+75.\+42\textquotesingle{},... \% IP address of converter 1234); \% Port of converter \% Pass interface converter to device constructor. sig\+Gen = \mbox{\hyperlink{class_s_m_x}{S\+MX}}(\char`\"{}eth2gpib\char`\"{},... \% communication mode interface\+Converter,... \% Interface converter object 6); \% G\+P\+IB address of device sig\+Gen.\+set\+Freq(1e7); }
+Interface converters require an initialisation of the interface converter object first, before initialising the device class. {\ttfamily  \% Initialising interface converter object interface\+Converter = Pro\+Logix(\textquotesingle{}eth\textquotesingle{},... \% communication mode of converter \textquotesingle{}192.\+168.\+75.\+42\textquotesingle{},... \% IP address of converter 1234); \% Port of converter \% Pass interface converter to device constructor. sig\+Gen = S\+MX(\char`\"{}eth2gpib\char`\"{},... \% communication mode interface\+Converter,... \% Interface converter object 6); \% G\+P\+IB address of device sig\+Gen.\+set\+Freq(1e7); }
 
 \doxysubsection*{Repository Structure}
 

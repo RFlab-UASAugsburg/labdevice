@@ -53,10 +53,10 @@ classdef  labDevice
                         error("no properties found");
                     elseif isempty(varargin)
                         if isfield(defaultProps, "eth2gpib")
-%                             fprintf(1,"creating a new ProLogix object.");
+%                             fprintf(1,"creating a new ProLogix_GPIB_ETHERNET object.");
 %                             fprintf(1,"Please use this adapter when creating new labdevices that are on the same GPIB bus");
 %                             fprintf(1,"for example labdevice('eth2gpib',thisobj.prop.adapter,gpibAddr");
-                            adapter = ProLogix(defaultProps.eth2gpib.address, defaultProps.eth2gpib.port);
+                            adapter = ProLogix_GPIB_ETHERNET(defaultProps.eth2gpib.address, defaultProps.eth2gpib.port);
                             obj.prop.adapter = adapter;
                             obj.prop.gpibAddr = defaultProps.eth2gpib.gpibAddr;
                         else

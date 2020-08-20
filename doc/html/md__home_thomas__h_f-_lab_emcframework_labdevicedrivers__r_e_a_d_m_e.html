@@ -74,12 +74,12 @@ $(function() {
 </ul>
 <h2>Example</h2>
 <p>** Use with Ethernet ** <code> mode="eth"; % Using ethernet interface for communication adress="192.168.1.20"; % IP address of device emiTestReceiver=ESPR(mode, adress); emiTestReceiver.setStartFreq(1e3); </code></p>
-<p>** Use with GPIB ** <code> sigGen = <a class="el" href="class_s_m_x.html" title="Rohde und Schwarz Signal generator with AM, FM and pulse modulation.">SMX</a>("gpib",... % mode 6); % GPIB address sigGen.setFreq(1e7); </code></p>
+<p>** Use with GPIB ** <code> sigGen = SMX("gpib",... % mode 6); % GPIB address sigGen.setFreq(1e7); </code></p>
 <h2>Using Interface Converter</h2>
 <ul>
 <li>mode= "eth2gpib";</li>
 </ul>
-<p>Interface converters require an initialisation of the interface converter object first, before initialising the device class. <code> % Initialising interface converter object interfaceConverter = <a class="el" href="class_pro_logix.html" title="ProLogix GPIB-ETHERNET (GPIB-LAN) Controller.">ProLogix</a>('eth',... % communication mode of converter '192.168.75.42',... % IP address of converter 1234); % Port of converter % Pass interface converter to device constructor. sigGen = <a class="el" href="class_s_m_x.html" title="Rohde und Schwarz Signal generator with AM, FM and pulse modulation.">SMX</a>("eth2gpib",... % communication mode interfaceConverter,... % Interface converter object 6); % GPIB address of device sigGen.setFreq(1e7); </code></p>
+<p>Interface converters require an initialisation of the interface converter object first, before initialising the device class. <code> % Initialising interface converter object interfaceConverter = ProLogix('eth',... % communication mode of converter '192.168.75.42',... % IP address of converter 1234); % Port of converter % Pass interface converter to device constructor. sigGen = SMX("eth2gpib",... % communication mode interfaceConverter,... % Interface converter object 6); % GPIB address of device sigGen.setFreq(1e7); </code></p>
 <h2>Repository Structure</h2>
 <p><code> @labDevice </code> Superclass for all lab Devices <code> cfg </code> Configs: Eg. default device properties <code> deviceTypes </code> Abstract Interface Classes for the different device types. The classes should be used to define common interfaces for all devices of one specific type. The abstract class assures the same method or property names over all devices of one device type eg. vector network analyser. <code> interfaceConverters </code> Contains all interface converter objects eg. eth2gpib. <code> functions </code> Contains all low level functionality like opening and closing connection to device. Namespaces (contianing + in front of foldername) seperate <em>open</em> and <em>close</em> functions of the interfaces (e.g. eth or gpib).</p>
 <h2>Adding labdevicedreivers as a submodule</h2>
@@ -92,7 +92,7 @@ $(function() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 20 2020 14:25:59 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 20 2020 15:09:56 for LabdevicedriverFramework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

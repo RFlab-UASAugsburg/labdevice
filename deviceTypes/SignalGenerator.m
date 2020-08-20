@@ -10,7 +10,7 @@
 %
 %> Initalise subclass
 %> @code
-%> classdef  SMX < labDevice & SignalGenerator
+%> classdef  RohdeUndSchwarz_SMX < labDevice & SignalGenerator
 %> @endcode
 % ======================================================
 classdef  SignalGenerator
@@ -24,7 +24,7 @@ classdef  SignalGenerator
        %> @param obj Instance of class
        %> @param pow Power level [dBm]
        % =====================================================
-      setPow(obj,pow)
+      setPower(obj,pow)
 
        % ====================================================
        %> @brief Disable the output of signal generator

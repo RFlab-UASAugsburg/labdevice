@@ -22,7 +22,7 @@ $\ast$$\ast$ Use with Ethernet $\ast$$\ast$
 
 $\ast$$\ast$ Use with G\+P\+IB $\ast$$\ast$ 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_s_m_x}{SMX}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_rohde_und_schwarz___s_m_x}{RohdeUndSchwarz\_SMX}}(\textcolor{stringliteral}{"gpib"},\% mode}
 \DoxyCodeLine{             6); \% GPIB address}
 \DoxyCodeLine{sigGen.setFreq(1e7);}
 \end{DoxyCode}
@@ -38,12 +38,12 @@ $\ast$$\ast$ Use with G\+P\+IB $\ast$$\ast$
 Interface converters require an initialisation of the interface converter object first, before initialising the device class. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\% Initialising \textcolor{keyword}{interface }converter object}
-\DoxyCodeLine{interfaceConverter = \mbox{\hyperlink{class_pro_logix}{ProLogix}}(\textcolor{stringliteral}{'eth'},\% communication mode of converter}
+\DoxyCodeLine{interfaceConverter = \mbox{\hyperlink{class_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t}{ProLogix\_GPIB\_ETHERNET}}(\textcolor{stringliteral}{'eth'},\% communication mode of converter}
 \DoxyCodeLine{                              \textcolor{stringliteral}{'192.168.75.42'},\% IP address of converter}
 \DoxyCodeLine{                              1234); \% Port of converter}
 \DoxyCodeLine{}
 \DoxyCodeLine{\% Pass \textcolor{keyword}{interface }converter to device constructor.}
-\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_s_m_x}{SMX}}(\textcolor{stringliteral}{"eth2gpib"},\% communication mode }
+\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_rohde_und_schwarz___s_m_x}{RohdeUndSchwarz\_SMX}}(\textcolor{stringliteral}{"eth2gpib"},\% communication mode }
 \DoxyCodeLine{             interfaceConverter,\% Interface converter \textcolor{keywordtype}{object}}
 \DoxyCodeLine{             6); \% GPIB address of device}
 \DoxyCodeLine{sigGen.setFreq(1e7);}

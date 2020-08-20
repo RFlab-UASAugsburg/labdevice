@@ -10,7 +10,7 @@
 %
 %> Initalise subclass
 %> @code
-%> classdef  ZVM < labDevice & VectorNetworkAnalyser
+%> classdef  RohdeUndSchwarz_ZVM < labDevice & VectorNetworkAnalyser
 %> @endcode
 % ======================================================
 classdef  VectorNetworkAnalyser

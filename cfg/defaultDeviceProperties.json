@@ -6,7 +6,7 @@
                 "port": 1234
             }
         },
-        "esrp": {
+        "rohdeundschwarz_esrp": {
             "eth": {
                 "ip": "192.168.73.115",
                 "port": 5025,
@@ -27,14 +27,14 @@
                 }
             }
         },
-        "smx": {
+        "rohdeundschwarz_smx": {
             "gpib": {
                 "address": 6,
                 "boardIdx": 1,
                 "vendor": "agilent"
             }
         },
-        "radisense": {
+        "RadiSense_EFieldProbe": {
             "gpib": {
                 "address": 8,
                 "boardIdx": 1,

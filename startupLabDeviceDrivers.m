@@ -49,7 +49,7 @@ end
 %> 
 %> ** Use with GPIB **
 %> @code
-%> sigGen = SMX("gpib",... % mode
+%> sigGen = RohdeUndSchwarz_SMX("gpib",... % mode
 %>              6); % GPIB address
 %> sigGen.setFreq(1e7);
 %> @endcode
@@ -62,12 +62,12 @@ end
 %> object first, before initialising the device class.
 %> @code
 %> % Initialising interface converter object
-%> interfaceConverter = ProLogix('eth',... % communication mode of converter
+%> interfaceConverter = ProLogix_GPIB_ETHERNET('eth',... % communication mode of converter
 %>                               '192.168.75.42',... % IP address of converter
 %>                               1234); % Port of converter
 %>
 %> % Pass interface converter to device constructor.
-%> sigGen = SMX("eth2gpib",... % communication mode 
+%> sigGen = RohdeUndSchwarz_SMX("eth2gpib",... % communication mode 
 %>              interfaceConverter,... % Interface converter object
 %>              6); % GPIB address of device
 %> sigGen.setFreq(1e7);
