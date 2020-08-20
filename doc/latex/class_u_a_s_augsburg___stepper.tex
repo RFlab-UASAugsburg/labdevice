@@ -1,0 +1,179 @@
+\hypertarget{class_u_a_s_augsburg___stepper}{}\doxysection{U\+A\+S\+Augsburg\+\_\+\+Stepper Class Reference}
+\label{class_u_a_s_augsburg___stepper}\index{UASAugsburg\_Stepper@{UASAugsburg\_Stepper}}
+
+
+Data acquisition unit with some custom hardware added to create a precice rotatable table.  
+
+
+
+
+Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+function \mbox{\hyperlink{class_u_a_s_augsburg___stepper_a1fa1e53cc6758e7039f3c132b01ddb38}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} (in mode, in varargin)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} constructor. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_u_a_s_augsburg___stepper_a8c327bb1cf1af6418be43acb044650c7}{delete}} (in obj)
+\begin{DoxyCompactList}\small\item\em Delete \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} Object. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_u_a_s_augsburg___stepper_aeea65c0f966e19855b6cc0cff5f1279e}{read}} (in obj)
+\begin{DoxyCompactList}\small\item\em Read data from labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_u_a_s_augsburg___stepper_a768a02c519cf85142ad5aed17c9d6adc}{flush}} (in obj)
+\begin{DoxyCompactList}\small\item\em Flush labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_u_a_s_augsburg___stepper_a9db7d79d8733eeaa459591c317d4cc0c}{write}} (in obj, in txt)
+\begin{DoxyCompactList}\small\item\em Write S\+C\+P\+I/skippy commands to labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_u_a_s_augsburg___stepper_a245abe72f411c3b99353c2bb4c6c0561}{nullpos}} (in obj)
+\begin{DoxyCompactList}\small\item\em manually turn the antenna to the null position \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_u_a_s_augsburg___stepper_aebdaadf307e4cdf56d1b8227976a102e}{turn}} (in obj, in deg)
+\begin{DoxyCompactList}\small\item\em turn the motor by deg degrees \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Data acquisition unit with some custom hardware added to create a precice rotatable table. 
+
+Usage\+: Initalise subclass 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{stepper = \mbox{\hyperlink{class_u_a_s_augsburg___stepper_a1fa1e53cc6758e7039f3c132b01ddb38}{UASAugsburg\_Stepper}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{             6); \% GPIB address}
+\DoxyCodeLine{stepper.nullpos(); \%point the antenna in a certain direction}
+\DoxyCodeLine{stepper.turn(360); \%\mbox{\hyperlink{class_u_a_s_augsburg___stepper_aebdaadf307e4cdf56d1b8227976a102e}{turn}} the table by 360 degrees}
+\end{DoxyCode}
+ 
+
+Definition at line 16 of file U\+A\+S\+Augsburg\+\_\+\+Stepper.\+m.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_a_s_augsburg___stepper_a1fa1e53cc6758e7039f3c132b01ddb38}\label{class_u_a_s_augsburg___stepper_a1fa1e53cc6758e7039f3c132b01ddb38}} 
+\index{UASAugsburg\_Stepper@{UASAugsburg\_Stepper}!UASAugsburg\_Stepper@{UASAugsburg\_Stepper}}
+\index{UASAugsburg\_Stepper@{UASAugsburg\_Stepper}!UASAugsburg\_Stepper@{UASAugsburg\_Stepper}}
+\doxysubsubsection{\texorpdfstring{UASAugsburg\_Stepper()}{UASAugsburg\_Stepper()}}
+{\footnotesize\ttfamily function U\+A\+S\+Augsburg\+\_\+\+Stepper\+::\+U\+A\+S\+Augsburg\+\_\+\+Stepper (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} constructor. 
+
+The constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Communication mode e.\+g. \char`\"{}gpib\char`\"{} for gpib \\
+\hline
+{\em varargin} & Variable input arguments depending on connection mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} class. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_a_s_augsburg___stepper_a8c327bb1cf1af6418be43acb044650c7}\label{class_u_a_s_augsburg___stepper_a8c327bb1cf1af6418be43acb044650c7}} 
+\index{UASAugsburg\_Stepper@{UASAugsburg\_Stepper}!delete@{delete}}
+\index{delete@{delete}!UASAugsburg\_Stepper@{UASAugsburg\_Stepper}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily function U\+A\+S\+Augsburg\+\_\+\+Stepper\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Delete \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} Object. 
+
+The destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_a_s_augsburg___stepper_a768a02c519cf85142ad5aed17c9d6adc}\label{class_u_a_s_augsburg___stepper_a768a02c519cf85142ad5aed17c9d6adc}} 
+\index{UASAugsburg\_Stepper@{UASAugsburg\_Stepper}!flush@{flush}}
+\index{flush@{flush}!UASAugsburg\_Stepper@{UASAugsburg\_Stepper}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily function U\+A\+S\+Augsburg\+\_\+\+Stepper\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Flush labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_a_s_augsburg___stepper_a245abe72f411c3b99353c2bb4c6c0561}\label{class_u_a_s_augsburg___stepper_a245abe72f411c3b99353c2bb4c6c0561}} 
+\index{UASAugsburg\_Stepper@{UASAugsburg\_Stepper}!nullpos@{nullpos}}
+\index{nullpos@{nullpos}!UASAugsburg\_Stepper@{UASAugsburg\_Stepper}}
+\doxysubsubsection{\texorpdfstring{nullpos()}{nullpos()}}
+{\footnotesize\ttfamily function U\+A\+S\+Augsburg\+\_\+\+Stepper\+::nullpos (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+manually turn the antenna to the null position 
+
+Disables all fields in the motor so the platform can be easily turned by hand
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_a_s_augsburg___stepper_aeea65c0f966e19855b6cc0cff5f1279e}\label{class_u_a_s_augsburg___stepper_aeea65c0f966e19855b6cc0cff5f1279e}} 
+\index{UASAugsburg\_Stepper@{UASAugsburg\_Stepper}!read@{read}}
+\index{read@{read}!UASAugsburg\_Stepper@{UASAugsburg\_Stepper}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily function U\+A\+S\+Augsburg\+\_\+\+Stepper\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Read data from labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret Data read from device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_a_s_augsburg___stepper_aebdaadf307e4cdf56d1b8227976a102e}\label{class_u_a_s_augsburg___stepper_aebdaadf307e4cdf56d1b8227976a102e}} 
+\index{UASAugsburg\_Stepper@{UASAugsburg\_Stepper}!turn@{turn}}
+\index{turn@{turn}!UASAugsburg\_Stepper@{UASAugsburg\_Stepper}}
+\doxysubsubsection{\texorpdfstring{turn()}{turn()}}
+{\footnotesize\ttfamily function U\+A\+S\+Augsburg\+\_\+\+Stepper\+::turn (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{deg }\end{DoxyParamCaption})}
+
+
+
+turn the motor by deg degrees 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} class \\
+\hline
+{\em deg} & Angle in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_a_s_augsburg___stepper_a9db7d79d8733eeaa459591c317d4cc0c}\label{class_u_a_s_augsburg___stepper_a9db7d79d8733eeaa459591c317d4cc0c}} 
+\index{UASAugsburg\_Stepper@{UASAugsburg\_Stepper}!write@{write}}
+\index{write@{write}!UASAugsburg\_Stepper@{UASAugsburg\_Stepper}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily function U\+A\+S\+Augsburg\+\_\+\+Stepper\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
+
+
+
+Write S\+C\+P\+I/skippy commands to labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}} class \\
+\hline
+{\em txt} & String with S\+C\+P\+I/skippy commands for labdevice \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/thomas/\+H\+F-\/\+Lab/emcframework/labdevicedrivers/@\+U\+A\+S\+Augsburg\+\_\+\+Stepper/\mbox{\hyperlink{_u_a_s_augsburg___stepper_8m}{U\+A\+S\+Augsburg\+\_\+\+Stepper.\+m}}\end{DoxyCompactItemize}

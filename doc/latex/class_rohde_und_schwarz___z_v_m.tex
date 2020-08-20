@@ -1,0 +1,529 @@
+\hypertarget{class_rohde_und_schwarz___z_v_m}{}\doxysection{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM Class Reference}
+\label{class_rohde_und_schwarz___z_v_m}\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+
+
+Rohde und Schwarz \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} Vector Signal Analyzer.  
+
+
+
+
+Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}, and \mbox{\hyperlink{class_vector_network_analyser}{Vector\+Network\+Analyser}}.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a110c5ff73ff076b0d43196de250ea15b}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} (in mode, in varargin)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} constructor. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a920cfe010a58aeabadd2ca4076097736}{delete}} (in obj)
+\begin{DoxyCompactList}\small\item\em Delete \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} Object. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a6b40832e9998963eaf5cc2331b9a581b}{read}} (in obj)
+\begin{DoxyCompactList}\small\item\em Read data from labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_aa638bfffd03e34be642da5dc27f1f678}{flush}} (in obj)
+\begin{DoxyCompactList}\small\item\em Flush labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_adf7f63e2a8e2b85af9974e34bbcd368d}{write}} (in obj, in txt)
+\begin{DoxyCompactList}\small\item\em Write S\+C\+P\+I/skippy commands to labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_ac2838cc8d39685f96b0e02976559a13e}{continuous\+Sweep}} (in obj)
+\begin{DoxyCompactList}\small\item\em set device to continuous sweep mode \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a3158814a0fc303af8ea688ab9669b313}{do\+Sweep}} (in obj)
+\begin{DoxyCompactList}\small\item\em do a single Sweep / immediately start a new measurement \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a3b0ac70832b8c3263430fe8c2df97230}{get\+Sweep\+Points}} (in obj)
+\begin{DoxyCompactList}\small\item\em get the amount of measurement points in a sweep \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a2bcdc63e64ce51864c799cef530ba77c}{get\+Trace\+Cmplx}} (in obj, in channel, in f\+\_\+points)
+\begin{DoxyCompactList}\small\item\em get the complex trace from the device \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a9f4fb595b65df9964c38c037f10607db}{set\+Average}} (in obj, in average)
+\begin{DoxyCompactList}\small\item\em configure averaging \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a8c0538dce3dd5d87741ed4d24745f017}{set\+Display}} (in obj, in onoff)
+\begin{DoxyCompactList}\small\item\em enable/disable display update during remote control \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a2a0cea99b3117b3559cb02b02058b459}{set\+Meas\+Format}} (in obj, in format)
+\begin{DoxyCompactList}\small\item\em Set the measurement format. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a562a0a046a0639ef6dd7c3aa136ec5d0}{set\+Meas\+Mode}} (in obj, in mode)
+\begin{DoxyCompactList}\small\item\em set the measurement mode \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a2c9f6e706d0d8802ec51a82a68e8a7b6}{set\+Meas\+Parameter}} (in obj, in param)
+\begin{DoxyCompactList}\small\item\em set the parameter to measure \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_ac31860a84ef69614bce97c789e3a31d7}{set\+Resolution\+Bandwidth}} (in obj, in bandwidth)
+\begin{DoxyCompactList}\small\item\em set the I\+F/\+I\+F/resolution bandwidth \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a3e21606340e8795cae82b71ce9424f40}{set\+Source\+Power}} (in obj, in power)
+\begin{DoxyCompactList}\small\item\em set the source power \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a11b38013ff4b78f035cd8e1bff1d9b2a}{set\+Start\+Freq}} (in obj, in freq)
+\begin{DoxyCompactList}\small\item\em set the start frequency \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a7e530bf0a4ab1f19e259f471b4bcc8a9}{set\+Stop\+Freq}} (in obj, in freq)
+\begin{DoxyCompactList}\small\item\em set the stop frequency \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_ae1b1316821881f6a32b73a5af4835d17}{set\+Sweep\+Count}} (in obj, in count)
+\begin{DoxyCompactList}\small\item\em set the sweep count \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a774c51608fdc241d35e73d47e1e03251}{set\+Sweep\+Mode}} (in obj, in mode)
+\begin{DoxyCompactList}\small\item\em choose single or continuous sweep mode \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a2636a1e85c5f2a9acc4c526949ffcfc7}{set\+Sweep\+Points}} (in obj, in points)
+\begin{DoxyCompactList}\small\item\em set the amount of measurement points in a sweep \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a24e6c2f2cac5ac07a4e3fe96768791d7}{set\+Sweep\+Time}} (in obj, in time)
+\begin{DoxyCompactList}\small\item\em configure the sweep time (in ms) \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_aa89c414c4f817017365125465ab19be8}{single\+Sweep}} (in obj)
+\begin{DoxyCompactList}\small\item\em set device to single sweep mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Rohde und Schwarz \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} Vector Signal Analyzer. 
+
+Usage\+: Initalise subclass 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{zvm = \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_a110c5ff73ff076b0d43196de250ea15b}{RohdeUndSchwarz\_ZVM}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{             6); \% GPIB address}
+\DoxyCodeLine{zvm.singleSweep();}
+\DoxyCodeLine{trace = zvm.getTraceCmplx(1,zvm.getSweepPoints);}
+\end{DoxyCode}
+ 
+
+Definition at line 16 of file Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M.\+m.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a110c5ff73ff076b0d43196de250ea15b}\label{class_rohde_und_schwarz___z_v_m_a110c5ff73ff076b0d43196de250ea15b}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{RohdeUndSchwarz\_ZVM()}{RohdeUndSchwarz\_ZVM()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::\+Rohde\+Und\+Schwarz\+\_\+\+Z\+VM (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} constructor. 
+
+The constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Communication mode e.\+g. \char`\"{}gpib\char`\"{} for gpib \\
+\hline
+{\em varargin} & Variable input arguments depending on connection mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_ac2838cc8d39685f96b0e02976559a13e}\label{class_rohde_und_schwarz___z_v_m_ac2838cc8d39685f96b0e02976559a13e}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!continuousSweep@{continuousSweep}}
+\index{continuousSweep@{continuousSweep}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{continuousSweep()}{continuousSweep()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::continuous\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set device to continuous sweep mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a3897caf03faa79af3ba39787117a5ed1}{Vector\+Network\+Analyser}}.
+
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a920cfe010a58aeabadd2ca4076097736}\label{class_rohde_und_schwarz___z_v_m_a920cfe010a58aeabadd2ca4076097736}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!delete@{delete}}
+\index{delete@{delete}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Delete \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} Object. 
+
+The destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a3158814a0fc303af8ea688ab9669b313}\label{class_rohde_und_schwarz___z_v_m_a3158814a0fc303af8ea688ab9669b313}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!doSweep@{doSweep}}
+\index{doSweep@{doSweep}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{doSweep()}{doSweep()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::do\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+do a single Sweep / immediately start a new measurement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a6ba2aa6383fe5add61b042c41d0e14db}{Vector\+Network\+Analyser}}.
+
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_aa638bfffd03e34be642da5dc27f1f678}\label{class_rohde_und_schwarz___z_v_m_aa638bfffd03e34be642da5dc27f1f678}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!flush@{flush}}
+\index{flush@{flush}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Flush labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a3b0ac70832b8c3263430fe8c2df97230}\label{class_rohde_und_schwarz___z_v_m_a3b0ac70832b8c3263430fe8c2df97230}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!getSweepPoints@{getSweepPoints}}
+\index{getSweepPoints@{getSweepPoints}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{getSweepPoints()}{getSweepPoints()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::get\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get the amount of measurement points in a sweep 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+points number of sweep points \mbox{[}double\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a6fea4338a2e20d0863c84bf411228c96}{Vector\+Network\+Analyser}}.
+
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a2bcdc63e64ce51864c799cef530ba77c}\label{class_rohde_und_schwarz___z_v_m_a2bcdc63e64ce51864c799cef530ba77c}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!getTraceCmplx@{getTraceCmplx}}
+\index{getTraceCmplx@{getTraceCmplx}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{getTraceCmplx()}{getTraceCmplx()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::get\+Trace\+Cmplx (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{channel,  }\item[{in}]{f\+\_\+points }\end{DoxyParamCaption})}
+
+
+
+get the complex trace from the device 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em channel} & which measurement channel to use (just use 1) \\
+\hline
+{\em f\+\_\+points} & amount of measurement points in the sweep\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Daten\+V\+NA complex array of length f\+\_\+points with the trace data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a6b40832e9998963eaf5cc2331b9a581b}\label{class_rohde_und_schwarz___z_v_m_a6b40832e9998963eaf5cc2331b9a581b}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!read@{read}}
+\index{read@{read}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Read data from labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret Data read from device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a9f4fb595b65df9964c38c037f10607db}\label{class_rohde_und_schwarz___z_v_m_a9f4fb595b65df9964c38c037f10607db}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setAverage@{setAverage}}
+\index{setAverage@{setAverage}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setAverage()}{setAverage()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Average (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{average }\end{DoxyParamCaption})}
+
+
+
+configure averaging 
+
+currently only set up for point averaging, functionality could be extended
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em average} & -\/1 for no averaging, otherwise the amount of measurements to average into a single result. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a8c0538dce3dd5d87741ed4d24745f017}\label{class_rohde_und_schwarz___z_v_m_a8c0538dce3dd5d87741ed4d24745f017}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setDisplay@{setDisplay}}
+\index{setDisplay@{setDisplay}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setDisplay()}{setDisplay()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Display (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{onoff }\end{DoxyParamCaption})}
+
+
+
+enable/disable display update during remote control 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em onoff} & \textquotesingle{}on\textquotesingle{} or \textquotesingle{}off\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a2a0cea99b3117b3559cb02b02058b459}\label{class_rohde_und_schwarz___z_v_m_a2a0cea99b3117b3559cb02b02058b459}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setMeasFormat@{setMeasFormat}}
+\index{setMeasFormat@{setMeasFormat}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setMeasFormat()}{setMeasFormat()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Meas\+Format (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{format }\end{DoxyParamCaption})}
+
+
+
+Set the measurement format. 
+
+U\+P\+Hase,P\+H\+A\+Se,C\+O\+M\+Plex,M\+A\+G\+Nitude,P\+H\+A\+Se,R\+E\+AL,I\+M\+A\+Ginary,S\+WR,G\+D\+E\+Lay
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em format} & one of\+: \textquotesingle{}U\+PH\textquotesingle{},\textquotesingle{}P\+H\+AS\textquotesingle{},\textquotesingle{}C\+O\+MP\textquotesingle{},\textquotesingle{}M\+A\+GN\textquotesingle{},\textquotesingle{}P\+H\+AS\textquotesingle{},\textquotesingle{}R\+E\+AL\textquotesingle{},\textquotesingle{}I\+M\+AG\textquotesingle{},\textquotesingle{}S\+WR\textquotesingle{},\textquotesingle{}G\+D\+EL\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a562a0a046a0639ef6dd7c3aa136ec5d0}\label{class_rohde_und_schwarz___z_v_m_a562a0a046a0639ef6dd7c3aa136ec5d0}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setMeasMode@{setMeasMode}}
+\index{setMeasMode@{setMeasMode}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setMeasMode()}{setMeasMode()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Meas\+Mode (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{mode }\end{DoxyParamCaption})}
+
+
+
+set the measurement mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em mode} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a2c9f6e706d0d8802ec51a82a68e8a7b6}\label{class_rohde_und_schwarz___z_v_m_a2c9f6e706d0d8802ec51a82a68e8a7b6}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setMeasParameter@{setMeasParameter}}
+\index{setMeasParameter@{setMeasParameter}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setMeasParameter()}{setMeasParameter()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Meas\+Parameter (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set the parameter to measure 
+
+in frequency sweep mode, while measuring power
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em param} & Measurement parameter, for example \textquotesingle{}Z21\textquotesingle{} or \textquotesingle{}S11\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a8e207eafb459a9306868a178da4dc32c}{Vector\+Network\+Analyser}}.
+
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_ac31860a84ef69614bce97c789e3a31d7}\label{class_rohde_und_schwarz___z_v_m_ac31860a84ef69614bce97c789e3a31d7}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setResolutionBandwidth@{setResolutionBandwidth}}
+\index{setResolutionBandwidth@{setResolutionBandwidth}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setResolutionBandwidth()}{setResolutionBandwidth()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Resolution\+Bandwidth (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{bandwidth }\end{DoxyParamCaption})}
+
+
+
+set the I\+F/\+I\+F/resolution bandwidth 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em bandwidth} & in Hz \mbox{[}double\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a3e21606340e8795cae82b71ce9424f40}\label{class_rohde_und_schwarz___z_v_m_a3e21606340e8795cae82b71ce9424f40}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setSourcePower@{setSourcePower}}
+\index{setSourcePower@{setSourcePower}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setSourcePower()}{setSourcePower()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Source\+Power (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{power }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set the source power 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em power} & in d\+Bm \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a046f125f382e6d61c47f5310de0beae6}{Vector\+Network\+Analyser}}.
+
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a11b38013ff4b78f035cd8e1bff1d9b2a}\label{class_rohde_und_schwarz___z_v_m_a11b38013ff4b78f035cd8e1bff1d9b2a}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setStartFreq@{setStartFreq}}
+\index{setStartFreq@{setStartFreq}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setStartFreq()}{setStartFreq()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Start\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set the start frequency 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em freq} & in Hz \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a80f2fbd6ef0425348fa651c286065350}{Vector\+Network\+Analyser}}.
+
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a7e530bf0a4ab1f19e259f471b4bcc8a9}\label{class_rohde_und_schwarz___z_v_m_a7e530bf0a4ab1f19e259f471b4bcc8a9}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setStopFreq@{setStopFreq}}
+\index{setStopFreq@{setStopFreq}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setStopFreq()}{setStopFreq()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Stop\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set the stop frequency 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em freq} & in Hz \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a909388ee53bd7ed70e06451a792cf51b}{Vector\+Network\+Analyser}}.
+
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_ae1b1316821881f6a32b73a5af4835d17}\label{class_rohde_und_schwarz___z_v_m_ae1b1316821881f6a32b73a5af4835d17}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setSweepCount@{setSweepCount}}
+\index{setSweepCount@{setSweepCount}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setSweepCount()}{setSweepCount()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Sweep\+Count (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{count }\end{DoxyParamCaption})}
+
+
+
+set the sweep count 
+
+idk what this does, need to do some research in the manual later
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em count} & sweep count \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a774c51608fdc241d35e73d47e1e03251}\label{class_rohde_und_schwarz___z_v_m_a774c51608fdc241d35e73d47e1e03251}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setSweepMode@{setSweepMode}}
+\index{setSweepMode@{setSweepMode}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setSweepMode()}{setSweepMode()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Sweep\+Mode (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{mode }\end{DoxyParamCaption})}
+
+
+
+choose single or continuous sweep mode 
+
+use \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_ac2838cc8d39685f96b0e02976559a13e}{Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M.\+continuous\+Sweep}} and \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m_aa89c414c4f817017365125465ab19be8}{Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M.\+single\+Sweep}} for readability
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em mode} & \textquotesingle{}cont\textquotesingle{} or \textquotesingle{}single\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a2636a1e85c5f2a9acc4c526949ffcfc7}\label{class_rohde_und_schwarz___z_v_m_a2636a1e85c5f2a9acc4c526949ffcfc7}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setSweepPoints@{setSweepPoints}}
+\index{setSweepPoints@{setSweepPoints}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setSweepPoints()}{setSweepPoints()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Sweep\+Points (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set the amount of measurement points in a sweep 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em points} & amount of points \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_aabccea00e92ce77920553db971f07c49}{Vector\+Network\+Analyser}}.
+
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_a24e6c2f2cac5ac07a4e3fe96768791d7}\label{class_rohde_und_schwarz___z_v_m_a24e6c2f2cac5ac07a4e3fe96768791d7}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!setSweepTime@{setSweepTime}}
+\index{setSweepTime@{setSweepTime}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{setSweepTime()}{setSweepTime()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::set\+Sweep\+Time (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{time }\end{DoxyParamCaption})}
+
+
+
+configure the sweep time (in ms) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em time} & -\/1 for automatic sweep time, otherwise time in ms \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_aa89c414c4f817017365125465ab19be8}\label{class_rohde_und_schwarz___z_v_m_aa89c414c4f817017365125465ab19be8}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!singleSweep@{singleSweep}}
+\index{singleSweep@{singleSweep}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{singleSweep()}{singleSweep()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::single\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set device to single sweep mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_vector_network_analyser_a60937f9c3680fa17968fd966009194e9}{Vector\+Network\+Analyser}}.
+
+\mbox{\Hypertarget{class_rohde_und_schwarz___z_v_m_adf7f63e2a8e2b85af9974e34bbcd368d}\label{class_rohde_und_schwarz___z_v_m_adf7f63e2a8e2b85af9974e34bbcd368d}} 
+\index{RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}!write@{write}}
+\index{write@{write}!RohdeUndSchwarz\_ZVM@{RohdeUndSchwarz\_ZVM}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily function Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
+
+
+
+Write S\+C\+P\+I/skippy commands to labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}} class \\
+\hline
+{\em txt} & String with S\+C\+P\+I/skippy commands for labdevice \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/thomas/\+H\+F-\/\+Lab/emcframework/labdevicedrivers/@\+Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M/\mbox{\hyperlink{_rohde_und_schwarz___z_v_m_8m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+V\+M.\+m}}\end{DoxyCompactItemize}
