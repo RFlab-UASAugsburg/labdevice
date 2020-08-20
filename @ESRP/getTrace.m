@@ -28,7 +28,7 @@ function trace = getTrace(obj, freqPoints, varargin)
             error("not enough data from ESRP");
         end
         pause(0.1)
-        message = [data obj.read];
+        message = [message obj.read];
         i = i+1;
     end
     %parse read data
