@@ -14,7 +14,7 @@
 %>                         Trigger on runts: 'RUNT'
 %>                         (Serial trigger: 'BUS')
 %>  Note: purchasable addons can easily be added if certain addons are
-%>        optained
+%>        obtained
 %>
 % =====================================================
 
