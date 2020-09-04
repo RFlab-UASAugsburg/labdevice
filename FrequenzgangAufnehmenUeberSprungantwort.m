@@ -1,5 +1,5 @@
 % ====================================================
-%> @brief Frequencyresponse acquisition script 
+%> @brief Frequencyresponse acquisition script (FFT of Impulseresponse)
 %> Operating principle:
 %> 1. Signalgenerator gets configured
 %> 2. Oscilloscope gets configured
@@ -8,12 +8,13 @@
 %> -  One into one of the oscilloscope channels
 %> 4. Step response from the DUT gets acquired and derived 
 %> 5. Data from the derivative waveform gets exported into MATLAB 
+%> Optional:
 %> 6. Matlab performs the FFT from the acquired waveform data
 %> 7. Plotting the frequencyresponse curves into two subplots
 %> 
 %> @param SignalGen Instance of class DG4102
 %>
-%> @param Oszilloscope Selected channel RTM3000
+%> @param Oszilloscope Instance of class RTM3000
 %>
 %> @param f_step Frequency for the step signal
 %>
@@ -34,7 +35,7 @@
 % =====================================================
 
 function output = FrequenzgangAufnehmenUeberSprungantwort(SignalGen,Oszilloscope,f_step,VPP_step,ChannelDUTInputSignal,ChannelDUTOutputSignal,Auswertung)
-%% Allgemeine Einstellungen
+%% Benötigte Variablen
 % Channelnummer aus Channelstring extrahieren
 Input_channel_nr = str2double(extractAfter(ChannelDUTInputSignal,"CH"));
 Output_channel_nr = str2double(extractAfter(ChannelDUTOutputSignal,"CH"));
@@ -100,6 +101,7 @@ disp("Konfiguration der Oszilloskopkanäle abgeschlossen");
 
 %% Oszilloskop Erfassungseinstellungen
 disp("Oszilloskop Erfassungseinstellungen werden konfiguriert");
+
 % Anzahl der aufzunehmenden Samples definieren
 write(Oszilloscope,"ACQ:POIN "+80E6);
 % Erfassungsmodus auf High Resolution stellen
@@ -108,23 +110,29 @@ setAcquisitionType(Oszilloscope,"HRES");
 setAcquisitionArithmetic(Oszilloscope,"AVER");
 % Anzahl Samples pro Averaging auf 32 setzen
 setAcquisitionArithmeticAveragingCount(Oszilloscope,32);
+
 disp("Konfiguration der Oszilloskop Erfassungseinstellungen abgeschlossen");
+
 %% Oszilloskop Triggereinstellungen
 disp("Oszilloskop Triggereinstellungen werden konfiguriert");
+
 % Triggermodus auf Automatisch setzen
 setTriggerMode(Oszilloscope,"AUTO");
 % Triggertyp auf Edgetrigger setzen
 setTriggerType(Oszilloscope,"EDGE");
 % Triggerquelle auf DUT-Eingangschannel setzen
-setTriggerSource(Oszilloscope,"CH"+Input_channel_nr)
+setTriggerSource(Oszilloscope,"CH"+Input_channel_nr);
 % Triggerflanke auf auf steigende Flanke setzen
 setEdgeTriggerSlope(Oszilloscope,"POS")
 % Triggerschwelle auf 1/4 der VPP des Eingangssprungs setzen
-setTriggerThresholdVoltage(Oszilloscope,1,VPP_step/4)
+setTriggerThresholdVoltage(Oszilloscope,1,VPP_step/4);
 % Triggerkopplung auf DC setzen
-setEdgeTriggerCouplingMode(Oszilloscope,"DC")
+setEdgeTriggerCouplingMode(Oszilloscope,"DC");
 % Trigger-Holdoff deaktivieren
-setTriggerHoldoffMode(Oszilloscope,"OFF")
+setTriggerHoldoffMode(Oszilloscope,"OFF");
+% Triggerposition an den linken Bildschirmrand setzen
+setTriggerOffset(Oszilloscope,1/2*f_step); % 1/f * 1/2
+
 disp("Konfiguration der Oszilloskop Triggereinstellungen abgeschlossen");
 
 %% Oszilloskop Math-einstellungen
