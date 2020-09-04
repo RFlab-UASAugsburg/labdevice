@@ -11,7 +11,7 @@
 
 function CurrentChannelState = getChannelState(obj, channel)
     if(channel >= 1 & channel <= 4)
-        write(obj,"CHAN" + channel + ":STAT?; *WAI");
+        write(obj,"*WAI; CHAN" + channel + ":STAT?");
         message = obj.read;
         message = strip(message);
         if isempty(message)

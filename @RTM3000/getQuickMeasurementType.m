@@ -11,7 +11,7 @@
 
 
 function MeasType = getQuickMeasurementType(obj, place)
-write(obj,"MEAS"+place+":MAIN?");
+write(obj,"*WAI; MEAS"+place+":MAIN?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

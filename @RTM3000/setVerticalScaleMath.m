@@ -11,7 +11,7 @@
 
 function setVerticalScaleMath(obj, channel, scale)
 if (channel >= 1 && channel <= 5)
-    write(obj,"CALC:MATH"+channel+":SCAL "+scale+"; *WAI");
+    write(obj,"*WAI; CALC:MATH"+channel+":SCAL "+scale);
 else
     error('Only math channels 1 to 5 are selectable');
 end

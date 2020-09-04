@@ -22,7 +22,7 @@ function setTriggerType(obj,type)
     types = {'EDGE','WIDTH','TV','LOG','LINE','RIS','RUNT'}; % Add additional source strings here if necessary
     type = upper(type);
     if any(strcmp(types,type))
-        write(obj,"TRIG:A:TYPE "+type);
+        write(obj,"*WAI; TRIG:A:TYPE "+type);
     else
         error("type can only be" + string(join(types)));
     end 

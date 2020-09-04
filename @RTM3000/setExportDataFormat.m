@@ -16,14 +16,14 @@ dataformats = {'ASC','REAL','UINT'};
                 case 2
                     switch dataformat
                         case 'ASC'
-                            write(obj,"FORM "+dataformat);
+                            write(obj,"*WAI; FORM "+dataformat);
                         case 'REAL'
-                            write(obj,"FORM "+dataformat);
+                            write(obj,"*WAI; FORM "+dataformat);
                     end
 
                 case 3
                     if varargin{1} == 8 || varargin{1} == 16 || varargin{1} == 32
-                        write(obj,"FORM "+dataformat+","+varargin{1});
+                        write(obj,"*WAI; FORM "+dataformat+","+varargin{1});
                     else
                         error("accuracy can only be set to 8,16,32");
                     end

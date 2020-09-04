@@ -11,7 +11,7 @@
 
 
 function pol = getChannelPolarity(obj,channel)
-write(obj,"CHAN"+channel+":POL?");
+write(obj,"*WAI; CHAN"+channel+":POL?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

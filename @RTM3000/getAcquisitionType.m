@@ -11,7 +11,7 @@
 
 
 function acquisitionType = getAcquisitionType(obj,channel)
-write(obj,"CHAN"+channel+":TYPE?");
+write(obj,"*WAI; CHAN"+channel+":TYPE?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

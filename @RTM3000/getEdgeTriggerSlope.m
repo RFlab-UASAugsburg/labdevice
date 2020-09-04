@@ -9,7 +9,7 @@
 
 
 function edgeTriggerSlope = getEdgeTriggerSlope(obj)
-write(obj,"TRIG:A:EDGE:SLOP?");
+write(obj,"*WAI; TRIG:A:EDGE:SLOP?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

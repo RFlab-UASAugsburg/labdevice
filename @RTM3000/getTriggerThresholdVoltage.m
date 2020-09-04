@@ -14,7 +14,7 @@
 
 function triggerThresholdVoltage = getTriggerThresholdVoltage(obj, trigger)
 if trigger >= 1 && trigger <= 5
-    write(obj,"TRIG:A:LEV"+trigger+":VAL?");
+    write(obj,"*WAI; TRIG:A:LEV"+trigger+":VAL?");
     message = obj.read;
     message = strip(message);
     if isempty(message)

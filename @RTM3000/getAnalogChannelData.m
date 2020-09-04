@@ -9,7 +9,7 @@
 
 function AnalogChannelData = getAnalogChannelData(obj, channel)
     if channel == 1 || channel == 2 || channel == 3 || channel == 4
-        write(obj,"CHAN"+channel+":DATA?; *WAI");
+        write(obj,"*WAI; CHAN"+channel+":DATA?");
         message = obj.read;
         if isempty(message)
             error("no response from device");

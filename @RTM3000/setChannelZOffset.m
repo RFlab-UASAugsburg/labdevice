@@ -13,6 +13,6 @@ function setChannelZOffset(obj,channel,zoffset)
     if channel < 1 || channel > 4
         error("Channel can only be between 1-4");
     else
-        write(obj,"CHAN"+channel+":ZOFF "+zoffset);
+        write(obj,"*WAI; CHAN"+channel+":ZOFF "+zoffset);
     end
 end

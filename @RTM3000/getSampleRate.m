@@ -9,7 +9,7 @@
 
 function SampleRate = getSampleRate(obj)
 
-write(obj,"ACQ:SRAT?; *WAI");
+write(obj,"*WAI; ACQ:SRAT?");
 message = obj.read;
 if isempty(message)
     error("no response from device");

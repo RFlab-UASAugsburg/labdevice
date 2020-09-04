@@ -14,6 +14,6 @@ function setChannelOffset(obj,channel,offset)
     if channel < 1 || channel > 4
         error("Channel can only be between 1-4");
     else
-        write(obj,"CHAN"+channel+":OFFS "+offset);
+        write(obj,"*WAI; CHAN"+channel+":OFFS "+offset);
     end
 end

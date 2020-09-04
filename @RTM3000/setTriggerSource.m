@@ -19,7 +19,7 @@ function setTriggerSource(obj,source)
     sources = {'CH1','CH2','CH3','CH4','EXT','LINE'}; % Add additional source strings here if necessary
     source = upper(source);
     if any(strcmp(sources,source))
-        write(obj,"TRIG:A:SOUR "+source);
+        write(obj,"*WAI; TRIG:A:SOUR "+source);
     else
         error("source can only be" + string(join(sources)));
     end 

@@ -9,7 +9,7 @@
 
 
 function triggerType = getTriggerType(obj)
-write(obj,"TRIG:A:TYPE?");
+write(obj,"*WAI; TRIG:A:TYPE?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

@@ -11,7 +11,7 @@
 
 
 function MeasSource = getQuickMeasurementSource(obj, place)
-write(obj,"MEAS"+place+":SOUR?");
+write(obj,"*WAI; MEAS"+place+":SOUR?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

@@ -11,7 +11,7 @@
 
 function VertScaleMath = getVerticalScaleMath(obj, channel)
 if (channel >= 1 && channel <= 5)
-    write(obj,"CALC:MATH"+channel+":SCAL?; *WAI");
+    write(obj,"*WAI; CALC:MATH"+channel+":SCAL?");
     message = obj.read;
     message = strip(message);
     if isempty(message)

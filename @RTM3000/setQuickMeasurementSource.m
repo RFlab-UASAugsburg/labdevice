@@ -17,7 +17,7 @@ switch nargin
     case 4
         if any(strcmp(possibleSources,SignalSourceOne))
             if any(strcmp(possibleSources,varargin{1}))
-                write(obj,"MEAS"+place+":SOUR "+SignalSourceOne+","+varargin{1});
+                write(obj,"*WAI; MEAS"+place+":SOUR "+SignalSourceOne+","+varargin{1});
             else
                 error("Second source argument wrong -> measurement source can only be" + string(join(possibleSources)));
             end
@@ -27,7 +27,7 @@ switch nargin
         end
     case 3
         if any(strcmp(possibleSources,SignalSourceOne))
-            write(obj,"MEAS"+place+":SOUR "+SignalSourceOne);
+            write(obj,"*WAI; MEAS"+place+":SOUR "+SignalSourceOne);
         else
             error("measurement source can only be" + string(join(possibleSources)));
         end

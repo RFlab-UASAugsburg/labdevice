@@ -13,7 +13,7 @@ function setAcquisitionType(obj,type)
     types = {'SAMP','PDET','HRES'};
     type = upper(type);    
         if any(strcmp(types,type))
-            write(obj,"CHAN:TYPE "+type);
+            write(obj,"*WAI; CHAN:TYPE "+type);
         else
             error("types can only be" + string(join(types)));
         end

@@ -9,8 +9,8 @@
 % =====================================================
 
 function VertScale = getVerticalScale(obj, channel)
-	  if (channel >= 1 & channel <= 4)
-            write(obj, ["CHAN"+channel+":SCAL?; *WAI"]);
+	  if (channel >= 1 && channel <= 4)
+            write(obj,"*WAI; CHAN"+channel+":SCAL?");
             message = obj.read;
             message = strip(message);
             if isempty(message)

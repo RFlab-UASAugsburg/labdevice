@@ -9,7 +9,7 @@
 
 function MathChannelData = getMathChannelData(obj, channel)
     if channel == 1 || channel == 2 || channel == 3 || channel == 4 || channel == 5
-        write(obj,"CALC:MATH"+channel+":DATA?; *WAI");
+        write(obj,"*WAI; CALC:MATH"+channel+":DATA?");
         message = obj.read;
         if isempty(message)
             error("no response from device");

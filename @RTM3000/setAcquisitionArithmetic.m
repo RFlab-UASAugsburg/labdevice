@@ -13,7 +13,7 @@ function setAcquisitionArithmetic(obj,arith)
     ariths = {'OFF','ENV','AVER'};
     arith = upper(arith);
         if any(strcmp(ariths,arith))
-            write(obj,"CHAN:ARIT "+arith);
+            write(obj,"*WAI; CHAN:ARIT "+arith);
         else
             error("types can only be" + string(join(ariths)));
         end

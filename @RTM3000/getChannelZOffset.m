@@ -11,7 +11,7 @@
 
 
 function zoffset = getChannelZOffset(obj,channel)
-write(obj,"CHAN"+channel+":ZOFF?");
+write(obj,"*WAI; CHAN"+channel+":ZOFF?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

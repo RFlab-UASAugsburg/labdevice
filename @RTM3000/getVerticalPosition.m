@@ -9,8 +9,8 @@
 % =====================================================
 
 function VertPos = getVerticalPosition(obj, channel)
-	  if (channel >= 1 & channel <= 4)
-            write(obj, ["CHAN"+channel+":POS?; *WAI"]);
+	  if (channel >= 1 && channel <= 4)
+            write(obj,"*WAI; CHAN"+channel+":POS?");
             message = obj.read;
             message = strip(message);
             if isempty(message)

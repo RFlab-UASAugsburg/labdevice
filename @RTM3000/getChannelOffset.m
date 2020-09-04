@@ -11,7 +11,7 @@
 
 
 function offset = getChannelOffset(obj,channel)
-write(obj,"CHAN"+channel+":OFFS?");
+write(obj,"*WAI; CHAN"+channel+":OFFS?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

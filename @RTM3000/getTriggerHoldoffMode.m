@@ -9,7 +9,7 @@
 
 
 function triggerHoldoffMode = getTriggerHoldoffMode(obj)
-write(obj,"TRIG:A:HOLD:MODE?");
+write(obj,"*WAI; TRIG:A:HOLD:MODE?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

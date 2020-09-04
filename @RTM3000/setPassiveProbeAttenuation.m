@@ -16,7 +16,7 @@ function setPassiveProbeAttenuation(obj,channel,att)
         if att < 0.001 || att > 10000
             error("Attenuation/Gain can only be between 0.001-10000");
         else
-            write(obj,"PROB"+channel+":SET:ATT:MAN "+att);
+            write(obj,"*WAI; PROB"+channel+":SET:ATT:MAN "+att);
         end 
     end
 end

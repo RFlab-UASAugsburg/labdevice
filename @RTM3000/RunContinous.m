@@ -4,6 +4,6 @@
 %> @param obj Instance of class
 % =====================================================
 function RunContinous(obj)
-    write(obj,['RUN']);
+    write(obj,'RUN');
 end
 

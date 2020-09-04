@@ -18,7 +18,7 @@ function setEdgeTriggerCouplingMode(obj,coupling)
     modes = {'DC','AC','LFR'}; 
     coupling = upper(coupling);
     if any(strcmp(modes,coupling))
-        write(obj,"TRIG:A:EDGE:COUP "+coupling);
+        write(obj,"*WAI; TRIG:A:EDGE:COUP "+coupling);
     else
         error("coupling mode can only be" + string(join(modes)));
     end 

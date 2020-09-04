@@ -7,7 +7,7 @@
 % =====================================================
 function RunSingleAcquisition(obj, count)
 
-    write(obj,["ACQ:NSIN:COUN " + count]);
-    write(obj,'RUNS; *WAI');
+    write(obj,"*WAI; ACQ:NSIN:COUN "+count);
+    write(obj,'*WAI; RUNS');
 end
 

@@ -12,7 +12,7 @@
 
 function MathChannelDataSampleCount = getMathChannelDataSampleCount(obj, channel)
     if channel == 1 || channel == 2 || channel == 3 || channel == 4 || channel == 5
-        write(obj,"CALC:MATH"+channel+":DATA:POIN?; *WAI");
+        write(obj,"*WAI; CALC:MATH"+channel+":DATA:POIN?");
         message = obj.read;
         if isempty(message)
             error("no response from device");

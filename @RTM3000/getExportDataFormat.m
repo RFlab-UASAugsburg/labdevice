@@ -7,7 +7,7 @@
 % =====================================================
 
 function ExportDataFormat = getExportDataFormat(obj)
-    write(obj,"FORM?; *WAI");
+    write(obj,"*WAI; FORM?");
     message = obj.read;
     message = strip(message);
     if isempty(message)

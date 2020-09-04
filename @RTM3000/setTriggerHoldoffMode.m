@@ -14,9 +14,9 @@ function setTriggerHoldoffMode(obj,state)
         state = upper(state);
          switch state
             case 'ON'
-                write(obj,"TRIG:A:GOLD:MODE TIME");
+                write(obj,"*WAI; TRIG:A:GOLD:MODE TIME");
             case 'OFF'
-                write(obj,"TRIG:A:GOLD:MODE OFF");
+                write(obj,"*WAI; TRIG:A:GOLD:MODE OFF");
             otherwise
                 error('Unclear state. ' +state);
          end      

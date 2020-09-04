@@ -12,7 +12,7 @@ function setHorizontalScale(obj, scale)
     if (scale < 1e-9 | scale > 50)
         error('Scale is out of bounds. Keep it between 1e-9 and 50');
     else
-        write(obj, ["TIM:SCAL "+scale+"; *WAI"]);
+        write(obj,"*WAI; TIM:SCAL "+scale);
     end
 
 end

@@ -11,7 +11,7 @@
 
 
 function att_gain = getPassiveProbeAttenuation(obj,channel)
-write(obj,"PROB"+channel+":SET:ATT:MAN?");
+write(obj,"*WAI; PROB"+channel+":SET:ATT:MAN?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

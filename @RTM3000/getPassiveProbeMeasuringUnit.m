@@ -11,7 +11,7 @@
 
 
 function measuringUnit = getPassiveProbeMeasuringUnit(obj,channel)
-write(obj,"PROB"+channel+":SET:ATT:UNIT?");
+write(obj,"*WAI; PROB"+channel+":SET:ATT:UNIT?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

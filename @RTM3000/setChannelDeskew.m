@@ -13,6 +13,6 @@ function setChannelDeskew(obj,channel,deskew_time)
     if channel < 1 || channel > 4
         error("Channel can only be between 1-4");
     else
-        write(obj,"CHAN"+channel+":SKEW "+deskew_time);
+        write(obj,"*WAI; CHAN"+channel+":SKEW "+deskew_time);
     end
 end

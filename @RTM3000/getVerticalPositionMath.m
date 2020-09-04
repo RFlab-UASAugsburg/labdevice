@@ -11,7 +11,7 @@
 
 function VertPosMath = getVerticalPositionMath(obj, channel)
 if (channel >= 1 && channel <= 5)
-    write(obj,"CALC:MATH"+channel+":POS?; *WAI");
+    write(obj,"*WAI; CALC:MATH"+channel+":POS?");
     message = obj.read;
     message = strip(message);
     if isempty(message)

@@ -20,7 +20,7 @@ function setPassiveProbeMeasuringUnit(obj,channel,unit)
         error("Channel can only be between 1-4");
     else
         if any(strcmp(types,unit))
-            write(obj,"PROB"+channel+":SET:ATT:UNIT "+unit);
+            write(obj,"*WAI; PROB"+channel+":SET:ATT:UNIT "+unit);
         else
             error("measuring units can only be" + string(join(types)));
         end 

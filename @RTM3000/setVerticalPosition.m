@@ -13,7 +13,7 @@ function setVerticalPosition(obj, channel, pos)
           if (pos < -5 | pos > 5)
               error('Position is out of bounds. Keep it between -5 and 5');
           else
-              write(obj, ["CHAN"+channel+":POS "+pos+"; *WAI"]); 
+              write(obj,"*WAI; CHAN"+channel+":POS "+pos); 
           end         
       else
           error('Only channels 1 to 4 are selectable');

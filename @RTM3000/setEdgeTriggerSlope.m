@@ -15,7 +15,7 @@ function setEdgeTriggerSlope(obj,slope)
     slopes = {'POS','NEG','EITH'};
     slope = upper(slope);
     if any(strcmp(slopes,slope))
-        write(obj,"TRIG:A:EDGE:SLOP "+slope);
+        write(obj,"*WAI; TRIG:A:EDGE:SLOP "+slope);
     else
         error("slope can only be" + string(join(slopes)));
     end 

@@ -6,5 +6,5 @@
 % =====================================================
 
 function setTriggerLevelHalfAmplitude(obj)
-    write(obj,"TRIG:A:FIND");
+    write(obj,"*WAI; TRIG:A:FIND");
 end

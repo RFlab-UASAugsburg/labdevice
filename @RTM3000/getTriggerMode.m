@@ -9,7 +9,7 @@
 
 
 function triggerMode = getTriggerMode(obj)
-write(obj,"TRIG:A:MODE?");
+write(obj,"*WAI; TRIG:A:MODE?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

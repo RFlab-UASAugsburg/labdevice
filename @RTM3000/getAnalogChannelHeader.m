@@ -13,7 +13,7 @@
 
 function AnalogChannelHeader = getAnalogChannelHeader(obj, channel)
     if channel == 1 || channel == 2 || channel == 3 || channel == 4
-        write(obj,"CHAN"+channel+":DATA:HEAD?; *WAI");
+        write(obj,"*WAI; CHAN"+channel+":DATA:HEAD?");
         message = obj.read;
         if isempty(message)
             error("no response from device");

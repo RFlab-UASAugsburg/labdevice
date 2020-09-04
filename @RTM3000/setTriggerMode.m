@@ -18,7 +18,7 @@ function setTriggerMode(obj,mode)
     modes = {'AUTO','NORM'};
     mode = upper(mode);
     if any(strcmp(modes,mode))
-        write(obj,"TRIG:A:MODE "+mode);
+        write(obj,"*WAI; TRIG:A:MODE "+mode);
     else
         error("mode can only be" + string(join(modes)));
     end 

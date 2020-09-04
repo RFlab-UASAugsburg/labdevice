@@ -7,7 +7,7 @@
 % =====================================================
 
 function HorzScale = getHorizontalScale(obj)
-    write(obj, "TIM:SCAL?; *WAI");
+    write(obj, "*WAI; TIM:SCAL?");
     message = obj.read;
     message = strip(message);
     if isempty(message)

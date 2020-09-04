@@ -14,7 +14,7 @@
 function setTriggerThresholdVoltage(obj,trigger,level)
     if trigger >= 1 && trigger <= 5
        if isnumeric(level)
-           write(obj,"TRIG:A:LEV"+trigger+":VAL "+level);
+           write(obj,"*WAI; TRIG:A:LEV"+trigger+":VAL "+level);
        else
            error("Trigger level is not a number");
        end

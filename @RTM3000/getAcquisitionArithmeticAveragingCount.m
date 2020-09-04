@@ -9,7 +9,7 @@
 
 
 function averagingCount = getAcquisitionArithmeticAveragingCount(obj)
-write(obj,"ACQ:AVER:COUN?");
+write(obj,"*WAI; ACQ:AVER:COUN?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

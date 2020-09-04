@@ -11,7 +11,7 @@
 
 
 function couplingMode = getChannelCoupling(obj,channel)
-write(obj,"CHAN"+channel+":COUP?");
+write(obj,"*WAI; CHAN"+channel+":COUP?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

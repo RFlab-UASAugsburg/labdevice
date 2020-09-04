@@ -11,7 +11,7 @@
 
 function setVerticalPositionMath(obj, channel, pos)
 if (channel >= 1 && channel <= 5)
-    write(obj,"CALC:MATH"+channel+":POS "+pos+"; *WAI");
+    write(obj,"*WAI; CALC:MATH"+channel+":POS "+pos);
 else
     error('Only math channels 1 to 5 are selectable');
 end

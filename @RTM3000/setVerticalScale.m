@@ -13,7 +13,7 @@ function setVerticalScale(obj, channel, scale)
           if (scale < 1e-3 | scale > 10)
               error('Scale is out of bounds. Keep it between 1e-3 and 10');
           else
-              write(obj, ["CHAN"+channel+":SCAL "+scale+"; *WAI"]); 
+              write(obj, "*WAI; CHAN"+channel+":SCAL "+scale); 
           end         
       else
           error('Only channels 1-4 are selectable');

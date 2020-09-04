@@ -20,7 +20,7 @@ function setChannelPolarity(obj,channel,polarity)
         error("Channel can only be between 1-4");
     else
         if any(strcmp(types,polarity))
-            write(obj,"CHAN"+channel+":POL "+polarity);
+            write(obj,"*WAI; CHAN"+channel+":POL "+polarity);
         else
             error("coupling mode can only be" + string(join(types)));
         end 

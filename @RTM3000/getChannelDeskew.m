@@ -11,7 +11,7 @@
 
 
 function deskew_time = getChannelDeskew(obj,channel)
-write(obj,"CHAN"+channel+":SKEW?");
+write(obj,"*WAI; CHAN"+channel+":SKEW?");
 message = obj.read;
 message = strip(message);
 if isempty(message)

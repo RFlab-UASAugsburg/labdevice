@@ -22,7 +22,7 @@ function setChannelCoupling(obj,channel,coupling)
         error("Channel can only be between 1-4");
     else
         if any(strcmp(types,coupling))
-            write(obj,"CHAN"+channel+":COUP "+coupling);
+            write(obj,"*WAI; CHAN"+channel+":COUP "+coupling);
         else
             error("coupling mode can only be" + string(join(types)));
         end 
