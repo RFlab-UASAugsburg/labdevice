@@ -28,13 +28,17 @@
 %>
 %> @param Auswertung Selectable boolean whether or not the data is getting
 %>                   postprocessed in MATLAB
+%>
+%> @param Plotsetting_xAxisLimMin X-Axis lower limit (for plotting)
+%> 
+%> @param Plotsetting_xAxisLimMax X-Axis upper limit (for plotting)
 %> 
 %> @output output 2x1 vector with the sampling frequency of the
 %                 oscilloscope and the acquired math channel data
 %>
 % =====================================================
 
-function output = FrequenzgangAufnehmenUeberSprungantwort(SignalGen,Oszilloscope,f_step,VPP_step,ChannelDUTInputSignal,ChannelDUTOutputSignal,Auswertung)
+function output = FrequenzgangAufnehmenUeberSprungantwort(SignalGen,Oszilloscope,f_step,VPP_step,ChannelDUTInputSignal,ChannelDUTOutputSignal,Auswertung,Plotsetting_xAxisLimMin,Plotsetting_xAxisLimMax)
 %% Benötigte Variablen
 % Channelnummer aus Channelstring extrahieren
 Input_channel_nr = str2double(extractAfter(ChannelDUTInputSignal,"CH"));
@@ -167,39 +171,41 @@ disp("Konfiguration der Oszilloskop Mathchanneleinstellungen abgeschlossen");
 RunSingleAcquisition(Oszilloscope,320);
 % Auslesen der Werte der Ableitungskurve
 math_channel_data = getMathChannelData(Oszilloscope,1);
-% Auslesen der Oszilloskop Samplingrate
-fs = getSampleRate(Oszilloscope);
+% Auslesen der Oszilloskop Samplingfrequency
+SamplingFrequency = getSampleRate(Oszilloscope);
 % Die ausgelesenen Werte an die Returnvariable übergeben
-output = {math_channel_data;fs};
+output = {"Mathchannel data","Samplingrate Fs";math_channel_data,SamplingFrequency};
 %% Messdaten auswerten
 if Auswertung == 1
 % Zero-Padding der Math-channel Daten, um 1E6 Nullen
     math_channel_data = [math_channel_data zeros(1,1000000)];
 % Bestimmung der Länge des Datenvektors    
-    L = length(math_channel_data);
+    Length_Datavector = length(math_channel_data);
 % Bestimmung der Anzahl an FFT-Punkten    
-    NFFT = 2^nextpow2(L);
+    NFFT = 2^nextpow2(Length_Datavector);
 % Berechung des Frequenzvekors        
-    f = fs/2*linspace(0,1,NFFT/2+1);
+    freq_vector = SamplingFrequency/2*linspace(0,1,NFFT/2+1);
 % Berechung der FFT und Skalierung mit 1/(Länge Datenvektor)    
-    Math_channel_data_FFT = fft(math_channel_data,NFFT)/L;
+    Math_channel_data_FFT = fft(math_channel_data,NFFT)/Length_Datavector;
 % Extraktion von der Amplitudenwerten aus dem komplexen FFT-Vektor
     abs_data = abs(Math_channel_data_FFT(1:NFFT/2+1));
-% Normierung der Amplitudenwerte, sodass im Bodediagramm die ersten Werte bei 0dB beginnen     
-    abs_data = abs_data ./ abs_data(1);
+% Normierung der Amplitudenwerte, sodass im Bodediagramm die ersten Werte bei 0dB beginnen
+    sum3amps = abs_data(1)+abs_data(2)+abs_data(3);
+    sum3ampsAVG = sum3amps/3;
+    abs_data = abs_data ./ sum3ampsAVG;
     
 % Subplot für den Amplitudengang
     subplot(2,1,1);
-    semilogx(f,20*log10(abs_data))
-    xlim([1E6,50E6]);
+    semilogx(freq_vector,20*log10(abs_data))
+    xlim([Plotsetting_xAxisLimMin,Plotsetting_xAxisLimMax]);
     xlabel("Frequenz in [Hz]");
     ylabel("Amplitude in [dB]");
     title("Amplitudengang");
     
 % Subplot für den Amplitudengang    
     subplot(2,1,2);
-    semilogx(f,unwrap(angle(Math_channel_data_FFT(1:NFFT/2+1))))
-    xlim([1E6,50E6]);
+    semilogx(freq_vector,unwrap(angle(Math_channel_data_FFT(1:NFFT/2+1))))
+    xlim([Plotsetting_xAxisLimMax,Plotsetting_xAxisLimMax]);
     xlabel("Frequenz in [Hz]");
     ylabel("Phase in [°]");
     title("Phasengang");

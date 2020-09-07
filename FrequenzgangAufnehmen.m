@@ -27,6 +27,7 @@
 %>
 %> @param f_steps Number of evenly spaced frequencypoints between f_start
 %>                and f_stop
+%>        NOTE: USE ATLEAST 50 STEPS
 %>
 %> @param VPP_initial Peak-to-Peak Amplitude for the sinusoid signal
 %>
@@ -184,11 +185,13 @@ for i = 1:1:f_steps
     % Messen und speichern der Phase
     data_vector(2,i) = getQuickMeasurementData(Oszilloscope,2);
     % Statusanzeiger
-    disp(i+"/"+f_steps+" complete");
+    disp(i+"/"+f_steps+" Done @ Ampl.: "+data_vector(1,i)+" Phase: "+data_vector(2,i));
     % Abbruchbedigung, wenn alle Frequenzpunkte durchlaufen sind
     if i+1 > f_steps
-        % Übergabe des Datenvektors and die Ausgabevariable
-        output = data_vector;
+        % Übergabe des Datenvektors und des Frequenzvektors an die
+        % Ausgabevariable
+        output = {'Amplitudenvektor','Phasenvektor','Frequenzvektor';...
+                    data_vector(1,:),data_vector(2,:),freq_vector};
         break;
     else
     % Nächsten Frequenzpunkt einstellen
@@ -218,8 +221,10 @@ disp("Messdatenaufnahme abgeschlossen");
 %% Messdaten auswerten
 if Auswertung == 1 
     disp("Messdaten werden ausgewertet");
-    %Vpp in Amplitudenwert umrechnen
-    amp_vector = data_vector(1,:) ./ data_vector(1,1);
+    %Vpp in Amplitudenwert umrechnen und normieren
+    sum3amps = data_vector(1,1)+data_vector(1,2)+data_vector(1,3);
+    sum3ampsAVG = sum3amps/3;
+    amp_vector = data_vector(1,:) ./ sum3ampsAVG;
     %Phasensprünge entfernen
     phase_vector = -180/pi .* (unwrap(pi/180 .* data_vector(2,:))); 
     
