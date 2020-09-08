@@ -46,6 +46,9 @@ Output_channel_nr = str2double(extractAfter(ChannelDUTOutputSignal,"CH"));
 
 %% Signalgeneratoreinstellungen
 disp("Signalgenerator wird konfiguriert");
+% Signaltyp einstellen bei welchem Kanalkopplung aktivierbar ist
+setSourceSquare(SignalGen,1,f_step,VPP_step,VPP_step/2,0);
+setSourceSquare(SignalGen,2,f_step,VPP_step,VPP_step/2,0);
 % Channelkopplung der Signalgeneratorausgänge aktivieren
 EnableDisableChannelCoupling(SignalGen,"ON");
 % Signaltyp und Anfangswerte definieren
@@ -54,6 +57,7 @@ EnableDisableChannelCoupling(SignalGen,"ON");
 % Offset = Anfangsampl. * 1/2
 % Phase  = 0
 setSourceSquare(SignalGen,1,f_step,VPP_step,VPP_step/2,0);
+setSourceSquare(SignalGen,2,f_step,VPP_step,VPP_step/2,0);
 disp("Konfiguration des Signalgenerators abgeschlossen");
 
 %% Oszilloskop Kanaleinstellungen
@@ -135,7 +139,7 @@ setEdgeTriggerCouplingMode(Oszilloscope,"DC");
 % Trigger-Holdoff deaktivieren
 setTriggerHoldoffMode(Oszilloscope,"OFF");
 % Triggerposition an den linken Bildschirmrand setzen
-setTriggerOffset(Oszilloscope,1/2*f_step); % 1/f * 1/2
+setTriggerOffset(Oszilloscope,1/(4*f_step)); % 1/f * 1/2
 
 disp("Konfiguration der Oszilloskop Triggereinstellungen abgeschlossen");
 
@@ -205,7 +209,7 @@ if Auswertung == 1
 % Subplot für den Amplitudengang    
     subplot(2,1,2);
     semilogx(freq_vector,unwrap(angle(Math_channel_data_FFT(1:NFFT/2+1))))
-    xlim([Plotsetting_xAxisLimMax,Plotsetting_xAxisLimMax]);
+    xlim([Plotsetting_xAxisLimMin,Plotsetting_xAxisLimMax]);
     xlabel("Frequenz in [Hz]");
     ylabel("Phase in [°]");
     title("Phasengang");
