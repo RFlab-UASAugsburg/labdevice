@@ -16,10 +16,10 @@ if length(response) ~= 18
     msgID = "RADISENSE:WeirdError";
     msg = "something went wrong: " + response;
     throw(MException(msgID,msg));
-elseif response(14) == "O"
-    msgID = "RADISENSE:OverRange";
-    msg = "Probe returned over range warning!";
-    throw(MException(msgID,msg));
+%elseif response(14) == "O"
+%    msgID = "RADISENSE:OverRange";
+%    msg = "Probe returned over range warning!";
+%    throw(MException(msgID,msg));
 end
 ret = double(string(extractBetween(response,3,7)));
 end
