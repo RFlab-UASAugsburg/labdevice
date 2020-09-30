@@ -1,7 +1,11 @@
+% ======================================================================
+%> @brief zero the probe
+%>
+%> before useful measurements can be taken, the sensor has to be zeroed. This process takes 15 seconds.
+%>
+%> @param obj Instance of RadiSense_EFieldProbe class
+% ======================================================================
 function zero(obj) %zero(obj, generator)
-%ZERO turn off generator and zero radisense
-%   the radisense sensor needs some time for zeroing
-	%generator.outputDisable();
     write(obj, "TC"); %random measurement to test if sensor is on
     read(obj);
     write(obj, "ZERO");

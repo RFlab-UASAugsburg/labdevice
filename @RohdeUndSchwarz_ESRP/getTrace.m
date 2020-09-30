@@ -27,7 +27,7 @@ function trace = getTrace(obj, freqPoints, varargin)
         if i > 5
             error("not enough data from RohdeUndSchwarz_ESRP");
         end
-        pause(0.1)
+        pause(0.5)
         message = [message obj.read];
         i = i+1;
     end

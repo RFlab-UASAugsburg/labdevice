@@ -2,6 +2,11 @@
 \label{class_radi_sense___e_field_probe}\index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 
 
+Radi\+Sense Electrical Field Probe, code is compatible with Radi\+Sense 4, 6 and 18.  
+
+
+
+
 Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}.
 
 \doxysubsection*{Public Member Functions}
@@ -18,20 +23,29 @@ function \mbox{\hyperlink{class_radi_sense___e_field_probe_a4ce97a6308ad8ae8b9d6
 function \mbox{\hyperlink{class_radi_sense___e_field_probe_a6ac8bbf793d9d972c88464d602bdda77}{write}} (in obj, in txt)
 \item 
 function \mbox{\hyperlink{class_radi_sense___e_field_probe_a96cbb33795f8ef58f2f2ddcbf273c028}{get\+Field}} (in obj)
-\item 
+\begin{DoxyCompactList}\small\item\em get the averaged E-\/field value of all axis \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_radi_sense___e_field_probe_aeba842dc93b242741cf43ad8cac3858d}{get\+Range}} (in obj)
-\item 
+\begin{DoxyCompactList}\small\item\em returns the currently set measurement range 1\+: 0 to 10V/m 2\+: 10 to 30V/m 3\+: 30 to 100V/m 4\+: 100V/m to end of spec. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_radi_sense___e_field_probe_a12ff9ec8c7d10b062813c874db3354e2}{set\+Range}} (in obj, in range)
 \item 
 function \mbox{\hyperlink{class_radi_sense___e_field_probe_a5c7ef2f9fedf26b369c7d03ab6af9ce6}{zero}} (in obj)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em zero the probe \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
+Radi\+Sense Electrical Field Probe, code is compatible with Radi\+Sense 4, 6 and 18. 
 
+Usage\+: Initalise subclass 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{radisense = \mbox{\hyperlink{class_radi_sense___e_field_probe_a78c88eab87848dee7ce29a69c2dce442}{RadiSense\_EFieldProbe}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{             6); \% GPIB address}
+\DoxyCodeLine{radisense.zero(); \% \mbox{\hyperlink{class_radi_sense___e_field_probe_a5c7ef2f9fedf26b369c7d03ab6af9ce6}{zero}} the probe, \textcolor{keyword}{this} takes 15 seconds!}
+\DoxyCodeLine{field = radisense.getField();}
+\end{DoxyCode}
+ 
 
-Definition at line 1 of file Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m.
+Definition at line 16 of file Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m.
 
 
 
@@ -63,12 +77,36 @@ Definition at line 1 of file Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m.
 \doxysubsubsection{\texorpdfstring{getField()}{getField()}}
 {\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::get\+Field (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+get the averaged E-\/field value of all axis 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+E\+Field\+Probe}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret Data read from device 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_radi_sense___e_field_probe_aeba842dc93b242741cf43ad8cac3858d}\label{class_radi_sense___e_field_probe_aeba842dc93b242741cf43ad8cac3858d}} 
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!getRange@{getRange}}
 \index{getRange@{getRange}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{getRange()}{getRange()}}
 {\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::get\+Range (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
+
+
+returns the currently set measurement range 1\+: 0 to 10V/m 2\+: 10 to 30V/m 3\+: 30 to 100V/m 4\+: 100V/m to end of spec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+E\+Field\+Probe}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret measurement range from device 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_radi_sense___e_field_probe_a385bfdc5cd094f1f2429b792043e0e25}\label{class_radi_sense___e_field_probe_a385bfdc5cd094f1f2429b792043e0e25}} 
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!read@{read}}
 \index{read@{read}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
@@ -95,6 +133,17 @@ Definition at line 1 of file Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m.
 
 
 
+zero the probe 
+
+before useful measurements can be taken, the sensor has to be zeroed. This process takes 15 seconds.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+E\+Field\+Probe}} class \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/thomas/\+H\+F-\/\+Lab/emcframework/labdevicedrivers/@\+Radi\+Sense\+\_\+\+E\+Field\+Probe/\mbox{\hyperlink{_radi_sense___e_field_probe_8m}{Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m}}\end{DoxyCompactItemize}
+/home/thomas/\+H\+F-\/\+Lab/labdevicedrivers/@\+Radi\+Sense\+\_\+\+E\+Field\+Probe/\mbox{\hyperlink{_radi_sense___e_field_probe_8m}{Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m}}\end{DoxyCompactItemize}
