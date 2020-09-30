@@ -11,10 +11,6 @@
 function power = getPowerZeroSpan(obj, freq, detector)
     obj.setCenterFreq(freq);
     obj.setSpan(0);
-    obj.setMeasBandwidth(300e3);
-    obj.singleSweep();
-    obj.write('SWE:TIME 200US');
-    
     switch upper(detector)
         case "PPE"
             obj.write('CALC:MARK:FUNC:SUMM:PPE ON;*WAI');
@@ -35,6 +31,8 @@ function power = getPowerZeroSpan(obj, freq, detector)
         otherwise
             error("incorrect detector string");
     end
-    power = obj.read;
-    obj.continuousSweep();
+    power = str2double(obj.read);
+    if isnan(power)
+        error("invalid data returned");
+    end
 end
