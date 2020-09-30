@@ -8,7 +8,7 @@
         },
         "rohdeundschwarz_esrp": {
             "eth": {
-                "ip": "192.168.73.115",
+                "ip": "192.168.73.25",
                 "port": 5025,
                 "additionalCommunicationParameters": {
                     "setSoTimeout": 20,
