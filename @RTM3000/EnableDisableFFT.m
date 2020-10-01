@@ -15,6 +15,6 @@ function EnableDisableFFT(obj, state)
             case 'OFF'
                 write(obj,"SPEC:STAT OFF");
             otherwise
-                error('Unclear status. ' +status);
+                error('Unclear state. ' +state);
          end      
 end
