@@ -1,5 +1,7 @@
 % ====================================================
 %> @brief Frequencyresponse acquisition script (FFT of Impulseresponse)
+%> Since the stepresponse can vary the user has to adjust some parameters
+%> by hand accordingly with the remote screen or at the device itself
 %> Operating principle:
 %> 1. Signalgenerator gets configured
 %> 2. Oscilloscope gets configured
@@ -29,16 +31,22 @@
 %> @param Auswertung Selectable boolean whether or not the data is getting
 %>                   postprocessed in MATLAB
 %>
-%> @param Plotsetting_xAxisLimMin X-Axis lower limit (for plotting)
-%> 
-%> @param Plotsetting_xAxisLimMax X-Axis upper limit (for plotting)
+%> @param Varargin Plot axis scaling values in order as follows:
+%>        freq_lim_min,freq_lim_max,dB_lim_min,dB_lim_max,phase_lim_min,phase_lim_max
+%>        1 & 2: x-axis frequency lower and upper limit
+%>        3 & 4: y-axis gain/attenuation lower and upper limit
+%>        5 & 6: y-axis phase lower and upper limit
+%>        Default values when no value is assigned:
+%>        1 & 2: start frequency and stop frequency of the frequency vector
+%>        3 & 4: -50dB and 0dB
+%>        5 & 6: -90°  and 0°
 %> 
 %> @output output 2x1 vector with the sampling frequency of the
 %                 oscilloscope and the acquired math channel data
 %>
 % =====================================================
 
-function output = FrequenzgangAufnehmenUeberSprungantwort(SignalGen,Oszilloscope,f_step,VPP_step,ChannelDUTInputSignal,ChannelDUTOutputSignal,Auswertung,Plotsetting_xAxisLimMin,Plotsetting_xAxisLimMax)
+function output = FrequenzgangAufnehmenUeberSprungantwort(SignalGen,Oscilloscope,f_step,VPP_step,ChannelDUTInputSignal,ChannelDUTOutputSignal,Auswertung,varargin)
 %% Benötigte Variablen
 % Channelnummer aus Channelstring extrahieren
 Input_channel_nr = str2double(extractAfter(ChannelDUTInputSignal,"CH"));
@@ -63,61 +71,58 @@ disp("Konfiguration des Signalgenerators abgeschlossen");
 %% Oszilloskop Kanaleinstellungen
 disp("Oszilloskopkanäle werden konfiguriert");
 % Benötigte Channel einschalten
-EnableDisableChannel(Oszilloscope,Input_channel_nr,"on");
-EnableDisableChannel(Oszilloscope,Output_channel_nr,"on");
-pause(0.5);
+EnableDisableChannel(Oscilloscope,Input_channel_nr,"on");
+EnableDisableChannel(Oscilloscope,Output_channel_nr,"on");
 % Kopplung der Kanäle auf DC 50Ohm stellen
-setChannelCoupling(Oszilloscope,Input_channel_nr,"DC");
-setChannelCoupling(Oszilloscope,Output_channel_nr,"DC");
-pause(0.5);
+setChannelCoupling(Oscilloscope,Input_channel_nr,"DC");
+setChannelCoupling(Oscilloscope,Output_channel_nr,"DC");
 % Tastkopfeinheit auf Volt stellen
-setPassiveProbeMeasuringUnit(Oszilloscope,Input_channel_nr,"V");
-setPassiveProbeMeasuringUnit(Oszilloscope,Output_channel_nr,"V");
-pause(0.5);
+setPassiveProbeMeasuringUnit(Oscilloscope,Input_channel_nr,"V");
+setPassiveProbeMeasuringUnit(Oscilloscope,Output_channel_nr,"V");
 % Tastkopfdämpfung auf 1:1 stellen
-setPassiveProbeAttenuation(Oszilloscope,Input_channel_nr,1);
-setPassiveProbeAttenuation(Oszilloscope,Output_channel_nr,1);
-pause(0.5);
+setPassiveProbeAttenuation(Oscilloscope,Input_channel_nr,1);
+setPassiveProbeAttenuation(Oscilloscope,Output_channel_nr,1);
 % Vertikalen Offset auf 0 setzen
-setChannelOffset(Oszilloscope,Input_channel_nr,0);
-setChannelOffset(Oszilloscope,Output_channel_nr,0);
-pause(0.5);
+setChannelOffset(Oscilloscope,Input_channel_nr,0);
+setChannelOffset(Oscilloscope,Output_channel_nr,0);
 % Channelpolarität auf Normal setzen
-setChannelPolarity(Oszilloscope,Input_channel_nr,"NORM");
-setChannelPolarity(Oszilloscope,Output_channel_nr,"NORM");
-pause(0.5);
+setChannelPolarity(Oscilloscope,Input_channel_nr,"NORM");
+setChannelPolarity(Oscilloscope,Output_channel_nr,"NORM");
 % Channel Deskew time auf 0 setzen
-setChannelDeskew(Oszilloscope,Input_channel_nr,0);
-setChannelDeskew(Oszilloscope,Output_channel_nr,0);
-pause(0.5);
+setChannelDeskew(Oscilloscope,Input_channel_nr,0);
+setChannelDeskew(Oscilloscope,Output_channel_nr,0);
 % Channel ZOffset auf 0 setzen
-setChannelZOffset(Oszilloscope,Input_channel_nr,0);
-setChannelZOffset(Oszilloscope,Output_channel_nr,0);
-pause(0.5);
+setChannelZOffset(Oscilloscope,Input_channel_nr,0);
+setChannelZOffset(Oscilloscope,Output_channel_nr,0);
 % Vertikale Skalierung anpassen
-setVerticalScale(Oszilloscope,Input_channel_nr,VPP_step/5);
-setVerticalScale(Oszilloscope,Output_channel_nr,VPP_step/5);
-pause(0.5);
+setVerticalScale(Oscilloscope,Input_channel_nr,VPP_step/5);
+setVerticalScale(Oscilloscope,Output_channel_nr,VPP_step/5);
 % Horzontale Skalierung anpassen
 HorzScal = 1/(24*f_step); % 1/f * 1/2 * 1/12
-setHorizontalScale(Oszilloscope,HorzScal);
-pause(2);
+setHorizontalScale(Oscilloscope,HorzScal);
+% Mannuelle Anpassung der vertikalen Skalierung der Sprungantwort
+RunContinous(Oscilloscope);
+disp('ANPASSEN DER POSITION UND VERTIKALEN SKALIERUNG DER SPRUNGANTWORT')
+disp('1. Den Kanal der Sprungantwort des DUT rechts auswählen')
+disp('2. Es sollte sich ein Tab öffnen, welches als fünften Eintrag von oben die "Vertical Scale" haben sollte')
+disp('3. Diese über diesen Tab oder direkt über die Drehknöpfe am Gerät oder am Remote Screen demensprechend einstellen')
+disp('3. Hierbei ist zubeachten, dass das Signal möglichst viel vom Bildschirm ausfüllt, ohne das das Signal clippt (d.h. außerhalb des Bildschirms liegt)')
+disp('5. Um das Skript fortzusetzen mit dem Mauszeiger in das Matlab Command Window klicken und 1x Enter drücken')
+pause;
 
-% Hier möglicherweise auch per-hand justierung von vert/horz scale falls
-% nötig
 disp("Konfiguration der Oszilloskopkanäle abgeschlossen");
 
 %% Oszilloskop Erfassungseinstellungen
 disp("Oszilloskop Erfassungseinstellungen werden konfiguriert");
 
 % Anzahl der aufzunehmenden Samples definieren
-write(Oszilloscope,"ACQ:POIN "+80E6);
+write(Oscilloscope,"ACQ:POIN "+80E6);
 % Erfassungsmodus auf High Resolution stellen
-setAcquisitionType(Oszilloscope,"HRES");
+setAcquisitionType(Oscilloscope,"HRES");
 % Erfassungsarithmetik auf Averaging stellen
-setAcquisitionArithmetic(Oszilloscope,"AVER");
+setAcquisitionArithmetic(Oscilloscope,"AVER");
 % Anzahl Samples pro Averaging auf 32 setzen
-setAcquisitionArithmeticAveragingCount(Oszilloscope,32);
+setAcquisitionArithmeticAveragingCount(Oscilloscope,32);
 
 disp("Konfiguration der Oszilloskop Erfassungseinstellungen abgeschlossen");
 
@@ -125,58 +130,57 @@ disp("Konfiguration der Oszilloskop Erfassungseinstellungen abgeschlossen");
 disp("Oszilloskop Triggereinstellungen werden konfiguriert");
 
 % Triggermodus auf Automatisch setzen
-setTriggerMode(Oszilloscope,"AUTO");
+setTriggerMode(Oscilloscope,"AUTO");
 % Triggertyp auf Edgetrigger setzen
-setTriggerType(Oszilloscope,"EDGE");
+setTriggerType(Oscilloscope,"EDGE");
 % Triggerquelle auf DUT-Eingangschannel setzen
-setTriggerSource(Oszilloscope,"CH"+Input_channel_nr);
+setTriggerSource(Oscilloscope,"CH"+Input_channel_nr);
 % Triggerflanke auf auf steigende Flanke setzen
-setEdgeTriggerSlope(Oszilloscope,"POS")
+setEdgeTriggerSlope(Oscilloscope,"POS")
 % Triggerschwelle auf 1/4 der VPP des Eingangssprungs setzen
-setTriggerThresholdVoltage(Oszilloscope,1,VPP_step/4);
+setTriggerThresholdVoltage(Oscilloscope,1,VPP_step/4);
 % Triggerkopplung auf DC setzen
-setEdgeTriggerCouplingMode(Oszilloscope,"DC");
+setEdgeTriggerCouplingMode(Oscilloscope,"DC");
 % Trigger-Holdoff deaktivieren
-setTriggerHoldoffMode(Oszilloscope,"OFF");
+setTriggerHoldoffMode(Oscilloscope,"OFF");
 % Triggerposition an den linken Bildschirmrand setzen
-setTriggerOffset(Oszilloscope,1/(4*f_step)); % 1/f * 1/2
+setTriggerOffset(Oscilloscope,1/(4*f_step)); % 1/f * 1/4
 
 disp("Konfiguration der Oszilloskop Triggereinstellungen abgeschlossen");
 
 %% Oszilloskop Math-einstellungen
 disp("Oszilloskop Mathchanneleinstellungen werden konfiguriert");
 % Benötigten Mathematikkanal einschalten
-EnableDisableMathChannel(Oszilloscope,1,"ON");
+EnableDisableMathChannel(Oscilloscope,1,"ON");
 % Ableiten des DUT-Ausgangssignals
-defineMathChannelOperation(Oszilloscope,1,"DERI","CH"+Output_channel_nr);
+defineMathChannelOperation(Oscilloscope,1,"DERI","CH"+Output_channel_nr);
 % Pausieren um die Anzahl der Samples pro dx einzustellen
 disp('EINSTELLEN DES ABLEITUNGSSAMPLE ANZAHL')
 disp('1. Auf dem Oszilloskopbildschirm auf den unten in der mitte angezeigten Math Kanal klicken')
 disp('2. In dem sich öffnenden Reiter den Punkt "Menu" auswählen und die Math-Kanal Einstellungen sollten sich öffnen')
 disp('3. Bei der ersten Gleichung, rechts neben "dx: XY Sa", auf den Knopf mit den 9 weißen Quadraten klicken')
 disp('4. Die Zahl 32 eingeben und mit dem "Enter" Knopf bestätigen')
-disp('5. Um das Skript fortzusetzen mit dem Mauszeiger in das Matlab COmmand Window klicken und 1x Enter drücken')
+disp('5. Um das Skript fortzusetzen mit dem Mauszeiger in das Matlab Command Window klicken und 1x Enter drücken')
 pause;
 % Pausieren um die Position und vertikale Skalierung der Math-Waveform per
 % Hand anzupassen
-RunContinous(Oszilloscope);
 disp('ANPASSEN DER POSITION UND VERTIKALEN SKALIERUNG DER MATH-WAVEFORM')
-disp('1. Möglicherweise überdeckt der "Equation Set Editor" die benötigten Felder. Diesen per Drag-and-Drop ein Stück nach unten schieben, sodass das ')
+disp('1. Möglicherweise überdeckt der "Equation Set Editor" die benötigten Felder. Diesen per Drag-and-Drop ein Stück nach unten schieben')
 disp('2. Rechts unten sollten die zwei Felder "Position" und "Vertical Scale" nun sichtbar sein')
 disp('3. Mit diesen die Position und vertikale Skalierung der Ableitung einstellen')
 disp('3. Per Remote-Screen oder am direkt am Gerät auch über die Drehknöpfe einstellbar')
-disp('4. Hierbei den Oszilloskopbildschirm bestmöglich ausnutzen und die vertikale Skalierung so klein wie möglich einstellen, ohne das das Signal clippt')
-disp('5. Um das Skript fortzusetzen mit dem Mauszeiger in das Matlab COmmand Window klicken und 1x Enter drücken')
+disp('4. Hierbei den Oszilloskopbildschirm bestmöglich ausnutzen und die vertikale Skalierung so klein wie möglich einstellen, ohne das das Signal clippt (außerhalb des Bildschirms ist)')
+disp('5. Um das Skript fortzusetzen mit dem Mauszeiger in das Matlab Command Window klicken und 1x Enter drücken')
 pause;
-StopAcquisition(Oszilloscope);
+StopAcquisition(Oscilloscope);
 disp("Konfiguration der Oszilloskop Mathchanneleinstellungen abgeschlossen");
 %% Messdaten aufnehmen
 % Single Acquisition mit definierter Anzahl an zu erfassenden Waveforms 
-RunSingleAcquisition(Oszilloscope,320);
+RunSingleAcquisition(Oscilloscope,320);
 % Auslesen der Werte der Ableitungskurve
-math_channel_data = getMathChannelData(Oszilloscope,1);
+math_channel_data = getMathChannelData(Oscilloscope,1);
 % Auslesen der Oszilloskop Samplingfrequency
-SamplingFrequency = getSampleRate(Oszilloscope);
+SamplingFrequency = getSampleRate(Oscilloscope);
 % Die ausgelesenen Werte an die Returnvariable übergeben
 output = {"Mathchannel data","Samplingrate Fs";math_channel_data,SamplingFrequency};
 %% Messdaten auswerten
@@ -201,19 +205,41 @@ if Auswertung == 1
 % Subplot für den Amplitudengang
     subplot(2,1,1);
     semilogx(freq_vector,20*log10(abs_data))
-    xlim([Plotsetting_xAxisLimMin,Plotsetting_xAxisLimMax]);
-    xlabel("Frequenz in [Hz]");
-    ylabel("Amplitude in [dB]");
+    %Frequenzskalierung
+    try
+        xlim([varargin{1},varargin{2}]);
+    catch
+        xlim([freq_vector(1),freq_vector(end)]);
+    end
+    %Verstärkung/Dämpfungsskalierung
+    try
+        ylim([varargin{3},varargin{4}]);
+    catch
+        ylim([-50,0]);
+    end
+    xlabel("Frequenz in Hz");
+    ylabel("Amplitude in dB");
     title("Amplitudengang");
     
-% Subplot für den Amplitudengang    
+% Subplot für den Phasengang    
     subplot(2,1,2);
     semilogx(freq_vector,unwrap(angle(Math_channel_data_FFT(1:NFFT/2+1))))
-    xlim([Plotsetting_xAxisLimMin,Plotsetting_xAxisLimMax]);
-    xlabel("Frequenz in [Hz]");
-    ylabel("Phase in [°]");
+    %Frequenzskalierung
+    try
+        xlim([varargin{1},varargin{2}]);
+    catch
+        xlim([freq_vector(1),freq_vector(end)]);
+    end
+    %Phasenskalierung
+    try
+        ylim([varargin{5},varargin{6}]);
+    catch
+        ylim([-90,0]);
+    end
+    xlabel("Frequenz in Hz");
+    ylabel("Phase in Grad");
     title("Phasengang");
     
-    sgtitle("Frequenzgang des Filters ");
+    sgtitle("Frequenzgang des Filters");
 
 end

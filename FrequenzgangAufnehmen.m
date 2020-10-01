@@ -40,13 +40,23 @@
 %> @param Auswertung Selectable boolean whether or not the data is getting
 %>                   postprocessed in MATLAB
 %> 
+%> @param Varargin Plot axis scaling values in order as follows:
+%>        freq_lim_min,freq_lim_max,dB_lim_min,dB_lim_max,phase_lim_min,phase_lim_max
+%>        1 & 2: x-axis frequency lower and upper limit
+%>        3 & 4: y-axis gain/attenuation lower and upper limit
+%>        5 & 6: y-axis phase lower and upper limit
+%>        Default values when no value is assigned:
+%>        1 & 2: start frequency and stop frequency of the frequency vector
+%>        3 & 4: -50dB and 0dB
+%>        5 & 6: -90°  and 0°
+%>
 %> @output output 2x1 double array
 %>         First row:  amplitude vector
 %>         Second row: phase vector
 % =====================================================
 
 
-function output = FrequenzgangAufnehmen(SignalGen,Oszilloscope,f_start,f_stop,f_steps,VPP_initial,ChannelDUTInputSignal,ChannelDUTOutputSignal,Auswertung)
+function output = FrequenzgangAufnehmen(SignalGen,Oszilloscope,f_start,f_stop,f_steps,VPP_initial,ChannelDUTInputSignal,ChannelDUTOutputSignal,Auswertung,varargin)
 %% Benötigte Variablen
 % Channelnummer aus Channelstring extrahieren
 Input_channel_nr = str2double(extractAfter(ChannelDUTInputSignal,"CH"));
@@ -231,17 +241,39 @@ if Auswertung == 1
     % Subplot für den Amplitudengang
     subplot(2,1,1);
     semilogx(freq_vector,20*log10(amp_vector));
-    xlim([f_start,f_stop]);
-    xlabel("Frequenz in [Hz]");
-    ylabel("Amplitude in [dB]");
+    %Frequenzskalierung
+    try
+        xlim([varargin{1},varargin{2}]);
+    catch
+        xlim([f_start,f_stop]);
+    end
+    %Verstärkung/Dämpfungsskalierung
+    try
+        ylim([varargin{3},varargin{4}]);
+    catch
+        ylim([-50,0]);
+    end
+    xlabel("Frequenz in Hz");
+    ylabel("Amplitude in dB");
     title("Amplitudengang");
     
     % Subplot für den Phasengang
     subplot(2,1,2); 
     semilogx(freq_vector,phase_vector);
-    xlim([f_start,f_stop]);
-    xlabel("Frequenz in [Hz]");
-    ylabel("Phase in [°]");
+    %Frequenzskalierung
+    try
+        xlim([varargin{1},varargin{2}]);
+    catch
+        xlim([f_start,f_stop]);
+    end
+    %Phasenskalierung
+    try
+        ylim([varargin{5},varargin{6}]);
+    catch
+        ylim([-90,0]);
+    end
+    xlabel("Frequenz in Hz");
+    ylabel("Phase in Grad");
     title("Phasengang");
     
     sgtitle("Frequenzgang des Filters");
