@@ -12,7 +12,7 @@ function triggerHoldoffMode = getTriggerHoldoffMode(obj)
 write(obj,"*WAI; TRIG:A:HOLD:MODE?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 triggerHoldoffMode = message;

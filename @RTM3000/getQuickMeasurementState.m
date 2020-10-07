@@ -14,7 +14,7 @@ function state = getQuickMeasurementState(obj, place)
 write(obj,"*WAI; MEAS"+place+":ENAB?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 state = message;

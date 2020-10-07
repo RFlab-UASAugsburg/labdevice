@@ -12,7 +12,7 @@ function maskTestSource = getMaskTestSource(obj)
 write(obj,"*WAI; MASK:SOUR?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 maskTestSource = message;

@@ -14,7 +14,7 @@ function zoffset = getChannelZOffset(obj,channel)
 write(obj,"*WAI; CHAN"+channel+":ZOFF?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 zoffset = message;

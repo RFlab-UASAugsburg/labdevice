@@ -9,10 +9,8 @@
 % =====================================================
 
 function setTriggerOffset(obj,offset)
-if mod(offset,0.01) ~= 0 
-   error("Offset has to be in increments of 0.01");
-else
-    write(obj,"*WAI; TIM:POS "+offset);
-end
+
+write(obj,"*WAI; TIM:POS "+offset);
+
 
 end

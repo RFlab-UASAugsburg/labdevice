@@ -12,7 +12,7 @@ function averagingCount = getAcquisitionArithmeticAveragingCount(obj)
 write(obj,"*WAI; ACQ:AVER:COUN?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 averagingCount = message;

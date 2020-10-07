@@ -13,7 +13,7 @@ function VertScale = getVerticalScale(obj, channel)
             write(obj,"*WAI; CHAN"+channel+":SCAL?");
             message = obj.read;
             message = strip(message);
-            if isempty(message)
+            if strlength(message) == 0
                 error("no response from device");
             end
 

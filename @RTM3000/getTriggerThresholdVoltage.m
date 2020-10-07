@@ -17,7 +17,7 @@ if trigger >= 1 && trigger <= 5
     write(obj,"*WAI; TRIG:A:LEV"+trigger+":VAL?");
     message = obj.read;
     message = strip(message);
-    if isempty(message)
+    if strlength(message) == 0
         error("no response from device");
     end
     

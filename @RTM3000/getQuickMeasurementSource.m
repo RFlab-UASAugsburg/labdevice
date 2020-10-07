@@ -14,7 +14,7 @@ function MeasSource = getQuickMeasurementSource(obj, place)
 write(obj,"*WAI; MEAS"+place+":SOUR?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 MeasSource = [{'Measure Source','Measure Source 2'};strsplit(message,',')];

@@ -12,7 +12,7 @@ function triggerType = getTriggerType(obj)
 write(obj,"*WAI; TRIG:A:TYPE?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 triggerType = message;

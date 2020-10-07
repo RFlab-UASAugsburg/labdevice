@@ -14,7 +14,7 @@ function measuringUnit = getPassiveProbeMeasuringUnit(obj,channel)
 write(obj,"*WAI; PROB"+channel+":SET:ATT:UNIT?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 measuringUnit = message;

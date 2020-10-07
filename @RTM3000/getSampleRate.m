@@ -11,7 +11,7 @@ function SampleRate = getSampleRate(obj)
 
 write(obj,"*WAI; ACQ:SRAT?");
 message = obj.read;
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 SampleRate = str2double(message);

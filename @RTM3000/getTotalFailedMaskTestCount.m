@@ -16,5 +16,5 @@ message = strip(message);
 if isempty(message)
     error("no response from device");
 end
-violationCount = message;
+violationCount = str2double(message);
 end

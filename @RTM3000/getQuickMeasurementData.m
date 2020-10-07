@@ -11,7 +11,7 @@ function MeasurementData = getQuickMeasurementData(obj, place)
     if (place >= 1 && place <= 8)
         write(obj,"*WAI; MEAS"+place+":RES?");
         message = obj.read;
-        if isempty(message)
+        if strlength(message) == 0
             error("no response from device");
         end
         MeasurementData = str2double(message);

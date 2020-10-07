@@ -13,7 +13,7 @@ function VertPos = getVerticalPosition(obj, channel)
             write(obj,"*WAI; CHAN"+channel+":POS?");
             message = obj.read;
             message = strip(message);
-            if isempty(message)
+            if strlength(message) == 0
                 error("no response from device");
             end
 

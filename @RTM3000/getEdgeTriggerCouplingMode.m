@@ -12,7 +12,7 @@ function edgeTriggerCoupling = getEdgeTriggerCouplingMode(obj)
 write(obj,"*WAI; TRIG:A:EDGE:COUP?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 edgeTriggerCoupling = message;

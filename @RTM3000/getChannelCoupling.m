@@ -14,7 +14,7 @@ function couplingMode = getChannelCoupling(obj,channel)
 write(obj,"*WAI; CHAN"+channel+":COUP?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 couplingMode = message;

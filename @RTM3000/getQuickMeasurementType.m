@@ -14,7 +14,7 @@ function MeasType = getQuickMeasurementType(obj, place)
 write(obj,"*WAI; MEAS"+place+":MAIN?");
 message = obj.read;
 message = strip(message);
-if isempty(message)
+if strlength(message) == 0
     error("no response from device");
 end
 MeasType = message;
