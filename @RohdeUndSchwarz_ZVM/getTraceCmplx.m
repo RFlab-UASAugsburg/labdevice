@@ -13,6 +13,7 @@ function DatenVNA = getTraceCmplx(obj,channel,f_points)
 	obj.read();
 	obj.write(['TRAC? CH',num2str(channel),'DATA;*WAI'])
 	pause(0.1);
+    pause(0.001*f_points);
 	data = obj.read();
 	i = 0;
 	while length(sscanf(data,'%f,')) < f_points*2
@@ -21,7 +22,7 @@ function DatenVNA = getTraceCmplx(obj,channel,f_points)
 	    end
 	    pause(0.1)
 	    data = [data obj.read];
-	    disp(data);
+	    disp("data read so far: " +data);
 	    i = i+1;
 	end
 	data = sscanf(data,'%f,',[2 f_points]);
