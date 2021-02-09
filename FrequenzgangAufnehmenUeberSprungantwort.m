@@ -14,9 +14,9 @@
 %> 6. Matlab performs the FFT from the acquired waveform data
 %> 7. Plotting the frequencyresponse curves into two subplots
 %> 
-%> @param SignalGen Instance of class DG4102
+%> @param SignalGen Instance of class Rigol_DG4102
 %>
-%> @param Oszilloscope Instance of class RTM3000
+%> @param Oszilloscope Instance of class RohdeUndSchwarz_RTM3000
 %>
 %> @param f_step Frequency for the step signal
 %>
@@ -58,7 +58,7 @@ disp("Signalgenerator wird konfiguriert");
 setSourceSquare(SignalGen,1,f_step,VPP_step,VPP_step/2,0);
 setSourceSquare(SignalGen,2,f_step,VPP_step,VPP_step/2,0);
 % Channelkopplung der Signalgeneratorausgänge aktivieren
-EnableDisableChannelCoupling(SignalGen,"ON");
+enableDisableChannelCoupling(SignalGen,"ON");
 % Signaltyp und Anfangswerte definieren
 % Freq.  = Startfrequenz
 % Ampl.  = Anfangsamplitude in VPP
@@ -71,8 +71,8 @@ disp("Konfiguration des Signalgenerators abgeschlossen");
 %% Oszilloskop Kanaleinstellungen
 disp("Oszilloskopkanäle werden konfiguriert");
 % Benötigte Channel einschalten
-EnableDisableChannel(Oscilloscope,Input_channel_nr,"on");
-EnableDisableChannel(Oscilloscope,Output_channel_nr,"on");
+enableDisableChannel(Oscilloscope,Input_channel_nr,"on");
+enableDisableChannel(Oscilloscope,Output_channel_nr,"on");
 % Kopplung der Kanäle auf DC 50Ohm stellen
 setChannelCoupling(Oscilloscope,Input_channel_nr,"DC");
 setChannelCoupling(Oscilloscope,Output_channel_nr,"DC");
@@ -101,7 +101,7 @@ setVerticalScale(Oscilloscope,Output_channel_nr,VPP_step/5);
 HorzScal = 1/(24*f_step); % 1/f * 1/2 * 1/12
 setHorizontalScale(Oscilloscope,HorzScal);
 % Mannuelle Anpassung der vertikalen Skalierung der Sprungantwort
-RunContinous(Oscilloscope);
+runContinuous(Oscilloscope);
 disp('ANPASSEN DER POSITION UND VERTIKALEN SKALIERUNG DER SPRUNGANTWORT')
 disp('1. Den Kanal der Sprungantwort des DUT rechts auswählen')
 disp('2. Es sollte sich ein Tab öffnen, welches als fünften Eintrag von oben die "Vertical Scale" haben sollte')
@@ -151,7 +151,7 @@ disp("Konfiguration der Oszilloskop Triggereinstellungen abgeschlossen");
 %% Oszilloskop Math-einstellungen
 disp("Oszilloskop Mathchanneleinstellungen werden konfiguriert");
 % Benötigten Mathematikkanal einschalten
-EnableDisableMathChannel(Oscilloscope,1,"ON");
+enableDisableMathChannel(Oscilloscope,1,"ON");
 % Ableiten des DUT-Ausgangssignals
 defineMathChannelOperation(Oscilloscope,1,"DERI","CH"+Output_channel_nr);
 % Pausieren um die Anzahl der Samples pro dx einzustellen
@@ -172,11 +172,11 @@ disp('3. Per Remote-Screen oder am direkt am Gerät auch über die Drehknöpfe eins
 disp('4. Hierbei den Oszilloskopbildschirm bestmöglich ausnutzen und die vertikale Skalierung so klein wie möglich einstellen, ohne das das Signal clippt (außerhalb des Bildschirms ist)')
 disp('5. Um das Skript fortzusetzen mit dem Mauszeiger in das Matlab Command Window klicken und 1x Enter drücken')
 pause;
-StopAcquisition(Oscilloscope);
+stopAcquisition(Oscilloscope);
 disp("Konfiguration der Oszilloskop Mathchanneleinstellungen abgeschlossen");
 %% Messdaten aufnehmen
 % Single Acquisition mit definierter Anzahl an zu erfassenden Waveforms 
-RunSingleAcquisition(Oscilloscope,320);
+runSingleAcquisition(Oscilloscope,320);
 % Auslesen der Werte der Ableitungskurve
 math_channel_data = getMathChannelData(Oscilloscope,1);
 % Auslesen der Oszilloskop Samplingfrequency

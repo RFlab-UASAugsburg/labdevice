@@ -6,7 +6,7 @@
 %> @param status 'on' || 'off'
 % =====================================================
 
-function EnableDisableMathChannel (obj, channel, status)
+function enableDisableMathChannel (obj, channel, status)
 	  if (channel >= 1 && channel <= 5)
           status = upper(status);
          switch status

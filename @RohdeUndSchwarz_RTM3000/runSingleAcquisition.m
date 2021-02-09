@@ -5,7 +5,7 @@
 %>
 %> @param count Number of waveforms acquired
 % =====================================================
-function RunSingleAcquisition(obj, count)
+function runSingleAcquisition(obj, count)
 
     write(obj,"*WAI; ACQ:NSIN:COUN "+count);
     write(obj,'*WAI; RUNS');

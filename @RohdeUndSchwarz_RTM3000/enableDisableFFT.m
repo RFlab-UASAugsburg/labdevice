@@ -1,19 +1,19 @@
 % ====================================================
-%> @brief Turn mask test on or off
+%> @brief Turn FFT on or off
 %>
 %> @param obj Instance of class
 %>
-%> @param state On-Off switch for the mask test
+%> @param state On-Off switch for the FFT
 %>
 % =====================================================
 
-function EnableDisableMaskingTest(obj, state)
+function enableDisableFFT(obj, state)
         state = upper(state);
          switch state
             case 'ON'
-                write(obj,"*WAI; MASK:STAT ON");
+                write(obj,"SPEC:STAT ON");
             case 'OFF'
-                write(obj,"*WAI; MASK:STAT OFF");
+                write(obj,"SPEC:STAT OFF");
             otherwise
                 error('Unclear state. ' +state);
          end      

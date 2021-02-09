@@ -9,7 +9,7 @@
 %>
 % =====================================================
 
-function EnableDisableSyncSignal(obj,output,state)
+function enableDisableSyncSignal(obj,output,state)
 if (output == 1 || output == 2)
     state = upper(state);
     switch state

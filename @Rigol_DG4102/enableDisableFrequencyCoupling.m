@@ -1,5 +1,5 @@
 % ====================================================
-%> @brief Enables/Disables frequency coupling
+%> @brief enables/Disables frequency coupling
 %>
 %> @param obj Instance of class
 %>
@@ -7,7 +7,7 @@
 %>
 % =====================================================
 
-function EnableDisableFrequencyCoupling(obj,state)
+function enableDisableFrequencyCoupling(obj,state)
 
     states = {'ON','OFF'};
     state = upper(state);

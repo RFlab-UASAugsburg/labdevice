@@ -1,5 +1,5 @@
 % ====================================================
-%> @brief Enables/Disables amplitude coupling
+%> @brief enables/Disables phase coupling
 %>
 %> @param obj Instance of class
 %>
@@ -7,12 +7,12 @@
 %>
 % =====================================================
 
-function EnableDisableAmplitudeCoupling(obj,state)
+function enableDisablePhaseCoupling(obj,state)
 
     states = {'ON','OFF'};
     state = upper(state);
     if any(strcmp(states,state))
-        write(obj,":COUP:AMPL:STAT "+state);
+        write(obj,":COUP:PHAS:STAT "+state);
     else
         error("State can only be" + string(join(states)));
     end

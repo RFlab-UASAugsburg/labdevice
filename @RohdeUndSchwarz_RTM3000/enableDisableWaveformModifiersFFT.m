@@ -13,7 +13,7 @@
 %>
 % =====================================================
 
-function EnableDisableWaveformModifiersFFT(obj, waveform, state)
+function enableDisableWaveformModifiersFFT(obj, waveform, state)
     state = upper(state);
     waveform = upper(waveform);
     states = {'ON','OFF'};

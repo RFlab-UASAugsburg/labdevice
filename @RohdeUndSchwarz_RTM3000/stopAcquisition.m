@@ -1,9 +1,8 @@
 % ====================================================
-%> @brief Start continuous acquisition
+%> @brief Stops acquisition
 %>
 %> @param obj Instance of class
 % =====================================================
-function RunContinous(obj)
-    write(obj,'RUN');
+function stopAcquisition(obj)
+    write(obj,'*WAI; STOP');
 end
-

@@ -1,5 +1,5 @@
-%> @file RTM3000.m
-%> @brief Rhode und Schwarz Digital Oscilloscope 
+%> @file Rigol_DG4102.m
+%> @brief Rigol Function/Arbitrary Waveform Generator 
 % ======================================================
 %> 
 %>
@@ -7,32 +7,32 @@
 %
 %> Initalise subclass
 %> @code
-%> rtm3000 = RTM3000("eth",... % mode
+%> dg4102 = Rigol_DG4102("eth",... % mode
 %>                   "1.1.1.1",... % IP address
 %>                   1234); %port
-%> rtm3000.reset();
+%> dg4102.reset();
 %> @endcode
 % ======================================================
 
-classdef  RTM3000 < labDevice
+classdef  Rigol_DG4102 < labDevice
     properties
       % Add device specific properties here
     end
    methods 
         % ======================================================================
-        %> @brief RTM3000 constructor
+        %> @brief Rigol_DG4102 constructor
         %>
         %>
         %> @param mode Communication mode e.g. "eth" for ethernet
         %> @param varargin Variable input arguments depending on connection mode
         %>
-        %> @return Instance of the RTM3000 class.
+        %> @return Instance of the Rigol_DG4102 class.
         % ======================================================================
-       function obj = RTM3000(mode, varargin)
+       function obj = Rigol_DG4102(mode, varargin)
            obj@labDevice(mfilename, mode, varargin);
        end
         % ======================================================================
-        %> @brief Delete RTM3000 Object
+        %> @brief Delete Rigol_DG4102 Object
         %>
         %> The destructor 
         %>
@@ -45,7 +45,7 @@ classdef  RTM3000 < labDevice
         %> @brief Read data from labdevice
         %>
         %>
-        %> @param obj Instance of RTM3000 class
+        %> @param obj Instance of Rigol_DG4102 class
         %>
         %> @return ret Data read from device
         % ======================================================================
@@ -57,7 +57,7 @@ classdef  RTM3000 < labDevice
         %> @brief Flush labdevice
         %>
         %>
-        %> @param obj Instance of RTM3000 class
+        %> @param obj Instance of Rigol_DG4102 class
         % ======================================================================
        function flush(obj)
            flush@labDevice(obj);
@@ -67,7 +67,7 @@ classdef  RTM3000 < labDevice
         %> @brief Write SCPI commands to labdevice
         %>
         %>
-        %> @param obj Instance of RTM3000 class
+        %> @param obj Instance of Rigol_DG4102 class
         %> @param txt String with SCPI commands for labdevice
         % ======================================================================
        function write(obj, txt)

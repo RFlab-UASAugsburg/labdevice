@@ -1,5 +1,5 @@
 % ====================================================
-%> @brief Enable/Disable channel coupling
+%> @brief enable/Disable channel coupling
 %>  note: The command turns on/off frequency, phase and amplitude coupling
 %>
 %> @param obj Instance of class
@@ -7,7 +7,7 @@
 %> @param state Sweep state either ON or OFF
 %>
 % =====================================================
-function EnableDisableChannelCoupling(obj, state)
+function enableDisableChannelCoupling(obj, state)
 state = upper(state);
 switch state
     case 'ON'

@@ -9,7 +9,7 @@
 %>
 % =====================================================
 
-function EnableDisableChannel (obj, channel, status)
+function enableDisableChannel (obj, channel, status)
 	  if (channel >= 1 & channel <= 4)
          switch status
             case 'on'

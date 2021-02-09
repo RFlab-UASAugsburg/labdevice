@@ -17,9 +17,9 @@
 %> 9. Postprocessing of the acquired data in MATLAB
 %> 10. Plotting the frequencyresponse curves into two subplots
 %>
-%> @param SignalGen Instance of class DG4102
+%> @param SignalGen Instance of class Rigol_DG4102
 %>
-%> @param Oszilloscope Selected channel RTM3000
+%> @param Oszilloscope Selected channel RohdeUndSchwarz_RTM3000
 %>
 %> @param f_start Startfrequency for the sinusoid
 %>
@@ -77,7 +77,7 @@ disp("Signalgenerator wird konfiguriert");
 % Channelkopplung der Signalgeneratorausgänge aktivieren
 setSourceSinus(SignalGen,1,f_start,VPP_initial,0,0);
 setSourceSinus(SignalGen,2,f_start,VPP_initial,0,0);
-EnableDisableChannelCoupling(SignalGen,"ON");
+enableDisableChannelCoupling(SignalGen,"ON");
 % Signaltyp und Anfangswerte definieren
 % Freq.  = Startfrequenz
 % Ampl.  = Anfangsamplitude
@@ -91,8 +91,8 @@ disp("Konfiguration des Signalgenerators abgeschlossen");
 disp("Oszilloskopkanäle werden konfiguriert");
 
 % Benötigte Channel einschalten
-EnableDisableChannel(Oszilloscope,Input_channel_nr,"on");
-EnableDisableChannel(Oszilloscope,Output_channel_nr,"on");
+enableDisableChannel(Oszilloscope,Input_channel_nr,"on");
+enableDisableChannel(Oszilloscope,Output_channel_nr,"on");
 pause(0.5);
 % Kopplung der Kanäle auf DC 50Ohm stellen
 setChannelCoupling(Oszilloscope,Input_channel_nr,"DC");
@@ -136,8 +136,8 @@ disp("Konfiguration der Oszilloskopkanäle abgeschlossen");
 %% Oszilloskop Messplatzeinstellungen
 disp("Oszilloskop Messplätze werden konfiguriert");
 % Messplätze einschalten
-EnableDisableQuickMeasurement(Oszilloscope,1,"ON");
-EnableDisableQuickMeasurement(Oszilloscope,2,"ON");
+enableDisableQuickMeasurement(Oszilloscope,1,"ON");
+enableDisableQuickMeasurement(Oszilloscope,2,"ON");
 pause(0.5);
 % Messungen einstellen
 defineQuickMeasurementType(Oszilloscope,1,"PEAK");
@@ -189,7 +189,7 @@ disp("Messdaten werden aufgenommen");
 
 % Schleife über alle Frequenzpunkte
 for i = 1:1:f_steps 
-    RunSingleAcquisition(Oszilloscope,1);
+    runSingleAcquisition(Oszilloscope,1);
     % Messen und speichern der Amplitude
     data_vector(1,i) = getQuickMeasurementData(Oszilloscope,1); 
     % Messen und speichern der Phase

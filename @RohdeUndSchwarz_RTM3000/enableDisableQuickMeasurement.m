@@ -6,7 +6,7 @@
 %> @param status 'on' || 'off'
 % =====================================================
 
-function EnableDisableQuickMeasurement(obj, place, status)
+function enableDisableQuickMeasurement(obj, place, status)
 	  if (place >= 1 && place <= 8)
          status = upper(status);
          switch status

@@ -14,9 +14,9 @@
 %> 6. Matlab performs the FFT from the acquired waveform data
 %> 7. Plotting the frequencyresponse curves into two subplots
 %> 
-%> @param SignalGen Instance of class DG4102
+%> @param SignalGen Instance of class Rigol_DG4102
 %>
-%> @param Oszilloscope Instance of class RTM3000
+%> @param Oszilloscope Instance of class RohdeUndSchwarz_RTM3000
 %>
 %> @param f_step Frequency for the step signal
 %>
@@ -71,8 +71,8 @@ disp("Konfiguration des Signalgenerators abgeschlossen");
 %% Oszilloskop Kanaleinstellungen
 disp("Oszilloskopkanäle werden konfiguriert");
 % Benötigte Channel einschalten
-EnableDisableChannel(Oscilloscope,Input_channel_nr,"on");
-EnableDisableChannel(Oscilloscope,Sync_channel_nr,"on");
+enableDisableChannel(Oscilloscope,Input_channel_nr,"on");
+enableDisableChannel(Oscilloscope,Sync_channel_nr,"on");
 % Kopplung der Kanäle auf DC 1MOhm(Signalkanal) und DC 50Ohm(SyncKanal) stellen
 setChannelCoupling(Oscilloscope,Input_channel_nr,"DCL");
 setChannelCoupling(Oscilloscope,Sync_channel_nr,"DC");
@@ -142,7 +142,7 @@ disp("Konfiguration der Oszilloskop Triggereinstellungen abgeschlossen");
 %% Maskentest konfigurieren
 disp("Oszilloskop Maskentest wird konfiguriert");
 % Maskentest einschalten
-EnableDisableMaskingTest(Oscilloscope, "ON");
+enableDisableMaskingTest(Oscilloscope, "ON");
 % Maskenquelle einstellen
 setMaskTestSource(Oscilloscope, "CH"+Input_channel_nr);
 % Bitfehlermaske laden
@@ -173,7 +173,7 @@ for i = 1:1:LengthAmpVector
     % Maskentestzähler zurücksetzen
     resetMaskCounter(Oscilloscope);
     % Erfassung des Oszilloskops auf "RUN" stellen
-    RunContinous(Oscilloscope);
+    runContinuous(Oscilloscope);
     % Erfassungstyp wieder auf "Sampling" setzen, da Maskentest dies
     % automatisch auf Envelope(Hüllkurve) setzt
     setAcquisitionType(Oscilloscope,"SAMP");

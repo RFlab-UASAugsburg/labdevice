@@ -1,5 +1,5 @@
 % ====================================================
-%> @brief Enable/Disable source sweep for a specific output
+%> @brief enable/Disable source sweep for a specific output
 %>
 %> @param obj Instance of class
 %>
@@ -8,7 +8,7 @@
 %> @param state Sweep state either ON or OFF
 %>
 % =====================================================
-function EnableDisableSourceSweep(obj, output, state)
+function enableDisableSourceSweep(obj, output, state)
         if (output == 1 || output == 2)
          state = upper(state);
          switch state
