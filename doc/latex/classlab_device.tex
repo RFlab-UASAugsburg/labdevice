@@ -7,7 +7,7 @@ Handling of the default values is done here.
 
 
 
-Inherited by \mbox{\hyperlink{class_h_p___e3631_a}{H\+P\+\_\+\+E3631A}}, \mbox{\hyperlink{class_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t}{Pro\+Logix\+\_\+\+G\+P\+I\+B\+\_\+\+E\+T\+H\+E\+R\+N\+ET}}, \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+E\+Field\+Probe}}, \mbox{\hyperlink{class_rohde_und_schwarz___e_s_r_p}{Rohde\+Und\+Schwarz\+\_\+\+E\+S\+RP}}, \mbox{\hyperlink{class_rohde_und_schwarz___s_m_x}{Rohde\+Und\+Schwarz\+\_\+\+S\+MX}}, \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+Z\+VM}}, and \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{U\+A\+S\+Augsburg\+\_\+\+Stepper}}.
+Inherited by \mbox{\hyperlink{class_h_p___e3631_a}{HP\+\_\+\+E3631A}}, \mbox{\hyperlink{class_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t}{Pro\+Logix\+\_\+\+GPIB\+\_\+\+ETHERNET}}, \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+EField\+Probe}}, \mbox{\hyperlink{class_rigol___d_g4102}{Rigol\+\_\+\+DG4102}}, \mbox{\hyperlink{class_rohde_und_schwarz___e_s_r_p}{Rohde\+Und\+Schwarz\+\_\+\+ESRP}}, \mbox{\hyperlink{class_rohde_und_schwarz___r_t_m3000}{Rohde\+Und\+Schwarz\+\_\+\+RTM3000}}, \mbox{\hyperlink{class_rohde_und_schwarz___s_m_x}{Rohde\+Und\+Schwarz\+\_\+\+SMX}}, \mbox{\hyperlink{class_rohde_und_schwarz___z_v_m}{Rohde\+Und\+Schwarz\+\_\+\+ZVM}}, and \mbox{\hyperlink{class_u_a_s_augsburg___stepper}{UASAugsburg\+\_\+\+Stepper}}.
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -21,7 +21,7 @@ function \mbox{\hyperlink{classlab_device_ad819d668a8f3e4c20d6982c015930d93}{flu
 function \mbox{\hyperlink{classlab_device_a063e6017e5c6eee88b9dfdaf73e92c00}{read}} (in obj)
 \begin{DoxyCompactList}\small\item\em Read data from labdevice. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{classlab_device_ac25c0a57509a9ea7b776254bf505f64b}{write}} (in obj, in txt)
-\begin{DoxyCompactList}\small\item\em Write S\+C\+P\+I/skippy commands to labdevice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Write SCPI/skippy commands to labdevice. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,6 +39,7 @@ Usage\+: Initalise class
 \DoxyCodeLine{dev = \mbox{\hyperlink{classlab_device_a09e8cbad3c7eee79583b8832bb4b7db5}{labDevice}}(deviceName, conMode) }
 \DoxyCodeLine{\%returns \mbox{\hyperlink{classlab_device}{labDevice}} object, dev,}
 \DoxyCodeLine{\%with \textcolor{keywordflow}{default} values \textcolor{keywordflow}{for} the parameters of the connection mode conMode.}
+
 \end{DoxyCode}
  
 
@@ -123,13 +124,13 @@ ret Data read from device
 
 
 
-Write S\+C\+P\+I/skippy commands to labdevice. 
+Write SCPI/skippy commands to labdevice. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em obj} & Instance of \mbox{\hyperlink{classlab_device}{lab\+Device}} class \\
 \hline
-{\em txt} & String with S\+C\+P\+I/skippy commands for labdevice \\
+{\em txt} & String with SCPI/skippy commands for labdevice \\
 \hline
 \end{DoxyParams}
 
@@ -149,4 +150,4 @@ Definition at line 25 of file lab\+Device.\+m.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/thomas/\+H\+F-\/\+Lab/labdevicedrivers/@lab\+Device/\mbox{\hyperlink{lab_device_8m}{lab\+Device.\+m}}\end{DoxyCompactItemize}
+/home/thomas/\+HF-\/\+Lab/gitlab/labdevice/@lab\+Device/\mbox{\hyperlink{lab_device_8m}{lab\+Device.\+m}}\end{DoxyCompactItemize}

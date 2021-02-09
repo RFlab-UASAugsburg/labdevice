@@ -1,30 +1,5 @@
 var searchData=
 [
-  ['getcenterfreq_2em_250',['getCenterFreq.m',['../get_center_freq_8m.html',1,'']]],
-  ['getcurrentlimit_2em_251',['getCurrentLimit.m',['../get_current_limit_8m.html',1,'']]],
-  ['getcurrentmeasured_2em_252',['getCurrentMeasured.m',['../get_current_measured_8m.html',1,'']]],
-  ['getdefaultdeviceproperties_2em_253',['getDefaultDeviceProperties.m',['../get_default_device_properties_8m.html',1,'']]],
-  ['getdetector_2em_254',['getDetector.m',['../get_detector_8m.html',1,'']]],
-  ['getdetectorfinalmeas_2em_255',['getDetectorFinalMeas.m',['../get_detector_final_meas_8m.html',1,'']]],
-  ['getfield_2em_256',['getField.m',['../get_field_8m.html',1,'']]],
-  ['getinputattenuation_2em_257',['getInputAttenuation.m',['../get_input_attenuation_8m.html',1,'']]],
-  ['getmarkerpeak_2em_258',['getMarkerPeak.m',['../get_marker_peak_8m.html',1,'']]],
-  ['getmarkerx_2em_259',['getMarkerX.m',['../get_marker_x_8m.html',1,'']]],
-  ['getmarkery_2em_260',['getMarkerY.m',['../get_marker_y_8m.html',1,'']]],
-  ['getmeasbandwidth_2em_261',['getMeasBandwidth.m',['../get_meas_bandwidth_8m.html',1,'']]],
-  ['getmeastime_2em_262',['getMeasTime.m',['../get_meas_time_8m.html',1,'']]],
-  ['getoutput_2em_263',['getOutput.m',['../get_output_8m.html',1,'']]],
-  ['getpowerunit_2em_264',['getPowerUnit.m',['../get_power_unit_8m.html',1,'']]],
-  ['getpreamp_2em_265',['getPreamp.m',['../get_preamp_8m.html',1,'']]],
-  ['getrange_2em_266',['getRange.m',['../get_range_8m.html',1,'']]],
-  ['getscanmode_2em_267',['getScanMode.m',['../get_scan_mode_8m.html',1,'']]],
-  ['getspan_2em_268',['getSpan.m',['../get_span_8m.html',1,'']]],
-  ['getstartfreq_2em_269',['getStartFreq.m',['../get_start_freq_8m.html',1,'']]],
-  ['getstepsize_2em_270',['getStepSize.m',['../get_step_size_8m.html',1,'']]],
-  ['getstopfreq_2em_271',['getStopFreq.m',['../get_stop_freq_8m.html',1,'']]],
-  ['getsweeppoints_2em_272',['getSweepPoints.m',['../get_sweep_points_8m.html',1,'']]],
-  ['gettrace_2em_273',['getTrace.m',['../get_trace_8m.html',1,'']]],
-  ['gettracecmplx_2em_274',['getTraceCmplx.m',['../get_trace_cmplx_8m.html',1,'']]],
-  ['getvoltagelimit_2em_275',['getVoltageLimit.m',['../get_voltage_limit_8m.html',1,'']]],
-  ['getvoltagemeasured_2em_276',['getVoltageMeasured.m',['../get_voltage_measured_8m.html',1,'']]]
+  ['flush_2em_539',['flush.m',['../flush_8m.html',1,'']]],
+  ['flushdev_2em_540',['flushDev.m',['../flush_dev_8m.html',1,'']]]
 ];

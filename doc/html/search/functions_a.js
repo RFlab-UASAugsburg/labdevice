@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['radisense_5fefieldprobe_396',['RadiSense_EFieldProbe',['../class_radi_sense___e_field_probe.html#a78c88eab87848dee7ce29a69c2dce442',1,'RadiSense_EFieldProbe']]],
-  ['read_397',['read',['../class_h_p___e3631_a.html#a9a222a497df1b04acbba8256d9a35ea5',1,'HP_E3631A::read()'],['../classlab_device.html#a063e6017e5c6eee88b9dfdaf73e92c00',1,'labDevice::read()'],['../class_radi_sense___e_field_probe.html#a385bfdc5cd094f1f2429b792043e0e25',1,'RadiSense_EFieldProbe::read()'],['../class_rohde_und_schwarz___e_s_r_p.html#ac880dfd0a74e47cc5dd07eae9f8fe40b',1,'RohdeUndSchwarz_ESRP::read()'],['../class_rohde_und_schwarz___s_m_x.html#aa1ef6fc699d32d0317b9c5fd6cdc1d64',1,'RohdeUndSchwarz_SMX::read()'],['../class_rohde_und_schwarz___z_v_m.html#a6b40832e9998963eaf5cc2331b9a581b',1,'RohdeUndSchwarz_ZVM::read()'],['../class_u_a_s_augsburg___stepper.html#aeea65c0f966e19855b6cc0cff5f1279e',1,'UASAugsburg_Stepper::read()'],['../class_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t.html#a56395898a9895c753e5009c61194a95b',1,'ProLogix_GPIB_ETHERNET::read()'],['../namespacecustom_eth.html#a42b4507db8236b8a8a6632decfe76543',1,'customEth::read()'],['../namespacecustom_eth2_gpib.html#ab83286ff408e937e869a99622242f36b',1,'customEth2Gpib::read()'],['../namespacecustom_eth_over_java.html#a9d4463f22089712df0063298e0c8b3ba',1,'customEthOverJava::read()'],['../namespacecustom_gpib.html#ab72cc8876839f04e1ac99b36743c6904',1,'customGpib::read()']]],
-  ['readbuffer_398',['readBuffer',['../class_data_reader.html#acaae40eacf15bd8f1d08d898897efe96',1,'DataReader']]],
-  ['readdev_399',['readDev',['../read_dev_8m.html#a44a9326166e9103556a02f1d918f0c61',1,'readDev.m']]],
-  ['reset_400',['reset',['../class_rohde_und_schwarz___e_s_r_p.html#a3ec0586b567ba5fd040607e8efd1dec3',1,'RohdeUndSchwarz_ESRP']]],
-  ['rohdeundschwarz_5fesrp_401',['RohdeUndSchwarz_ESRP',['../class_rohde_und_schwarz___e_s_r_p.html#a0077beaeb5ffd9a8fee6353d49cf01fa',1,'RohdeUndSchwarz_ESRP']]],
-  ['rohdeundschwarz_5fsmx_402',['RohdeUndSchwarz_SMX',['../class_rohde_und_schwarz___s_m_x.html#a750f105377ea0e53a0b42c4545b1c5a7',1,'RohdeUndSchwarz_SMX']]],
-  ['rohdeundschwarz_5fzvm_403',['RohdeUndSchwarz_ZVM',['../class_rohde_und_schwarz___z_v_m.html#a110c5ff73ff076b0d43196de250ea15b',1,'RohdeUndSchwarz_ZVM']]]
+  ['peaksearch_890',['peakSearch',['../class_rohde_und_schwarz___e_s_r_p.html#ac91b1d1b80b0faecc61905b037f1fa48',1,'RohdeUndSchwarz_ESRP']]],
+  ['prologix_5fgpib_5fethernet_891',['ProLogix_GPIB_ETHERNET',['../class_pro_logix___g_p_i_b___e_t_h_e_r_n_e_t.html#abb47dcc25b91647569643c2ccb58c070',1,'ProLogix_GPIB_ETHERNET']]]
 ];

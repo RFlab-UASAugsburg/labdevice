@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['m_5fdata_5finput_89',['m_data_input',['../class_data_reader.html#aaf3507ee4846ef2793bf4bb568018c25',1,'DataReader']]],
-  ['messpunkte_2em_90',['messpunkte.m',['../messpunkte_8m.html',1,'']]]
+  ['labdevice_247',['labDevice',['../classlab_device.html',1,'labDevice'],['../classlab_device.html#a09e8cbad3c7eee79583b8832bb4b7db5',1,'labDevice::labDevice()']]],
+  ['labdevice_20driver_20framework_248',['LabDevice Driver Framework',['../index.html',1,'(Global Namespace)'],['../md__home_thomas__h_f__lab_gitlab_labdevice__r_e_a_d_m_e.html',1,'(Global Namespace)']]],
+  ['labdevice_2em_249',['labDevice.m',['../lab_device_8m.html',1,'']]]
 ];

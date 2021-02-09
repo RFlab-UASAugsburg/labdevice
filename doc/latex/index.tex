@@ -1,4 +1,4 @@
-A open source framewok handling interactions with typical laboratory devices. The framework consists of a communication layer and a device layer. A bottom layer for communication that can handle G\+P\+IB, Ethernet, and G\+P\+I\+B-\/over-\/\+Ethernet communication is the base of the framework. On top typical S\+C\+PI (Standard Commands for Programmable Instruments) commands are implemented to free the user from searching through endless user manuals. This framework can be used as stand-\/alone or can yield the basis for all Matlab measurement applications.
+A open source framewok handling interactions with typical laboratory devices. The framework consists of a communication layer and a device layer. A bottom layer for communication that can handle GPIB, Ethernet, and GPIB-\/over-\/\+Ethernet communication is the base of the framework. On top typical SCPI (Standard Commands for Programmable Instruments) commands are implemented to free the user from searching through endless user manuals. This framework can be used as stand-\/alone or can yield the basis for all Matlab measurement applications.
 
 \doxysubsubsection*{Supported Communication Interfaces}
 
@@ -13,18 +13,20 @@ A open source framewok handling interactions with typical laboratory devices. Th
 
 $\ast$$\ast$ Use with Ethernet $\ast$$\ast$ 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{mode=\textcolor{stringliteral}{"eth"}; \% Using ethernet \textcolor{keyword}{interface }for communication}
-\DoxyCodeLine{adress=\textcolor{stringliteral}{"192.168.1.20"}; \% IP address of device}
+\DoxyCodeLine{mode=\textcolor{stringliteral}{"{}eth"{}}; \% Using ethernet \textcolor{keyword}{interface }for communication}
+\DoxyCodeLine{adress=\textcolor{stringliteral}{"{}192.168.1.20"{}}; \% IP address of device}
 \DoxyCodeLine{emiTestReceiver=ESPR(mode, adress);}
 \DoxyCodeLine{emiTestReceiver.setStartFreq(1e3);}
+
 \end{DoxyCode}
 
 
-$\ast$$\ast$ Use with G\+P\+IB $\ast$$\ast$ 
+$\ast$$\ast$ Use with GPIB $\ast$$\ast$ 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_rohde_und_schwarz___s_m_x}{RohdeUndSchwarz\_SMX}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_rohde_und_schwarz___s_m_x}{RohdeUndSchwarz\_SMX}}(\textcolor{stringliteral}{"{}gpib"{}},\% mode}
 \DoxyCodeLine{             6); \% GPIB address}
 \DoxyCodeLine{sigGen.setFreq(1e7);}
+
 \end{DoxyCode}
 
 
@@ -43,10 +45,11 @@ Interface converters require an initialisation of the interface converter object
 \DoxyCodeLine{                              1234); \% Port of converter}
 \DoxyCodeLine{}
 \DoxyCodeLine{\% Pass \textcolor{keyword}{interface }converter to device constructor.}
-\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_rohde_und_schwarz___s_m_x}{RohdeUndSchwarz\_SMX}}(\textcolor{stringliteral}{"eth2gpib"},\% communication mode }
+\DoxyCodeLine{sigGen = \mbox{\hyperlink{class_rohde_und_schwarz___s_m_x}{RohdeUndSchwarz\_SMX}}(\textcolor{stringliteral}{"{}eth2gpib"{}},\% communication mode }
 \DoxyCodeLine{             interfaceConverter,\% Interface converter \textcolor{keywordtype}{object}}
 \DoxyCodeLine{             6); \% GPIB address of device}
 \DoxyCodeLine{sigGen.setFreq(1e7);}
+
 \end{DoxyCode}
 
 
@@ -55,22 +58,27 @@ Interface converters require an initialisation of the interface converter object
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{@\mbox{\hyperlink{classlab_device}{labDevice}} }
+
 \end{DoxyCode}
  Superclass for all lab Devices 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{cfg }
+
 \end{DoxyCode}
  Configs\+: Eg. default device properties 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{deviceTypes }
+
 \end{DoxyCode}
  Abstract Interface Classes for the different device types. The classes should be used to define common interfaces for all devices of one specific type. The abstract class assures the same method or property names over all devices of one device type eg. vector network analyser. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{interfaceConverters }
+
 \end{DoxyCode}
  Contains all interface converter objects eg. eth2gpib. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{functions }
+
 \end{DoxyCode}
  Contains all low level functionality like opening and closing connection to device. Namespaces (contianing + in front of foldername) seperate {\itshape open} and {\itshape close} functions of the interfaces (e.\+g. eth or gpib).
 
@@ -79,10 +87,12 @@ Interface converters require an initialisation of the interface converter object
 To integrate the labdevice framework in an existing repo as a submodule\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{git submodule add git@git.etech.fh-\/augsburg.de:emc/labdevicedrivers.git }
+
 \end{DoxyCode}
  {\bfseries{Keep in mind\+:}} git pull on the main repository does not update the submodule. After git pull you need to execute 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{git submodule update -\/-\/init -\/-\/remote labdevicedrivers}
+
 \end{DoxyCode}
  to update the submodule after running git pull.
 

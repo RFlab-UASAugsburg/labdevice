@@ -1,4 +1,4 @@
-\hypertarget{class_radi_sense___e_field_probe}{}\doxysection{Radi\+Sense\+\_\+\+E\+Field\+Probe Class Reference}
+\hypertarget{class_radi_sense___e_field_probe}{}\doxysection{Radi\+Sense\+\_\+\+EField\+Probe Class Reference}
 \label{class_radi_sense___e_field_probe}\index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 
 
@@ -12,7 +12,7 @@ Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \mbox{\hyperlink{class_radi_sense___e_field_probe_a78c88eab87848dee7ce29a69c2dce442}{Radi\+Sense\+\_\+\+E\+Field\+Probe}} (in mode, in varargin)
+function \mbox{\hyperlink{class_radi_sense___e_field_probe_a78c88eab87848dee7ce29a69c2dce442}{Radi\+Sense\+\_\+\+EField\+Probe}} (in mode, in varargin)
 \item 
 function \mbox{\hyperlink{class_radi_sense___e_field_probe_a55a85c4c780a942146cabaa21c8e1ee4}{delete}} (in obj)
 \item 
@@ -38,14 +38,15 @@ Radi\+Sense Electrical Field Probe, code is compatible with Radi\+Sense 4, 6 and
 
 Usage\+: Initalise subclass 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{radisense = \mbox{\hyperlink{class_radi_sense___e_field_probe_a78c88eab87848dee7ce29a69c2dce442}{RadiSense\_EFieldProbe}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{radisense = \mbox{\hyperlink{class_radi_sense___e_field_probe_a78c88eab87848dee7ce29a69c2dce442}{RadiSense\_EFieldProbe}}(\textcolor{stringliteral}{"{}gpib"{}},\% mode}
 \DoxyCodeLine{             6); \% GPIB address}
 \DoxyCodeLine{radisense.zero(); \% \mbox{\hyperlink{class_radi_sense___e_field_probe_a5c7ef2f9fedf26b369c7d03ab6af9ce6}{zero}} the probe, \textcolor{keyword}{this} takes 15 seconds!}
 \DoxyCodeLine{field = radisense.getField();}
+
 \end{DoxyCode}
  
 
-Definition at line 16 of file Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m.
+Definition at line 16 of file Radi\+Sense\+\_\+\+EField\+Probe.\+m.
 
 
 
@@ -54,7 +55,7 @@ Definition at line 16 of file Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m.
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{RadiSense\_EFieldProbe()}{RadiSense\_EFieldProbe()}}
-{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::\+Radi\+Sense\+\_\+\+E\+Field\+Probe (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+EField\+Probe\+::\+Radi\+Sense\+\_\+\+EField\+Probe (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -63,19 +64,19 @@ Definition at line 16 of file Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m.
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!delete@{delete}}
 \index{delete@{delete}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{delete()}{delete()}}
-{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+EField\+Probe\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_radi_sense___e_field_probe_a4ce97a6308ad8ae8b9d60fcf9089501f}\label{class_radi_sense___e_field_probe_a4ce97a6308ad8ae8b9d60fcf9089501f}} 
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!flush@{flush}}
 \index{flush@{flush}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{flush()}{flush()}}
-{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+EField\+Probe\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_radi_sense___e_field_probe_a96cbb33795f8ef58f2f2ddcbf273c028}\label{class_radi_sense___e_field_probe_a96cbb33795f8ef58f2f2ddcbf273c028}} 
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!getField@{getField}}
 \index{getField@{getField}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{getField()}{getField()}}
-{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::get\+Field (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+EField\+Probe\+::get\+Field (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 
 
@@ -83,7 +84,7 @@ get the averaged E-\/field value of all axis
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+E\+Field\+Probe}} class\\
+{\em obj} & Instance of \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+EField\+Probe}} class\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -93,7 +94,7 @@ ret Data read from device
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!getRange@{getRange}}
 \index{getRange@{getRange}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{getRange()}{getRange()}}
-{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::get\+Range (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+EField\+Probe\+::get\+Range (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 
 
@@ -101,7 +102,7 @@ returns the currently set measurement range 1\+: 0 to 10V/m 2\+: 10 to 30V/m 3\+
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+E\+Field\+Probe}} class\\
+{\em obj} & Instance of \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+EField\+Probe}} class\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -111,25 +112,25 @@ ret measurement range from device
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!read@{read}}
 \index{read@{read}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{read()}{read()}}
-{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+EField\+Probe\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_radi_sense___e_field_probe_a12ff9ec8c7d10b062813c874db3354e2}\label{class_radi_sense___e_field_probe_a12ff9ec8c7d10b062813c874db3354e2}} 
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!setRange@{setRange}}
 \index{setRange@{setRange}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{setRange()}{setRange()}}
-{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::set\+Range (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{range }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+EField\+Probe\+::set\+Range (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{range }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_radi_sense___e_field_probe_a6ac8bbf793d9d972c88464d602bdda77}\label{class_radi_sense___e_field_probe_a6ac8bbf793d9d972c88464d602bdda77}} 
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!write@{write}}
 \index{write@{write}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{write()}{write()}}
-{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+EField\+Probe\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_radi_sense___e_field_probe_a5c7ef2f9fedf26b369c7d03ab6af9ce6}\label{class_radi_sense___e_field_probe_a5c7ef2f9fedf26b369c7d03ab6af9ce6}} 
 \index{RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}!zero@{zero}}
 \index{zero@{zero}!RadiSense\_EFieldProbe@{RadiSense\_EFieldProbe}}
 \doxysubsubsection{\texorpdfstring{zero()}{zero()}}
-{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+E\+Field\+Probe\+::zero (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function Radi\+Sense\+\_\+\+EField\+Probe\+::zero (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 
 
@@ -139,11 +140,11 @@ before useful measurements can be taken, the sensor has to be zeroed. This proce
 
 
 \begin{DoxyParams}{Parameters}
-{\em obj} & Instance of \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+E\+Field\+Probe}} class \\
+{\em obj} & Instance of \mbox{\hyperlink{class_radi_sense___e_field_probe}{Radi\+Sense\+\_\+\+EField\+Probe}} class \\
 \hline
 \end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/thomas/\+H\+F-\/\+Lab/labdevicedrivers/@\+Radi\+Sense\+\_\+\+E\+Field\+Probe/\mbox{\hyperlink{_radi_sense___e_field_probe_8m}{Radi\+Sense\+\_\+\+E\+Field\+Probe.\+m}}\end{DoxyCompactItemize}
+/home/thomas/\+HF-\/\+Lab/gitlab/labdevice/@\+Radi\+Sense\+\_\+\+EField\+Probe/\mbox{\hyperlink{_radi_sense___e_field_probe_8m}{Radi\+Sense\+\_\+\+EField\+Probe.\+m}}\end{DoxyCompactItemize}

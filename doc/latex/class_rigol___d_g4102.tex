@@ -1,0 +1,1054 @@
+\hypertarget{class_rigol___d_g4102}{}\doxysection{Rigol\+\_\+\+DG4102 Class Reference}
+\label{class_rigol___d_g4102}\index{Rigol\_DG4102@{Rigol\_DG4102}}
+
+
+Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a2826e725018d141b665d09ca5c1b34f5}{Rigol\+\_\+\+DG4102}} (in mode, in varargin)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rigol___d_g4102}{Rigol\+\_\+\+DG4102}} constructor. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a58167935934792db7c281f821c97143e}{delete}} (in obj)
+\begin{DoxyCompactList}\small\item\em Delete \mbox{\hyperlink{class_rigol___d_g4102}{Rigol\+\_\+\+DG4102}} Object. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a54d90f7034140d351029f65ca60417df}{read}} (in obj)
+\begin{DoxyCompactList}\small\item\em Read data from labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_aedf7d1d9754ac5f516260ba9068a108d}{flush}} (in obj)
+\begin{DoxyCompactList}\small\item\em Flush labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_ac5987e882bdb62b86fed0b01eede56ac}{write}} (in obj, in txt)
+\begin{DoxyCompactList}\small\item\em Write SCPI commands to labdevice. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a17519466954ddeee7bc863773790e2c9}{enable\+Disable\+Amplitude\+Coupling}} (in obj, in state)
+\begin{DoxyCompactList}\small\item\em enables/\+Disables amplitude coupling \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a484fc828f61cf9c75cfc75788c2fa552}{enable\+Disable\+Channel\+Coupling}} (in obj, in state)
+\begin{DoxyCompactList}\small\item\em enable/\+Disable channel coupling note\+: The command turns on/off frequency, phase and amplitude coupling \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_ac6a5dd4f474c4b912e5f0f457a099d73}{enable\+Disable\+Frequency\+Coupling}} (in obj, in state)
+\begin{DoxyCompactList}\small\item\em enables/\+Disables frequency coupling \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a31bd8f56d3298af5e8a550572ae72ad0}{enable\+Disable\+Phase\+Coupling}} (in obj, in state)
+\begin{DoxyCompactList}\small\item\em enables/\+Disables phase coupling \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a2264595dd7e000464be92546baed9347}{enable\+Disable\+Source\+Sweep}} (in obj, in output, in state)
+\begin{DoxyCompactList}\small\item\em enable/\+Disable source sweep for a specific output \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_af0674d53a756a7c2817d51f957cf15d6}{enable\+Disable\+Sync\+Signal}} (in obj, in output, in state)
+\begin{DoxyCompactList}\small\item\em Turns the sync signal of a specific output on or off. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a7c62860af0506dd7f9dd24727b26cf5f}{get\+Amplitude}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Gets the amplitude of the selected output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_afa3839295adb45319266fb4232940342}{get\+Amplitude\+Coupling\+Deviation}} (in obj)
+\begin{DoxyCompactList}\small\item\em Gets the amplitude coupling deviation. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_ace3fcd1984bcd2cdc1d05fb6b315e836}{get\+Amplitude\+Coupling\+State}} (in obj)
+\begin{DoxyCompactList}\small\item\em Gets wether or not amplitude coupling is enabled. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_af63d7afc25d5a3252624b12eb8d06ff6}{get\+Amplitude\+Unit}} (in obj, in source)
+\begin{DoxyCompactList}\small\item\em Gets the amplitude unit. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a26806a5cdf92cfbb5b5e2d1ab5d36206}{get\+Channel\+Coupling\+Config}} (in obj)
+\begin{DoxyCompactList}\small\item\em Gets the current channel coupling states. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a3547ceae61d92f097af782046d30c8e4}{get\+Coupling\+Base\+Channel}} (in obj)
+\begin{DoxyCompactList}\small\item\em Get wether the output sweep is enabled or disabled. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_ad624ef19aa78340c7e6cdbe43a294f41}{get\+Frequency}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Gets the frequency of the selected output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a0f6bce6a6dc2564740f25e988093574c}{get\+Frequency\+Coupling\+Deviation}} (in obj)
+\begin{DoxyCompactList}\small\item\em Gets the frequency coupling deviation. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a0fe75fd49d22c6ffb706e545de1cba60}{get\+Frequency\+Coupling\+State}} (in obj)
+\begin{DoxyCompactList}\small\item\em Gets wether or not frequency coupling is enabled. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_af409aeb933fd17f644a519ab089b7022}{get\+Offset}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Gets the offset of the selected output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_ab13fe96f682233c290c3da6220c60fa6}{get\+Output\+Impedance}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Get the output impedance of a specific output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a0bc7d03727cb839972432608de2afe85}{get\+Output\+State}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Get the output state(\textquotesingle{}ON\textquotesingle{},\textquotesingle{}OFF\textquotesingle{}) of a specific output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_af5af3e669b8f27ad42b570a90ce671cb}{get\+Output\+Sync\+State}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Get wether the output sync signal is enabled or disabled. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a7a81a33ffa66879cd13e4d055febb587}{get\+Phase}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Gets the phase of the selected output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a3d51c75a4f9af51e34e8e3a7a8a9f2e2}{get\+Phase\+Coupling\+Deviation}} (in obj)
+\begin{DoxyCompactList}\small\item\em Gets the phase coupling deviation. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a129d42f1c814155d8ac5dab3daff5cd1}{get\+Phase\+Coupling\+State}} (in obj)
+\begin{DoxyCompactList}\small\item\em Gets wether or not phase coupling is enabled. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_aa0fed7f3693d4686b7ef01d96e684422}{get\+Source\+Config}} (in obj, in source)
+\begin{DoxyCompactList}\small\item\em Get current configuration of the generator. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a91ff698ba828a33b5062a3f761964a20}{get\+Sweep\+Start\+Freq}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Get sweep start frequency. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a6de6cfa4fd4fd4d78b413c4bed4bd0da}{get\+Sweep\+State}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Get wether the output sweep is enabled or disabled. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_aa647dce6a4fdf0eb2c4eed0f90310e82}{get\+Sweep\+Stop\+Freq}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Get sweep stop frequency. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a7aef6a5358dc0c0b4cdec2c3ea0fdead}{get\+Sweep\+Time}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Gets the sweep time of the selected output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_acf766699345a4d6c101af096d9a9a1ac}{get\+Sweep\+Type}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Gets the sweep type of the selected output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a11a97ebb9cbd62312f1fa25e764014e0}{get\+Sync\+Signal\+Polarity}} (in obj, in output)
+\begin{DoxyCompactList}\small\item\em Gets the sync signal polarity of a specific output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_af70d63eff9315e7d5ed3264c71e30424}{set\+Amplitude}} (in obj, in output, in amplitude)
+\begin{DoxyCompactList}\small\item\em Sets the amplitude of the basic waveform. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a1e298c840bac017901e28c117cd7da8f}{set\+Amplitude\+Coupling\+Deviation}} (in obj, in deviation)
+\begin{DoxyCompactList}\small\item\em Sets the amplitude coupling deviation. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a24efb7f83e73566a43776dd723d3a8ac}{set\+Amplitude\+Unit}} (in obj, in source, in unit)
+\begin{DoxyCompactList}\small\item\em set the amplitude unit \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_aa4cd24321be637ff578774a348548a9a}{set\+Coupling\+Base\+Channel}} (in obj, in base)
+\begin{DoxyCompactList}\small\item\em Sets the base channel of the channel coupling. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_afc8fdb56fb1ed6b69c5fb6e956eb687b}{set\+Frequency}} (in obj, in output, in frequency)
+\begin{DoxyCompactList}\small\item\em Sets the frequency of the basic waveform. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_ad7842262aa88cb5148f3aa0a66f3d471}{set\+Frequency\+Coupling\+Deviation}} (in obj, in deviation)
+\begin{DoxyCompactList}\small\item\em Sets the frequency coupling deviation. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_aca9cb8eb1b96c80b1d0fdc429b047252}{set\+Offset}} (in obj, in output, in offset)
+\begin{DoxyCompactList}\small\item\em Sets the offset of the basic waveform. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_aee5dc4fc4a025a6cc96e625f115dcc16}{set\+Output\+Impedance}} (in obj, in output, in imp)
+\begin{DoxyCompactList}\small\item\em Set the Output impedance of a specific output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a62dc70d4855d18cc138b7e539c3d2ab5}{set\+Output\+State}} (in obj, in output, in state)
+\begin{DoxyCompactList}\small\item\em Set the Output state of a specific output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a765424afbdc6daf953cfdb0833198f47}{set\+Phase}} (in obj, in output, in phase)
+\begin{DoxyCompactList}\small\item\em Sets the phase of the basic waveform. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_accda908a1e0ff5d275c16b610245890d}{set\+Phase\+Coupling\+Deviation}} (in obj, in deviation)
+\begin{DoxyCompactList}\small\item\em Sets the phase coupling deviation. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_abc77cd004d7fa08f9a8aaea0a85091fd}{set\+Source\+Sinus}} (in obj, in source, in freq, in amp, in offset, in phase)
+\begin{DoxyCompactList}\small\item\em Sets the output signal to a sinusoid. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a1c6861fc768db569617e172559164246}{set\+Source\+Square}} (in obj, in source, in freq, in amp, in offset, in phase)
+\begin{DoxyCompactList}\small\item\em Sets the output signal to a square wave. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_a51dcfa36a098ce03fcb9182c1d9a1d9c}{set\+Sweep\+Start\+Freq}} (in obj, in output, in freq)
+\begin{DoxyCompactList}\small\item\em Set sweep start frequency (Currently only for sinus sweeps) \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_af020307a1c3268e7bab3cde915401bec}{set\+Sweep\+Stop\+Freq}} (in obj, in output, in freq)
+\begin{DoxyCompactList}\small\item\em Set sweep stop frequency (Currently only for sinus sweeps) \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_ae872678c7bd6e305cce9d92f5ad68ffa}{set\+Sweep\+Time}} (in obj, in output, in time)
+\begin{DoxyCompactList}\small\item\em Sets the sweep time of the selected output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_ac754f55bd4c0067d1a6b44df77ce3632}{set\+Sweep\+Type}} (in obj, in output, in mode)
+\begin{DoxyCompactList}\small\item\em Sets the sweep type of the selected output. \end{DoxyCompactList}\item 
+function \mbox{\hyperlink{class_rigol___d_g4102_af84c5a16c626866b4c6e6450c3f23f9c}{set\+Sync\+Signal\+Polarity}} (in obj, in output, in polarity)
+\begin{DoxyCompactList}\small\item\em Sets the sync signal polarity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Usage\+: Initalise subclass 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{dg4102 = \mbox{\hyperlink{class_rigol___d_g4102_a2826e725018d141b665d09ca5c1b34f5}{Rigol\_DG4102}}(\textcolor{stringliteral}{"{}eth"{}},\% mode}
+\DoxyCodeLine{                  \textcolor{stringliteral}{"{}1.1.1.1"{}},\% IP address}
+\DoxyCodeLine{                  1234); \%port}
+\DoxyCodeLine{dg4102.reset();}
+
+\end{DoxyCode}
+ 
+
+Definition at line 17 of file Rigol\+\_\+\+DG4102.\+m.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rigol___d_g4102_a2826e725018d141b665d09ca5c1b34f5}\label{class_rigol___d_g4102_a2826e725018d141b665d09ca5c1b34f5}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!Rigol\_DG4102@{Rigol\_DG4102}}
+\index{Rigol\_DG4102@{Rigol\_DG4102}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{Rigol\_DG4102()}{Rigol\_DG4102()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::\+Rigol\+\_\+\+DG4102 (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_rigol___d_g4102}{Rigol\+\_\+\+DG4102}} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Communication mode e.\+g. \char`\"{}eth\char`\"{} for ethernet \\
+\hline
+{\em varargin} & Variable input arguments depending on connection mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the \mbox{\hyperlink{class_rigol___d_g4102}{Rigol\+\_\+\+DG4102}} class. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rigol___d_g4102_a58167935934792db7c281f821c97143e}\label{class_rigol___d_g4102_a58167935934792db7c281f821c97143e}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!delete@{delete}}
+\index{delete@{delete}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Delete \mbox{\hyperlink{class_rigol___d_g4102}{Rigol\+\_\+\+DG4102}} Object. 
+
+The destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a17519466954ddeee7bc863773790e2c9}\label{class_rigol___d_g4102_a17519466954ddeee7bc863773790e2c9}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!enableDisableAmplitudeCoupling@{enableDisableAmplitudeCoupling}}
+\index{enableDisableAmplitudeCoupling@{enableDisableAmplitudeCoupling}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{enableDisableAmplitudeCoupling()}{enableDisableAmplitudeCoupling()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::enable\+Disable\+Amplitude\+Coupling (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{state }\end{DoxyParamCaption})}
+
+
+
+enables/\+Disables amplitude coupling 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em state} & \textquotesingle{}on\textquotesingle{} $\vert$$\vert$ \textquotesingle{}off\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a484fc828f61cf9c75cfc75788c2fa552}\label{class_rigol___d_g4102_a484fc828f61cf9c75cfc75788c2fa552}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!enableDisableChannelCoupling@{enableDisableChannelCoupling}}
+\index{enableDisableChannelCoupling@{enableDisableChannelCoupling}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{enableDisableChannelCoupling()}{enableDisableChannelCoupling()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::enable\+Disable\+Channel\+Coupling (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{state }\end{DoxyParamCaption})}
+
+
+
+enable/\+Disable channel coupling note\+: The command turns on/off frequency, phase and amplitude coupling 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em state} & Sweep state either ON or OFF \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_ac6a5dd4f474c4b912e5f0f457a099d73}\label{class_rigol___d_g4102_ac6a5dd4f474c4b912e5f0f457a099d73}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!enableDisableFrequencyCoupling@{enableDisableFrequencyCoupling}}
+\index{enableDisableFrequencyCoupling@{enableDisableFrequencyCoupling}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{enableDisableFrequencyCoupling()}{enableDisableFrequencyCoupling()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::enable\+Disable\+Frequency\+Coupling (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{state }\end{DoxyParamCaption})}
+
+
+
+enables/\+Disables frequency coupling 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em state} & \textquotesingle{}on\textquotesingle{} $\vert$$\vert$ \textquotesingle{}off\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a31bd8f56d3298af5e8a550572ae72ad0}\label{class_rigol___d_g4102_a31bd8f56d3298af5e8a550572ae72ad0}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!enableDisablePhaseCoupling@{enableDisablePhaseCoupling}}
+\index{enableDisablePhaseCoupling@{enableDisablePhaseCoupling}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{enableDisablePhaseCoupling()}{enableDisablePhaseCoupling()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::enable\+Disable\+Phase\+Coupling (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{state }\end{DoxyParamCaption})}
+
+
+
+enables/\+Disables phase coupling 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em state} & \textquotesingle{}on\textquotesingle{} $\vert$$\vert$ \textquotesingle{}off\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a2264595dd7e000464be92546baed9347}\label{class_rigol___d_g4102_a2264595dd7e000464be92546baed9347}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!enableDisableSourceSweep@{enableDisableSourceSweep}}
+\index{enableDisableSourceSweep@{enableDisableSourceSweep}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{enableDisableSourceSweep()}{enableDisableSourceSweep()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::enable\+Disable\+Source\+Sweep (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{state }\end{DoxyParamCaption})}
+
+
+
+enable/\+Disable source sweep for a specific output 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output 1 or 2\\
+\hline
+{\em state} & Sweep state either ON or OFF \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_af0674d53a756a7c2817d51f957cf15d6}\label{class_rigol___d_g4102_af0674d53a756a7c2817d51f957cf15d6}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!enableDisableSyncSignal@{enableDisableSyncSignal}}
+\index{enableDisableSyncSignal@{enableDisableSyncSignal}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{enableDisableSyncSignal()}{enableDisableSyncSignal()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::enable\+Disable\+Sync\+Signal (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{state }\end{DoxyParamCaption})}
+
+
+
+Turns the sync signal of a specific output on or off. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em state} & Desired sync signal state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_aedf7d1d9754ac5f516260ba9068a108d}\label{class_rigol___d_g4102_aedf7d1d9754ac5f516260ba9068a108d}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!flush@{flush}}
+\index{flush@{flush}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Flush labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rigol___d_g4102}{Rigol\+\_\+\+DG4102}} class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a7c62860af0506dd7f9dd24727b26cf5f}\label{class_rigol___d_g4102_a7c62860af0506dd7f9dd24727b26cf5f}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getAmplitude@{getAmplitude}}
+\index{getAmplitude@{getAmplitude}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getAmplitude()}{getAmplitude()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Amplitude (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Gets the amplitude of the selected output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output amplitude Configured amplitude \mbox{\Hypertarget{class_rigol___d_g4102_afa3839295adb45319266fb4232940342}\label{class_rigol___d_g4102_afa3839295adb45319266fb4232940342}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getAmplitudeCouplingDeviation@{getAmplitudeCouplingDeviation}}
+\index{getAmplitudeCouplingDeviation@{getAmplitudeCouplingDeviation}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getAmplitudeCouplingDeviation()}{getAmplitudeCouplingDeviation()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Amplitude\+Coupling\+Deviation (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Gets the amplitude coupling deviation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+\end{DoxyParams}
+@output amplitude\+Coupling\+Deviation Current amplitude coupling deviation \mbox{\Hypertarget{class_rigol___d_g4102_ace3fcd1984bcd2cdc1d05fb6b315e836}\label{class_rigol___d_g4102_ace3fcd1984bcd2cdc1d05fb6b315e836}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getAmplitudeCouplingState@{getAmplitudeCouplingState}}
+\index{getAmplitudeCouplingState@{getAmplitudeCouplingState}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getAmplitudeCouplingState()}{getAmplitudeCouplingState()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Amplitude\+Coupling\+State (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Gets wether or not amplitude coupling is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+\end{DoxyParams}
+@output state\+Amplitude\+Coupling amplitude coupling state\+: \textquotesingle{}ON\textquotesingle{} or \textquotesingle{}OFF\textquotesingle{} \mbox{\Hypertarget{class_rigol___d_g4102_af63d7afc25d5a3252624b12eb8d06ff6}\label{class_rigol___d_g4102_af63d7afc25d5a3252624b12eb8d06ff6}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getAmplitudeUnit@{getAmplitudeUnit}}
+\index{getAmplitudeUnit@{getAmplitudeUnit}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getAmplitudeUnit()}{getAmplitudeUnit()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Amplitude\+Unit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{source }\end{DoxyParamCaption})}
+
+
+
+Gets the amplitude unit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em source} & Selected source\\
+\hline
+\end{DoxyParams}
+@output Amp\+Unit Amplitude unit configured at the selected source \mbox{\Hypertarget{class_rigol___d_g4102_a26806a5cdf92cfbb5b5e2d1ab5d36206}\label{class_rigol___d_g4102_a26806a5cdf92cfbb5b5e2d1ab5d36206}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getChannelCouplingConfig@{getChannelCouplingConfig}}
+\index{getChannelCouplingConfig@{getChannelCouplingConfig}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getChannelCouplingConfig()}{getChannelCouplingConfig()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Channel\+Coupling\+Config (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Gets the current channel coupling states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a3547ceae61d92f097af782046d30c8e4}\label{class_rigol___d_g4102_a3547ceae61d92f097af782046d30c8e4}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getCouplingBaseChannel@{getCouplingBaseChannel}}
+\index{getCouplingBaseChannel@{getCouplingBaseChannel}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getCouplingBaseChannel()}{getCouplingBaseChannel()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Coupling\+Base\+Channel (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Get wether the output sweep is enabled or disabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+\end{DoxyParams}
+@output coupling\+Base\+Channel Current base channel of the channel coupling \mbox{\Hypertarget{class_rigol___d_g4102_ad624ef19aa78340c7e6cdbe43a294f41}\label{class_rigol___d_g4102_ad624ef19aa78340c7e6cdbe43a294f41}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getFrequency@{getFrequency}}
+\index{getFrequency@{getFrequency}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getFrequency()}{getFrequency()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Frequency (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Gets the frequency of the selected output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output frequency Configured frequency \mbox{\Hypertarget{class_rigol___d_g4102_a0f6bce6a6dc2564740f25e988093574c}\label{class_rigol___d_g4102_a0f6bce6a6dc2564740f25e988093574c}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getFrequencyCouplingDeviation@{getFrequencyCouplingDeviation}}
+\index{getFrequencyCouplingDeviation@{getFrequencyCouplingDeviation}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getFrequencyCouplingDeviation()}{getFrequencyCouplingDeviation()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Frequency\+Coupling\+Deviation (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Gets the frequency coupling deviation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+\end{DoxyParams}
+@output frequency\+Coupling\+Deviation Current frequency coupling deviation \mbox{\Hypertarget{class_rigol___d_g4102_a0fe75fd49d22c6ffb706e545de1cba60}\label{class_rigol___d_g4102_a0fe75fd49d22c6ffb706e545de1cba60}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getFrequencyCouplingState@{getFrequencyCouplingState}}
+\index{getFrequencyCouplingState@{getFrequencyCouplingState}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getFrequencyCouplingState()}{getFrequencyCouplingState()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Frequency\+Coupling\+State (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Gets wether or not frequency coupling is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+\end{DoxyParams}
+@output state\+Frequency\+Coupling amplitude coupling state\+: \textquotesingle{}ON\textquotesingle{} or \textquotesingle{}OFF\textquotesingle{} \mbox{\Hypertarget{class_rigol___d_g4102_af409aeb933fd17f644a519ab089b7022}\label{class_rigol___d_g4102_af409aeb933fd17f644a519ab089b7022}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getOffset@{getOffset}}
+\index{getOffset@{getOffset}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getOffset()}{getOffset()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Offset (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Gets the offset of the selected output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output phase Configured offset \mbox{\Hypertarget{class_rigol___d_g4102_ab13fe96f682233c290c3da6220c60fa6}\label{class_rigol___d_g4102_ab13fe96f682233c290c3da6220c60fa6}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getOutputImpedance@{getOutputImpedance}}
+\index{getOutputImpedance@{getOutputImpedance}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getOutputImpedance()}{getOutputImpedance()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Output\+Impedance (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Get the output impedance of a specific output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output 1 or 2\\
+\hline
+\end{DoxyParams}
+@output Output\+Imp Configured output impedance of the selected output Note\+: HighZ is returned as \textquotesingle{}INFINITY\textquotesingle{} Regular impedance values e.\+g. 50Ohm as real numbers \mbox{\Hypertarget{class_rigol___d_g4102_a0bc7d03727cb839972432608de2afe85}\label{class_rigol___d_g4102_a0bc7d03727cb839972432608de2afe85}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getOutputState@{getOutputState}}
+\index{getOutputState@{getOutputState}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getOutputState()}{getOutputState()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Output\+State (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Get the output state(\textquotesingle{}ON\textquotesingle{},\textquotesingle{}OFF\textquotesingle{}) of a specific output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output 1 or 2\\
+\hline
+\end{DoxyParams}
+@output Current\+Output\+State Current output state of the selected output \mbox{\Hypertarget{class_rigol___d_g4102_af5af3e669b8f27ad42b570a90ce671cb}\label{class_rigol___d_g4102_af5af3e669b8f27ad42b570a90ce671cb}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getOutputSyncState@{getOutputSyncState}}
+\index{getOutputSyncState@{getOutputSyncState}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getOutputSyncState()}{getOutputSyncState()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Output\+Sync\+State (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Get wether the output sync signal is enabled or disabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output output\+Sync\+State Ouput sweep state, either \textquotesingle{}ON\textquotesingle{} or \textquotesingle{}OFF\textquotesingle{} \mbox{\Hypertarget{class_rigol___d_g4102_a7a81a33ffa66879cd13e4d055febb587}\label{class_rigol___d_g4102_a7a81a33ffa66879cd13e4d055febb587}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getPhase@{getPhase}}
+\index{getPhase@{getPhase}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getPhase()}{getPhase()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Phase (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Gets the phase of the selected output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output phase Configured phase \mbox{\Hypertarget{class_rigol___d_g4102_a3d51c75a4f9af51e34e8e3a7a8a9f2e2}\label{class_rigol___d_g4102_a3d51c75a4f9af51e34e8e3a7a8a9f2e2}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getPhaseCouplingDeviation@{getPhaseCouplingDeviation}}
+\index{getPhaseCouplingDeviation@{getPhaseCouplingDeviation}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getPhaseCouplingDeviation()}{getPhaseCouplingDeviation()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Phase\+Coupling\+Deviation (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Gets the phase coupling deviation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+\end{DoxyParams}
+@output phase\+Coupling\+Deviation Current phase coupling deviation \mbox{\Hypertarget{class_rigol___d_g4102_a129d42f1c814155d8ac5dab3daff5cd1}\label{class_rigol___d_g4102_a129d42f1c814155d8ac5dab3daff5cd1}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getPhaseCouplingState@{getPhaseCouplingState}}
+\index{getPhaseCouplingState@{getPhaseCouplingState}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getPhaseCouplingState()}{getPhaseCouplingState()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Phase\+Coupling\+State (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Gets wether or not phase coupling is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+\end{DoxyParams}
+@output state\+Phase\+Coupling phase coupling state\+: \textquotesingle{}ON\textquotesingle{} or \textquotesingle{}OFF\textquotesingle{} \mbox{\Hypertarget{class_rigol___d_g4102_aa0fed7f3693d4686b7ef01d96e684422}\label{class_rigol___d_g4102_aa0fed7f3693d4686b7ef01d96e684422}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getSourceConfig@{getSourceConfig}}
+\index{getSourceConfig@{getSourceConfig}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getSourceConfig()}{getSourceConfig()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Source\+Config (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{source }\end{DoxyParamCaption})}
+
+
+
+Get current configuration of the generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em source} & Selected source 1 or 2\\
+\hline
+\end{DoxyParams}
+@output Source\+Config 2x5 cell array containing the current output configurations \mbox{\Hypertarget{class_rigol___d_g4102_a91ff698ba828a33b5062a3f761964a20}\label{class_rigol___d_g4102_a91ff698ba828a33b5062a3f761964a20}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getSweepStartFreq@{getSweepStartFreq}}
+\index{getSweepStartFreq@{getSweepStartFreq}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getSweepStartFreq()}{getSweepStartFreq()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Sweep\+Start\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Get sweep start frequency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output sweep\+Start\+Freq Configured start sweep frequency of the selected channel in \mbox{[}Hz\mbox{]} \mbox{\Hypertarget{class_rigol___d_g4102_a6de6cfa4fd4fd4d78b413c4bed4bd0da}\label{class_rigol___d_g4102_a6de6cfa4fd4fd4d78b413c4bed4bd0da}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getSweepState@{getSweepState}}
+\index{getSweepState@{getSweepState}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getSweepState()}{getSweepState()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Sweep\+State (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Get wether the output sweep is enabled or disabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output sweep\+State Ouput sweep state, either \textquotesingle{}ON\textquotesingle{} or \textquotesingle{}OFF\textquotesingle{} \mbox{\Hypertarget{class_rigol___d_g4102_aa647dce6a4fdf0eb2c4eed0f90310e82}\label{class_rigol___d_g4102_aa647dce6a4fdf0eb2c4eed0f90310e82}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getSweepStopFreq@{getSweepStopFreq}}
+\index{getSweepStopFreq@{getSweepStopFreq}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getSweepStopFreq()}{getSweepStopFreq()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Sweep\+Stop\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Get sweep stop frequency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output sweep\+Stop\+Freq Configured stop sweep frequency of the selected channel in \mbox{[}Hz\mbox{]} \mbox{\Hypertarget{class_rigol___d_g4102_a7aef6a5358dc0c0b4cdec2c3ea0fdead}\label{class_rigol___d_g4102_a7aef6a5358dc0c0b4cdec2c3ea0fdead}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getSweepTime@{getSweepTime}}
+\index{getSweepTime@{getSweepTime}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getSweepTime()}{getSweepTime()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Sweep\+Time (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Gets the sweep time of the selected output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output sweep\+Time Configured sweep time aka sweep duration \mbox{\Hypertarget{class_rigol___d_g4102_acf766699345a4d6c101af096d9a9a1ac}\label{class_rigol___d_g4102_acf766699345a4d6c101af096d9a9a1ac}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getSweepType@{getSweepType}}
+\index{getSweepType@{getSweepType}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getSweepType()}{getSweepType()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Sweep\+Type (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Gets the sweep type of the selected output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a11a97ebb9cbd62312f1fa25e764014e0}\label{class_rigol___d_g4102_a11a97ebb9cbd62312f1fa25e764014e0}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!getSyncSignalPolarity@{getSyncSignalPolarity}}
+\index{getSyncSignalPolarity@{getSyncSignalPolarity}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{getSyncSignalPolarity()}{getSyncSignalPolarity()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::get\+Sync\+Signal\+Polarity (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+
+
+
+Gets the sync signal polarity of a specific output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+\end{DoxyParams}
+@output sync\+Signal\+Polarity Currently configured sync signal polarity \mbox{\Hypertarget{class_rigol___d_g4102_a54d90f7034140d351029f65ca60417df}\label{class_rigol___d_g4102_a54d90f7034140d351029f65ca60417df}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!read@{read}}
+\index{read@{read}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+
+
+
+Read data from labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rigol___d_g4102}{Rigol\+\_\+\+DG4102}} class\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ret Data read from device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rigol___d_g4102_af70d63eff9315e7d5ed3264c71e30424}\label{class_rigol___d_g4102_af70d63eff9315e7d5ed3264c71e30424}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setAmplitude@{setAmplitude}}
+\index{setAmplitude@{setAmplitude}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setAmplitude()}{setAmplitude()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Amplitude (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{amplitude }\end{DoxyParamCaption})}
+
+
+
+Sets the amplitude of the basic waveform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em amplitude} & Desired amplitude in \mbox{[}Vpp\mbox{]} Note\+: Amplitude range is limited by the impedance and freq./period ?20MHz\+: 1m\+Vpp to 10Vpp ?70MHz\+: 1m\+Vpp to 5Vpp ?100MHz\+: 1m\+Vpp to 2.\+5\+Vpp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a1e298c840bac017901e28c117cd7da8f}\label{class_rigol___d_g4102_a1e298c840bac017901e28c117cd7da8f}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setAmplitudeCouplingDeviation@{setAmplitudeCouplingDeviation}}
+\index{setAmplitudeCouplingDeviation@{setAmplitudeCouplingDeviation}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setAmplitudeCouplingDeviation()}{setAmplitudeCouplingDeviation()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Amplitude\+Coupling\+Deviation (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{deviation }\end{DoxyParamCaption})}
+
+
+
+Sets the amplitude coupling deviation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em deviation} & Desired amplitude deviation in \mbox{[}Vpp\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a24efb7f83e73566a43776dd723d3a8ac}\label{class_rigol___d_g4102_a24efb7f83e73566a43776dd723d3a8ac}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setAmplitudeUnit@{setAmplitudeUnit}}
+\index{setAmplitudeUnit@{setAmplitudeUnit}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setAmplitudeUnit()}{setAmplitudeUnit()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Amplitude\+Unit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{source,  }\item[{in}]{unit }\end{DoxyParamCaption})}
+
+
+
+set the amplitude unit 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em unit} & one of these unit strings\+: \textquotesingle{}VPP\textquotesingle{},\textquotesingle{}VRMS\textquotesingle{},\textquotesingle{}DBM\textquotesingle{} (note\+: DBM not available when impedance is set to HighZ)\\
+\hline
+{\em source} & Selected source \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_aa4cd24321be637ff578774a348548a9a}\label{class_rigol___d_g4102_aa4cd24321be637ff578774a348548a9a}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setCouplingBaseChannel@{setCouplingBaseChannel}}
+\index{setCouplingBaseChannel@{setCouplingBaseChannel}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setCouplingBaseChannel()}{setCouplingBaseChannel()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Coupling\+Base\+Channel (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{base }\end{DoxyParamCaption})}
+
+
+
+Sets the base channel of the channel coupling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em base} & Selected channel as base channel \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_afc8fdb56fb1ed6b69c5fb6e956eb687b}\label{class_rigol___d_g4102_afc8fdb56fb1ed6b69c5fb6e956eb687b}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setFrequency@{setFrequency}}
+\index{setFrequency@{setFrequency}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setFrequency()}{setFrequency()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Frequency (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{frequency }\end{DoxyParamCaption})}
+
+
+
+Sets the frequency of the basic waveform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em amplitude} & Desired frequency in \mbox{[}Hz\mbox{]} Note\+: Different waveforms correspond to different frequency ranges. Sine\+: 1 ?Hz to 100 MHz Square\+: 1 ?Hz to 40 MHz Ramp\+: 1 ?Hz to 3 MHz Pulse\+: 1 ?Hz to 25 MHz Arb\+: 1 ?Hz to 25 MHz Harmonic\+: 1 ?Hz to 50 MHz Noise\+: 80 Mhz bandwidth \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_ad7842262aa88cb5148f3aa0a66f3d471}\label{class_rigol___d_g4102_ad7842262aa88cb5148f3aa0a66f3d471}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setFrequencyCouplingDeviation@{setFrequencyCouplingDeviation}}
+\index{setFrequencyCouplingDeviation@{setFrequencyCouplingDeviation}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setFrequencyCouplingDeviation()}{setFrequencyCouplingDeviation()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Frequency\+Coupling\+Deviation (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{deviation }\end{DoxyParamCaption})}
+
+
+
+Sets the frequency coupling deviation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em deviation} & Desired frequency deviation in \mbox{[}Hz\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_aca9cb8eb1b96c80b1d0fdc429b047252}\label{class_rigol___d_g4102_aca9cb8eb1b96c80b1d0fdc429b047252}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setOffset@{setOffset}}
+\index{setOffset@{setOffset}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setOffset()}{setOffset()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Offset (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{offset }\end{DoxyParamCaption})}
+
+
+
+Sets the offset of the basic waveform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em phase} & Desired offset in \mbox{[}V\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_aee5dc4fc4a025a6cc96e625f115dcc16}\label{class_rigol___d_g4102_aee5dc4fc4a025a6cc96e625f115dcc16}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setOutputImpedance@{setOutputImpedance}}
+\index{setOutputImpedance@{setOutputImpedance}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setOutputImpedance()}{setOutputImpedance()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Output\+Impedance (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{imp }\end{DoxyParamCaption})}
+
+
+
+Set the Output impedance of a specific output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output 1 or 2\\
+\hline
+{\em imp} & Desired impedance (1 to 10k\+Ohm) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a62dc70d4855d18cc138b7e539c3d2ab5}\label{class_rigol___d_g4102_a62dc70d4855d18cc138b7e539c3d2ab5}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setOutputState@{setOutputState}}
+\index{setOutputState@{setOutputState}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setOutputState()}{setOutputState()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Output\+State (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{state }\end{DoxyParamCaption})}
+
+
+
+Set the Output state of a specific output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output 1 or 2\\
+\hline
+{\em state} & Output state either ON or OFF \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a765424afbdc6daf953cfdb0833198f47}\label{class_rigol___d_g4102_a765424afbdc6daf953cfdb0833198f47}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setPhase@{setPhase}}
+\index{setPhase@{setPhase}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setPhase()}{setPhase()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Phase (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{phase }\end{DoxyParamCaption})}
+
+
+
+Sets the phase of the basic waveform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em phase} & Desired phase in \mbox{[}Deg\mbox{]} Note\+: Range from 0° to 360° \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_accda908a1e0ff5d275c16b610245890d}\label{class_rigol___d_g4102_accda908a1e0ff5d275c16b610245890d}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setPhaseCouplingDeviation@{setPhaseCouplingDeviation}}
+\index{setPhaseCouplingDeviation@{setPhaseCouplingDeviation}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setPhaseCouplingDeviation()}{setPhaseCouplingDeviation()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Phase\+Coupling\+Deviation (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{deviation }\end{DoxyParamCaption})}
+
+
+
+Sets the phase coupling deviation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em deviation} & Desired phase deviation in \mbox{[}Deg\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_abc77cd004d7fa08f9a8aaea0a85091fd}\label{class_rigol___d_g4102_abc77cd004d7fa08f9a8aaea0a85091fd}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setSourceSinus@{setSourceSinus}}
+\index{setSourceSinus@{setSourceSinus}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setSourceSinus()}{setSourceSinus()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Source\+Sinus (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{source,  }\item[{in}]{freq,  }\item[{in}]{amp,  }\item[{in}]{offset,  }\item[{in}]{phase }\end{DoxyParamCaption})}
+
+
+
+Sets the output signal to a sinusoid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em source} & Selected source\\
+\hline
+{\em freq} & Frequency 1µ\+Hz to 160MHz\\
+\hline
+{\em amp} & Amplitude into 50 Ohm in Vpp (boundaries depending on the frequency)\\
+\hline
+{\em offset} & DC Offset in V\\
+\hline
+{\em phase} & Start phase in DEG 0° to 360° \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a1c6861fc768db569617e172559164246}\label{class_rigol___d_g4102_a1c6861fc768db569617e172559164246}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setSourceSquare@{setSourceSquare}}
+\index{setSourceSquare@{setSourceSquare}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setSourceSquare()}{setSourceSquare()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Source\+Square (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{source,  }\item[{in}]{freq,  }\item[{in}]{amp,  }\item[{in}]{offset,  }\item[{in}]{phase }\end{DoxyParamCaption})}
+
+
+
+Sets the output signal to a square wave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em source} & Selected source\\
+\hline
+{\em freq} & Frequency 1µ\+Hz to 40MHz\\
+\hline
+{\em amp} & Amplitude into 50Ohm in Vpp (boundaries depending on the frequency)\\
+\hline
+{\em offset} & DC Offset in V\\
+\hline
+{\em phase} & Start phase in DEG 0° to 360° \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_a51dcfa36a098ce03fcb9182c1d9a1d9c}\label{class_rigol___d_g4102_a51dcfa36a098ce03fcb9182c1d9a1d9c}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setSweepStartFreq@{setSweepStartFreq}}
+\index{setSweepStartFreq@{setSweepStartFreq}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setSweepStartFreq()}{setSweepStartFreq()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Sweep\+Start\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{freq }\end{DoxyParamCaption})}
+
+
+
+Set sweep start frequency (Currently only for sinus sweeps) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em freq} & sweep start frequency \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_af020307a1c3268e7bab3cde915401bec}\label{class_rigol___d_g4102_af020307a1c3268e7bab3cde915401bec}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setSweepStopFreq@{setSweepStopFreq}}
+\index{setSweepStopFreq@{setSweepStopFreq}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setSweepStopFreq()}{setSweepStopFreq()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Sweep\+Stop\+Freq (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{freq }\end{DoxyParamCaption})}
+
+
+
+Set sweep stop frequency (Currently only for sinus sweeps) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em freq} & sweep start frequency \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_ae872678c7bd6e305cce9d92f5ad68ffa}\label{class_rigol___d_g4102_ae872678c7bd6e305cce9d92f5ad68ffa}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setSweepTime@{setSweepTime}}
+\index{setSweepTime@{setSweepTime}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setSweepTime()}{setSweepTime()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Sweep\+Time (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{time }\end{DoxyParamCaption})}
+
+
+
+Sets the sweep time of the selected output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em time} & sweep time aka sweep duration in \mbox{[}s\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_ac754f55bd4c0067d1a6b44df77ce3632}\label{class_rigol___d_g4102_ac754f55bd4c0067d1a6b44df77ce3632}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setSweepType@{setSweepType}}
+\index{setSweepType@{setSweepType}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setSweepType()}{setSweepType()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Sweep\+Type (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets the sweep type of the selected output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em mode} & Mode string to select a specific mode available mode strings\+: Linear = \textquotesingle{}LIN\textquotesingle{} Logarithmic = \textquotesingle{}LOG\textquotesingle{} Step = \textquotesingle{}STE\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_af84c5a16c626866b4c6e6450c3f23f9c}\label{class_rigol___d_g4102_af84c5a16c626866b4c6e6450c3f23f9c}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!setSyncSignalPolarity@{setSyncSignalPolarity}}
+\index{setSyncSignalPolarity@{setSyncSignalPolarity}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{setSyncSignalPolarity()}{setSyncSignalPolarity()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::set\+Sync\+Signal\+Polarity (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output,  }\item[{in}]{polarity }\end{DoxyParamCaption})}
+
+
+
+Sets the sync signal polarity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of class\\
+\hline
+{\em output} & Selected output\\
+\hline
+{\em polarity} & Desired sync signal polarity available polarity strings\+: Positive = \textquotesingle{}POS\textquotesingle{} Negative = \textquotesingle{}NEG\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rigol___d_g4102_ac5987e882bdb62b86fed0b01eede56ac}\label{class_rigol___d_g4102_ac5987e882bdb62b86fed0b01eede56ac}} 
+\index{Rigol\_DG4102@{Rigol\_DG4102}!write@{write}}
+\index{write@{write}!Rigol\_DG4102@{Rigol\_DG4102}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily function Rigol\+\_\+\+DG4102\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
+
+
+
+Write SCPI commands to labdevice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Instance of \mbox{\hyperlink{class_rigol___d_g4102}{Rigol\+\_\+\+DG4102}} class \\
+\hline
+{\em txt} & String with SCPI commands for labdevice \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/thomas/\+HF-\/\+Lab/gitlab/labdevice/@\+Rigol\+\_\+\+DG4102/\mbox{\hyperlink{_rigol___d_g4102_8m}{Rigol\+\_\+\+DG4102.\+m}}\end{DoxyCompactItemize}

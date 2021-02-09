@@ -1,8 +1,8 @@
-\hypertarget{class_h_p___e3631_a}{}\doxysection{H\+P\+\_\+\+E3631A Class Reference}
+\hypertarget{class_h_p___e3631_a}{}\doxysection{HP\+\_\+\+E3631A Class Reference}
 \label{class_h_p___e3631_a}\index{HP\_E3631A@{HP\_E3631A}}
 
 
-Keysight \mbox{\hyperlink{class_h_p___e3631_a}{H\+P\+\_\+\+E3631A}} Power Supply.  
+Keysight \mbox{\hyperlink{class_h_p___e3631_a}{HP\+\_\+\+E3631A}} Power Supply.  
 
 
 
@@ -12,7 +12,7 @@ Inherits \mbox{\hyperlink{classlab_device}{lab\+Device}}.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-function \mbox{\hyperlink{class_h_p___e3631_a_a63ad5f129c0bcf678d4987d86a90adc8}{H\+P\+\_\+\+E3631A}} (in mode, in varargin)
+function \mbox{\hyperlink{class_h_p___e3631_a_a63ad5f129c0bcf678d4987d86a90adc8}{HP\+\_\+\+E3631A}} (in mode, in varargin)
 \item 
 function \mbox{\hyperlink{class_h_p___e3631_a_a5fc2e701b271170f97cc1376b41dad57}{delete}} (in obj)
 \item 
@@ -33,9 +33,9 @@ function \mbox{\hyperlink{class_h_p___e3631_a_a0a893bebc120075b19e28d1ef74cc951}
 function \mbox{\hyperlink{class_h_p___e3631_a_a1b968538e7bf1f59ce2eabba75fdecf1}{get\+Voltage\+Measured}} (in obj, in varargin)
 \begin{DoxyCompactList}\small\item\em Get the measured voltage for a specified or the active output. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_h_p___e3631_a_a07c57953b61236923d8ebffa3ba8b760}{output\+Disable}} (in obj)
-\begin{DoxyCompactList}\small\item\em Disable A\+LL outputs. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Disable ALL outputs. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_h_p___e3631_a_a3f42880b1d73e6a60f681034e0c9d636}{output\+Enable}} (in obj)
-\begin{DoxyCompactList}\small\item\em Enable A\+LL outputs. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Enable ALL outputs. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_h_p___e3631_a_a533cc1441bffe80bf9130a68ee88d3e5}{set\+Current}} (in obj, in current, in varargin)
 \begin{DoxyCompactList}\small\item\em Set the current limit for a specified or the active output. \end{DoxyCompactList}\item 
 function \mbox{\hyperlink{class_h_p___e3631_a_afe91f15d6abc2a22186a2e02075d065e}{set\+Output}} (in obj, in output)
@@ -46,21 +46,22 @@ function \mbox{\hyperlink{class_h_p___e3631_a_a83a4acb93558a318ca9760585efd071b}
 
 
 \doxysubsection{Detailed Description}
-Keysight \mbox{\hyperlink{class_h_p___e3631_a}{H\+P\+\_\+\+E3631A}} Power Supply. 
+Keysight \mbox{\hyperlink{class_h_p___e3631_a}{HP\+\_\+\+E3631A}} Power Supply. 
 
 Usage\+: Initalise subclass 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{psu = \mbox{\hyperlink{class_h_p___e3631_a_a63ad5f129c0bcf678d4987d86a90adc8}{HP\_E3631A}}(\textcolor{stringliteral}{"gpib"},\% mode}
+\DoxyCodeLine{psu = \mbox{\hyperlink{class_h_p___e3631_a_a63ad5f129c0bcf678d4987d86a90adc8}{HP\_E3631A}}(\textcolor{stringliteral}{"{}gpib"{}},\% mode}
 \DoxyCodeLine{             6); \% GPIB address}
 \DoxyCodeLine{psu.setVoltage(3,\textcolor{stringliteral}{'P6V'});}
 \DoxyCodeLine{psu.setCurrent(1,\textcolor{stringliteral}{'P6V'});}
 \DoxyCodeLine{psu.setOutput(\textcolor{stringliteral}{'N25V'});}
 \DoxyCodeLine{psu.setCurrent(0.05);}
 \DoxyCodeLine{i = psu.getCurrentMeasured(\textcolor{stringliteral}{'P6V'})}
+
 \end{DoxyCode}
  
 
-Definition at line 20 of file H\+P\+\_\+\+E3631\+A.\+m.
+Definition at line 20 of file HP\+\_\+\+E3631\+A.\+m.
 
 
 
@@ -69,7 +70,7 @@ Definition at line 20 of file H\+P\+\_\+\+E3631\+A.\+m.
 \index{HP\_E3631A@{HP\_E3631A}!HP\_E3631A@{HP\_E3631A}}
 \index{HP\_E3631A@{HP\_E3631A}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{HP\_E3631A()}{HP\_E3631A()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::\+H\+P\+\_\+\+E3631A (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::\+HP\+\_\+\+E3631A (\begin{DoxyParamCaption}\item[{in}]{mode,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -78,19 +79,19 @@ Definition at line 20 of file H\+P\+\_\+\+E3631\+A.\+m.
 \index{HP\_E3631A@{HP\_E3631A}!delete@{delete}}
 \index{delete@{delete}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{delete()}{delete()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::delete (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_h_p___e3631_a_a5b035a29edc9e7f72d96dc35db8c76d4}\label{class_h_p___e3631_a_a5b035a29edc9e7f72d96dc35db8c76d4}} 
 \index{HP\_E3631A@{HP\_E3631A}!flush@{flush}}
 \index{flush@{flush}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{flush()}{flush()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::flush (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_h_p___e3631_a_a5a9642d4ac55057ccf83f239eec6f029}\label{class_h_p___e3631_a_a5a9642d4ac55057ccf83f239eec6f029}} 
 \index{HP\_E3631A@{HP\_E3631A}!getCurrentLimit@{getCurrentLimit}}
 \index{getCurrentLimit@{getCurrentLimit}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{getCurrentLimit()}{getCurrentLimit()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::get\+Current\+Limit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::get\+Current\+Limit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -110,7 +111,7 @@ i current current limit in Ampere
 \index{HP\_E3631A@{HP\_E3631A}!getCurrentMeasured@{getCurrentMeasured}}
 \index{getCurrentMeasured@{getCurrentMeasured}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{getCurrentMeasured()}{getCurrentMeasured()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::get\+Current\+Measured (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::get\+Current\+Measured (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -130,7 +131,7 @@ i measured current in Ampere
 \index{HP\_E3631A@{HP\_E3631A}!getOutput@{getOutput}}
 \index{getOutput@{getOutput}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::get\+Output (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::get\+Output (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 
 
@@ -148,7 +149,7 @@ output currently active output. \textquotesingle{}P6V\textquotesingle{} $\vert$$
 \index{HP\_E3631A@{HP\_E3631A}!getVoltageLimit@{getVoltageLimit}}
 \index{getVoltageLimit@{getVoltageLimit}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{getVoltageLimit()}{getVoltageLimit()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::get\+Voltage\+Limit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::get\+Voltage\+Limit (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -168,7 +169,7 @@ u current voltage limit in Volts
 \index{HP\_E3631A@{HP\_E3631A}!getVoltageMeasured@{getVoltageMeasured}}
 \index{getVoltageMeasured@{getVoltageMeasured}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{getVoltageMeasured()}{getVoltageMeasured()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::get\+Voltage\+Measured (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::get\+Voltage\+Measured (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -188,11 +189,11 @@ u measured Voltage in Volts
 \index{HP\_E3631A@{HP\_E3631A}!outputDisable@{outputDisable}}
 \index{outputDisable@{outputDisable}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{outputDisable()}{outputDisable()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::output\+Disable (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::output\+Disable (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 
 
-Disable A\+LL outputs. 
+Disable ALL outputs. 
 
 Equivalent to pressing the Output on/off button on the front panel. To individually enable/disable outputs, instead set their current and voltage to zero
 
@@ -205,11 +206,11 @@ Equivalent to pressing the Output on/off button on the front panel. To individua
 \index{HP\_E3631A@{HP\_E3631A}!outputEnable@{outputEnable}}
 \index{outputEnable@{outputEnable}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{outputEnable()}{outputEnable()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::output\+Enable (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::output\+Enable (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 
 
-Enable A\+LL outputs. 
+Enable ALL outputs. 
 
 Equivalent to pressing the Output on/off button on the front panel. To individually enable/disable outputs, instead set their current and voltage to zero
 
@@ -222,13 +223,13 @@ Equivalent to pressing the Output on/off button on the front panel. To individua
 \index{HP\_E3631A@{HP\_E3631A}!read@{read}}
 \index{read@{read}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{read()}{read()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::read (\begin{DoxyParamCaption}\item[{in}]{obj }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{class_h_p___e3631_a_a533cc1441bffe80bf9130a68ee88d3e5}\label{class_h_p___e3631_a_a533cc1441bffe80bf9130a68ee88d3e5}} 
 \index{HP\_E3631A@{HP\_E3631A}!setCurrent@{setCurrent}}
 \index{setCurrent@{setCurrent}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{setCurrent()}{setCurrent()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::set\+Current (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{current,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::set\+Current (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{current,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -247,7 +248,7 @@ Set the current limit for a specified or the active output.
 \index{HP\_E3631A@{HP\_E3631A}!setOutput@{setOutput}}
 \index{setOutput@{setOutput}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{setOutput()}{setOutput()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::set\+Output (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::set\+Output (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{output }\end{DoxyParamCaption})}
 
 
 
@@ -264,7 +265,7 @@ set the currently active output for programming
 \index{HP\_E3631A@{HP\_E3631A}!setU@{setU}}
 \index{setU@{setU}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{setU()}{setU()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::setU (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{voltage,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::setU (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{voltage,  }\item[{in}]{varargin }\end{DoxyParamCaption})}
 
 
 
@@ -283,10 +284,10 @@ Set the voltage limit for a specified or the active output.
 \index{HP\_E3631A@{HP\_E3631A}!write@{write}}
 \index{write@{write}!HP\_E3631A@{HP\_E3631A}}
 \doxysubsubsection{\texorpdfstring{write()}{write()}}
-{\footnotesize\ttfamily function H\+P\+\_\+\+E3631\+A\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily function HP\+\_\+\+E3631\+A\+::write (\begin{DoxyParamCaption}\item[{in}]{obj,  }\item[{in}]{txt }\end{DoxyParamCaption})}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/thomas/\+H\+F-\/\+Lab/labdevicedrivers/@\+H\+P\+\_\+\+E3631\+A/\mbox{\hyperlink{_h_p___e3631_a_8m}{H\+P\+\_\+\+E3631\+A.\+m}}\end{DoxyCompactItemize}
+/home/thomas/\+HF-\/\+Lab/gitlab/labdevice/@\+HP\+\_\+\+E3631\+A/\mbox{\hyperlink{_h_p___e3631_a_8m}{HP\+\_\+\+E3631\+A.\+m}}\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+A open source framewok handling interactions with typical laboratory devices. The framework consists of a communication layer and a device layer. A bottom layer for communication that can handle GPIB, Ethernet, and GPIB-\/over-\/\+Ethernet communication is the base of the framework. On top typical SCPI (Standard Commands for Programmable Instruments) commands are implemented to free the user from searching through endless user manuals. This framework can be used as stand-\/alone or can yield the basis for all Matlab measurement applications.
+
+\doxysubsection*{Supported Communication Interfaces}
+
+
+\begin{DoxyItemize}
+\item mode= \char`\"{}eth\char`\"{};
+\item mode= \char`\"{}gpib\char`\"{};
+\item mode= \char`\"{}eth2gpib\char`\"{}; (See\+: Using Interface Converter)
+\end{DoxyItemize}
+
+\doxysubsection*{Example}
+
+$\ast$$\ast$ Use with Ethernet $\ast$$\ast$ {\ttfamily  mode=\char`\"{}eth\char`\"{}; \% Using ethernet interface for communication adress=\char`\"{}192.\+168.\+1.\+20\char`\"{}; \% IP address of device emi\+Test\+Receiver=ESPR(mode, adress); emi\+Test\+Receiver.\+set\+Start\+Freq(1e3); }
+
+$\ast$$\ast$ Use with GPIB $\ast$$\ast$ {\ttfamily  sig\+Gen = SMX(\char`\"{}gpib\char`\"{},... \% mode 6); \% GPIB address sig\+Gen.\+set\+Freq(1e7); }
+
+\doxysubsection*{Using Interface Converter}
+
+
+\begin{DoxyItemize}
+\item mode= \char`\"{}eth2gpib\char`\"{};
+\end{DoxyItemize}
+
+Interface converters require an initialisation of the interface converter object first, before initialising the device class. {\ttfamily  \% Initialising interface converter object interface\+Converter = Pro\+Logix(\textquotesingle{}eth\textquotesingle{},... \% communication mode of converter \textquotesingle{}192.\+168.\+75.\+42\textquotesingle{},... \% IP address of converter 1234); \% Port of converter \% Pass interface converter to device constructor. sig\+Gen = SMX(\char`\"{}eth2gpib\char`\"{},... \% communication mode interface\+Converter,... \% Interface converter object 6); \% GPIB address of device sig\+Gen.\+set\+Freq(1e7); }
+
+\doxysubsection*{Repository Structure}
+
+{\ttfamily  @lab\+Device } Superclass for all lab Devices {\ttfamily  cfg } Configs\+: Eg. default device properties {\ttfamily  device\+Types } Abstract Interface Classes for the different device types. The classes should be used to define common interfaces for all devices of one specific type. The abstract class assures the same method or property names over all devices of one device type eg. vector network analyser. {\ttfamily  interface\+Converters } Contains all interface converter objects eg. eth2gpib. {\ttfamily  functions } Contains all low level functionality like opening and closing connection to device. Namespaces (contianing + in front of foldername) seperate {\itshape open} and {\itshape close} functions of the interfaces (e.\+g. eth or gpib).
+
+\doxysubsection*{Adding labdevicedreivers as a submodule}
+
+To integrate the labdevice framework in an existing repo as a submodule\+: {\ttfamily  git submodule add \href{mailto:git@git.etech.fh-augsburg.de}{\texttt{ git@git.\+etech.\+fh-\/augsburg.\+de}}\+:emc/labdevicedrivers.\+git } {\bfseries{Keep in mind\+:}} git pull on the main repository does not update the submodule. After git pull you need to execute {\ttfamily  git submodule update --init --remote labdevicedrivers } to update the submodule after running git pull.
+
+\doxysubsection*{Documentation}
+
+You can find matlab\+Doxygen Documentation in doc/html. Until now doxygen must be run offline. Run {\ttfamily  doxygen Doxyfile } in the folder doc/doxymatlab/. We use doxymatlab\+: Copyright (c) 2009, Fabrice All rights reserved. \href{http://www.mathworks.com/matlabcentral/fileexchange/25925-using-doxygen-with-matlab/}{\texttt{ http\+://www.\+mathworks.\+com/matlabcentral/fileexchange/25925-\/using-\/doxygen-\/with-\/matlab/}}
+
+\doxysubsection*{Contribute}
+
+See our Development Guidelines 
