@@ -1,21 +1,15 @@
+% ======================================================================
+%> @brief Get the Default Lab Device specific properties for construction of object.
+%>
+%> Search for a default addresses of device. All default device settings
+%> should be stored in a json file in this folder. Always write device 
+%> names in the json file as lowercase.
+%> See also: defaultDeviceProperties.json
+%>
+%> @param deviceName [string]
+%> @return defaultProperties [struct]
+% ======================================================================
 function defaultProperties = getDefaultDeviceProperties(deviceName)
-%getDefaultDeviceProperties Get the Default Lab Device specific properties
-%                           for construction of object.
-% Search for a default addresses of device. All default device settings
-% should be stored in a json file in this folder. Always write device 
-% names in the json file as lowercase.
-%
-%
-% Parameters:
-%   deviceName [string]
-%
-%
-% Return values:
-%   defaultProperties [struct]
-%
-% See also: defaultDeviceProperties.json (Always write device names as
-% lowercase.)
-%
 
 fname = 'defaultDeviceProperties.json';
 val = jsondecode(fileread(fname)); %read json file

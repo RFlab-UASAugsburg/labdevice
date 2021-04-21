@@ -1,29 +1,52 @@
 {
     "devices": {
-        "esrp": {
+        "prologix": {
             "eth": {
-                "ip": "192.168.73.115",
-                "port": 5025
+                "ip": "192.168.73.40",
+                "port": 1234
+            }
+        },
+        "rohdeundschwarz_rtm3000": {
+                    "eth": {
+                        "ip": "141.82.75.71",
+                        "port": 5025
+                    }
+            },
+        "rigol_dg4102": {
+                    "eth": {
+                        "ip": "141.82.75.74",
+                        "port": 5555
+                    }
+            },
+        "rohdeundschwarz_esrp": {
+            "eth": {
+                "ip": "192.168.73.25",
+                "port": 5025,
+                "additionalCommunicationParameters": {
+                    "setSoTimeout": 20,
+                    "setReceiveBufferSize": 16777216,
+                    "setSendBufferSize": 16777216
+                }
             },
             "gpib": {
                 "address": 20,
                 "boardIdx": 1,
-                "vendor": "agilent"
-            },
-            "additionalCommunicationParameters": {
-                "Timeout": 20,
-                "InputBufferSize": 16777216,
-                "OutputBufferSize": 16777216
+                "vendor": "agilent",
+                "additionalCommunicationParameters": {
+                    "Timeout": 20,
+                    "InputBufferSize": 16777216,
+                    "OutputBufferSize": 16777216
+                }
             }
         },
-        "smx": {
+        "rohdeundschwarz_smx": {
             "gpib": {
                 "address": 6,
                 "boardIdx": 1,
                 "vendor": "agilent"
             }
         },
-        "radisense": {
+        "radisense_efieldprobe": {
             "gpib": {
                 "address": 8,
                 "boardIdx": 1,
