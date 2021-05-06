@@ -70,7 +70,7 @@ Namespaces (contianing + in front of foldername) seperate *open* and *close* fun
 
 To integrate the labdevice framework in an existing repo as a submodule:
 
-    git submodule add git@gitlab.elektrotechnik.hs-augsburg.de:hf/labdevice.git
+    git submodule add git@github.com:RFlab-UASAugsburg/labdevice.git
 
 **Keep in mind:** git pull on the main repository does not update the submodule.
 After git pull you need to execute 
